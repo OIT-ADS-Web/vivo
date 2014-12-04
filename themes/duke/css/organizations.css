@@ -1,0 +1,43 @@
+#orgNavigation {
+    margin: 0;
+}
+#orgNavigation ul {
+  margin:0;
+}
+#orgNavigation a.organization {
+    margin-left: 1.250em;
+}
+#orgNavigation a.parent {
+    margin-left: 0;
+}
+#orgNavigation ul, #orgNavigation li {
+    padding: 0.25em  0;
+}
+
+ #orgNavigation li ul {
+    padding: 0.25em .5em;
+}
+#orgNavigation a {
+    text-decoration: none;
+}
+#orgNavigation img {
+    vertical-align: middle;
+}
+#orgNavigation a.organization {
+    padding-left: 0.25em;
+}
+#orgNavigation a.organization:hover {
+    text-decoration: underline;
+}
+
+#individual-organizationForPosition h3{
+        padding: 0.25em 1em;
+}
+
+#individual-organizationForPosition li{
+        padding: 0.25em 1em;
+}
+
+
+#wrapper-content {
+}

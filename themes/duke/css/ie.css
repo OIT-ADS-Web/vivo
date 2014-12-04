@@ -1,0 +1,7 @@
+.ie #search-field input.search {
+	cursor:pointer;
+}
+
+#wrapper-main {
+	width:960px;
+}
