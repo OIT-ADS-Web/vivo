@@ -10,7 +10,7 @@
 ### This file defines the default menu for vivo. ###
 ### It overrides the menu.n3 from vitro and vivo.
 
-### At Duke, we removed Events
+### At Duke, we removed Events and customized some headings and pages
 
 #### Default Menu ####
 
@@ -39,7 +39,7 @@ display:PeopleMenuItem
 display:OrganizationsMenuItem 
     a display:NavigationElement ;
     display:menuPosition 3;
-    display:linkText "Organizations";
+    display:linkText "Schools / Institutes";
     display:toPage display:Organizations .
 
 display:ResearchMenuItem     
@@ -74,8 +74,9 @@ display:Organizations
     a display:Page ;
     a display:ClassGroupPage;
     display:forClassGroup vivoweb:vitroClassGrouporganizations ;
-    display:title "Organizations" ;
+    display:title "Schools / Institutes" ;
     display:urlMapping "/organizations";
+    display:requiresBodyTemplate "menupage--classgroup-organizations.ftl" ;
     display:hasDataGetter display:organizationsDataGetter .
 
 display:People 
@@ -84,6 +85,7 @@ display:People
     display:forClassGroup vivoweb:vitroClassGrouppeople ;
     display:title "People" ;
     display:urlMapping "/people" ;
+    display:requiresBodyTemplate "menupage--classgroup-people.ftl" ;
    	display:hasDataGetter display:peopleDataGetter .
 
 display:Research 
@@ -92,6 +94,7 @@ display:Research
     display:forClassGroup vivoweb:vitroClassGrouppublications ;
     display:title "Research" ;
     display:urlMapping "/research" ;
+    display:requiresBodyTemplate "menupage--classgroup-research.ftl" ;
     display:hasDataGetter display:researchDataGetter .
 
 
