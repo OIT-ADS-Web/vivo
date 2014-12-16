@@ -27,7 +27,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
 <#-- Template for scripts that must be loaded in the head -->
-
+<script>
+var i18nStrings = {
+    allCapitalized: '${i18n().all_capitalized}',
+};
+</script>
 <script type="text/javascript" src="${urls.theme}/js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="${urls.base}/js/vitroUtils.js"></script>
 <script type="text/javascript" src="${urls.theme}/js/viewportSize-min.js"></script>
