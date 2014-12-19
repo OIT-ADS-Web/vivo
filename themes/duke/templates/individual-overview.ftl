@@ -39,7 +39,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <div class="overview-value">
                 ${statement.value}
             </div>
-            <@p.editingLinks "${overview.name}" statement editable />
         </div>
     </#list>
 </#if>
