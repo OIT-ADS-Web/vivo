@@ -1,3 +1,39 @@
+#organization-info{
+width:100%;
+margin:10px 0;
+}
+
+
+#organization-info h2{
+color: #A1B70D;
+font-size:1.5em;
+
+}
+
+#organization-info #overview{
+display:none;
+}
+
+#organization-content-wrapper{
+width:100%;
+margin-top:1.250em;
+}
+
+#organization-body{
+width:70%;
+float:left;
+
+}
+
+
+#organization-visualizations{
+width:20%;
+padding:10px;
+float:right;
+
+}
+
+
 #orgNavigation {
     margin: 0;
 }
@@ -10,8 +46,13 @@
 #orgNavigation a.parent {
     margin-left: 0;
 }
-#orgNavigation ul, #orgNavigation li {
+#orgNavigation ul{
     padding: 0.25em  0;
+}
+
+#orgNavigation li {
+    padding: 0.25em  0;
+    border-top: 1px solid #BBBBBB;
 }
 
  #orgNavigation li ul {
@@ -30,12 +71,19 @@
     text-decoration: underline;
 }
 
-#individual-organizationForPosition h3{
-        padding: 0.25em 1em;
+#organization_people {
+        border-top: 1px solid #BBBBBB;
 }
 
 #individual-organizationForPosition li{
         padding: 0.25em 1em;
+        border-top: 1px solid #BBBBBB;
+
+}
+
+
+#individual-administers {
+     padding: 0.25em 2em;
 }
 
 
