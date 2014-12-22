@@ -48,9 +48,13 @@
         <#include "individual-overview.ftl">
 
         <#-- Positions -->
-        <#assign positions = propertyGroups.pullProperty("${core}personInPosition")!>
+        <#assign positions = propertyGroups.pullProperty("${core}relatedBy", "${core}Position")!>
         <#if positions?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-          <@p.objectPropertyListing positions false />
+          <#assign localName = positions.localName>
+          <h3 id="${localName}" class="mainPropGroup">Current Appointments and Affiliations <@p.verboseDisplay positions /></h3>
+          <ul id="individual-personInPosition" role="list">
+            <@p.objectProperty positions false />
+          </ul>
         </#if>
 
         <#-- Contact Info -->
