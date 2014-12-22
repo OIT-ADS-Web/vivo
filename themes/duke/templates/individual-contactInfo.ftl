@@ -4,8 +4,10 @@
 
 <#-- Addresses  -->
 <#assign addresses = propertyGroups.pullProperty("${core}mailingAddress")!>
-<#assign email = propertyGroups.pullProperty("${core}primaryEmail")!>
-<#assign phone = propertyGroups.pullProperty("${core}phoneNumber")!>
+<#assign email = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/ARG_2000028",
+                                             "http://www.w3.org/2006/vcard/ns#Email")!>
+<#assign phone = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/ARG_2000028",
+                                             "http://www.w3.org/2006/vcard/ns#Telephone")!>
 <#assign webpage = propertyGroups.pullProperty("${core}webpage")!>
 <@showContact addresses email phone webpage />
 
@@ -25,7 +27,7 @@
         <#list email.statements as statement>
           <span class="email">
               <img class ="icon-email middle" src="${urls.images}/individual/emailIcon.gif" alt="email icon" />
-              <a href="mailto:${statement.value}" title="email">${statement.value}</a>
+              <a href="mailto:${statement.emailAddress!}" title="email">${statement.emailAddress!}</a>
           </span>
         </#list>
       </#if>
@@ -34,7 +36,7 @@
       <#if phone.statements?has_content> <#-- if there are any statements -->
         <#list phone.statements as statement>
           <span class="phone">
-            <img class ="icon-phone  middle" src="${urls.images}/individual/phoneIcon.gif" alt="phone icon" />${statement.value}
+            <img class ="icon-phone  middle" src="${urls.images}/individual/phoneIcon.gif" alt="phone icon" />${statement.number!}
           </span>
         </#list>
       </#if>
