@@ -9,7 +9,8 @@
                                              "http://www.w3.org/2006/vcard/ns#Email")!>
 <#assign phone = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/ARG_2000028",
                                              "http://www.w3.org/2006/vcard/ns#Telephone")!>
-<#assign webpage = propertyGroups.pullProperty("${core}webpage")!>
+<#assign webpage = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/ARG_2000028",
+                                               "http://www.w3.org/2006/vcard/ns#URL")!>
 <@showContact addresses email phone webpage />
 
 <#macro showContact addresses email phone webpage>
