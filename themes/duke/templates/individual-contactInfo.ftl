@@ -3,7 +3,8 @@
 <#import "lib-sequence.ftl" as s>
 
 <#-- Addresses  -->
-<#assign addresses = propertyGroups.pullProperty("${core}mailingAddress")!>
+<#assign addresses = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/ARG_2000028",
+                                                 "http://www.w3.org/2006/vcard/ns#Address")!>
 <#assign email = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/ARG_2000028",
                                              "http://www.w3.org/2006/vcard/ns#Email")!>
 <#assign phone = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/ARG_2000028",
