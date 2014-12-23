@@ -917,7 +917,7 @@ ul#individual-hasResearchArea li, ul#individual-geographicFocus li {
   width: 45%;
 }
 
-div.hideshow ul, #MentorshipAvailability p {
+div.hideshow ul[role=list], #MentorshipAvailability p {
   font-size:1.38em;
   line-height:1.3em;
   margin:10px 3px;
@@ -991,13 +991,6 @@ ul.subclass-property-list li {
 ul#individual-personInPosition {
 	list-style-type:circle;
 	padding-left:0;
-}
-
-.subclass-property-list {
-	margin:0;
-	padding:0!important;
-	margin:0;
-	font-size:1.38em;
 }
 
 #individual-intro.person {
@@ -3249,6 +3242,7 @@ body input {
 }
 .collate_header {
   margin-top: .75em;
+  font-size: 1.1em;
 }
 
 /**
