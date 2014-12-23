@@ -917,19 +917,19 @@ ul#individual-hasResearchArea li, ul#individual-geographicFocus li {
   width: 45%;
 }
 
-ul#individual-educationalTraining, ul#individual-hasResearchArea, ul#individual-geographicFocus, ul#individual-awardOrHonor, ul#individual-mentorshipAvailability, #MentorshipAvailability p {
-font-size:1.38em;
-line-height:1.3em;
-margin:10px 3px;
+div.hideshow ul, #MentorshipAvailability p {
+  font-size:1.38em;
+  line-height:1.3em;
+  margin:10px 3px;
 }
 
 ul#individual-advisorIn {
-line-height:1.3em;
-margin:10px 3px;
+  line-height:1.3em;
+  margin:10px 3px;
 }
 
-ul#individual-educationalTraining li {
-	margin:10px;
+div.hideshow ul li {
+  margin:10px;
 }
 
 ul#individual-outcomeOf li {

@@ -68,7 +68,7 @@
   <section id="individual-body" role="region">
     <ul class="section-navigation">
        <#-- Education -->
-        <#assign educations = propertyGroups.pullProperty("${core}educationalTraining")!>
+        <#assign educations = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000056", "${core}EducationalProcess")!>
         <@collapsiblePropertyListSection "Education" educations editable />
 
         <#-- Research Areas -->
