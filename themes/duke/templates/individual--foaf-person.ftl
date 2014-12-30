@@ -76,7 +76,7 @@
         <@collapsiblePropertyListSection "Keywords" researchAreas editable />
 
         <#-- Awards -->
-        <#assign awards = propertyGroups.pullProperty("${core}awardOrHonor")!>
+        <#assign awards = propertyGroups.pullProperty("${core}relatedBy", "${core}AwardReceipt")!>
         <@collapsiblePropertyListSection "Award" awards editable />
 
         <#-- Professional Activities -->
