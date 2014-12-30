@@ -2320,7 +2320,7 @@ h2 a.expanderLink {
 	padding:12px 8px;
 }
 
-.entity .document #individual-body ul li {
+.entity .document #individual-body ul[role=list] > li {
 	font-size:1.44em;
 	line-height:1.3em;
 	margin-left:8px;
