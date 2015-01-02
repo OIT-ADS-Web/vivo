@@ -92,7 +92,7 @@
         <@collapsiblePropertyListSection "ArtisticWork" artisticRelationships editable />
 
         <#-- Publication -->
-        <#assign authorships = propertyGroups.pullProperty("${core}authorInAuthorship")!>
+        <#assign authorships = propertyGroups.pullProperty("${core}relatedBy", "${core}Authorship")!>
         <@collapsiblePropertyListSection "Publication" authorships editable />
 
         <#-- Edited Pubs -->
