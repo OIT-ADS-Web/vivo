@@ -23,12 +23,10 @@
 
 <#macro simpleObjectPropertyListing property label template=property.template>
 
-    <#local localName = property.localName>
-
-    <h3 id="${localName}">${label} </h3>
-    <ul id="individual-${localName}" role="list">
-        <@objectProperty property false template />
-    </ul>
+  <h3 id='${label?replace(" ", "")}'>${label} </h3>
+  <ul id='individual-${label?replace(" ", "")}' role="list">
+    <@objectProperty property false template />
+  </ul>
 </#macro>
 
 <#macro navObjectPropertyListing property label template=property.template>

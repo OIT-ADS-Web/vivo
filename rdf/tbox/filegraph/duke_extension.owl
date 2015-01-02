@@ -460,4 +460,9 @@
     <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Document"/>
   </rdf:Description>
 
+  <!-- View Customizations -->
+  <rdf:Description rdf:about="http://vivoweb.org/ontology/core#AwardReceipt">
+      <vitro:customDisplayViewAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">individual--vivo-awardReceipt.ftl</vitro:customDisplayViewAnnot>
+  </rdf:Description>
+
 </rdf:RDF>
