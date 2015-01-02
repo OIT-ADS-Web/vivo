@@ -17,7 +17,7 @@
   <h1>${awardReceiptLabel}</h1>
 </header>
 
-<section id="topcontainer" class="main-content concept">
+<section id="topcontainer" class="main-content document">
   <section id="individual-body" role="region">
     <ul class="section-navigation">
       <#assign org = propertyGroups.pullProperty("http://vivoweb.org/ontology/core#assignedBy")!>
