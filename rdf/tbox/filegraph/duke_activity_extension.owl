@@ -264,11 +264,12 @@
     <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#AdvisingRelationship"/>
   </owl:DatatypeProperty>
 
-   <!-- View Customizations -->
-   <rdf:Description rdf:about="http://vivo.duke.edu/vivo/ontology/duke-activity-extension#ProfessionalActivity">
-       <vitro:customDisplayViewAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">individual--dukeact-professional-activity.ftl</vitro:customDisplayViewAnnot>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://vivoweb.org/ontology/core#AdvisingRelationship">
-     <vitro:customDisplayViewAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">individual--vivo-advising-relationship.ftl</vitro:customDisplayViewAnnot>
-   </rdf:Description>
+  <!-- View Customizations -->
+  <rdf:Description rdf:about="http://vivo.duke.edu/vivo/ontology/duke-activity-extension#ProfessionalActivity">
+      <vitro:customDisplayViewAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">individual--dukeact-professional-activity.ftl</vitro:customDisplayViewAnnot>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vivoweb.org/ontology/core#AdvisingRelationship">
+    <vitro:customDisplayViewAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">individual--vivo-advising-relationship.ftl</vitro:customDisplayViewAnnot>
+  </rdf:Description>
+
 </rdf:RDF>
