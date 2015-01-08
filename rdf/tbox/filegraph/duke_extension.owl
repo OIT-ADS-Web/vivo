@@ -483,4 +483,32 @@
       <vitro:customDisplayViewAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">individual--vivo-awardReceipt.ftl</vitro:customDisplayViewAnnot>
   </rdf:Description>
 
+  <rdf:Description rdf:about="http://purl.org/ontology/bibo/Document">
+    <vitro:customDisplayViewAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">individual--bibo-document.ftl</vitro:customDisplayViewAnnot>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://purl.org/ontology/bibo/Journal">
+    <vitro:customDisplayViewAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">individual--bibo-journal.ftl</vitro:customDisplayViewAnnot>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://vivoweb.org/ontology/core#FundingOrganization">
+    <vitro:customDisplayViewAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">individual--vivo-funding-organization.ftl</vitro:customDisplayViewAnnot>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+    <vitro:customDisplayViewAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">individual--skos-concept.ftl</vitro:customDisplayViewAnnot>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://vivoweb.org/ontology/core#Publisher">
+    <vitro:customDisplayViewAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">individual--vivo-publisher.ftl</vitro:customDisplayViewAnnot>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://vivoweb.org/ontology/core#Grant">
+    <vitro:customDisplayViewAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">individual--vivo-agreement.ftl</vitro:customDisplayViewAnnot>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://vivoweb.org/ontology/core#Course">
+    <vitro:customDisplayViewAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">individual--vivo-course.ftl</vitro:customDisplayViewAnnot>
+  </rdf:Description>
+
 </rdf:RDF>
