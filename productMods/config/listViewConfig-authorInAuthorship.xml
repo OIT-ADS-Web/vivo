@@ -53,7 +53,11 @@
             ?infoResource vitro:mostSpecificType ?subclass .
         } WHERE {
             ?subject ?property ?authorship .
-            ?authorship a core:Authorship . 
+            {?authorship a core:Authorship .}
+            UNION
+            {?authorship a core:Editorship .}
+            UNION
+            {?authorship a core:Translatorship .}
             ?authorship core:relates ?infoResource .
             ?infoResource a &lt;http://purl.obolibrary.org/obo/IAO_0000030&gt; .
             ?infoResource vitro:mostSpecificType ?subclass .
@@ -84,21 +88,27 @@
             {
                ?subject ?property ?authorship .
                ?authorship a core:Authorship 
-            }
-            UNION {
+            } UNION {
                ?subject ?property ?authorship .
                ?authorship a core:Editorship 
+            } UNION {
+               ?subject ?property ?authorship .
+               ?authorship a core:Translatorship 
             } UNION {
                ?subject ?property ?authorship .
                {?authorship a core:Authorship .}
                UNION
                {?authorship a core:Editorship .}
+               UNION
+               {?authorship a core:Translatorship .}
                ?authorship ?authorshipProperty ?authorshipValue 
             } UNION {
                ?subject ?property ?authorship .
                {?authorship a core:Authorship .}
                UNION
                {?authorship a core:Editorship .}
+               UNION
+               {?authorship a core:Translatorship .}
                ?authorship core:relates ?infoResource .
                ?infoResource a &lt;http://purl.obolibrary.org/obo/IAO_0000030&gt;  
             } UNION {
@@ -106,6 +116,8 @@
                {?authorship a core:Authorship .}
                UNION
                {?authorship a core:Editorship .}
+               UNION
+               {?authorship a core:Translatorship .}
                ?authorship core:relates ?infoResource .
                ?infoResource a &lt;http://purl.obolibrary.org/obo/IAO_0000030&gt; .
                ?infoResource ?infoResourceProperty ?infoResourceValue
@@ -114,6 +126,8 @@
                {?authorship a core:Authorship .}
                UNION
                {?authorship a core:Editorship .}
+               UNION
+               {?authorship a core:Translatorship .}
                ?authorship core:relates ?infoResource .
                ?infoResource a &lt;http://purl.obolibrary.org/obo/IAO_0000030&gt; .
                ?infoResource duke:linkToItem ?linkToItem
@@ -134,6 +148,8 @@
             {?authorship a core:Authorship .}
             UNION
             {?authorship a core:Editorship .}
+            UNION
+            {?authorship a core:Translatorship .}
             ?authorship core:relates ?infoResource .
             ?infoResource a &lt;http://purl.obolibrary.org/obo/IAO_0000030&gt; .
             ?infoResource core:dateTimeValue ?dateTimeValue .

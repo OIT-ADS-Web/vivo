@@ -113,9 +113,9 @@
     </#if>
 
     <#-- duke translators -->
-    <#assign dukeTranslators = propertyGroups.pullProperty("http://purl.org/ontology/bibo/translator")!>
+    <#assign dukeTranslators = propertyGroups.pullProperty("${core}relatedBy", "${core}Translatorship")!>
     <#if dukeTranslators?has_content>
-      <@simpleDataPropertyListing dukeTranslators "Duke Translators" />
+      <@simpleObjectPropertyListing dukeTranslators "Duke Translators" />
     </#if>
 
     <#-- cited translators -->

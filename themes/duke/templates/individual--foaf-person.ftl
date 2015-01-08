@@ -95,14 +95,6 @@
         <#assign authorships = propertyGroups.pullProperty("${core}relatedBy", "${core}Authorship")!>
         <@collapsiblePropertyListSection "Publication" authorships editable />
 
-        <#-- Edited Pubs -->
-        <#assign editorships = propertyGroups.pullProperty("${core}editorOf")!>
-        <@collapsiblePropertyListSection "Publication" editorships editable />
-
-        <#-- Translated Pubs -->
-        <#assign translatorships = propertyGroups.pullProperty("${core}translatorOf")!>
-        <@collapsiblePropertyListSection "Publication" translatorships editable />
-
         <#-- Grants -->
         <#assign grants = propertyGroups.pullProperty("${core}hasInvestigatorRole")!>
         <@collapsiblePropertyListSection "Grant" grants editable />
