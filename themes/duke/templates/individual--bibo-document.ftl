@@ -89,7 +89,7 @@
       </#if>
 
     <#-- duke authors -->
-    <#assign dukeAuthors = propertyGroups.pullProperty("${core}informationResourceInAuthorship")!>
+    <#assign dukeAuthors = propertyGroups.pullProperty("${core}relatedBy", "${core}Authorship")!>
     <#if dukeAuthors?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
       <@simpleObjectPropertyListing dukeAuthors "Duke Authors" />
     </#if>
@@ -101,7 +101,7 @@
     </#if>
 
     <#-- duke editors -->
-    <#assign dukeEditors = propertyGroups.pullProperty("${core}editor")!>
+    <#assign dukeEditors = propertyGroups.pullProperty("${core}relatedBy", "${core}Editorship")!>
     <#if dukeEditors?has_content>
       <@simpleObjectPropertyListing dukeEditors "Duke Editors" />
     </#if>
