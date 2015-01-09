@@ -27,3 +27,17 @@ local:informationResourceInTranslatorshipConfig a :ObjectPropertyDisplayConfig ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
     :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupoverview> .
 
+local:creatorInArtisticRelationshipContext a :ConfigContext ;
+    :hasConfiguration local:creatorInArtisticRelationshipConfig ;
+    :configContextFor <http://vivoweb.org/ontology/core#relatedBy> ;
+    :qualifiedByDomain <http://xmlns.com/foaf/0.1/Person> ;
+    :qualifiedBy      <http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticRelationship> .
+
+local:creatorInArtisticRelationshipConfig a :ObjectPropertyDisplayConfig ;
+    :listViewConfigFile "listViewConfig-creatorInArtisticRelationship.xml"^^xsd:string ;
+    :displayName "artistic works" ;
+    vitro:displayRankAnnot 15;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
+    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
+

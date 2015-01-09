@@ -88,7 +88,7 @@
         <@collapsiblePropertyListSection "GeographicFocus" regions editable />
 
         <#-- Artistic Works -->
-        <#assign artisticRelationships = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-art-extension#relatedBy")!>
+        <#assign artisticRelationships = propertyGroups.pullProperty("${core}relatedBy", "http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticRelationship")!>
         <@collapsiblePropertyListSection "ArtisticWork" artisticRelationships editable />
 
         <#-- Publication -->
