@@ -66,7 +66,7 @@
     </#if>
 
     <#-- collaborators -->
-    <#assign relatedCollaborators = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-art-extension#relatedBy")!>
+    <#assign relatedCollaborators = propertyGroups.pullProperty("${core}relatedBy", "http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticRelationship")!>
     <#if relatedCollaborators?has_content>
       <@simpleObjectPropertyListing relatedCollaborators "Duke Faculty Artists/Collaborators" />
     </#if>

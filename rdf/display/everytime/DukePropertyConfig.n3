@@ -41,3 +41,17 @@ local:creatorInArtisticRelationshipConfig a :ObjectPropertyDisplayConfig ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
     :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
 
+local:workInArtisticRelationshipContext a :ConfigContext ;
+    :hasConfiguration local:workInArtisticRelationshipConfig ;
+    :configContextFor <http://vivoweb.org/ontology/core#relatedBy> ;
+    :qualifiedByDomain <http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork> ;
+    :qualifiedBy      <http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticRelationship> .
+
+local:workInArtisticRelationshipConfig a :ObjectPropertyDisplayConfig ;
+    :listViewConfigFile "listViewConfig-workInArtisticRelationship.xml"^^xsd:string ;
+    :displayName "artistic relationship" ;
+    vitro:displayRankAnnot 15;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
+    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
+

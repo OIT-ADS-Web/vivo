@@ -6,11 +6,9 @@
   <#local relatedTitle>
       <#if statement.artWork??>
         <a href="${profileUrl(statement.uri("artWork"))}"  title="artistic work name">${statement.artWorkName}</a>.
-      <#elseif statement.artCreator??>
-        <a href="${profileUrl(statement.uri("artCreator"))}"  title="artistic creator name">${statement.artCreatorName}</a>.
       <#else>
-          <#-- This shouldn't happen, but we must provide for it -->
-          <a href="${profileUrl(statement.uri("artisticRelationship"))}" title="missing resource">missing artistic work or creator</a>.
+        <#-- This shouldn't happen, but we must provide for it -->
+        <a href="${profileUrl(statement.uri("artisticRelationship"))}" title="missing resource">missing artistic work</a>.
       </#if>
   </#local>
 
