@@ -2,6 +2,7 @@
 deploy.properties
 build.properties
 runtime.properties
+developer.properties
 
 #Build dir
 .build/
