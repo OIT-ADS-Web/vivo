@@ -10,16 +10,22 @@
 
 <section id="topcontainer" class="main-content document">
 
-  <#assign related = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-art-extension#relates")!>
-  <#assign statement = related.statements[0]>
-
-  <#if statement.artCreatorName??>
-    <#assign creatorName = statement.artCreatorName>
+  <#assign creator = propertyGroups.pullProperty("${core}relates", "http://xmlns.com/foaf/0.1/Person")!>
+  <#assign creatorStatement = creator.statements[0]>
+  <#if creatorStatement.artCreatorName??>
+    <#assign creatorName = creatorStatement.artCreatorName>
   <#else>
     <#assign creatorName = "no creator name found">
   </#if>
 
-  <#assign workName = "${creatorName} - ${statement.artWorkName}" >
+  <#assign work = propertyGroups.pullProperty("${core}relates", "http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork")!>
+  <#assign workStatement = work.statements[0]>
+  <#if workStatement.artWork??>
+    <#assign artWork = workStatement.artWork>
+    <#assign artWorkName = workStatement.artWorkName>
+  </#if>
+
+  <#assign workName = "${creatorName} - ${artWorkName}" >
 
   <section id="individual-info" ${infoClass!} role="region">
     <header>
@@ -44,24 +50,21 @@
   </section>
 
   <section id="individual-body" role="region">
-    <#assign statement = related.statements[0]>
-
-    <#if statement.artCreator??>
-      <#assign artCreator = statement.artCreator>
-      <#assign artCreatorName = statement.artCreatorName>
+    <#if creatorStatement.artCreator??>
+      <#assign artCreator = creatorStatement.artCreator>
+      <#assign artCreatorName = creatorStatement.artCreatorName>
       <h3>Described Artist</h3>
       <ul id="individual-artist" role="list">
-        <li><a href="${profileUrl(statement.uri("artCreator"))}" title="artistic creator name">${statement.artCreatorName}</a></li>
+        <li><a href="${profileUrl(creatorStatement.uri("artCreator"))}" title="artistic creator name">${creatorStatement.artCreatorName}</a></li>
       </ul>
     </#if>
 
-    <#if statement.artWork??>
-      <#assign artWork = statement.artWork>
-      <#assign artWorkName = statement.artWorkName>
+    <#if workStatement.artWork??>
       <h3>Described Artistic Work</h3>
       <ul id="individual-artist" role="list">
-        <li><a href="${profileUrl(statement.uri("artWork"))}" title="artistic work name">${statement.artWorkName}</a></li>
+        <li><a href="${profileUrl(workStatement.uri("artWork"))}" title="artistic work name">${workStatement.artWorkName}</a></li>
       </ul>
     </#if>
+
   </section>
 </section>

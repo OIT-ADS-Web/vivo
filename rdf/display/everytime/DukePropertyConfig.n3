@@ -55,3 +55,31 @@ local:workInArtisticRelationshipConfig a :ObjectPropertyDisplayConfig ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
     :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
 
+local:relatesArtisticCreatorContext a :ConfigContext ;
+    :hasConfiguration local:relatesArtisticCreatorConfig ;
+    :configContextFor <http://vivoweb.org/ontology/core#relates> ;
+    :qualifiedByDomain <http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticRelationship> ;
+    :qualifiedBy      <http://xmlns.com/foaf/0.1/Person> .
+
+local:relatesArtisticCreatorConfig a :ObjectPropertyDisplayConfig ;
+    :listViewConfigFile "listViewConfig-relatesArtisticCreator.xml"^^xsd:string ;
+    :displayName "artistic creator" ;
+    vitro:displayRankAnnot 15;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
+    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
+
+local:relatesArtisticWorkContext a :ConfigContext ;
+    :hasConfiguration local:relatesArtisticWorkConfig ;
+    :configContextFor <http://vivoweb.org/ontology/core#relates> ;
+    :qualifiedByDomain <http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticRelationship> ;
+    :qualifiedBy      <http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork> .
+
+local:relatesArtisticWorkConfig a :ObjectPropertyDisplayConfig ;
+    :listViewConfigFile "listViewConfig-relatesArtisticWork.xml"^^xsd:string ;
+    :displayName "artistic work" ;
+    vitro:displayRankAnnot 15;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
+    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
+
