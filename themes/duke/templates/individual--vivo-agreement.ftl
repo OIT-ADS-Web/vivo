@@ -18,12 +18,12 @@
     </header>
   </section>
   <section id="individual-body" role="region">
-    <#assign administeredBy = propertyGroups.pullProperty("${core}administeredBy")!>
+    <#assign administeredBy = propertyGroups.pullProperty("${core}relates", "${core}AdministratorRole")!>
     <#if administeredBy?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
       <@simpleObjectPropertyListing administeredBy "Administered By" />
     </#if>
 
-    <#assign grantAwardedBy = propertyGroups.pullProperty("${core}grantAwardedBy")!>
+    <#assign grantAwardedBy = propertyGroups.pullProperty("${core}assignedBy", "http://xmlns.com/foaf/0.1/Organization")!>
     <#if grantAwardedBy?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
       <@simpleObjectPropertyListing grantAwardedBy "Awarded By" />
     </#if>
