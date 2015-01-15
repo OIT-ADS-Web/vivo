@@ -28,17 +28,7 @@
       <@simpleObjectPropertyListing grantAwardedBy "Awarded By" />
     </#if>
 
-    <#assign hasSubGrant = propertyGroups.pullProperty("${core}hasSubGrant")!>
-    <#if hasSubGrant?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-      <@simpleObjectPropertyListing hasSubGrant "Sub Grants" />
-    </#if>
-
-    <#assign subGrantOf = propertyGroups.pullProperty("${core}subGrantOf")!>
-    <#if subGrantOf?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-      <@simpleObjectPropertyListing subGrantOf "Sub Grant Of" />
-    </#if>
-
-    <#assign contributingRole = propertyGroups.pullProperty("${core}contributingRole")!>
+    <#assign contributingRole = propertyGroups.pullProperty("${core}relates", "${core}InvestigatorRole")!>
     <#if contributingRole?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
       <@simpleObjectPropertyListing contributingRole "Contributors" />
     </#if>
