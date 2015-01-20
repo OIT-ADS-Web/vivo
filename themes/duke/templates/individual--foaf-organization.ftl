@@ -20,11 +20,11 @@
       </header>
     </section>
 
-    <#assign suborgs = propertyGroups.pullProperty("${core}hasSubOrganization")!>
+    <#assign suborgs = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/BFO_0000051")!>
 
     <ul class="section-navigation">
       <#-- Faculty -->
-      <#assign faculty = propertyGroups.pullProperty("${core}organizationForPosition")!>
+      <#assign faculty = propertyGroups.pullProperty("${core}relatedBy", "${core}Position")!>
       <@collapsiblePropertyListSection "OrganizationFaculty" faculty editable />
 
       <#-- Grants -->
