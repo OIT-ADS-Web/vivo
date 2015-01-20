@@ -28,7 +28,7 @@
       <@collapsiblePropertyListSection "OrganizationFaculty" faculty editable />
 
       <#-- Grants -->
-      <#assign grants  = propertyGroups.pullProperty("${core}administers")!>
+      <#assign grants  = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000053", "${core}AdministratorRole")!>
       <@collapsiblePropertyListSection "OrganizationGrant" grants editable />
 
       <#-- Sub-Orgs -->
