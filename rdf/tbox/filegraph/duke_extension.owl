@@ -330,7 +330,7 @@
 
   <rdf:Description rdf:about="http://vivo.duke.edu/vivo/ontology/duke-extension#StudentPosition">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="en-US">Student Position</rdfs:label>
+    <rdfs:label xml:lang="en-US">Student</rdfs:label>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">student position</vitro:shortDef>
     <vitro:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</vitro:displayLimitAnnot>
     <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</vitro:displayRankAnnot>

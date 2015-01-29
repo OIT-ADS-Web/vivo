@@ -1552,7 +1552,7 @@ vivo:PopulatedPlace
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 vivo:FacultyAdministrativePosition
-      rdfs:label "Faculty Administrative Position"@en-US ;
+      rdfs:label "Administrative Position"@en-US ;
       vitro:displayLimitAnnot
               "-1"^^xsd:int ;
       vitro:displayRankAnnot
@@ -7236,7 +7236,7 @@ vivo:PresenterRole
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 vivo:PrimaryPosition
-      rdfs:label "Primary Position"@en-US , "Primary Position"@en-US ;
+      rdfs:label "Primary Appointment"@en-US , "Primary Appointment"@en-US ;
       vitro:displayLimitAnnot
               "5"^^xsd:int ;
       vitro:displayRankAnnot
@@ -8082,7 +8082,7 @@ bibo:Quote
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 vivo:NonFacultyAcademicPosition
-      rdfs:label "Non-Faculty Academic Position"@en-US ;
+      rdfs:label "Non-Faculty Position"@en-US ;
       vitro:displayLimitAnnot
               "-1"^^xsd:int ;
       vitro:displayRankAnnot
