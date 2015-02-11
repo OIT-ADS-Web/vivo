@@ -117,7 +117,7 @@
     </owl:inverseOf>
     <rdfs:label xml:lang="en-US">Performed by</rdfs:label>
     <vitro:collateBySubclassAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
-    >true</vitro:collateBySubclassAnnot>
+    >false</vitro:collateBySubclassAnnot>
     <vitro:selectFromExistingAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
     >true</vitro:selectFromExistingAnnot>
     <rdfs:domain rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-activity-extension#ProfessionalActivity"/>
