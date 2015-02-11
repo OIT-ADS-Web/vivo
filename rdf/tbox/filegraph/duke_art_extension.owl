@@ -42,7 +42,7 @@
       >-1</vitro:displayLimitAnnot>
     <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
       >-1</vitro:displayRankAnnot>
-    <rdfs:label xml:lang="en-US">Artistic Work</rdfs:label>
+    <rdfs:label xml:lang="en-US">Artistic and Documentary Work</rdfs:label>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
       >An artistic work</vitro:shortDef>
   </owl:Class>
@@ -327,7 +327,7 @@
   </owl:Class>
 
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#MultipleTypes">
-    <rdfs:label xml:lang="en-US">Multiple Types</rdfs:label>
+    <rdfs:label xml:lang="en-US">Mixed Media</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Multiple Types</vitro:shortDef>

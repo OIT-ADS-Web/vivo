@@ -55,6 +55,7 @@ Rules cribbed from http://kuwamoto.org/2007/12/17/improved-pluralizing-in-php-ac
     'lighting design',
     'new media',
     'digital media',
+    'mixed media',
     'expertise',
     'PhD',
     'postdoc',
