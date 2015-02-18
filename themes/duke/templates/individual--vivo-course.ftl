@@ -20,7 +20,7 @@
   <section id="individual-body" role="region">
   <#-- instructors -->
   <ul class="section-navigation">
-  <#assign realizedRole = propertyGroups.pullProperty("${core}realizedRole")!>
+  <#assign realizedRole = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/BFO_0000055")!>
   <#if realizedRole?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
     <@simpleCollapsiblePropertyListSection realizedRole "Instructors" />
   </#if>
