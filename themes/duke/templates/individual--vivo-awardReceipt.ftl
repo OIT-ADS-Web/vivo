@@ -30,6 +30,13 @@
       <#if recipients?has_content>
         <@simpleObjectPropertyListing recipients "Recipient" />
       </#if>
+
+      <#-- date -->
+      <#assign awardedDate = propertyGroups.pullProperty("${core}dateTimeValue")!>
+      <#if awardedDate?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+        <@simpleObjectPropertyListing awardedDate "Award Date" />
+      </#if>
+
     </ul>
   </section>
 </section>
