@@ -23,6 +23,13 @@
     </#if>  
 </#macro>
 
+<#macro intervalSpan startDateTime="" startDateTimePrecision="yearPrecision" endDateTime="" endDateTimePrecision="yearPrecision" endAsRange=false>
+  <#local interval = dateTimeIntervalLong(startDateTime, startDateTimePrecision, endDateTime, endDateTimePrecision, endAsRange)>
+  <#if interval?has_content>
+    <@dateTimeSpan>${interval}</@dateTimeSpan>
+  </#if>
+</#macro>
+
 <#-- Display the datetime value or interval in a classed span appropriate for 
      a property statement list -->
 <#macro dateTimeSpan>

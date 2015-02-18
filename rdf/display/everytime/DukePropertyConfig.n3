@@ -97,3 +97,16 @@ local:contributingRoleConfig a :ObjectPropertyDisplayConfig ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
     :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupresearch> .
 
+local:outcomeOfEventContext a :ConfigContext ;
+    :hasConfiguration local:outcomeOfEventConfig ;
+    :configContextFor <http://purl.obolibrary.org/obo/RO_0002233> ;
+    :qualifiedByDomain <http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork> ;
+    :qualifiedBy      <http://purl.org/NET/c4dm/event.owl#Event> .
+
+local:outcomeOfEventConfig a :ObjectPropertyDisplayConfig ;
+    :listViewConfigFile "listViewConfig-outcomeOfEvent.xml"^^xsd:string ;
+    :displayName "artistic event" ;
+    vitro:displayRankAnnot 15;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
+    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .

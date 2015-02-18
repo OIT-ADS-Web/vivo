@@ -21,7 +21,7 @@
   </#local>
 
   <#local date>
-    <@dt.intervalSpan "${statement.startDate!}" "${statement.startDatePrecisionLabel!}" "${statement.endDate!}" "${statement.endDatePrecisionLabel!}" false />
+    <@dt.intervalSpan "${statement.startDate!}" "${statement.startDatePrecision!}" "${statement.endDate!}" "${statement.endDatePrecision!}" />
   </#local>
 
 ${title} ${description} ${venue} ${date}
