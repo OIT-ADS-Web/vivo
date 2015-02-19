@@ -7818,7 +7818,7 @@ vivo:hrJobTitle
       rdfs:label "Phase 1"@en-US .
 
 vivo:hasResearchArea
-      rdfs:label "keywords"@en-US ;
+      rdfs:label "subject headings"@en-US ;
       vitro:customEntryFormAnnot
               "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.AddAssociatedConceptGenerator"^^xsd:string ;
       vitro:displayLimitAnnot
