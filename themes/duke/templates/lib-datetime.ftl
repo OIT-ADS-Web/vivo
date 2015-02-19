@@ -73,7 +73,10 @@
                 ${start}&nbsp;-&nbsp;${end}
             </#if>
         <#elseif start??>
-            ${start} -
+            ${start}
+            <#if endAsRange>
+              &nbsp;-&nbsp;
+            </#if>
         <#elseif end??>
             <#if endAsRange>-&nbsp;</#if>${end}
         </#if>
