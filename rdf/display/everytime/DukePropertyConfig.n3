@@ -36,6 +36,8 @@ local:creatorInArtisticRelationshipContext a :ConfigContext ;
 local:creatorInArtisticRelationshipConfig a :ObjectPropertyDisplayConfig ;
     :listViewConfigFile "listViewConfig-creatorInArtisticRelationship.xml"^^xsd:string ;
     :displayName "artistic and documentary works" ;
+    vitro:collateBySubclassAnnot
+              "true"^^xsd:boolean;
     vitro:displayRankAnnot 15;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
