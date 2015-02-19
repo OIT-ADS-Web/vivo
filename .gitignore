@@ -18,3 +18,5 @@ revisionInfo
 .classpath
 .project
 .settings
+
+.DS_Store
