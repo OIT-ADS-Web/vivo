@@ -3245,6 +3245,24 @@ body input {
   font-size: 1.1em;
 }
 
+a.more-less {
+  margin-bottom: .8em;
+  padding: .5em .8em;
+  font-size: .9em;
+  background: #49AFCD;
+  background-image: linear-gradient(to bottom, #5BC0DE, #2F96B4);
+  background-repeat: repeat-x;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  color: #FFFFFF;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+a:hover.more-less {
+  color: black;
+  background: #B2D15A;
+}
+
 /**
   * SVG ICONS
   */
