@@ -42,9 +42,9 @@
       >-1</vitro:displayLimitAnnot>
     <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
       >-1</vitro:displayRankAnnot>
-    <rdfs:label xml:lang="en-US">Artistic and Documentary Work</rdfs:label>
+    <rdfs:label xml:lang="en-US">Artistic Work and Non-Print Media</rdfs:label>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-      >An artistic work</vitro:shortDef>
+      >An artistic work or non-print media</vitro:shortDef>
   </owl:Class>
 
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticRelationship">
