@@ -7,6 +7,7 @@
 
    <#-- capitalize after hyphen -->
    <#local title = title?replace("Non-faculty", "Non-Faculty")>
+   <#local title = title?replace("Non-print", "Non-Print")>
 
    <#-- lower case small words -->
    <#local title = title?replace(" And "," and ")>
