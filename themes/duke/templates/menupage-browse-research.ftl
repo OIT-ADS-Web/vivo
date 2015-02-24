@@ -30,23 +30,29 @@
 
 
 
-            <#assign activitySubclasses = ['Service to the Profession', 'Service to the University', 'Awards & Honors', 'Outreach & Engaged Scholarship', 'Students/Advising/Mentoring', 'Presentations & Appearances'] />
+            <#assign activitySubclasses = ['Service to the Profession', 'Service to the University', 'Award or Honor', 'Outreach & Engaged Scholarship', 'Students/Advising/Mentoring', 'Presentations & Appearances'] />
             <#assign grantSubclasses = ["Grant","Grants","Clinical Trial Grant","Conference Grant","Construction Renovation Grant","Equipment Grant","Fellowship Grant","Institutional Support Grant","Institutional Training Grant","Professorship","Public Service Grant","Research Grant"] />
-            <#assign workSubclasses = ["Audio Recording",
+            <#assign workSubclasses = ["Artistic Work and Non-Print Media", "Audio Recording",
                                        "Ceramic","Choreography","Composition","Costume Design","CostumeDesign"
-                                       "Dance","Decorative Art","Digital Media","Drawing",
+                                       "Dance",
+                                       "Dance Production",
+                                       "Decorative Art","Digital Media","Drawing",
                                        "Exhibit",
                                        "Film",
                                        "Graphic Design",
                                        "Illustration","Installation",
                                        "Lighting Design",
                                        "Motion Graphics","Multiple Types","Musical Composition","Musical Performance",
-                                       "New Media",
+                                       "Mixed Media", "New Media",
                                        "Painting","Photograph","Print",
                                        "Radio / Television Program","Repertoire / Portfolio",
                                        "Radio/Television Program","Repertoire/Portfolio",
                                        "Sculpture","Set Design",
+                                       "Script",
+                                       "Sound Design",
                                        "Theatrical Performance",
+                                       "Theatrical Production",
+                                       "Theatrical Production / Dance",
                                        "Video","Video Recording"] />
 
             <#assign ignoreClasses = ["Article","Artistic Work","Artistic Relationship"] />

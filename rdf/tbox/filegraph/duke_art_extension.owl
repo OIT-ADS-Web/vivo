@@ -51,7 +51,6 @@
     <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#Relationship"/>
     <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
     <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
-    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
       >-1</vitro:displayLimitAnnot>
     <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
@@ -113,6 +112,7 @@
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#AudioRecording">
     <rdfs:label xml:lang="en-US">Audio Recording</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Audio Recording</vitro:shortDef>
   </owl:Class>
@@ -120,6 +120,7 @@
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#Ceramic">
     <rdfs:label xml:lang="en-US">Ceramic</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Ceramic</vitro:shortDef>
   </owl:Class>
@@ -127,6 +128,7 @@
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#Composition">
     <rdfs:label xml:lang="en-US">Composition</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Composition</vitro:shortDef>
   </owl:Class>
@@ -134,6 +136,7 @@
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#Choreography">
     <rdfs:label xml:lang="en-US">Choreography</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Choreography</vitro:shortDef>
   </owl:Class>
@@ -141,6 +144,7 @@
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#MusicalComposition">
     <rdfs:label xml:lang="en-US">Musical Composition</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Musical Composition</vitro:shortDef>
   </owl:Class>
@@ -148,6 +152,7 @@
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#CostumeDesign">
     <rdfs:label xml:lang="en-US">Costume Design</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Costume Design</vitro:shortDef>
   </owl:Class>
@@ -155,6 +160,7 @@
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#DanceProduction">
     <rdfs:label xml:lang="en-US">Dance Production</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Dance Production</vitro:shortDef>
   </owl:Class>
@@ -162,6 +168,7 @@
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#DecorativeArt">
     <rdfs:label xml:lang="en-US">Decorative Art</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Decorative Art</vitro:shortDef>
   </owl:Class>
@@ -169,6 +176,7 @@
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#DigitalMedia">
     <rdfs:label xml:lang="en-US">Digital Media</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Digital Media</vitro:shortDef>
   </owl:Class>
@@ -176,6 +184,7 @@
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#Drawing">
     <rdfs:label xml:lang="en-US">Drawing</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Drawing</vitro:shortDef>
   </owl:Class>
@@ -183,6 +192,7 @@
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#Exhibit">
     <rdfs:label xml:lang="en-US">Exhibit</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Exhibit</vitro:shortDef>
   </owl:Class>
@@ -190,6 +200,7 @@
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#Film">
     <rdfs:label xml:lang="en-US">Film</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Film</vitro:shortDef>
   </owl:Class>
@@ -197,6 +208,7 @@
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#GraphicDesign">
     <rdfs:label xml:lang="en-US">Graphic Design</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Graphic Design</vitro:shortDef>
   </owl:Class>
@@ -204,6 +216,7 @@
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#Illustration">
     <rdfs:label xml:lang="en-US">Illustration</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Illustration</vitro:shortDef>
   </owl:Class>
@@ -211,6 +224,7 @@
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#Installation">
     <rdfs:label xml:lang="en-US">Installation</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Installation</vitro:shortDef>
   </owl:Class>
@@ -218,6 +232,7 @@
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#LightingDesign">
     <rdfs:label xml:lang="en-US">Lighting Design</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Lighting Design</vitro:shortDef>
   </owl:Class>
@@ -225,6 +240,7 @@
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#MotionGraphics">
     <rdfs:label xml:lang="en-US">Motion Graphics</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Motion Graphics</vitro:shortDef>
   </owl:Class>
@@ -232,6 +248,7 @@
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#MusicalPerformance">
     <rdfs:label xml:lang="en-US">Musical Performance</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Musical Performance</vitro:shortDef>
   </owl:Class>
@@ -239,6 +256,7 @@
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#NewMedia">
     <rdfs:label xml:lang="en-US">New Media</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >New Media</vitro:shortDef>
   </owl:Class>
@@ -246,6 +264,7 @@
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#Painting">
     <rdfs:label xml:lang="en-US">Painting</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Painting</vitro:shortDef>
   </owl:Class>
@@ -253,6 +272,7 @@
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#Photograph">
     <rdfs:label xml:lang="en-US">Photograph</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Photograph</vitro:shortDef>
   </owl:Class>
@@ -260,6 +280,7 @@
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#Print">
     <rdfs:label xml:lang="en-US">Print</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Print</vitro:shortDef>
   </owl:Class>
@@ -267,6 +288,7 @@
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#RadioTelevisionProgram">
     <rdfs:label xml:lang="en-US">Radio/Television Program</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Radio/Television Program</vitro:shortDef>
   </owl:Class>
@@ -274,6 +296,7 @@
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#RepertoirePortfolio">
     <rdfs:label xml:lang="en-US">Repertoire/Portfolio</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Repertoire/Portfolio</vitro:shortDef>
   </owl:Class>
@@ -282,11 +305,13 @@
     <rdfs:label xml:lang="en-US">Script</rdfs:label>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Script</vitro:shortDef>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
   </owl:Class>
 
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#Sculpture">
     <rdfs:label xml:lang="en-US">Sculpture</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Sculpture</vitro:shortDef>
   </owl:Class>
@@ -294,6 +319,7 @@
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#SetDesign">
     <rdfs:label xml:lang="en-US">Set Design</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Set Design</vitro:shortDef>
   </owl:Class>
@@ -301,6 +327,7 @@
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#SoundDesign">
     <rdfs:label xml:lang="en-US">Sound Design</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Sound Design</vitro:shortDef>
   </owl:Class>
@@ -308,6 +335,7 @@
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#TheatricalProduction">
     <rdfs:label xml:lang="en-US">Theatrical Production</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Theatrical Production</vitro:shortDef>
   </owl:Class>
@@ -315,6 +343,7 @@
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#TheatricalProductionDance">
     <rdfs:label xml:lang="en-US">Theatrical Production / Dance</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Theatrical Production / Dance</vitro:shortDef>
   </owl:Class>
@@ -322,6 +351,7 @@
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#VideoRecording">
     <rdfs:label xml:lang="en-US">Video Recording</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Video Recording</vitro:shortDef>
   </owl:Class>
@@ -329,6 +359,7 @@
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#MultipleTypes">
     <rdfs:label xml:lang="en-US">Mixed Media</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Mixed Media</vitro:shortDef>
   </owl:Class>
