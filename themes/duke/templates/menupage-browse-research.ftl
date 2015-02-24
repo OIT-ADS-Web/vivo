@@ -28,9 +28,8 @@
         <ul id="browse-classes">
             <li class="browse_header">Browse By</li>
 
-
-
             <#assign activitySubclasses = ['Service to the Profession', 'Service to the University', 'Award or Honor', 'Outreach & Engaged Scholarship', 'Students/Advising/Mentoring', 'Presentations & Appearances'] />
+            <#assign venueSubclasses = ["Journal", "Newspaper"] />
             <#assign grantSubclasses = ["Grant","Grants","Clinical Trial Grant","Conference Grant","Construction Renovation Grant","Equipment Grant","Fellowship Grant","Institutional Support Grant","Institutional Training Grant","Professorship","Public Service Grant","Research Grant"] />
             <#assign workSubclasses = ["Artistic Work and Non-Print Media", "Audio Recording",
                                        "Ceramic","Choreography","Composition","Costume Design","CostumeDesign"
@@ -70,6 +69,8 @@
 
                 <#if (workSubclasses?seq_contains(vClass.name) && vClass.entityCount > 0)>
                   <#assign workMenuItems = workMenuItems + [vClass] />
+                <#if (venueSubclasses?seq_contains(vClass.name) && vClass.entityCount > 0)>
+                  <#assign venueMenuItems = venueMenuItems + [vClass] />
                 <#elseif (grantSubclasses?seq_contains(vClass.name) && vClass.entityCount > 0)>
                   <#assign grantMenuItems = grantMenuItems + [vClass] />
                 <#elseif (activitySubclasses?seq_contains(vClass.name) && vClass.entityCount > 0)>
@@ -124,6 +125,26 @@
                       <#assign workName = vClass.name />
                     </#if>
                     <li id="${vClassCamel}"><a href="#${vClassCamel}" title="Browse all individuals in this class" data-uri="${vClass.URI}">${workName} <span class="count-classes">(${vClass.entityCount})</span></a></li>
+                </#if>
+            </#list>
+            </ul>
+            </li>
+            </#if>
+
+            <#if (venueMenuItems?size > 0)>
+            <li class="menu_header">
+              Publication Venues
+            <ul>
+            <#list venueMenuItems as vClass>
+                <#assign vClassCamel = str.camelCase(vClass.name) />
+                <#if (vClass.entityCount > 0)>
+                    <#assign venuePosition = vClass.name?last_index_of("Journal") />
+                    <#if (venuePosition > 0)>
+                      <#assign venueName = vClass.name?substring(0,venuePosition) />
+                    <#else>
+                      <#assign venueName = vClass.name />
+                    </#if>
+                    <li id="${vClassCamel}"><a href="#${vClassCamel}" title="Browse all individuals in this class" data-uri="${vClass.URI}">${venueName} <span class="count-classes">(${vClass.entityCount})</span></a></li>
                 </#if>
             </#list>
             </ul>
