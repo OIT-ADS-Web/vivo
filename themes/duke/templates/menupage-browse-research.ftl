@@ -152,26 +152,6 @@
             </li>
             </#if>
 
-            <#if (activityMenuItems?size > 0)>
-              <li class="menu_header">
-              Professional Activities
-              <ul>
-              <#list activityMenuItems as vClass>
-                <#assign vClassCamel = str.camelCase(vClass.name) />
-                <#if (vClass.entityCount > 0)>
-                    <#assign activity = vClass.name?last_index_of("ProfessionalActivity") />
-                    <#if (activity > 0)>
-                      <#assign activityName = vClass.name?substring(0,activity) />
-                    <#else>
-                      <#assign activityName = vClass.name />
-                    </#if>
-                    <li id="${vClassCamel}"><a href="#${vClassCamel}" title="Browse all individuals in this class" data-uri="${vClass.URI}">${activityName} <span class="count-classes">(${vClass.entityCount})</span></a></li>
-                </#if>
-              </#list>
-              </ul>
-              </li>
-            </#if>
-
         </ul>
     </nav>
 </section>
