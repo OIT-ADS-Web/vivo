@@ -58,6 +58,7 @@
 
             <#assign grantMenuItems = [] />
             <#assign workMenuItems = [] />
+            <#assign venueMenuItems = [] />
             <#assign activityMenuItems = [] />
 
             <li class="menu_header">
@@ -69,7 +70,7 @@
 
                 <#if (workSubclasses?seq_contains(vClass.name) && vClass.entityCount > 0)>
                   <#assign workMenuItems = workMenuItems + [vClass] />
-                <#if (venueSubclasses?seq_contains(vClass.name) && vClass.entityCount > 0)>
+                <#elseif (venueSubclasses?seq_contains(vClass.name) && vClass.entityCount > 0)>
                   <#assign venueMenuItems = venueMenuItems + [vClass] />
                 <#elseif (grantSubclasses?seq_contains(vClass.name) && vClass.entityCount > 0)>
                   <#assign grantMenuItems = grantMenuItems + [vClass] />
