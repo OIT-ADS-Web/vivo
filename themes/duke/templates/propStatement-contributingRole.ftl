@@ -1,5 +1,4 @@
 <#import "lib-sequence.ftl" as s>
-<#import "lib-datetime.ftl" as dt>
 
 <@showRole statement property  />
 
@@ -32,6 +31,6 @@
         </#if>
     </#local>
 
-    ${linkedIndividual} ${roleLabel} <@dt.yearIntervalSpan "${statement.dateTimeStart!}" "${statement.dateTimeEnd!}" />
+    ${linkedIndividual} ${roleLabel}
 
 </#macro>

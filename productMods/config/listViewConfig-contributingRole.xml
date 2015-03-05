@@ -47,7 +47,7 @@ http://vivoweb.org/ontology/core#realizedRole and http://vivoweb.org/ontology/co
                         ?roleLabel
                         ?indivInRole (afn:localname(?indivInRole) AS ?indivName)
                         ?indivLabel
-                        ?dateTimeInterval ?dateTimeStart ?dateTimeEnd WHERE {
+         WHERE {
 
             ?subject ?property ?role.
             ?role a core:InvestigatorRole.
@@ -63,14 +63,6 @@ http://vivoweb.org/ontology/core#realizedRole and http://vivoweb.org/ontology/co
                        OPTIONAL { ?indivInRole rdfs:label ?indivLabel }
                      }
 
-            OPTIONAL { ?role core:dateTimeInterval ?dateTimeInterval
-                       OPTIONAL { ?dateTimeInterval core:start ?dateTimeStartValue .
-                                  ?dateTimeStartValue core:dateTime ?dateTimeStart
-                                }
-                       OPTIONAL { ?dateTimeInterval core:end ?dateTimeEndValue .
-                                  ?dateTimeEndValue core:dateTime ?dateTimeEnd
-                                }
-                     }
         } ORDER BY <collated>?roleLabel</collated> ?indivLabel ?roleTypeLabel ?indivName
     </query-select>
 
@@ -103,36 +95,6 @@ http://vivoweb.org/ontology/core#realizedRole and http://vivoweb.org/ontology/co
                ?role obo:RO_0000052 ?indivInRole .
                ?indivInRole rdfs:label ?indivLabel
             }
-        }
-    </query-construct>
-
-    <query-construct>
-        PREFIX core: &lt;http://vivoweb.org/ontology/core#&gt;
-        CONSTRUCT {
-            ?subject ?property ?role .
-            ?role core:dateTimeInterval ?dateTimeInterval .
-            ?dateTimeInterval core:start ?dateTimeStartValue .
-            ?dateTimeStartValue core:dateTime ?dateTimeStart
-        } WHERE {
-            ?subject ?property ?role .
-            ?role core:dateTimeInterval ?dateTimeInterval .
-            ?dateTimeInterval core:start ?dateTimeStartValue .
-            ?dateTimeStartValue core:dateTime ?dateTimeStart
-        }
-    </query-construct>
-
-    <query-construct>
-        PREFIX core: &lt;http://vivoweb.org/ontology/core#&gt;
-        CONSTRUCT {
-            ?subject ?property ?role .
-            ?role core:dateTimeInterval ?dateTimeInterval .
-            ?dateTimeInterval core:end ?dateTimeEndValue .
-            ?dateTimeEndValue core:dateTime ?dateTimeEnd
-        } WHERE {
-            ?subject ?property ?role .
-            ?role core:dateTimeInterval ?dateTimeInterval .
-            ?dateTimeInterval core:end ?dateTimeEndValue .
-            ?dateTimeEndValue core:dateTime ?dateTimeEnd
         }
     </query-construct>
 
