@@ -3289,6 +3289,21 @@ a:hover.more-less {
 }
 
 /**
+* HOMEPAGE UPDATES
+*/
+div.updates {
+  background-color: lightgray;
+  font-size: 1.4em;
+  margin: 0.5em;
+  padding: 0.8em;
+}
+
+div.updates a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/**
   * HOMEPAGE WIDGETS
   */
 .widgets .widget {

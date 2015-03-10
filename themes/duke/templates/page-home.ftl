@@ -51,6 +51,10 @@
                 initCarousel();
               </script>
 
+              <div class="updates">
+                <a href="http://about.scholars.duke.edu/recent-updates">Read Updates From the Scholars Team >></a>
+              </div>
+
               <div class="widgets ">
 
                 <div class="widget one-third">
