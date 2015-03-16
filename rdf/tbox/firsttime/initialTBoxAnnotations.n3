@@ -2059,7 +2059,7 @@ obo:ARG_2000080
      rdfs:label "American Board of Pediatrics"@en-US .
 
 bibo:AcademicArticle
-      rdfs:label "Academic Article"@en-US ;
+      rdfs:label "Journal Article"@en-US ;
       vitro:displayLimitAnnot
               "-1"^^xsd:int ;
       vitro:displayRankAnnot
