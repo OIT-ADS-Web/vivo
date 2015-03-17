@@ -2,4 +2,5 @@
 @prefix core: <http://vivoweb.org/ontology/core#> .
 
 vitroDisplay:SearchIndex 
+  vitroDisplay:excludeClass core:Award ;
   vitroDisplay:excludeClass core:Translatorship .
