@@ -122,7 +122,7 @@
                           <p>
                               ${statement.value}
                           </p>
-                          <@p.editingLinks "${mentorOverview.name}" statement editable />
+                          <@p.editingLinks "${mentorOverview.localName}" "${mentorOverview.name}" statement editable />
                       </div>
                   </#list>
               </#if>
