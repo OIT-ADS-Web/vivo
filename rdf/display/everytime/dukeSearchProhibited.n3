@@ -1,0 +1,5 @@
+@prefix vitroDisplay: <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#> .
+@prefix core: <http://vivoweb.org/ontology/core#> .
+
+vitroDisplay:SearchIndex 
+  vitroDisplay:excludeClass core:Translatorship .
