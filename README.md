@@ -7,7 +7,7 @@ For a more detailed explanation of setting up the VIVO environment, consult the 
 
 ###VIVO 1.7
 ~~~
-$ git clone https://github.com/lawlesst/vivo-project-template.git vivo
+$ git clone git@git.oit.duke.edu:vivo.git
 $ cd vivo
 $ git submodule init
 #Pull in VIVO and Vitro.  This will take a few minutes.
