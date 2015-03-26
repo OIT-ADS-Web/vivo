@@ -6,7 +6,7 @@
 <#assign addresses = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/ARG_2000028",
                                                  "http://www.w3.org/2006/vcard/ns#Address")!>
 <#assign email = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/ARG_2000028",
-                                             "http://www.w3.org/2006/vcard/ns#Email")!>
+                                             "http://www.w3.org/2006/vcard/ns#Work")!>
 <#assign phone = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/ARG_2000028",
                                              "http://www.w3.org/2006/vcard/ns#Telephone")!>
 <#assign webpage = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/ARG_2000028",
