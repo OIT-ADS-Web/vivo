@@ -366,6 +366,16 @@
     <rdfs:label xml:lang="en-US">Other Article</rdfs:label>
   </owl:Class>
 
+  <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-extension#DigitalPublication">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
+    <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Publication</vitro:shortDef>
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Document"/>
+    <rdfs:label xml:lang="en-US">Digital Publication</rdfs:label>
+  </owl:Class>
+
   <rdf:Description rdf:about="http://vivo.duke.edu/vivo/ontology/duke-extension#ClinicalTrialGrant">
     <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#Grant"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
