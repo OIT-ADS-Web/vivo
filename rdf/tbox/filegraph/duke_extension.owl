@@ -464,7 +464,7 @@
   </owl:ObjectProperty>
 
   <rdf:Description rdf:about="http://vivoweb.org/ontology/core#Software">
-    <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/bibo#Document"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Document"/>
   </rdf:Description>
 
   <rdf:Description rdf:about="http://vivoweb.org/ontology/core#Dataset">
