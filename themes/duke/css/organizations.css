@@ -1,91 +1,75 @@
-#organization-info{
-width:100%;
-margin:10px 0;
+#organization-info {
+    width: 100%;
+    margin: 10px 0;
+}
+                    // ^conflicts w/ duke
+
+
+#organization-body {
+    float: left;
 }
 
-
-#organization-info h2{
-color: #A1B70D;
-font-size:1.5em;
-
+#organization-visualizations {
+    width: 20%;
+    padding: 10px;
+    float: right;
 }
-
-#organization-info #overview{
-display:none;
-}
-
-#organization-content-wrapper{
-width:100%;
-margin-top:1.250em;
-}
-
-#organization-body{
-width:70%;
-float:left;
-
-}
-
-
-#organization-visualizations{
-width:20%;
-padding:10px;
-float:right;
-
-}
+                    // ^conflicts w/ duke
 
 
 #orgNavigation {
     margin: 0;
 }
-#orgNavigation ul {
-  margin:0;
-}
+                    // ^conflicts w/ duke
+
+
 #orgNavigation a.organization {
     margin-left: 1.250em;
 }
+                    // ^conflicts w/ duke
+
+
 #orgNavigation a.parent {
     margin-left: 0;
 }
-#orgNavigation ul{
-    padding: 0.25em  0;
+
+#orgNavigation ul {
+    margin: 0;
+    padding: 0.25em .5em;
 }
 
 #orgNavigation li {
-    padding: 0.25em  0;
+    padding: 0.25em  .5em;
     border-top: 1px solid #BBBBBB;
 }
+                    // ^conflicts w/ duke
 
- #orgNavigation li ul {
-    padding: 0.25em .5em;
-}
+
 #orgNavigation a {
     text-decoration: none;
 }
+
 #orgNavigation img {
     vertical-align: middle;
 }
+
 #orgNavigation a.organization {
     padding-left: 0.25em;
 }
+
 #orgNavigation a.organization:hover {
     text-decoration: underline;
 }
 
 #organization_people {
-        border-top: 1px solid #BBBBBB;
+    border-top: 1px solid #BBBBBB;
 }
 
-#individual-organizationForPosition li{
-        padding: 0.25em 1em;
-        border-top: 1px solid #BBBBBB;
-
+#individual-organizationForPosition li {
+    padding: 0.25em 1em;
+    border-top: 1px solid #BBBBBB;
 }
-
 
 #individual-administers {
-     padding: 0.25em 2em;
-}
-
-
-#wrapper-content {
+    padding: 0.25em 2em;
 }
