@@ -56,6 +56,8 @@
 #orgNavigation a.organization {
     padding-left: 0.25em;
 }
+                    // ^in addition to
+
 
 #orgNavigation a.organization:hover {
     text-decoration: underline;
@@ -64,6 +66,8 @@
 #organization_people {
     border-top: 1px solid #BBBBBB;
 }
+                    // ^in addition to
+
 
 #individual-organizationForPosition li {
     padding: 0.25em 1em;
@@ -73,3 +77,6 @@
 #individual-administers {
     padding: 0.25em 2em;
 }
+                    // ^in addition to
+
+                    
