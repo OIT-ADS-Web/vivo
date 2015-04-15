@@ -774,8 +774,8 @@ input.search-home-vivo {
 
 .research_feed a {
 	padding: 5px 15px;
-        font-size: 1.2em;
-        line-height: 1.3em;
+	font-size: 1.2em;
+  line-height: 1.3em;
 }
 
 .research_feed li {
@@ -1177,16 +1177,13 @@ h3#personInPosition {
 #orgNavigation {
 	margin: 10px 0;
 	line-height: 1.3em;
-	/*	border-bottom: 1px solid #BBB;*/
 }
 
 #orgNavigation li {
-	/*border-bottom: 1px solid #BBB;*/
 	padding: 12px 20px;
 }
 
 #orgNavigation li.subtree {
-/*	border-bottom: 1px solid #BBB;*/
 }
 
 	#orgNavigation li li {
