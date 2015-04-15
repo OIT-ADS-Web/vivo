@@ -535,7 +535,7 @@ h1.vivo-logo a {
 	float: left;
 }
 
-#header-nav li: first-child a {
+#header-nav li:first-child a {
 	border-right: 1px solid #cccccc;
 }
 
@@ -629,7 +629,7 @@ ul#main-nav {
 	line-height: 3em;
 }
 
-#main-nav li: first-child {
+#main-nav li:first-child {
 	background: none;
 }
 
@@ -1034,7 +1034,7 @@ ul#individual-hasResearchArea li {
 	float: left;
 }
 
-ul#individual-hasResearchArea li: first-child {
+ul#individual-hasResearchArea li:first-child {
 	padding-left: 0;
 }
 
@@ -1177,15 +1177,16 @@ h3#personInPosition {
 #orgNavigation {
 	margin: 10px 0;
 	line-height: 1.3em;
+	/*	border-bottom: 1px solid #BBB;*/
 }
 
 #orgNavigation li {
-	border-bottom: 1px solid #BBB;
+	/*border-bottom: 1px solid #BBB;*/
 	padding: 12px 20px;
 }
 
 #orgNavigation li.subtree {
-	border-bottom: 1px solid #BBB;
+/*	border-bottom: 1px solid #BBB;*/
 }
 
 	#orgNavigation li li {
@@ -1228,8 +1229,12 @@ li.subtree ul.tree-navigation li.subtree {
 	border: none!important;
 }
 
-#orgNavigation li: first-child {
+#orgNavigation li:first-child {
 	border-top: 1px solid #BBB;
+}
+
+#orgNavigation li:last-child {
+	border-bottom: 1px solid #BBB;
 }
 
 #orgNavigation a.parent {
@@ -1955,7 +1960,7 @@ p.view-all-coauthors {
 	color: #002B44;
 }
 
-#property-group-menu li: last-child {
+#property-group-menu li:last-child {
 	background: none repeat scroll 0 0 transparent;
 }
 
@@ -2461,7 +2466,7 @@ ul#footer-nav li {
 	padding-right: 10px;
 }
 
-ul#footer-nav li: last-child {
+ul#footer-nav li:last-child {
 	border-right: medium none;
 }
 
