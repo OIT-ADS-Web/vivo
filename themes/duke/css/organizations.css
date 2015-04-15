@@ -1,37 +1,37 @@
 /* These have values that differ from what is in duke.css */
-#organization-info {
-    width: 100%;
-    margin: 10px 0;
-}
+#organization-info { 
+	width: 100%; 
+	margin: 10px 0; 
+} 
 
-#organization-visualizations {
-    width: 20%;
-    padding: 10px;
-    float: right;
-}
+#organization-visualizations { 
+	width: 20%; 
+	padding: 10px; 
+	float: right; 
+} 
 
-#orgNavigation {
-    margin: 0;
-}
+#orgNavigation { 
+	margin: 0; 
+} 
 
-#orgNavigation a.organization {
-    margin-left: 1.250em;
-}
+#orgNavigation a.organization { 
+	margin-left: 1.250em; 
+} 
 
-#orgNavigation li {
-    padding: 0.25em  .5em;
-    border-top: 1px solid #BBBBBB;
-}
+#orgNavigation li { 
+	padding: 0.25em .5em; 
+	border-top: 1px solid #BBBBBB; 
+} 
 
-/* These have values that are in addition to what is in duke.css */
-#orgNavigation a.organization {
-    padding-left: 0.25em;
-}
+/* These have values that are in addition to what is in duke.css */ 
+#orgNavigation a.organization { 
+	padding-left: 0.25em; 
+} 
 
-#organization_people {
-    border-top: 1px solid #BBBBBB;
-}
+#organization_people { 
+	border-top: 1px solid #BBBBBB; 
+} 
 
-#individual-administers {
-    padding: 0.25em 2em;
+#individual-administers { 
+	padding: 0.25em 2em;
 }
