@@ -1172,6 +1172,7 @@ h3#personInPosition {
 /*Schools and Istitutes*/
 #organization-body {
 	float: left;
+	width: 100%;
 }
 
 #orgNavigation {
