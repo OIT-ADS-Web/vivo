@@ -978,6 +978,11 @@ ul.subclass-property-list li {
 	margin-bottom: 1em;
 }
 
+ul#individual-geographicallyRelatesTo li {
+	pointer-events: none;
+	cursor: default;
+}
+
 #individual-hasInvestigatorRole li {
 	font-size: 1.44em!important;
 	line-height: 1.3em;
