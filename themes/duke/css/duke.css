@@ -814,6 +814,8 @@ input.search-home-vivo {
 	margin: 20px 0;
 	line-height: 1.3em;
 	width: 100%;
+	display: inline-block;
+	padding-bottom: 20px;
 }
 
 #find-person h2 {
