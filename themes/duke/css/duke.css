@@ -983,6 +983,11 @@ ul#individual-geographicallyRelatesTo li {
 	cursor: default;
 }
 
+ul#individual-geographicallyRelatesTo a {
+	color: #595b5b;
+	text-decoration: none;
+}
+
 #individual-hasInvestigatorRole li {
 	font-size: 1.44em!important;
 	line-height: 1.3em;
