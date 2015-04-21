@@ -523,4 +523,12 @@
 
 
 
+    <!-- PrimaryPosition -->
+
+    <rdf:Description rdf:about="http://vivoweb.org/ontology/core#PrimaryPosition">
+        <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</vitro:displayRankAnnot>
+    </rdf:Description>
+
+
+
 </rdf:RDF>
