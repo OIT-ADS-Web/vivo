@@ -968,10 +968,6 @@ ul#individual-outcomeOf li {
   font-size: 1.4em;
 }
 
-#individual-relatedBy li h4 {
-	margin: 0 10px;
-}
-
 ul.subclass-property-list li {
 	line-height: 1.3em;
 	margin: 10px;
@@ -1282,6 +1278,19 @@ li.subtree ul.tree-navigation li.subtree {
 #individual-organizationForPosition li {
 	padding: 0.25em 1em;
 	border-top: 1px solid #BBBBBB;
+}
+
+#individual-relatedBy li {
+	padding: 0.25em 1em;
+/*	border-top: 1px solid #BBBBBB;*/
+}
+
+#individual-relatedBy li h4 {
+	margin: 0 10px;
+}
+
+#individual-relatedBy h3{
+	padding: 0.25em 1em;
 }
 
 #individual-administers {
@@ -3274,7 +3283,7 @@ body input {
 }
 .collate_header {
   margin-top: .75em;
-  font-size: 1.1em;
+  font-size: 1.25em;
 }
 
 a.more-less {
@@ -3411,4 +3420,8 @@ div.updates a {
   	width: 100%;
   	margin-left: 0;
   }
+}
+
+body {
+	background-color: orange;
 }
