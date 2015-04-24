@@ -1280,6 +1280,10 @@ li.subtree ul.tree-navigation li.subtree {
 	border-top: 1px solid #BBBBBB;
 }
 
+#individual-relatedBy {
+	margin: -9px 0 0 -14px;
+}
+
 #individual-relatedBy li {
 	padding: 0.25em 1em;
 /*	border-top: 1px solid #BBBBBB;*/
