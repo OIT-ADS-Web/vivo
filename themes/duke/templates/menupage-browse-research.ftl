@@ -51,7 +51,6 @@
                                        "Sound Design",
                                        "Theatrical Performance",
                                        "Theatrical Production",
-                                       "Theatrical Production / Dance",
                                        "Video","Video Recording"] />
 
             <#assign ignoreClasses = ["Article","Artistic Work","Artistic Relationship"] />
