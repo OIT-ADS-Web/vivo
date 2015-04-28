@@ -972,14 +972,14 @@ ul.subclass-property-list li {
 	line-height: 1.3em;
 	margin: 10px;
 	margin-bottom: 1em;
-}
+}	
 
-ul#individual-geographicallyRelatesTo li {
+#individual-geographicallyRelatesTo > li.subclass > ul.subclass-property-list li {
 	pointer-events: none;
-	cursor: default;
-}
+	cursor: default;	
+}		
 
-ul#individual-geographicallyRelatesTo a {
+#individual-geographicallyRelatesTo > li.subclass > ul.subclass-property-list li > a {
 	color: #595b5b;
 	text-decoration: none;
 }
