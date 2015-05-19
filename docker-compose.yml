@@ -1,0 +1,9 @@
+db:
+  image: docker-ads.oit.duke.edu/mariadb_55_utf8
+  ports:
+    - "3306:3306"
+  environment:
+    - MYSQL_ROOT_PASSWORD=hello
+    - MYSQL_USER=vivodev
+    - MYSQL_PASSWORD=local_vivo_work
+    - MYSQL_DATABASE=new_dev_vivo
