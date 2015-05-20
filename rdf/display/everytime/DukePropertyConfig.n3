@@ -112,3 +112,17 @@ local:outcomeOfEventConfig a :ObjectPropertyDisplayConfig ;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
     :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
+
+local:performs a :ConfigContext ;
+    :hasConfiguration local:performsConfig ;
+    :configContextFor <http://vivo.duke.edu/vivo/ontology/duke-activity-extension#performs> ;
+    :qualifiedByDomain <http://xmlns.com/foaf/0.1/Person> ;
+    :qualifiedBy      <http://vivo.duke.edu/vivo/ontology/duke-activity-extension#ProfessionalActivity> .
+
+local:performsConfig a :ObjectPropertyDisplayConfig ;
+    :listViewConfigFile "listViewConfig-performs.xml"^^xsd:string ;
+    :displayName "professional activities" ;
+    vitro:displayRankAnnot 15;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
+    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
