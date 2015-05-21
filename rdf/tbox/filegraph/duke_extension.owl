@@ -285,7 +285,7 @@
 
   <rdf:Description rdf:about="http://vivo.duke.edu/vivo/ontology/duke-extension#Professorship">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="en-US">Distinguished Professorship</rdfs:label>
+    <rdfs:label xml:lang="en-US">Professorship</rdfs:label>
     <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppeople"/>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">professorship appointment</vitro:shortDef>
     <vitro:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</vitro:displayLimitAnnot>
