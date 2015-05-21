@@ -537,4 +537,25 @@
         <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</vitro:displayRankAnnot>
     </rdf:Description>
 
+  <!-- New Publication Types -->
+  <rdf:Description rdf:about="http://vivo.duke.edu/vivo/ontology/duke-extension#JournalIssue">
+    <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <rdfs:label xml:lang="en-US">Journal Issue</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Journal Issue</vitro:shortDef>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Document"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://vivo.duke.edu/vivo/ontology/duke-extension#BookSeries">
+    <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <rdfs:label xml:lang="en-US">Book Series</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Book Series</vitro:shortDef>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Document"/>
+  </rdf:Description>
+
 </rdf:RDF>
