@@ -50,5 +50,5 @@
     }
   </query-construct>
 
-  <template>propStatement-default.ftl</template>
+  <template>propStatement-dukeact-performs.ftl</template>
 </list-view-config>
