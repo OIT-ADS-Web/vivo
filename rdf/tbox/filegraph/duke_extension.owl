@@ -558,4 +558,8 @@
     <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Document"/>
   </rdf:Description>
 
+  <rdf:Description rdf:about="http://vivoweb.org/ontology/core#Review">
+    <rdfs:label xml:lang="en-US">Book Review</rdfs:label>
+  </rdf:Description>
+
 </rdf:RDF>
