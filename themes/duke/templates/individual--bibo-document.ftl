@@ -237,7 +237,7 @@
     <#assign source = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#source")!>
     <#if source?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
       <#assign sourceName = capitalizeSourceName(source.statements[0].value)!>
-      <#if sourceName != 'Web of Science' && sourceName != 'Manual'>
+      <#if sourceName == 'Scopus'>
         <@simpleList sourceName "Citation Source" />
       </#if>
     </#if>
