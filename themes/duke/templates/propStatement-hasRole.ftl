@@ -52,6 +52,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <@dt.yearIntervalSpan "${statement.dateTimeStart!}" "${statement.dateTimeEnd!}" />
     </#local>
     
-    ${linkedIndividual} ${statement.roleLabel!} ${dateTime!}
+    ${linkedIndividual} ${dateTime!}
 
 </#macro>
