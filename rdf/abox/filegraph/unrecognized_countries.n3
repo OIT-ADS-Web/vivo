@@ -1,0 +1,11 @@
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vitro:   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
+@prefix vivo:    <http://vivoweb.org/ontology/core#> .
+@prefix geo:     <http://aims.fao.org/aos/geopolitical.owl#> .
+
+<http://dbpedia.org/resource/Taiwan>
+      a       vivo:GeographicRegion , vivo:Country ;
+      rdfs:label "Taiwan"@en ;
+      geo:codeISO2 "TW"^^<http://www.w3.org/2001/XMLSchema#string> ;
+      vitro:mostSpecificType
+              vivo:Country .
