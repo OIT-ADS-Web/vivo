@@ -3445,11 +3445,11 @@ p.caption {
 	margin-left: 8px;
 }
 
-#home_page_carousel {
+/*#home_page_carousel {
 	height: 410px;
-}
+}*/
 
-@media (max-width: 1000px) {
+/*@media (max-width: 1000px) {
 	#home_page_carousel {
 		height: 430px;
 	}
@@ -3478,11 +3478,11 @@ p.caption {
 		height: 450px;
 	}
 }
-
+*/
 @media (max-width: 485px) {
-	#home_page_carousel {
+	/*#home_page_carousel {
 		height: 470px;
-	}
+	}*/
 
 	.caption-wrap {
 		max-width: 95%;
