@@ -3426,12 +3426,16 @@ div.updates a {
   }
 }
 
-/* Homepage image revamp, 6/23/2015 */
+/* HOMEPAGE IMAGE UPDATE 6/23/2015 */
 
 p.caption {
 	text-align: left;
 	margin-top: 0;
 	float: left;
+}
+
+.caption-wrap {
+	max-width: 95%
 }
 
 #home_page_carousel #wrapper-content p.caption {
@@ -3445,6 +3449,43 @@ p.caption {
 	height: 410px;
 }
 
-.caption-wrap {
-	max-width: 95%
+@media (max-width: 1000px) {
+	#home_page_carousel {
+		height: 430px;
+	}
+}
+
+@media (max-width: 810px) {
+	#home_page_carousel {
+		height: 450px;
+	}
+}
+
+@media (max-width: 769px) {
+	#home_page_carousel {
+		height: 410px;
+	}
+}
+
+@media (max-width: 695px) {
+	#home_page_carousel {
+		height: 430px;
+	}
+}
+
+@media (max-width: 566px) {
+	#home_page_carousel {
+		height: 450px;
+	}
+}
+
+@media (max-width: 485px) {
+	#home_page_carousel {
+		height: 470px;
+	}
+
+	.caption-wrap {
+		max-width: 95%;
+		padding-left: 10px;
+	}
 }
