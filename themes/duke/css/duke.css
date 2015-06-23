@@ -3425,3 +3425,27 @@ div.updates a {
   	margin-left: 0;
   }
 }
+
+/* Homepage image revamp, 6/23/2015 */
+
+p.caption {
+	text-align: left;
+	margin-top: 0;
+	float: left;
+	max-width: 174px;
+}
+
+#home_page_carousel #wrapper-content p.caption {
+	padding: 0;
+	text-align: center;
+	float: none;
+	margin-left: 8px;
+}
+
+#home_page_carousel {
+	height: 410px;
+}
+
+.caption-wrap {
+	max-width: 95%
+}
