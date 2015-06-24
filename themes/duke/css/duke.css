@@ -3426,7 +3426,7 @@ div.updates a {
   }
 }
 
-/* HOMEPAGE IMAGE UPDATE 6/23/2015 */
+/* HOMEPAGE IMAGE UPDATE 6/24/2015 */
 
 p.caption {
 	text-align: left;
@@ -3453,11 +3453,11 @@ p.caption {
 
 @media (max-width: 994px) {
 	p.caption {
-		height: 75px;
+		height: 80px;
 	}
 }
 
-@media (max-width: 810px) {
+@media (max-width: 808px) {
 	p.caption {
 		height: 95px;
 	}
