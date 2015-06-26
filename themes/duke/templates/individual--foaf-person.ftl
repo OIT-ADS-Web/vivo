@@ -95,10 +95,15 @@
         <#assign authorships = propertyGroups.pullProperty("${core}relatedBy", "${core}Authorship")!>
         <@collapsiblePropertyListSection "Publication" authorships editable />
 
+        <#-- In The News -->
+        <#assign newsfeeds = propertyGroups.pullProperty("${core}relates", "${core}Newsfeeds")!>
+        <@collapsiblePropertyListSection "Newsfeed" newsfeeds editable />
+
         <#-- Grants -->
         <#assign grants = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000053", "${core}InvestigatorRole")!>
         <@collapsiblePropertyListSection "Grant" grants editable />
-<#-- Courses -->
+
+        <#-- Courses -->
         <#assign courses = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000053", "${core}TeacherRole")!>
         <@collapsiblePropertyListSection "Course" courses editable />
 
