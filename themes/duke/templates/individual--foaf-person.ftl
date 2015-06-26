@@ -96,7 +96,7 @@
         <@collapsiblePropertyListSection "Publication" authorships editable />
 
         <#-- In The News -->
-        <#assign newsfeeds = propertyGroups.pullProperty("${core}relates", "${core}Newsfeeds")!>
+        <#assign newsfeeds = propertyGroups.pullProperty("${core}relatedBy", "${core}NewsRelease")!>
         <@collapsiblePropertyListSection "Newsfeed" newsfeeds editable />
 
         <#-- Grants -->
