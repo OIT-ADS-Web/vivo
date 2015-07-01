@@ -13,14 +13,15 @@
     select <collated>?subclass</collated>
            ?newsObj
            ?newsName
-           ?startTime
+           ?datetime
     where {
       ?subject ?property ?newsObj .
       ?newsObj rdfs:label ?newsName .
       ?newsObj vivo:dateTimeValue ?dateTimeObj .
+      ?dateTimeObj vivo:dateTime ?datetime .
       ?newsObj vitro:mostSpecificType ?subclass .
     }
-    order by ?subclass desc(?startTime) asc(?newsName)
+    order by ?subclass desc(?dateTimeObj) asc(?newsName)
 
   </query-select>
 
@@ -34,6 +35,7 @@
       ?subject ?property ?newsObj .
       ?newsObj rdfs:label ?newsName .
       ?newsObj vivo:dateTimeValue ?dateTimeObj .
+      ?dateTimeObj vivo:dateTime ?datetime .
       ?newsObj vitro:mostSpecificType ?subclass .
     }
     where {
@@ -41,6 +43,7 @@
       ?newsObj a vivo:NewsRelease .
       ?newsObj rdfs:label ?newsName .
       ?newsObj vivo:dateTimeValue ?dateTimeObj .
+      ?dateTimeObj vivo:dateTime ?datetime .
       ?newsObj vitro:mostSpecificType ?subclass .
     }
   </query-construct>

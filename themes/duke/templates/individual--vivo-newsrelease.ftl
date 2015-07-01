@@ -15,7 +15,7 @@
           <@p.label individual false 1 />
         </#assign>
         <h1>
-          ${docName}
+          ${docName} just anything
         </h1>
 
     </header>
