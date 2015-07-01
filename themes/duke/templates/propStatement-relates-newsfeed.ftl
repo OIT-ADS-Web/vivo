@@ -14,7 +14,7 @@
     <#-- The query retrieves a type only for Persons. Post-processing will remove all but one. -->   
 
     <#local dateInfo>
-    	<@dt.yearSpan "${statement.dateTimeObj!}" />
+    	<@dt.yearMonthDaySpan "${statement.dateTimeObj!}" />
   	</#local>
 
     <a href="${profileUrl(statement.uri("newsObj"))}" title="${i18n().name}">${statement.newsName!statement.localName!}</a>&nbsp; ${dateInfo}

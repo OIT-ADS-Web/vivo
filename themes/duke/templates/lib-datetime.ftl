@@ -16,6 +16,12 @@
     </#if>
 </#macro>
 
+<#macro yearMonthDaySpan dateTime>
+    <#if dateTime?has_content>
+        <@dateTimeSpan>${formatXsdDateTimeLong(dateTime,"yearMonthDayPrecision")}</@dateTimeSpan>
+    </#if>
+</#macro>
+
 <#macro yearIntervalSpan startDateTime="" endDateTime="" endYearAsRange=true>
     <#local yearInterval = yearInterval(startDateTime, endDateTime, endYearAsRange)>
     <#if yearInterval?has_content>
