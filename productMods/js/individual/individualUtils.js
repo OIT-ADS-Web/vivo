@@ -52,6 +52,57 @@ $(document).ready(function(){
         }
     };
 
+
+    var toggleNewsDisplay = {
+        showMore: function($toggleLink, $itemContainer) {
+            $toggleLink.click(function() {
+                $itemContainer.show();
+                $(this).attr('href', '#show less content');
+                var descr = "Show Fewer ";
+                    descr+= "News Items";
+                $(this).text(descr);
+                toggleNewsDisplay.showLess($toggleLink, $itemContainer);
+                return false;
+            });
+      },
+
+        showLess: function($toggleLink, $itemContainer) {
+            $toggleLink.click(function() {
+                $itemContainer.hide();
+                $(this).attr('href', '#show more content');
+                var descr = "Show More ";
+                descr+= "News Items";
+                $(this).text(descr);
+                toggleNewsDisplay.showMore($toggleLink, $itemContainer);
+                return false;
+            });
+        }
+    };
+
+   var $newsList = $('#Newsfeed ul#individual-relatedBy');
+   $newsList.each(function() {
+       var $additionalItems = $(this).find('li:gt(4)');
+       if ( $additionalItems.exists() ) {
+           // create container for additional elements
+           var $itemContainer = $('<div class="additionalItems" />').appendTo(this);
+
+           // create toggle link
+           var entityType = "News Items";
+           var $toggleLink = $('<a />');
+           $toggleLink.attr('class',"more-less");
+           $toggleLink.attr('href',"#show more content");
+           $toggleLink.text("Show More "+entityType+"...");
+           $toggleLink.appendTo(this);
+
+           $additionalItems.appendTo($itemContainer);
+
+           $itemContainer.hide();
+
+           toggleNewsDisplay.showMore($toggleLink, $itemContainer);
+       }
+   });
+
+
     // var $propList = $('.property-list').not('>li>ul');
     var $propList = $('.property-list:not(:has(>li>ul))');
     $propList.each(function() {
