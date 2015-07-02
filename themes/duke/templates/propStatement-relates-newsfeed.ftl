@@ -17,6 +17,8 @@
     	<@dt.yearMonthDaySpan "${statement.datetime!}" />
   	</#local>
 
-    <a href="${profileUrl(statement.uri("newsObj"))}" title="${i18n().name}">${statement.newsName!statement.localName!}</a>&nbsp; ${dateInfo}
+		<span style="margin-left:-8px;">${dateInfo}</span>
+		<br>
+    <a href="${profileUrl(statement.uri("newsObj"))}" title="${i18n().name}">${statement.newsName!statement.localName!}</a>
 
 </#macro>
