@@ -15,7 +15,7 @@
           <@p.label individual false 1 />
         </#assign>
         <h1>
-          ${docName} just anything
+          ${docName}
         </h1>
 
     </header>
@@ -49,11 +49,8 @@
 
     <#-- source -->
     <#assign source = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#source")!>
-    <#if source?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-      <#assign sourceName = capitalizeSourceName(source.statements[0].value)!>
-      <#if sourceName == 'Scopus'>
-        <@simpleList sourceName "Citation Source" />
-      </#if>
+    <#if source?has_content>
+      <@simpleList source "Source" />
     </#if>
 
   </section>
