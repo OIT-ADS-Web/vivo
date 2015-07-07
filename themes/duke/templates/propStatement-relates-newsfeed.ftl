@@ -19,10 +19,11 @@
 
 		<span style="margin-left:-8px;">${dateInfo}</span>
 		<br>
+    <#assign linkToItem = "${statement.newsLink}" />
     <#assign sourcedNews = "(${statement.newsSource})"/>
-    <a href="${profileUrl(statement.uri("newsObj"))}" title="${i18n().name}">${statement.newsName!statement.localName!}</a>
-    <#if sourcedNews?has_content> ${sourcedNews}</#if>
-    <br>
-    ${statement.newsLink}
+    <a href="${linkToItem}" title="${i18n().name}">${statement.newsName!statement.localName!}</a>&nbsp;
+    <#if sourcedNews?has_content>
+      ${sourcedNews}
+    </#if>
 
 </#macro>
