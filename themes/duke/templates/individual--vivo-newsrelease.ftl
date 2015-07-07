@@ -14,7 +14,7 @@
         <#assign docName>
           <@p.label individual false 1 />
         </#assign>
-        <h1> dog
+        <h1>
           ${docName}
         </h1>
 
