@@ -21,7 +21,7 @@
 		<br>
     <#assign linkToItem = "${statement.newsLink}" />
     <#assign sourcedNews = "(${statement.newsSource})"/>
-    <a href="${linkToItem}" title="${i18n().name}">${statement.newsName!statement.localName!}</a>&nbsp;
+    <a href="${linkToItem}" title="${i18n().name}">${statement.newsName!statement.localName!}</a>
     <#if sourcedNews?has_content>
       ${sourcedNews}
     </#if>

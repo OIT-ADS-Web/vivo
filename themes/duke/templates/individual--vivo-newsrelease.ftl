@@ -48,10 +48,15 @@
     </#if>
 
     <#-- source -->
-    <#assign source = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#source")!>
-    <#if source?has_content>
-      <@simpleList source "Source" />
+    <#assign newsSource = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#source")!>
+    <#if newsSource?has_content>
+
+      maybe:    ${dataPropertyValue(newsSource)}
+
+      or maybe: <#assign sourcedNews = "${newsSource.statements[0].value}" />
+                <@simpleList sourcedNews "News Source" />
     </#if>
+
 
   </section>
 </section>
