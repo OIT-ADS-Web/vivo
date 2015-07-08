@@ -22,9 +22,9 @@
     </#if>
 </#macro>
 
-<#macro editedYearMonthDaySpan dateTime>
+<#macro newsYearMonthDaySpan dateTime>
     <#if dateTime?has_content>
-        <@dateTimeSpan>${formatXsdDateTimeLong(dateTime,"adminPrecision")}</@dateTimeSpan>
+        <@dateTimeSpan>${formatXsdDateTimeLong(dateTime,"newsPrecision")?upper_case}</@dateTimeSpan>
     </#if>
 </#macro>
 
@@ -184,7 +184,7 @@
             <#if precision?ends_with("yearPrecision")>yyyy
             <#elseif precision?ends_with("yearMonthPrecision")>MMMM yyyy
             <#elseif precision?ends_with("yearMonthDayPrecision")>MMMM d, yyyy
-            <#elseif precision?ends_with("adminPrecision")>dd MMM yyyy
+            <#elseif precision?ends_with("newsPrecision")>dd MMM yyyy
             <#else>MMMM d, yyyy h:mm a
             </#if>
         <#else> <#-- formatType == "short" -->

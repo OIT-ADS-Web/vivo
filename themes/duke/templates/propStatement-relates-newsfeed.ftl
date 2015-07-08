@@ -14,7 +14,7 @@
     <#-- The query retrieves a type only for Persons. Post-processing will remove all but one. -->   
 
     <#local dateInfo>
-    	<@dt.editedYearMonthDaySpan "${statement.datetime!}" />
+    	<@dt.newsYearMonthDaySpan "${statement.datetime!}" />
   	</#local>
 		<table>
       <tr height="18">
