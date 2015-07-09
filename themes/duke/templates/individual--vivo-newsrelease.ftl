@@ -28,12 +28,12 @@
       <#assign linkToItem = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#linkToItem")!>
       <#if linkToItem?has_content && (linkToItem.statements)?has_content>
         <#assign linkValue = "${linkToItem.statements[0].value}"/>
-        <#assign linkUrl = "<a href=\"${linkValue}\" target=\"_blank\">Link to Item (THIS IS A TEST)</a>">
+        <#assign linkUrl = "<a href=\"${linkValue}\" target=\"_blank\">Link to Item</a>">
         <#assign fullTextLinks = fullTextLinks + [linkUrl]/>
       </#if>
 
       <#if (fullTextLinks?size > 0)>
-        <h3>Full Text TEST TEST TEST</h3>
+        <h3>Full Text</h3>
         <ul role="list">
         <#list fullTextLinks as ft_link>
            <li role="listitem">${ft_link}</li>

@@ -501,6 +501,10 @@
     <vitro:customDisplayViewAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">individual--bibo-journal.ftl</vitro:customDisplayViewAnnot>
   </rdf:Description>
 
+  <rdf:Description rdf:about="http://vivoweb.org/ontology/core#NewsRelease">
+    <vitro:customDisplayViewAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">individual--vivo-newsRelease.ftl</vitro:customDisplayViewAnnot>
+  </rdf:Description>
+
   <rdf:Description rdf:about="http://vivoweb.org/ontology/core#FundingOrganization">
     <vitro:customDisplayViewAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">individual--vivo-funding-organization.ftl</vitro:customDisplayViewAnnot>
   </rdf:Description>
