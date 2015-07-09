@@ -51,7 +51,7 @@
       <#assign newsSource = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#source")!>
       <#if newsSource?has_content>
         <#assign sourcedNews = "${newsSource.statements[0].value}" />
-        <@simpleList sourcedNews "News Source" />
+        <@simpleList sourcedNews "Source" />
      </#if>
 
   </section>
