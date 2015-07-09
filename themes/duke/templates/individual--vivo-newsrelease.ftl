@@ -28,12 +28,12 @@
       <#assign linkToItem = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#linkToItem")!>
       <#if linkToItem?has_content && (linkToItem.statements)?has_content>
         <#assign linkValue = "${linkToItem.statements[0].value}"/>
-        <#assign linkUrl = "<a href=\"${linkValue}\" target=\"_blank\">Link to Item Dogg</a>">
+        <#assign linkUrl = "<a href=\"${linkValue}\" target=\"_blank\">Link to Item (THIS IS A TEST)</a>">
         <#assign fullTextLinks = fullTextLinks + [linkUrl]/>
       </#if>
 
       <#if (fullTextLinks?size > 0)>
-        <h3>Full Text</h3>
+        <h3>Full Text TEST TEST TEST</h3>
         <ul role="list">
         <#list fullTextLinks as ft_link>
            <li role="listitem">${ft_link}</li>
@@ -42,21 +42,17 @@
       </#if>
 
     <#-- published date -->
-    <#assign publishedDate = propertyGroups.pullProperty("${core}dateTimeValue")!>
-    <#if publishedDate?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-      <@simpleObjectPropertyListing publishedDate "Published Date" />
-    </#if>
+      <#assign publishedDate = propertyGroups.pullProperty("${core}dateTimeValue")!>
+      <#if publishedDate?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+        <@simpleObjectPropertyListing publishedDate "Published Date" />
+      </#if>
 
     <#-- source -->
-    <#assign newsSource = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#source")!>
-    <#if newsSource?has_content>
-
-      maybe:    ${dataPropertyValue(newsSource)}
-
-      or maybe: <#assign sourcedNews = "${newsSource.statements[0].value}" />
-                <@simpleList sourcedNews "News Source" />
-    </#if>
-
+      <#assign newsSource = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#source")!>
+      <#if newsSource?has_content>
+        <#assign sourcedNews = "${newsSource.statements[0].value}" />
+        <@simpleList sourcedNews "News Source" />
+     </#if>
 
   </section>
 </section>
@@ -67,4 +63,3 @@
     <@navObjectPropertyListing subjectAreas "Subject Areas on Research" />
   </#if>
 </section>
-
