@@ -32,7 +32,7 @@
 
 		<div id="news-link">
       <#assign linkToItem = "${statement.newsLink}" />
-      <a href="${linkToItem}" title="${i18n().name}">${statement.newsName!statement.localName!}</a>
+      <a href="${linkToItem}" target="_blank" title="${i18n().name}">${statement.newsName!statement.localName!}</a>
     </div>
 
 </#macro>
