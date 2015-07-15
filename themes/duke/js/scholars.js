@@ -27,3 +27,12 @@ jQuery(function() {
 		$('#mobile-nav').toggle();
 	});
 });
+
+function removeExtraComma() {
+    var str = document.querySelector('.adr').innerHTML; 
+    var res = str.replace(',,', ',');
+    document.querySelector(".adr").innerHTML = res;
+}
+window.onload = removeExtraComma;
+
+
