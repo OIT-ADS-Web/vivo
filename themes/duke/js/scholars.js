@@ -28,11 +28,9 @@ jQuery(function() {
 	});
 });
 
-function removeExtraComma() {
+$(function removeExtraComma() {
     var str = document.querySelector('.adr').innerHTML; 
     var res = str.replace(',,', ',');
     document.querySelector(".adr").innerHTML = res;
-}
-window.onload = removeExtraComma;
-
+});
 
