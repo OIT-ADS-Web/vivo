@@ -15,7 +15,7 @@
 
 		<table>
       <tr height="18">
-        <td width="85">
+        <td width="90">
           <#local dateInfo>
             <@dt.newsYearMonthDaySpan "${statement.datetime!}" />
           </#local>
