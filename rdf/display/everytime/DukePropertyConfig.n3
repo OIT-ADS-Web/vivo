@@ -126,3 +126,16 @@ local:performsConfig a :ObjectPropertyDisplayConfig ;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
     :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
+
+local:relatednews a :ConfigContext ;
+    :hasConfiguration local:relatednewsConfig ;
+    :configContextFor vivo:relatedBy ;
+    :qualifiedByDomain <http://xmlns.com/foaf/0.1/Person> ;
+    :qualifiedBy      vivo:NewsRelease .
+
+local:relatednewsConfig a :ObjectPropertyDisplayConfig ;
+    :listViewConfigFile "listViewConfig-relatesNewsRelease.xml"^^xsd:string ;
+    :displayName "in the news" ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
+    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .

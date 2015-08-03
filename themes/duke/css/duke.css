@@ -3516,3 +3516,17 @@ p.caption {
 		display: none;
 	}
 }
+
+#date-info {
+	margin-left: -8px;
+}
+
+#sourced-news {
+	font-size: 11px; 
+	background: none repeat scroll 0 0 #F4F4F4; 
+	padding: 0 .4em;
+}
+
+#news-link {
+	margin: 2px 0 0 -4px;
+}

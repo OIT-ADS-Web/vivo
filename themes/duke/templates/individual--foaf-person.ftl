@@ -71,6 +71,10 @@
         <#assign educations = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000056", "${core}EducationalProcess")!>
         <@collapsiblePropertyListSection "Education" educations editable />
 
+        <#-- In The News -->
+        <#assign newsfeeds = propertyGroups.pullProperty("${core}relatedBy", "${core}NewsRelease")!>
+        <@collapsiblePropertyListSection "Newsfeed" newsfeeds editable />
+
         <#-- Research Areas -->
         <#assign researchAreas = propertyGroups.pullProperty("${core}hasResearchArea")!>
         <@collapsiblePropertyListSection "Keywords" researchAreas editable />
@@ -98,7 +102,8 @@
         <#-- Grants -->
         <#assign grants = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000053", "${core}InvestigatorRole")!>
         <@collapsiblePropertyListSection "Grant" grants editable />
-<#-- Courses -->
+
+        <#-- Courses -->
         <#assign courses = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000053", "${core}TeacherRole")!>
         <@collapsiblePropertyListSection "Course" courses editable />
 

@@ -16,6 +16,18 @@
     </#if>
 </#macro>
 
+<#macro yearMonthDaySpan dateTime>
+    <#if dateTime?has_content>
+        <@dateTimeSpan>${formatXsdDateTimeLong(dateTime,"yearMonthDayPrecision")}</@dateTimeSpan>
+    </#if>
+</#macro>
+
+<#macro newsYearMonthDaySpan dateTime>
+    <#if dateTime?has_content>
+        <@dateTimeSpan>${formatXsdDateTimeLong(dateTime,"newsPrecision")?upper_case}</@dateTimeSpan>
+    </#if>
+</#macro>
+
 <#macro yearIntervalSpan startDateTime="" endDateTime="" endYearAsRange=true>
     <#local yearInterval = yearInterval(startDateTime, endDateTime, endYearAsRange)>
     <#if yearInterval?has_content>
@@ -172,6 +184,7 @@
             <#if precision?ends_with("yearPrecision")>yyyy
             <#elseif precision?ends_with("yearMonthPrecision")>MMMM yyyy
             <#elseif precision?ends_with("yearMonthDayPrecision")>MMMM d, yyyy
+            <#elseif precision?ends_with("newsPrecision")>MMM d, yyyy
             <#else>MMMM d, yyyy h:mm a
             </#if>
         <#else> <#-- formatType == "short" -->
