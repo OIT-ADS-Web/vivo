@@ -49,10 +49,14 @@
 
     <#-- source -->
       <#assign newsSource = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#source")!>
-      <#if newsSource?has_content>
-        <#assign sourcedNews = "${newsSource.statements[0].value}" />
-        <@simpleList sourcedNews "Source" />
-     </#if>
+      <#assign sourcedNews = "${newsSource.statements[0].value}" />
+      <@simpleList sourcedNews "Source" /><br>
+
+    <#-- list scholars -->
+      <#assign scholars = propertyGroups.pullProperty("${core}relates", "http://xmlns.com/foaf/0.1/Person")!>
+      <#if scholars?has_content>
+        <@simpleObjectPropertyListing scholars "Scholar" />
+      </#if>
 
   </section>
 </section>
