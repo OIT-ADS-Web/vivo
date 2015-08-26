@@ -17,7 +17,6 @@
         <h1>
           ${docName}
         </h1>
-
     </header>
   </section>
   <section id="individual-body" role="region">
@@ -50,13 +49,15 @@
     <#-- source -->
       <#assign newsSource = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#source")!>
       <#assign sourcedNews = "${newsSource.statements[0].value}" />
-      <@simpleList sourcedNews "Source" /><br>
-
-    <#-- list scholars -->
-      <#assign scholars = propertyGroups.pullProperty("${core}relates", "http://xmlns.com/foaf/0.1/Person")!>
-      <#if scholars?has_content>
-        <@simpleObjectPropertyListing scholars "Scholar" />
+      <#if newsSource?has_content> 
+        <@simpleList sourcedNews "Source" />
       </#if>
+
+    <#-- associated scholar -->  
+      <#assign scholar = propertyGroups.pullProperty("${core}relates")!>  
+      <#if scholar?has_content>  
+        <@simpleObjectPropertyListing scholar "Associated Scholar" />  
+      </#if>  
 
   </section>
 </section>
