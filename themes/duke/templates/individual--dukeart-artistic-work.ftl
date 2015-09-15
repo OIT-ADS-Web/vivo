@@ -29,20 +29,9 @@
       <#assign link = propertyGroups.pullProperty("http://www.w3.org/2006/vcard/ns#hasURL")!>
       <#if link?has_content && link.statements?has_content>
         <#assign linkStatement = link.statements[0]>
-        <#assign linkUrl = linkStatement.url>
-        <#assign linkAnchor = linkStatement.anchor>
+        <p>${linkStatement.label}</p>
       </#if>
-      <#if linkUrl??>
-        <#assign linkText>
-            <#if linkAnchor??>${linkAnchor}<#t>
-            <#else>${linkUrl}<#t>
-            </#if>
-        </#assign>
-        <div class="webpage" role="listitem">
-          <img class="icon-uri middle" src="${urls.images}/individual/uriIcon.gif" alt="uri icon" />
-          <a class='artWebpage' href="${linkUrl}" title="link text">${linkText}</a>
-        </div>
-      </#if>
+
     </header>
   </section>
 
