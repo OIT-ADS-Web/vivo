@@ -26,10 +26,12 @@
       </#if>
 
       <#-- link to webpage; hardcoded now to only one -->
-      <#assign link = propertyGroups.pullProperty("http://www.w3.org/2006/vcard/ns#hasURL")!>
+      <#assign link = propertyGroups.pullProperty("http://www.w3.org/2006/vcard/ns#hasURL", "http://www.w3.org/2006/vcard/ns#URL")!>
       <#if link?has_content && link.statements?has_content>
+        <h5><@simpleDataPropertyListing link "Link" /></h5>
         <#assign linkStatement = link.statements[0]>
         <p>${linkStatement.label}</p>
+        <p>${linkStatement}</p>
       </#if>
 
     </header>
