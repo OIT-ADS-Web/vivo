@@ -27,53 +27,46 @@
       </#if>
 
 
+
+      <#-- NEW ATTEMPT (9/25/2015 ) -->
+
       <#-- link to webpage; hardcoded now to only one -->
-        Next step: try running through the assorted data pull options run through in duke-properties.ftl <br><br>
-
-      <#assign link = propertyGroups.pullProperty("http://www.w3.org/2006/vcard/ns#hasURL")!> 
-      <#if link?has_content && link.statements?has_content>
-        <img class="icon-uri middle" src="${urls.images}/individual/uriIcon.gif" alt="uri icon" />
-        <@simpleDataPropertyListing link "Link" />
-        <#assign linkStatement = link.statements[0]>
-          <#assign linkedLink = propertyGroups.pullProperty("http://www.w3.org/2006/vcard/ns#URL")!>
+      <#assign linked = propertyGroups.pullProperty("http://www.w3.org/2006/vcard/ns#hasURL")!>
+      <#if linked?has_content && linked.statements?has_content>
+        <#assign linkedStatement = linked.statements[0]>
+        <#assign linkedUrl = linkedStatement.url>
 
 
-        <br> Artistic work --> pullProperty hasURL --> returns URL object (see simpleDataPropertyListing 'link')
-        <br>
-        <br>(Since linkStatement.url isn't working [though .label does], What I'm trying to do is run a pullProperty on linkStatement so that it returns URL)
+        <#-- line 37 ".url" is the issue. See the error:
 
+        Caused by: Error on line 37, column 9 in individual--dukeart-artistic-work.ftl 
+        linkedStatement.url is undefined. It cannot be assigned to linkedUrl 
+        The problematic instruction: ---------- ==> assignment: linkedUrl=linkedStatement.url [on line 37, column 9 in individual--dukeart-artistic-work.ftl]
+         ---------- Java backtrace for programmers: ---------- 
+         freemarker.core.InvalidReferenceException: Error on line 37, column 9 in individual--dukeart-artistic-work.ftl linkedStatement.url is undefined. It cannot be assigned to linkedUrl at freemarker.core.Assignment.accept(Assignment.java:111) at freemarker.core.Environment.visit(Environment.java:221) at freemarker.core.MixedContent.accept(MixedContent.java:92) at freemarker.core.Environment.visit(Environment.java:221) 
 
-        <p><b>linkStatement.label:</b> ${linkStatement.label}</p>
-        <p><b>linkStatement:</b> ${linkStatement}</p>
+        -->
+
+        <#assign linkedAnchor = linkedStatement.label>
+      </#if>
+      <#if linkedUrl??>
+        <#assign linkedText>
+            <#if linkedAnchor??>${linkedAnchor}<#t>
+              <#else>${linkedUrl}<#t>
+            </#if>
+        </#assign>
+        <div class="webpage" role="listitem">
+          <img class="icon-uri middle" src="${urls.images}/individual/uriIcon.gif" alt="uri icon" />
+          <a class='artWebpage' href="${linkedUrl}" title="link text">${linkedText}</a>
+        </div>
       </#if>
 
 
 
 
-      *************************************************************
 
-      [need to modify these; copied in from individual-contactinfo.ftl]
 
-      "http://www.w3.org/2006/vcard/ns#hasURL"
-      "http://purl.obolibrary.org/obo/ARG_2000028"
 
-      <#assign webpage = propertyGroups.pullProperty("http://www.w3.org/2006/vcard/ns#hasURL",
-                                               "http://www.w3.org/2006/vcard/ns#URL")!>
-
-      <@showWebpage webpage />
-      <#macro showWebpage webpage>
-        <ul class="webpage">                      
-          <#if webpage?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-            <#if webpage.statements?has_content> <#-- if there are any statements -->
-                <#list webpage.statements as statement>
-                <li class="webpages" role="listitem">
-                  <#include webpage.template />  <-- this is referencing propStatement-webpage.ftl ... perhaps I need to create a new propStatement that better reflects the somewhat different needs of this vCard situation (as opposed to how it's used in contactinfo context)
-                </li>
-                </#list>
-            </#if>
-          </#if>
-        </ul>
-      </#macro>
     </header>
   </section>
 
