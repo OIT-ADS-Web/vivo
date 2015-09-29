@@ -27,14 +27,20 @@
       </#if>
 
 
-
-      <#-- NEW ATTEMPT (9/25/2015 ) -->
+      <#-- Attempt using structure from vivo 1.5 -->
 
       <#-- link to webpage; hardcoded now to only one -->
-      <#assign linked = propertyGroups.pullProperty("http://www.w3.org/2006/vcard/ns#hasURL")!>
-      <#if linked?has_content && linked.statements?has_content>
-        <#assign linkedStatement = linked.statements[0]>
-        <#assign linkedUrl = linkedStatement.url>
+      <#assign link = propertyGroups.pullProperty("http://www.w3.org/2006/vcard/ns#hasURL")!>
+      <#if link?has_content && link.statements?has_content>
+        <#assign linkStatement = link.statements[0]>
+
+        <#-- assign linkUrl = linkStatement.url -->
+
+        <#assign linkAnchor = linkStatement.label>
+        
+
+        ${linkAnchor}
+        <h5><@simpleDataPropertyListing link "Link" /></h5>  
 
 
         <#-- line 37 ".url" is the issue. See the error:
@@ -44,28 +50,41 @@
         The problematic instruction: ---------- ==> assignment: linkedUrl=linkedStatement.url [on line 37, column 9 in individual--dukeart-artistic-work.ftl]
          ---------- Java backtrace for programmers: ---------- 
          freemarker.core.InvalidReferenceException: Error on line 37, column 9 in individual--dukeart-artistic-work.ftl linkedStatement.url is undefined. It cannot be assigned to linkedUrl at freemarker.core.Assignment.accept(Assignment.java:111) at freemarker.core.Environment.visit(Environment.java:221) at freemarker.core.MixedContent.accept(MixedContent.java:92) at freemarker.core.Environment.visit(Environment.java:221) 
-
         -->
 
-        <#assign linkedAnchor = linkedStatement.label>
       </#if>
-      <#if linkedUrl??>
-        <#assign linkedText>
-            <#if linkedAnchor??>${linkedAnchor}<#t>
-              <#else>${linkedUrl}<#t>
+      <#if linkUrl??>
+        <#assign linkText>
+            <#if linkAnchor??>${linkAnchor}<#t>
+              <#else>${linkUrl}<#t>
             </#if>
         </#assign>
         <div class="webpage" role="listitem">
           <img class="icon-uri middle" src="${urls.images}/individual/uriIcon.gif" alt="uri icon" />
-          <a class='artWebpage' href="${linkedUrl}" title="link text">${linkedText}</a>
+          <a class='artWebpage' href="${linkUrl}" title="link text">${linkText}</a>
         </div>
       </#if>
 
 
 
+      <#-- attempt using structure from individual-contactinfo.ftl; does not throw error but does not find content either-->
 
-
-
+      <#assign webpage = propertyGroups.pullProperty("http://www.w3.org/2006/vcard/ns#hasURL",
+                                                     "http://www.w3.org/2006/vcard/ns#URL")!>
+      <@showContact webpage />
+      <#macro showContact webpage>
+        <ul class="contact_list">
+          <#if webpage?has_content> <#-- true when the property is in the list, even if not populated (when editing) --> has content
+            <#if webpage.statements?has_content> <#-- if there are any statements -->
+              <#list webpage.statements as statement>
+                <li class="webpages" role="listitem">
+                  <#include webpage.template />
+                </li>
+              </#list>
+            </#if>
+          </#if>
+        </ul>
+      </#macro>
 
     </header>
   </section>
