@@ -24,13 +24,14 @@
          <div class="abstract">
            <p>${dataPropertyValue(abstract)}</p>
          </div>
-      </#if>
+      </#if> 
 
       <#-- link to webpage; hardcoded now to only one -->
       <#assign link = propertyGroups.pullProperty("http://www.w3.org/2006/vcard/ns#hasURL","http://www.w3.org/2006/vcard/ns#URL")!>
       <#if link?has_content && link.statements?has_content>
         <#assign linkStatement = link.statements[0]>
         <#assign linkAnchor = linkStatement.label>
+        <#assign linkUrl = linkStatement.url>
       </#if>
       <#if linkUrl??>
         <#assign linkText>
@@ -43,11 +44,11 @@
           <a class='artWebpage' href="${linkUrl}" title="link text">${linkText}</a>
         </div>
       </#if>
-      <h5><@simpleDataPropertyListing link "Link" /></h5>
     </header>
   </section>
 
   <section id="individual-body" role="region">
+
     <#-- work type -->
     <#assign workType = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-art-extension#workType")!>
     <#if workType?has_content>
