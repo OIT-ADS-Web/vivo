@@ -26,11 +26,8 @@
          </div>
       </#if>
 
-
-      <#-- Attempt using structure from vivo 1.5 -->
-
       <#-- link to webpage; hardcoded now to only one -->
-      <#assign link = propertyGroups.pullProperty("http://www.w3.org/2006/vcard/ns#hasURL")!>
+      <#assign link = propertyGroups.pullProperty("http://www.w3.org/2006/vcard/ns#hasURL","http://www.w3.org/2006/vcard/ns#URL")!>
       <#if link?has_content && link.statements?has_content>
         <#assign linkStatement = link.statements[0]>
 
@@ -39,15 +36,6 @@
         <#assign linkAnchor = linkStatement.label>
         ${linkAnchor}
         ${link.template}
-
-        <#-- line 37 ".url" is the issue. See the error:
-
-        Caused by: Error on line 37, column 9 in individual--dukeart-artistic-work.ftl 
-        linkedStatement.url is undefined. It cannot be assigned to linkedUrl 
-        The problematic instruction: ---------- ==> assignment: linkedUrl=linkedStatement.url [on line 37, column 9 in individual--dukeart-artistic-work.ftl]
-         ---------- Java backtrace for programmers: ---------- 
-         freemarker.core.InvalidReferenceException: Error on line 37, column 9 in individual--dukeart-artistic-work.ftl linkedStatement.url is undefined. It cannot be assigned to linkedUrl at freemarker.core.Assignment.accept(Assignment.java:111) at freemarker.core.Environment.visit(Environment.java:221) at freemarker.core.MixedContent.accept(MixedContent.java:92) at freemarker.core.Environment.visit(Environment.java:221) 
-        -->
 
       </#if>
       <#if linkUrl??>

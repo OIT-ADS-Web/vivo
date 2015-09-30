@@ -120,7 +120,7 @@ local:artisticWorkLinkContext a :ConfigContext ;
     :qualifiedBy      <http://www.w3.org/2006/vcard/ns#URL> .
 
 local:artisticWorkLinkConfig a :ObjectPropertyDisplayConfig ;
-    :listViewConfigFile "listViewConfig-webpage.xml"^^xsd:string ;
+    :listViewConfigFile "listViewConfig-link.xml"^^xsd:string ;
     :displayName "link" ;
     vitro:displayRankAnnot 15;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
