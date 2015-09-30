@@ -37,11 +37,8 @@
         <#-- assign linkUrl = linkStatement.url -->
 
         <#assign linkAnchor = linkStatement.label>
-        
-
         ${linkAnchor}
-        <h5><@simpleDataPropertyListing link "Link" /></h5>  
-
+        ${link.template}
 
         <#-- line 37 ".url" is the issue. See the error:
 
@@ -66,6 +63,23 @@
       </#if>
 
 
+      <#-- using simpledataproperty to get a link to the hasURL page (which contains the URL we are trying to obtain)-->
+      <h5><@simpleDataPropertyListing link "Link" /></h5>
+
+
+      <#-- attempt using structure from bibo-document (what Sheri constructed in 2014) -->
+
+      <#assign fullTextLinks = []/>
+      <#assign link = propertyGroups.pullProperty("http://www.w3.org/2006/vcard/ns#hasURL","http://www.w3.org/2001/XMLSchema#anyURI")!>
+      <#if link?has_content && link.statements?has_content>
+        <#assign linkValue = "${link.statements[0]}"/> 
+        <#-- ^^^ this originally had .value following it, but that throws an error when I try it -->
+
+        <#assign linkUrl = "<a href=\"${linkValue}\" target=\"_blank\">THIS IS A HYPERLINK</a>"/>
+        <#assign fullTextLinks = fullTextLinks + [linkUrl]/>
+      </#if>
+
+
 
       <#-- attempt using structure from individual-contactinfo.ftl; does not throw error but does not find content either-->
 
@@ -86,8 +100,14 @@
         </ul>
       </#macro>
 
+      <#-- related to vcard:url (according to Authorship.2015-08-26.png) . . . http://www.w3.org/2001/XMLSchema#anyURI
+      isDefinedBy 
+      -->
+
     </header>
   </section>
+
+
 
   <section id="individual-body" role="region">
     <#-- work type -->
