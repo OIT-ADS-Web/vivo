@@ -566,6 +566,10 @@
     <rdfs:label xml:lang="en-US">Book Review</rdfs:label>
   </rdf:Description>
 
+<rdf:Description rdf:about="http://purl.org/ontology/bibo/Thesis">
+    <rdfs:label xml:lang="en-US">Theses and Dissertations</rdfs:label>
+  </rdf:Description>
+
   <rdf:Description rdf:about="http://vivo.duke.edu/vivo/ontology/duke-extension#officehours">
     <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A list of office hours for a person.</vitro:publicDescriptionAnnot>
     <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
