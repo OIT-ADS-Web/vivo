@@ -1812,14 +1812,15 @@ local:yearAwardedConfig a :ObjectPropertyDisplayConfig ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
     :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupoverview> .
 
-### work on changing thesis label ###
+local:thesisContext a :ConfigContext ;
+    :hasConfiguration local:thesisConfig ;
+    :configContextFor <http://purl.org/ontology/bibo/Thesis> ;
+    :qualifiedByDomain <http://purl.org/ontology/bibo/Document> ;
+    :qualifiedBy <http://purl.org/ontology/bibo/Thesis> .
 
 local:thesisConfig a :ObjectPropertyDisplayConfig ;
     :listViewConfigFile "listViewConfig-fauxPropertyDefault.xml"^^xsd:string ;
     :displayName "theses and dissertations" ;
-    vitro:collateBySubclassAnnot
-              "true"^^xsd:boolean;
-    vitro:displayRankAnnot 1;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
-    :propertyGroup <http://purl.org/ontology/bibo/Thesis> . 
+    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupoverview> . 
