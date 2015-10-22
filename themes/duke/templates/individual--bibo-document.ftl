@@ -242,6 +242,24 @@
       </#if>
     </#if>
 
+    <#-- conference name -->
+    <#assign conferenceName = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#serviceOrEventName")!>
+    <#if conferenceName?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+      <@simpleDataPropertyListing conferenceName "Conference Name" />
+    </#if>
+
+    <#-- conference location -->
+    <#assign conferenceLocation = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#locationOrVenue")!>
+    <#if conferenceLocation?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+      <@simpleDataPropertyListing conferenceLocation "Conference Location" />
+    </#if>
+
+
+    <#-- Conference Dates are conflicting with "Published Date" section -->
+    <#-- these may end up being a range section like page range, and I may have to change type from datetime to something else to resolve conflict with publication date -->
+    <#-- conference start date -->
+    <#-- conference end date -->
+
   </section>
 </section>
 <section id="rightColumn" class="sidebar">
