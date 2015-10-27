@@ -242,6 +242,30 @@
       </#if>
     </#if>
 
+    <#-- conference name -->
+    <#assign conferenceName = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#serviceOrEventName")!>
+    <#if conferenceName?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+      <@simpleDataPropertyListing conferenceName "Conference Name" />
+    </#if>
+
+    <#-- conference location -->
+    <#assign conferenceLocation = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#locationOrVenue")!>
+    <#if conferenceLocation?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+      <@simpleDataPropertyListing conferenceLocation "Conference Location" />
+    </#if>
+
+    <#-- conference start date -->
+    <#assign startDate = propertyGroups.pullProperty("${core}start")!>
+    <#if startDate?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+      <@simpleObjectPropertyListing startDate "Conference Start Date" />
+    </#if>
+
+    <#-- conference end date -->
+    <#assign endDate = propertyGroups.pullProperty("${core}end")!>
+    <#if endDate?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+      <@simpleObjectPropertyListing endDate "Conference End Date" />
+    </#if>
+
   </section>
 </section>
 <section id="rightColumn" class="sidebar">
