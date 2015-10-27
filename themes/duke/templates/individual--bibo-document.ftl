@@ -21,14 +21,19 @@
         <#-- publication status -->
         <#assign pstatus = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#publicationStatus")!>
         <#if pstatus?has_content>
-             <p class='publication-status'>${dataPropertyValue(pstatus)}</p>
+           <p class='publication-status'>${dataPropertyValue(pstatus)}</p>
         </#if>
 
-        <#-- subtypes -->
+        <#-- pubtypes and subtypes -->
         <#assign subtypes = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#subtypes")!>
-        <#if subtypes?has_content>
-             <p id="publication-subtypes">${dataPropertyValue(subtypes)}</p>
-        </#if>
+        <p id="publication-subtypes">
+          <@p.mostSpecificTypes individual />
+          <#if subtypes?has_content>
+            <span style="padding-left:10px; padding-right:10px; color:#004D69; background-color:#f0f0f0;">
+              ${dataPropertyValue(subtypes)}
+            </span>
+          </#if>
+        </p>
 
         <#-- abstract -->
         <#assign abstract = propertyGroups.pullProperty("http://purl.org/ontology/bibo/abstract")!>
