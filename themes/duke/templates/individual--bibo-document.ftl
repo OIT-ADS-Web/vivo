@@ -29,7 +29,7 @@
         <p id="publication-subtypes">
           <@p.mostSpecificTypes individual />
           <#if subtypes?has_content>
-            <span style="padding-left:10px; padding-right:10px; color:#004D69; background-color:#f0f0f0;">
+            <span id="publication-subtype-color">
               ${dataPropertyValue(subtypes)}
             </span>
           </#if>
