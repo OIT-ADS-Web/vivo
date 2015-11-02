@@ -26,11 +26,12 @@
 
         <#-- pubtypes and subtypes -->
         <#assign subtypes = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#subtypes")!>
+        <#assign subContent = "${dataPropertyValue(subtypes)}"/>
         <p id="publication-subtypes">
           <@p.mostSpecificTypes individual />
-          <#if subtypes?has_content>
+          <#if subtypes?has_content && (subContent?length > 0) >
             <span id="publication-subtype-color">
-              ${dataPropertyValue(subtypes)}
+              (${subContent})
             </span>
           </#if>
         </p>
