@@ -34,5 +34,3 @@ function removeExtraComma() {
     document.querySelector(".adr").innerHTML = res;
 }
 window.onload = removeExtraComma;
-
-
