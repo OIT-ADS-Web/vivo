@@ -381,8 +381,8 @@ local:hasResearcherRoleContext a :ConfigContext ;
     :qualifiedBy      <http://vivoweb.org/ontology/core#ResearcherRole> .
 
 local:hasResearcherRoleConfig a :ObjectPropertyDisplayConfig ;
-    :listViewConfigFile "listViewConfig-hasResearcherRoleConfig.xml "^^xsd:string ;
-    :displayName "selected grants" ;
+    :listViewConfigFile "listViewConfig-hasResearcherRoleConfig.xml"^^xsd:string ;
+    :displayName "selected grants (11/20/2015)" ;
     vitro:displayRankAnnot 35;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
