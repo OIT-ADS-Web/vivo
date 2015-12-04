@@ -63,7 +63,16 @@ http://vivoweb.org/ontology/core#realizedRole and http://vivoweb.org/ontology/co
                        OPTIONAL { ?indivInRole rdfs:label ?indivLabel }
                      }
 
-        } ORDER BY <collated>?roleLabel</collated> ?indivLabel ?roleTypeLabel ?indivName
+             values (?roleLabel ?investigatorRoleLabel) { 
+                ("Principal Investigator" 1) 
+                ("Co-Principal Investigator" 2) 
+                ("Investigator" 3)
+                ("Researcher" 4)
+                ("Statistician" 5) 
+                (UNDEF 6)                
+             }
+
+        } ORDER BY ?investigatorRoleLabel <collated>?roleLabel</collated> ?indivLabel ?roleTypeLabel ?indivName
     </query-select>
 
     <query-construct>
