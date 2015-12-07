@@ -219,3 +219,25 @@ ${headScripts.add('<script type="text/javascript" src="${urls.base}/js/tiny_mce/
 ${scripts.add('<script type="text/javascript" src="${urls.base}/js/imageUpload/imageUploadUtils.js"></script>',
               '<script type="text/javascript" src="${urls.base}/js/individual/individualUtils.js"></script>')}
 ${headScripts.add('<script type="text/javascript" src="${urls.base}/js/individual/dukeUtils.js"></script>')}
+<script type="text/javascript">
+$(document).ready(function() {
+  $(window).load(function(){
+    $('.section-collapsible .hideshow [role=listitem] a').click(function(e){
+      e.preventDefault();
+      var href = e.target.href;
+      var slugParts = href.split("/");
+      var slug = slugParts[slugParts.length - 1];
+      window.location.hash=slug;
+      window.location.href=href;
+    });
+    var navTo = window.location.hash.slice(1);
+    if (navTo) {
+      var targetLink = $('a[href$=' + navTo + ']');
+      var section = targetLink.parents('.section-collapsible')
+      var expander = section.children('a.expanderLink');
+      $(expander).trigger('click');
+      $('html, body').animate({ scrollTop: targetLink.offset().top }, 1000);
+    }
+  });
+});
+</script>
