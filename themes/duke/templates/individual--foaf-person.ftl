@@ -234,8 +234,8 @@ $(document).ready(function() {
     if (navTo) {
       var targetLink = $('a[href$=' + navTo + ']');
       var section = targetLink.parents('.section-collapsible')
-      var expander = section.children('a.expanderLink');
-      $(expander).trigger('click');
+      section.children('a.expanderLink').trigger('click');
+      targetLink.parents('.additionalItems').siblings('a.more-less').trigger('click');
       $('html, body').animate({ scrollTop: targetLink.offset().top }, 1000);
     }
   });
