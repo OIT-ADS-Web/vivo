@@ -27,3 +27,7 @@ jQuery(function() {
 		$('#mobile-nav').toggle();
 	});
 });
+
+$(document).ready(function() {
+	$('.individual-overview').find("a").attr("target", "_blank");
+});
