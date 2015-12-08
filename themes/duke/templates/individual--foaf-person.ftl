@@ -232,7 +232,7 @@ $(document).ready(function() {
     });
     var navTo = window.location.hash.slice(1);
     if (navTo) {
-      var targetLink = $('a[href$=' + navTo + ']');
+      var targetLink = $('a[href$="' + navTo + '"]');
       var section = targetLink.parents('.section-collapsible')
       section.children('a.expanderLink').trigger('click');
       targetLink.parents('.additionalItems').siblings('a.more-less').trigger('click');
