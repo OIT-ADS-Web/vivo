@@ -29,5 +29,5 @@ jQuery(function() {
 });
 
 $(document).ready(function() {
-	$('.individual-overview').find("a").attr("target", "_blank");
+	$('.individual-overview, .webpages').find("a").attr("target", "_blank");
 });
