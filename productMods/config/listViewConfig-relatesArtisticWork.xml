@@ -9,6 +9,7 @@
         PREFIX duke: &lt;http://vivo.duke.edu/vivo/ontology/duke-extension#&gt;
         PREFIX dukeart: &lt;http://vivo.duke.edu/vivo/ontology/duke-art-extension#&gt;
         PREFIX bibo: &lt;http://purl.org/ontology/bibo/&gt;
+        PREFIX vcard: &lt;http://www.w3.org/2006/vcard/ns#&gt;
 
         SELECT ?artWork
                ?artWorkName
@@ -22,6 +23,7 @@
         PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
         PREFIX dukeart: &lt;http://vivo.duke.edu/vivo/ontology/duke-art-extension#&gt;
         PREFIX bibo: &lt;http://purl.org/ontology/bibo/&gt;
+        PREFIX vcard: &lt;http://www.w3.org/2006/vcard/ns#&gt;
         CONSTRUCT {
             ?subject ?property ?artWork .
             ?artWork a dukeart:ArtisticWork .

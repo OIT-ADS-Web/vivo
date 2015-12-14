@@ -21,14 +21,20 @@
         <#-- publication status -->
         <#assign pstatus = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#publicationStatus")!>
         <#if pstatus?has_content>
-             <p class='publication-status'>${dataPropertyValue(pstatus)}</p>
+           <p class='publication-status'>${dataPropertyValue(pstatus)}</p>
         </#if>
 
-        <#-- subtypes -->
+        <#-- pubtypes and subtypes -->
         <#assign subtypes = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#subtypes")!>
-        <#if subtypes?has_content>
-             <p id="publication-subtypes">${dataPropertyValue(subtypes)}</p>
-        </#if>
+        <#assign subContent = "${dataPropertyValue(subtypes)}"/>
+        <p id="publication-subtypes">
+          <@p.mostSpecificTypes individual />
+          <#if subtypes?has_content && (subContent?length > 0) >
+            <span id="publication-subtype-color">
+              (${subContent})
+            </span>
+          </#if>
+        </p>
 
         <#-- abstract -->
         <#assign abstract = propertyGroups.pullProperty("http://purl.org/ontology/bibo/abstract")!>
@@ -240,6 +246,30 @@
       <#if sourceName == 'Scopus'>
         <@simpleList sourceName "Citation Source" />
       </#if>
+    </#if>
+
+    <#-- conference name -->
+    <#assign conferenceName = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#serviceOrEventName")!>
+    <#if conferenceName?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+      <@simpleDataPropertyListing conferenceName "Conference Name" />
+    </#if>
+
+    <#-- conference location -->
+    <#assign conferenceLocation = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#locationOrVenue")!>
+    <#if conferenceLocation?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+      <@simpleDataPropertyListing conferenceLocation "Conference Location" />
+    </#if>
+
+    <#-- conference start date -->
+    <#assign startDate = propertyGroups.pullProperty("${core}start")!>
+    <#if startDate?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+      <@simpleObjectPropertyListing startDate "Conference Start Date" />
+    </#if>
+
+    <#-- conference end date -->
+    <#assign endDate = propertyGroups.pullProperty("${core}end")!>
+    <#if endDate?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+      <@simpleObjectPropertyListing endDate "Conference End Date" />
     </#if>
 
   </section>

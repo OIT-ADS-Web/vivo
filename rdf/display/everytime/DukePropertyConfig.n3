@@ -120,6 +120,20 @@ local:outcomeOfEventConfig a :ObjectPropertyDisplayConfig ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
     :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
 
+local:artisticWorkLinkContext a :ConfigContext ;
+    :hasConfiguration local:artisticWorkLinkConfig ;
+    :configContextFor <http://www.w3.org/2006/vcard/ns#hasURL> ;
+    :qualifiedByDomain <http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork> ;
+    :qualifiedBy      <http://www.w3.org/2006/vcard/ns#URL> .
+
+local:artisticWorkLinkConfig a :ObjectPropertyDisplayConfig ;
+    :listViewConfigFile "listViewConfig-link.xml"^^xsd:string ;
+    :displayName "link" ;
+    vitro:displayRankAnnot 15;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
+    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
+
 local:performs a :ConfigContext ;
     :hasConfiguration local:performsConfig ;
     :configContextFor <http://vivo.duke.edu/vivo/ontology/duke-activity-extension#performs> ;

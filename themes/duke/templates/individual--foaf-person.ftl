@@ -47,6 +47,9 @@
         <#-- Overview -->
         <#include "individual-overview.ftl">
 
+        <#-- Office Hours -->
+        <#include "individual-officehours.ftl">
+
         <#-- Positions -->
         <#assign positions = propertyGroups.pullProperty("${core}relatedBy", "${core}Position")!>
         <#if positions?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->

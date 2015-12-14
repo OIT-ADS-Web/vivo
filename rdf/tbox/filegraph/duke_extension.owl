@@ -497,12 +497,12 @@
     <vitro:customDisplayViewAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">individual--bibo-document.ftl</vitro:customDisplayViewAnnot>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://purl.org/ontology/bibo/Journal">
-    <vitro:customDisplayViewAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">individual--bibo-journal.ftl</vitro:customDisplayViewAnnot>
-  </rdf:Description>
-
   <rdf:Description rdf:about="http://vivoweb.org/ontology/core#NewsRelease">
     <vitro:customDisplayViewAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">individual--vivo-newsrelease.ftl</vitro:customDisplayViewAnnot>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://purl.org/ontology/bibo/Journal">
+    <vitro:customDisplayViewAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">individual--bibo-journal.ftl</vitro:customDisplayViewAnnot>
   </rdf:Description>
 
   <rdf:Description rdf:about="http://vivoweb.org/ontology/core#FundingOrganization">
@@ -564,6 +564,24 @@
 
   <rdf:Description rdf:about="http://vivoweb.org/ontology/core#Review">
     <rdfs:label xml:lang="en-US">Book Review</rdfs:label>
+  </rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/ontology/bibo/Thesis">
+    <rdfs:label xml:lang="en-US">Theses and Dissertations</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://vivo.duke.edu/vivo/ontology/duke-extension#officehours">
+    <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A list of office hours for a person.</vitro:publicDescriptionAnnot>
+    <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <vitro:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</vitro:displayLimitAnnot>
+    <rdfs:label xml:lang="en-US">office hours</rdfs:label>
+    <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</vitro:displayRankAnnot>
+    <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <vitro:inPropertyGroupAnnot rdf:resource="http://vivoweb.org/ontology#vitroPropertyGroupoverview"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
 
 </rdf:RDF>

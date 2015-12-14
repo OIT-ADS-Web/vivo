@@ -17,7 +17,6 @@
         <h1>
           ${docName}
         </h1>
-
     </header>
   </section>
   <section id="individual-body" role="region">
@@ -49,10 +48,16 @@
 
     <#-- source -->
       <#assign newsSource = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#source")!>
-      <#if newsSource?has_content>
-        <#assign sourcedNews = "${newsSource.statements[0].value}" />
+      <#assign sourcedNews = "${newsSource.statements[0].value}" />
+      <#if newsSource?has_content> 
         <@simpleList sourcedNews "Source" />
-     </#if>
+      </#if>
+
+    <#-- associated scholar -->  
+      <#assign scholar = propertyGroups.pullProperty("${core}relates")!>  
+      <#if scholar?has_content>  
+        <@simpleObjectPropertyListing scholar "Associated Scholar" />  
+      </#if>  
 
   </section>
 </section>
