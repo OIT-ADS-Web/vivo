@@ -27,3 +27,6 @@ jQuery(function() {
 		$('#mobile-nav').toggle();
 	});
 });
+
+  $('<p>Text</p>').appendTo('li#Course.section-collapsible');
+
