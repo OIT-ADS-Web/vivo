@@ -85,12 +85,6 @@ local:relatesArtisticWorkConfig a :ObjectPropertyDisplayConfig ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
     :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
 
-#local:contributingRoleContext a :ConfigContext ;
-#    :hasConfiguration local:contributingRoleConfig ;
-#    :configContextFor <http://vivoweb.org/ontology/core#relates> ;
-#    :qualifiedByDomain <http://vivoweb.org/ontology/core#Grant> ;
-#    :qualifiedBy      <http://vivoweb.org/ontology/core#InvestigatorRole> .
-
 local:contributingRoleContext a :ConfigContext ;
     :hasConfiguration local:contributingRoleConfig ;
     :configContextFor <http://vivoweb.org/ontology/core#relates> ;
