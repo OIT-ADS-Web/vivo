@@ -103,9 +103,9 @@
         <@collapsiblePropertyListSection "Publication" authorships editable />
 
         <#-- Grants -->
-        <#assign grants = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000053", "${core}InvestigatorRole")!>
+        <#assign grants = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000053", "${core}ResearcherRole")!>
         <@collapsiblePropertyListSection "Grant" grants editable />
-
+        
         <#-- Courses -->
         <#assign courses = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000053", "${core}TeacherRole")!>
         <@collapsiblePropertyListSection "Course" courses editable />

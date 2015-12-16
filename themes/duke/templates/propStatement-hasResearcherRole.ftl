@@ -33,8 +33,7 @@
     <#local dateTime>
         <@dt.yearIntervalSpan "${statement.dateTimeStartGrant!}" "${statement.dateTimeEndGrant!}" />
     </#local>
-
-
+   
     ${linkedIndividual} ${awardOrAdminBy} ${dateTime!}
 
 </#macro>
