@@ -241,3 +241,7 @@ $(document).ready(function() {
   });
 });
 </script>
+
+${headScripts.add('<meta name="description" value="${individual.name}\'s profile, publications, research topics, and co-authors"></meta>')}
+
+
