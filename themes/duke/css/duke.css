@@ -170,8 +170,12 @@ label.inline {
 	padding: 0 .4em;
 }
 
-.disclaimer {
+.disclaimer, .grant-disclaimer {
         font-size: 1.3em;
+}
+
+.grant-disclaimer {
+	margin-left: 1.4em;
 }
 
 .verbose-toggle,.verbose-toggle: visited,#showAddFormButton,#showAddFormButton: visited,input.submit,input.submit: visited,input#submit,input#submit: visited {
