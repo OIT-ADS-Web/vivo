@@ -28,7 +28,7 @@
       <@simpleObjectPropertyListing grantAwardedBy "Awarded By" />
     </#if>
 
-    <#assign contributingRole = propertyGroups.pullProperty("${core}relates", "${core}InvestigatorRole")!>
+    <#assign contributingRole = propertyGroups.pullProperty("${core}relates", "${core}ResearcherRole")!>
     <#if contributingRole?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
       <@simpleObjectPropertyListing contributingRole "Contributors" />
     </#if>

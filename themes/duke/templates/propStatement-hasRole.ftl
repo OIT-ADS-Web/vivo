@@ -51,7 +51,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <#local dateTime>
         <@dt.yearIntervalSpan "${statement.dateTimeStart!}" "${statement.dateTimeEnd!}" />
     </#local>
-    
+
+
     ${linkedIndividual} ${dateTime!}
 
 </#macro>
