@@ -32,7 +32,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 <meta name="viewport" content="width=device-width"/>
 
-<title>${title}</title>
+<title>${title} | Scholars @Duke</title>
+
+<meta name="description" content="${title}’s profile, publications, research topics, and co-authors">
+
 
 <#include "stylesheets.ftl">
 <link id="resetcss" rel="stylesheet" href="${urls.theme}/css/reset.css" />
