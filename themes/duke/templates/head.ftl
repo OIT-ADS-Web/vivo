@@ -32,10 +32,15 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 <meta name="viewport" content="width=device-width"/>
 
+<#if title?index_of(",") > 0>
 <#assign arr=title?split(",")>
 <#assign dukelabel>${arr[1]?trim} ${arr[0]?trim}</#assign>
 <title>${dukelabel}| Scholars @Duke</title>
 <meta name="description" content="${dukelabel}’s profile, publications, research topics, and co-authors">
+<#else>
+<title>${title}| Scholars @Duke</title>
+<meta name="description" content="${title}’s profile, publications, research topics, and co-authors">
+</#if>
 
 <#include "stylesheets.ftl">
 <link id="resetcss" rel="stylesheet" href="${urls.theme}/css/reset.css" />
