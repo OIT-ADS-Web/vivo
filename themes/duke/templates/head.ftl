@@ -32,7 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 <meta name="viewport" content="width=device-width"/>
 
-<#if title?index_of(",") > 0>
+<#if title?contains(",")>
 <#assign arr=title?split(",")>
 <#assign dukelabel>${arr[1]?trim} ${arr[0]?trim}</#assign>
 <title>${dukelabel}| Scholars @Duke</title>
