@@ -3451,43 +3451,43 @@ p.caption {
 
 @media (min-width: 995px) {
 	p.caption {
-		height: 60px;
+		height: 30px;
 	}
 }
 
 @media (max-width: 994px) {
 	p.caption {
-		height: 80px;
+		height: 40px;
 	}
 }
 
 @media (max-width: 808px) {
 	p.caption {
-		height: 95px;
+		height: 47px;
 	}
 }
 
 @media (max-width: 768px) {
 	p.caption {
-		height: 60px;
+		height: 30px;
 	}
 }
 
 @media (max-width: 693px) {
 	p.caption {
-		height: 80px;
+		height: 40px;
 	}
 }
 
 @media (max-width: 564px) {
 	p.caption {
-		height: 100px;
+		height: 50px;
 	}
 }
 
 @media (max-width: 484px) {
 	p.caption {
-		height: 115px;
+		height: 57px;
 	}
 }
 
@@ -3499,19 +3499,19 @@ p.caption {
 
 @media (max-width: 390px) {
 	p.caption {
-		height: 135px;
+		height: 67px;
 	}
 }
 
 @media (max-width: 359px) {
 	p.caption {
-		height: 155px;
+		height: 77px;
 	}
 }
 
 @media (max-width: 332px) {
 	p.caption {
-		height: 175px;
+		height: 87px;
 	}
 }
 
