@@ -35,10 +35,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 <#if title?contains(",")>
 <#assign arr=title?split(",")>
 <#assign dukelabel>${arr[1]?trim} ${arr[0]?trim}</#assign>
-<title>${dukelabel}| Scholars @Duke</title>
+<title>${dukelabel} | Scholars@Duke</title>
 <meta name="description" content="${dukelabel}’s profile, publications, research topics, and co-authors">
 <#else>
-<title>${title}| Scholars @Duke</title>
+<title>${title} | Scholars@Duke</title>
 <meta name="description" content="${title}’s profile, publications, research topics, and co-authors">
 </#if>
 
