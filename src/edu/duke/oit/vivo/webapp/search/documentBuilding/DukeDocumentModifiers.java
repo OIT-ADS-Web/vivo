@@ -15,6 +15,7 @@ import edu.cornell.mannlib.vitro.webapp.rdfservice.impl.RDFServiceUtils;
 
 import edu.cornell.mannlib.vitro.webapp.search.documentBuilding.DocumentModifier;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonDepartmentFacet;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonDepartmentSearch;
 
 public class DukeDocumentModifiers implements javax.servlet.ServletContextListener{
 
@@ -34,6 +35,7 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
         }
 
         modifiers.add( new PersonDepartmentFacet( rdfServiceFactory ));
+        modifiers.add( new PersonDepartmentSearch( rdfServiceFactory ));
     }
 
     @Override

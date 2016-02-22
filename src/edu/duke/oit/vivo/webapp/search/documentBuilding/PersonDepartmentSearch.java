@@ -1,10 +1,5 @@
 package edu.duke.oit.vivo.webapp.search.documentBuilding;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.apache.commons.lang.StringUtils;
-
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -26,13 +21,13 @@ import edu.cornell.mannlib.vitro.webapp.search.documentBuilding.SkipIndividualEx
 /**
  * Add helper field for faceting Person searches by Deparment
  */
-public class PersonDepartmentFacet implements DocumentModifier {
+public class PersonDepartmentSearch implements DocumentModifier {
   RDFServiceFactory rsf;
 
   public static final VitroSearchTermNames term = new VitroSearchTermNames();
   public static final Log log = LogFactory.getLog(PersonDepartmentFacet.class.getName());
 
-  public PersonDepartmentFacet( RDFServiceFactory rsf){
+  public PersonDepartmentSearch( RDFServiceFactory rsf){
     this.rsf = rsf; 
   }
 
@@ -47,14 +42,14 @@ public class PersonDepartmentFacet implements DocumentModifier {
       "PREFIX foaf: <http://xmlns.com/foaf/0.1/> " +
       "PREFIX obo: <http://purl.obolibrary.org/obo/> " +
       "PREFIX core: <http://vivoweb.org/ontology/core#> " +
-      "SELECT (group_concat(DISTINCT ?parentUri) as ?path)" +
+      "SELECT DISTINCT ?parentLabel " +
       "WHERE { " +
         "<"+ ind.getURI() + "> a foaf:Person ; core:relatedBy ?positionUri . " +
         "?positionUri a core:Position ; core:relates ?organizationUri . " +
         "?organizationUri a foaf:Organization ; obo:BFO_0000050* ?parentUri . " +
+        "?parentUri rdfs:label ?parentLabel . " +
         "FILTER (?parentUri NOT IN (<https://scholars.duke.edu/individual/org50000021>)) " +
-       "} " +
-       "GROUP BY ?positionUri ?organizationUri ";
+       "} ";
 
     try {
 
@@ -67,28 +62,15 @@ public class PersonDepartmentFacet implements DocumentModifier {
 
       String line;
       while( (line = stream.readLine()) != null ){
-        String[] orgs = line.split(" ");
-        if (orgs.length > 0 && orgs[0].trim() !="") {
-          for(int i=0;i<orgs.length/2;i++) {
-            String tmp = orgs[i];
-            orgs[i] = orgs[orgs.length -i -1];
-            orgs[orgs.length -i -1] = tmp;
-          }
-          // build hierarchical paths with depth index
-          for(int j = orgs.length;j > 0;j--){
-            String[] subpath = Arrays.copyOfRange(orgs,0,j);
-            ArrayList<String> paths = new ArrayList<String>(Arrays.asList(subpath));
-            paths.add(0,Integer.toString(j));
-            String nav = StringUtils.join(paths,"|");
-            doc.addField("department_facet_string", nav);
-          }
+        if (line.trim() != "") {
+          doc.addField("department_search_text", line);
         }
       }
 
     } catch (RDFServiceException e) {
-        log.error("Person Department Facet Indexing Error: ",e);
+        log.error("Person Department Search Indexing Error: ",e);
     } catch (IOException e) {
-        log.error("Person Department Facet Indexing Error: ",e);
+        log.error("Person Department Search Indexing Error: ",e);
     }
 
   }
