@@ -62,7 +62,7 @@ public class PersonDepartmentSearch implements DocumentModifier {
 
       String line;
       while( (line = stream.readLine()) != null ){
-        if (line.trim() != "") {
+        if(!line.isEmpty() && !line.trim().equals("") && !line.trim().equals("\n")) {
           doc.addField("department_search_text", line);
         }
       }

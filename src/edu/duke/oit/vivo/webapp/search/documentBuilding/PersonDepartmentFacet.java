@@ -66,9 +66,9 @@ public class PersonDepartmentFacet implements DocumentModifier {
       stream.readLine();
 
       String line;
-      while( (line = stream.readLine()) != null ){
-        String[] orgs = line.split(" ");
-        if (orgs.length > 0 && orgs[0].trim() !="") {
+      while( (line = stream.readLine()) != null){
+        if(!line.isEmpty() && !line.trim().equals("") && !line.trim().equals("\n")) {
+          String[] orgs = line.split(" ");
           for(int i=0;i<orgs.length/2;i++) {
             String tmp = orgs[i];
             orgs[i] = orgs[orgs.length -i -1];
