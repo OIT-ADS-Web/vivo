@@ -62,10 +62,10 @@ public class IndividualRequestAnalysisContextImpl implements
 			return null;
 		}
 
-		name = name.replace('.', ' ');
+		//name = name.replace('.', ' ');
 
 		List<Individual> inds = iDao.getIndividualsByDataProperty(
-				"http://vivo.duke.edu/vivo/ontology/duke-extension#profileLabel", name);
+				"http://vivo.duke.edu/vivo/ontology/duke-extension#profileAlias", name);
 
 		if (!inds.isEmpty()) {
 			return inds.get(0);
