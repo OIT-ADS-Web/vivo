@@ -65,7 +65,7 @@ public class IndividualRequestAnalysisContextImpl implements
 		//name = name.replace('.', ' ');
 
 		List<Individual> inds = iDao.getIndividualsByDataProperty(
-				"http://vivo.duke.edu/vivo/ontology/duke-extension#profileAlias", name);
+				"http://vivo.duke.edu/vivo/ontology/duke-extension#profileAlias", name.toLowerCase());
 
 		if (!inds.isEmpty()) {
 			return inds.get(0);
