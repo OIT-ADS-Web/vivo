@@ -21,39 +21,39 @@
               <div id="home_page_carousel" class="carousel slide">
                 <div class="carousel-inner">
                   <div class="item">
-                    <img src="../themes/duke/images/scholars_Michelle_Hartman_School_of_Nursing_photo.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/scholars-spie005.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per4004892">Michelle Hartman</a>, Assistant Professor in the School of Nursing: Teaching course N397 (Community and Public Health Nursing) to accelerated bachelor of science in nursing students.</p>
+                      <p class="caption"><a href="display/per6834062">April Brown</a>, <a href="display/per5449272">Nan Jokerst</a>, and <a href="display/per3399472">Adrienne Stiff-Roberts</a>, Electrical and Computer Engineering Faculty</p>
                     </div>
                   </div>
                   <div class="item">
-                    <img src="../themes/duke/images/scholars_185712_supko025.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/scholars_leftkowitz_robert032.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per6269292">John Supko</a>, Assistant Professor of Music: Composer of Inland Ocean - photographed in the studio with oversized scores of the composition.</p>
+                      <p class="caption"><a href="display/per3314042">Dr. Robert Lefkowitz</a>, James B. Duke Professor of Medicine</p>
                     </div>
                   </div>
                   <div class="item">
-                    <img src="../themes/duke/images/scholars_166012_charbonneau025.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/scholars_dawson002.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per3754982">Patrick Charbonneau</a>, Assistant professor in the Department of Chemistry: Researching the molecular properties of glass.</p>
+                      <p class="caption"><a href="display/per4177302">Geraldine Dawson</a>, Professor in Psychiatry and Behavioral Sciences and Director of the Duke Center for Autism and Brain Development</p>
                     </div>
                   </div>
                   <div class="item">
-                    <img src="../themes/duke/images/scholars_136214_ciofani011.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/scholars-mattingly.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per7438402">Maria Ciofani</a>, PhD, Assistant Professor of Immunology: Studying the immune system's ability to start and stop its aggression against other cells, in her Jones Building lab.</p>
+                      <p class="caption"><a href="display/per2685062">Jonathan Mattingly</a>, Professor of Mathematics</p>
                     </div>
                   </div>
                   <div class="item">
-                    <img src="../themes/duke/images/scholars_187306_ferreira006.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/scholars-yode.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per2373472">Dr. Paulo Ferreira</a>, Associate Professor in Ophthalmology: The focus of the Ferreira laboratory is to understand the integration of signaling and trafficking pathways and how they relay environmental cues across subcellular compartments and cellular systems in mouse and disease models. </p>
+                      <p class="caption"><a href="display/per3392742">Anne Yoder</a>, Professor of Biology and Director of the Duke Lemur Center</p>
                     </div>
                   </div>
                   <div class="item">
-                    <img src="../themes/duke/images/scholars_094205_katu016.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/scholars_heaney013.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per9294252">Gabriel Katul</a>, Theodore S. Coile Professor of Hydrology and Micrometeorology (Nicholas School of the Environment): Atop the Free Atmosphere Carbon Enrichment Program (FACE) facility site tower in Duke Forest.</p>
+                      <p class="caption"><a href="display/per7413042">Gregson Davis</a>, Andrew W. Mellon Research Professor of Humanities and Research Professor in the Department of Classical Studies</p>
                     </div>
                   </div>
                 </div>

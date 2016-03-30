@@ -30,4 +30,11 @@ jQuery(function() {
 
 $(document).ready(function() {
 	$('.individual-overview, .webpages, .webpage').find("a").attr("target", "_blank");
+	$(window).load(function(){
+		$('a[name=Grant]').one('click',function() {
+			var disclaimerText = '<p class="grant-disclaimer">Due to sponsor publicity restrictions, some awards may not be displayed.</p>'
+			var grantCollapsibleSection = $('li#Grant.section-collapsible').find('.hideshow');
+			$(disclaimerText).appendTo(grantCollapsibleSection);
+		});
+	});
 });
