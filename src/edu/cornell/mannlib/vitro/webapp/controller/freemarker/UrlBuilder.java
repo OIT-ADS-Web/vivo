@@ -254,7 +254,7 @@ public class UrlBuilder {
                     IndividualDao idao = wadf.getIndividualDao();
                     Individual ind = idao.getIndividualByURI(uri);
                     profileUrl = "person" + "/" + ind.getDataValue("http://vivo.duke.edu/vivo/ontology/duke-extension#profileAlias");
-                    //log.info("URL >>>>>>> " + profileUrl);
+                    log.info("URL >>>>>>> " + profileUrl);
                 }
                 else{
                     profileUrl = getUrl(Route.DISPLAY.path() + "/" + localName);
