@@ -109,6 +109,13 @@
       <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#editor"/>
    </owl:DatatypeProperty>
 
+  <owl:DatatypeProperty rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#linkList">
+    <rdfs:label xml:lang="en-US">Links</rdfs:label>
+    <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <vitro:inPropertyGroupAnnot rdf:resource="http://vivoweb.org/ontology#vitroPropertyGroupresearch"/>
+  </owl:DatatypeProperty>
+
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#AudioRecording">
     <rdfs:label xml:lang="en-US">Audio Recording</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork"/>

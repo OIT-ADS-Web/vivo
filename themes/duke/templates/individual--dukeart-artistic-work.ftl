@@ -27,7 +27,7 @@
       </#if> 
 
       <#-- link to webpage; hardcoded now to only one -->
-      <#assign link = propertyGroups.pullProperty("http://www.w3.org/2006/vcard/ns#hasURL","http://www.w3.org/2006/vcard/ns#URL")!>
+      <#assign link = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-art-extension#linkList")!>
       <#if link?has_content && link.statements?has_content>
         <#assign linkStatement = link.statements[0]>
         <#assign linkAnchor = linkStatement.label>
