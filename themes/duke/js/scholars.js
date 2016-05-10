@@ -38,3 +38,62 @@ $(document).ready(function() {
 		});
 	});
 });
+
+
+// works: replace a word (old-fasioned way)
+
+// function removeExtraCitationSpaces() {
+// 	var str = document.querySelector("#citation-element").innerHTML;
+// 	var res = str.replace('genomics', 'dog');
+// 	document.querySelector("#citation-element").innerHTML = res;
+// }
+// window.onload = removeExtraCitationSpaces;
+
+
+
+// works: replace a word (newer way)
+
+// function removeExtraCitationSpaces() {
+// 	$('#citation-element').text(function( index,text ) {
+// 	  return text.replace('Iversen', 'A.I.');
+// 	});
+// }
+// window.onload = removeExtraCitationSpaces;
+
+
+// doesn't work here, though it works in jsfiddle - replace " ." with "."
+
+// this applies changes to all of the instances of a thing and not just the first one it encounters
+// function removeExtraCitationSpaces() {
+// 	$('.citation-element').text(function( index,text ) {
+// 	  // return text.replace(/ \./g,'.');
+// 	  // return text.replace(/ \,/g, ',');
+// 	  return text.replace('Clyde', 'Some Person');
+// 	});
+// }
+// window.onload = removeExtraCitationSpaces;
+
+
+function removeExtraCitationSpaces() {
+	$('.citation-element').text(function( index,text ) {
+	  return text
+	  .replace(/\s+(\W)/g, "$1")
+	  .replace(",&", ", &")
+	  .replace(/([(])/g, ' $1').trim()
+	});
+}
+window.onload = removeExtraCitationSpaces;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
