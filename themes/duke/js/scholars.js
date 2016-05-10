@@ -40,7 +40,7 @@ $(document).ready(function() {
 });
 
 
-// works: replace a word (old-fasioned way)
+// works: replace a word (old-fasioned way) -- only works for the first instance of a class or id
 
 // function removeExtraCitationSpaces() {
 // 	var str = document.querySelector("#citation-element").innerHTML;
@@ -49,16 +49,6 @@ $(document).ready(function() {
 // }
 // window.onload = removeExtraCitationSpaces;
 
-
-
-// works: replace a word (newer way)
-
-// function removeExtraCitationSpaces() {
-// 	$('#citation-element').text(function( index,text ) {
-// 	  return text.replace('Iversen', 'A.I.');
-// 	});
-// }
-// window.onload = removeExtraCitationSpaces;
 
 
 // doesn't work here, though it works in jsfiddle - replace " ." with "."
@@ -74,17 +64,32 @@ $(document).ready(function() {
 // window.onload = removeExtraCitationSpaces;
 
 
+
+// this makes the citations look great, but it's stripping out the links--so I need to return more than .text (.innerHTML probaby)
+// function removeExtraCitationSpaces() {
+// 	$('.citation-element').text(function( index,text ) {
+// 	  return text
+// 	  .replace(/\s+(\W)/g, "$1")
+// 	  .replace(",&", ", &")
+// 	  .replace(/([(])/g, ' $1').trim()
+// 	});
+// }
+// window.onload = removeExtraCitationSpaces;
+
+
+
+
+
 function removeExtraCitationSpaces() {
-	$('.citation-element').text(function( index,text ) {
-	  return text
+	$('.citation-element').html(function( index,html ) {
+	  return html
 	  .replace(/\s+(\W)/g, "$1")
 	  .replace(",&", ", &")
-	  .replace(/([(])/g, ' $1').trim()
+	  .replace(/([(])/g, ' $1')
+	  .replace(/([.,])/g, '$1 ')
 	});
 }
 window.onload = removeExtraCitationSpaces;
-
-
 
 
 

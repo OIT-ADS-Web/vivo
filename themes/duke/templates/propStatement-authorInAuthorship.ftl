@@ -15,7 +15,7 @@
   </#local>
   <span class="citation-element">
     ${citation}
-    </span>
+  </span>
   <#if statement.doi??>
      &nbsp;<a href="http://dx.doi.org/${statement.doi}" class="link-to-content full-text" target="_blank" title="view full text">Full Text</a>
   </#if>
