@@ -38,3 +38,20 @@ $(document).ready(function() {
 		});
 	});
 });
+
+function removeExtraCitationSpaces() {
+	$('.citation-element').html(function( index,html ) {
+	  return html
+	  .replace(/\s+([,.])/g, "$1") 
+	});
+}
+window.onload = removeExtraCitationSpaces;
+
+
+
+
+
+
+
+
+

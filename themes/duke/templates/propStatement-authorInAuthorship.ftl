@@ -7,15 +7,15 @@
 <#macro showAuthorship statement>
 
   <#local citation>
-    <#if statement.preferredCitation??>
+    <#if statement.preferredCitation??>   
       ${statement.preferredCitation}
     <#else>
       <a href="${profileUrl(statement.uri("infoResource"))}" title="resource name">missing citation</a>
     </#if>
   </#local>
-
-  ${citation}
-
+  <span class="citation-element">
+    ${citation}
+  </span>
   <#if statement.doi??>
      &nbsp;<a href="http://dx.doi.org/${statement.doi}" class="link-to-content full-text" target="_blank" title="view full text">Full Text</a>
   </#if>
