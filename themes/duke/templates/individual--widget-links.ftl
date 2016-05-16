@@ -22,7 +22,7 @@ ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/css/individual/indi
       WidgetConfig = {
       "urlBase" : window.location.protocol + "//" + window.location.host,
       "builderLink"    : function() {
-        return this.urlBase + "/builder?uri=${individual.uri}"
+        return this.urlBase + "/widgets/builder?uri=${individual.uri}"
       },
       "collectionLink" : function(collection) {
         return '<a href="' + this.urlBase + '/people/' + collection + '/5.js?uri=${individual.uri}" class="mysite" collection="' + collection + '">[Add to my web site]</a>'
