@@ -1,19 +1,38 @@
 ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/css/individual/individual-widget-links.css" />')}
 
 <script type="text/javascript">
-  WidgetConfig = {
-    "urlBase" : window.location.protocol + "//" + window.location.host + "/widgets",
-    "builderLink"    : function() {
-      return this.urlBase + "/builder?uri=${individual.uri}"
-    },
-    "collectionLink" : function(collection) {
-      return '<a href="' + this.urlBase + '/people/' + collection + '/5.js?uri=${individual.uri}" class="mysite" collection="' + collection + '">[Add to my web site]</a>'
-    },
-    "collectionLinkMap" : {
-       "h2#authorInAuthorship" : "publications",
-       "h2#hasResearcherRole"  : "grants",
-       "h2#hasPrincipalInvestigatorRole"  : "grants",
-       "h2#hasTeacherRole"     : "courses"
+  if (document.location.hostname == "localhost") {
+    WidgetConfig = {
+      "urlBase" : window.location.protocol + "//" + "localhost:8080",
+      "builderLink"    : function() {
+        return this.urlBase + "/builder?uri=${individual.uri}"
+      },
+      "collectionLink" : function(collection) {
+        return '<a href="' + this.urlBase + '/people/' + collection + '/5.js?uri=${individual.uri}" class="mysite" collection="' + collection + '">[Add to my web site]</a>'
+      },
+      "collectionLinkMap" : {
+         "h2#authorInAuthorship" : "publications",
+         "h2#hasResearcherRole"  : "grants",
+         "h2#hasPrincipalInvestigatorRole"  : "grants",
+         "h2#hasTeacherRole"     : "courses"
+      }
+    }
+  }
+  else {
+      WidgetConfig = {
+      "urlBase" : window.location.protocol + "//" + window.location.host,
+      "builderLink"    : function() {
+        return this.urlBase + "/widgets/builder?uri=${individual.uri}"
+      },
+      "collectionLink" : function(collection) {
+        return '<a href="' + this.urlBase + '/people/' + collection + '/5.js?uri=${individual.uri}" class="mysite" collection="' + collection + '">[Add to my web site]</a>'
+      },
+      "collectionLinkMap" : {
+         "h2#authorInAuthorship" : "publications",
+         "h2#hasResearcherRole"  : "grants",
+         "h2#hasPrincipalInvestigatorRole"  : "grants",
+         "h2#hasTeacherRole"     : "courses"
+      }
     }
   }
 </script>
