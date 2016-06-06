@@ -24,6 +24,7 @@ Disallow: /vis/
 Disallow: /visualizationAjax/
 Disallow: /visualizationData/
 Disallow: /qrcode
+Disallow: /display/per_vcard*
 
 # Sitemap addition
 Sitemap: http://scholars.duke.edu/sitemap.xml
