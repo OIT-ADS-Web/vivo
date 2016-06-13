@@ -26,5 +26,5 @@ Disallow: /visualizationData/
 Disallow: /qrcode
 Disallow: /display/per_vcard*
 
-# Sitemap addition
+# Sitemap addition for testing
 Sitemap: http://scholars.duke.edu/sitemap.xml
