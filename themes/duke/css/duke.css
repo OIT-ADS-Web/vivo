@@ -3546,7 +3546,7 @@ p.caption {
 }
 
 .test-text {
-  color: red;
+  color: #FF0000;
   font-weight: bold;
   display: inline;
 }
