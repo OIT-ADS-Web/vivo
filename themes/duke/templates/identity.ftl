@@ -37,7 +37,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <#if siteTagline?has_content>
         <em>${siteTagline}</em>
     </#if>-->
-
+     
     <section id="search" role="region">
         <fieldset>
             <legend>Search form</legend>
@@ -51,6 +51,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </fieldset>
     </section>
     <nav role="navigation" id="header-nav">
+        <div class="test-text">TEST</div>
         <ul role="list">
           <li role="listitem"><a href="http://about.scholars.duke.edu/support-duke-faculty-delegates">Support</a></li>
           <li role="listitem"><a href="${urls.index}">Index</a></li>
