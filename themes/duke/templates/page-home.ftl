@@ -21,39 +21,39 @@
               <div id="home_page_carousel" class="carousel slide">
                 <div class="carousel-inner">
                   <div class="item">
-                    <img src="../themes/duke/images/scholars-spie005.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/163213_vanberg007.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per6834062">April Brown</a>, <a href="display/per5449272">Nan Jokerst</a>, and <a href="display/per3399472">Adrienne Stiff-Roberts</a>, Electrical and Computer Engineering Faculty</p>
+                      <p class="caption"><a href="display/per8092472">Georg Vanberg</a>, Professor of Political Science</p>
                     </div>
                   </div>
                   <div class="item">
-                    <img src="../themes/duke/images/scholars_leftkowitz_robert032.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/183911_mcdonnell036.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per3314042">Dr. Robert Lefkowitz</a>, James B. Duke Professor of Medicine</p>
+                      <p class="caption"><a href="display/per9763252">Donald McDonnell</a>, Chair, Department of Pharmacology & Cancer Biology</p>
                     </div>
                   </div>
                   <div class="item">
-                    <img src="../themes/duke/images/scholars_dawson002.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/013614_wall_lab013.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per4177302">Geraldine Dawson</a>, Professor in Psychiatry and Behavioral Sciences and Director of the Duke Center for Autism and Brain Development</p>
+                      <p class="caption"><a href="display/per6012252">Christine Wall</a>, Research Professor in the Department of Evolutionary Anthropology</p>
                     </div>
                   </div>
                   <div class="item">
-                    <img src="../themes/duke/images/scholars-mattingly.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/049309_pimm_stuart042.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per2685062">Jonathan Mattingly</a>, Professor of Mathematics</p>
+                      <p class="caption"><a href="display/per6513062">Stuart Pimm</a>, Doris Duke Professor of Conservation Ecology in the Nicholas School of the Environment and Earth Sciences</p>
                     </div>
                   </div>
                   <div class="item">
-                    <img src="../themes/duke/images/scholars-yode.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/124315_duarts_mural139615_tweedy005.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per3392742">Anne Yoder</a>, Professor of Biology and Director of the Duke Lemur Center</p>
+                      <p class="caption"><a href="display/per5907252">Damon Tweedy</a>, Assistant Professor of Psychiatry and Behavioral Sciences</p>
                     </div>
                   </div>
                   <div class="item">
-                    <img src="../themes/duke/images/scholars_heaney013.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/032613_volkan021.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per7413042">Gregson Davis</a>, Andrew W. Mellon Research Professor of Humanities and Research Professor in the Department of Classical Studies</p>
+                      <p class="caption"><a href="display/per4904292">Pelin Volkan</a>, Assistant Professor of Biology and Investigator in the Duke Institute for Brain Sciences</p>
                     </div>
                   </div>
                 </div>
