@@ -83,8 +83,8 @@
                     <li><a href="#">Find People</a></li>
                   </ul>
 
-                  <form id="people-search-form" action="/search" class="search-form inline" name="people-search" role="search">
-                    <input name="querytext" type="text" class="search-vivo" width="30" onfocus="if (this.value == 'Search') {this.value = '';}" placeholder="" value="Search" autocapitalize="off" onblur="if (this.value == '') {this.value = 'Search';}">
+                  <form id="people-search-form" action="/scholars_search/" class="search-form inline" name="people-search" role="search" method="GET">
+                    <input name="exactMatch" type="text" class="search-vivo" width="30" onfocus="if (this.value == 'Search') {this.value = '';}" placeholder="" value="Search" autocapitalize="off" onblur="if (this.value == '') {this.value = 'Search';}">
                     <input type="submit" class="search" value="GO" />
                   </form>
 
