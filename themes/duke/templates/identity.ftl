@@ -49,6 +49,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                 </div>
             </form>
         </fieldset>
+        <!-- NOTE: made this a list since Support|Index is a list too -->
+        <ul>
+          <li><a href="/scholars_search/">Advanced Search</a></li>
+        </ul>
+    
     </section>
     <nav role="navigation" id="header-nav">
         <div class="test-text">TEST</div>

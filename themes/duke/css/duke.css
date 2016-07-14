@@ -586,6 +586,23 @@ h1.vivo-logo a {
 	display: none;
 }
 
+/* advanced search link */
+#search > ul {
+ 	float: right;
+ 	margin-top: 0px;
+}
+
+#search li {
+ 	float: left;
+}
+
+#search li a {
+ 	color: #ffffff;
+ 	padding: 0 4px;
+ 	font-size: 1.2em;
+}
+
+
 #search-form input.search-vivo {
 	border: 0 none;
 	color: #5E6363;
@@ -3551,3 +3568,4 @@ p.caption {
   font-weight: bold;
   display: inline;
 }
+
