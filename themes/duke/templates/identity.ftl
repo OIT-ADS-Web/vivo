@@ -51,7 +51,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </fieldset>
         <!-- NOTE: made this ul since Support|Index is a list too -->
         <ul>
-          <li><a href="/scholars_search/">Advanced Search</a></li>
+          <li><a href="/scholars_search/?advanced=true">Advanced Search</a></li>
         </ul>
     
     </section>
