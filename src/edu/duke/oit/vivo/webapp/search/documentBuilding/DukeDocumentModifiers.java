@@ -17,6 +17,8 @@ import edu.cornell.mannlib.vitro.webapp.search.documentBuilding.DocumentModifier
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonDepartmentFacet;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonDepartmentSearch;
 
+import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeGrantFields;
+
 public class DukeDocumentModifiers implements javax.servlet.ServletContextListener{
 
     @SuppressWarnings("unchecked")
@@ -36,6 +38,7 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
 
         modifiers.add( new PersonDepartmentFacet( rdfServiceFactory ));
         modifiers.add( new PersonDepartmentSearch( rdfServiceFactory ));
+        modifiers.add( new DukeGrantFields( rdfServiceFactory ));
     }
 
     @Override
