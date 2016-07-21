@@ -77,6 +77,10 @@ edu.cornell.mannlib.vitro.webapp.i18n.selection.LocaleSelectionSetup
 # Add VIVO specific DocumentModifers, this must come before SearchIndexerSetup
 edu.cornell.mannlib.vitro.webapp.search.documentBuilding.VivoDocumentModifiers
 
+# Add DUKE specific DocumentModifers, this must come before SearchIndexerSetup
+edu.duke.oit.vivo.webapp.search.documentBuilding.DukeDocumentModifiers
+
+
 # The search indexer uses a "public" permission, so the PropertyRestrictionPolicyHelper 
 #   and the PermissionRegistry must already be set up.
 edu.cornell.mannlib.vitro.webapp.searchengine.SearchEngineSetup
