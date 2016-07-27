@@ -44,7 +44,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
             <form id="search-form" action="/scholars_search/" name="search" role="search" method="GET"> 
                 <div id="search-field">
-                    <input type="text" name="exactMatch" class="search-vivo" autocapitalize="off" value="${searchvalue}" onblur="if (this.value == '') {this.value = 'Search People, Places or Things';}" onfocus="if (this.value == 'Search People, Places or Things') {this.value = '';}" />
+                    <input type="text" name="allWords" class="search-vivo" autocapitalize="off" value="${searchvalue}" onblur="if (this.value == '') {this.value = 'Search People, Places or Things';}" onfocus="if (this.value == 'Search People, Places or Things') {this.value = '';}" />
                     <input type="submit" value="Search" class="search">
                 </div>
             </form>
