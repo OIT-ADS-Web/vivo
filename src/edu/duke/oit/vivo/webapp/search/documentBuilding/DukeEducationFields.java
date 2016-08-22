@@ -56,7 +56,7 @@ public class DukeEducationFields extends ContextNodeFields {
           "WHERE \n" +
           "{\n" +
           "   ?uri obo:RO_0000056 ?ed . \n" +
-          "   ed a core:EducationalProcess . \n" +
+          "   ?ed a core:EducationalProcess . \n" +
           "   ?ed vitro:mostSpecificType ?type . \n" +
           "   ?ed rdfs:label ?label . \n" +
           "   OPTIONAL { \n" +

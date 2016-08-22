@@ -18,6 +18,9 @@ import edu.cornell.mannlib.vitro.webapp.search.documentBuilding.DocumentModifier
 //import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonDepartmentSearch;
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeGrantFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeVcardFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeProfessionalActivityFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeEducationFields;
 
 public class DukeDocumentModifiers implements javax.servlet.ServletContextListener{
 
@@ -39,6 +42,10 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
         //modifiers.add( new PersonDepartmentFacet( rdfServiceFactory ));
         //modifiers.add( new PersonDepartmentSearch( rdfServiceFactory ));
         modifiers.add( new DukeGrantFields( rdfServiceFactory ));
+        modifiers.add( new DukeVcardFields( rdfServiceFactory ));
+        modifiers.add( new DukeEducationFields( rdfServiceFactory ));
+        modifiers.add( new DukeProfessionalActivityFields( rdfServiceFactory ));
+
 
     }
 
