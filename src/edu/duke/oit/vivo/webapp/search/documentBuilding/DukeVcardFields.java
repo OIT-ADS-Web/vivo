@@ -8,12 +8,21 @@ import edu.cornell.mannlib.vitro.webapp.search.documentBuilding.ContextNodeField
 
 /*
 
+FIXME: don't like the regex just to remove spaces
+should be a 'TRIM' method
+
+
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX vcard: <http://www.w3.org/2006/vcard/ns#> 
 
-SELECT (CONCAT(?title, ' ', COALESCE(?phoneNumber, ''), ' ', 
-    COALESCE(?primaryAddress, ''), ' ', COALESCE(?primaryUrl, ''), ' ') 
-    as ?result)
+SELECT (REPLACE(
+  (CONCAT(
+    COALESCE(?phoneNumber, ''), ' ', 
+    COALESCE(?primaryAddress, ''), ' ', 
+    COALESCE(?primaryUrl, ''), ' ') 
+  ),
+  '^\\s+(.*?)\\s*$|^(.*?)\\s+$', '$1$2'
+) as $result)
 WHERE {
   <https://scholars.duke.edu/individual/per0015172> obo:ARG_2000028 ?individualVcard .
   ?individualVcard vcard:hasTitle ?titleVcard .
@@ -51,9 +60,14 @@ public class DukeVcardFields extends ContextNodeFields {
  
     private static String queryForVcards =        
       prefix + 
-      " SELECT (CONCAT(?title, ' ', COALESCE(?phoneNumber, ''), ' ', \n" +
-      " COALESCE(?primaryAddress, ''), ' ', COALESCE(?primaryUrl, ''), ' ') \n" + 
-      " as ?result)\n" +
+      " SELECT (REPLACE( \n" +
+      "  (CONCAT( \n" +
+      "    COALESCE(?phoneNumber, ''), ' ', \n" +
+      "    COALESCE(?primaryAddress, ''), ' ', \n" + 
+      "    COALESCE(?primaryUrl, ''), ' ') \n" +
+      "  ),\n" +
+      "  '^\\\\s+(.*?)\\\\s*$|^(.*?)\\\\s+$', '$1$2' \n" +
+      " ) as ?result)\n" +
       " WHERE {\n" +
       "    ?uri obo:ARG_2000028 ?individualVcard . \n" +
       "    ?individualVcard vcard:hasTitle ?titleVcard . \n" +
