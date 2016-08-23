@@ -60,14 +60,6 @@ public class DukeGrantFields extends ContextNodeFields {
           " ?person rdfs:label ?rawResult \n" +
           "}";
 
-          //"SELECT \n" +
-          // "(str(?rawresult) as ?result) WHERE \n" +
-          // "{\n" +              
-          // " ?uri   core:relates ?deg    . \n" +
-          // " ?deg   rdf:type     core:AwardedDegree . \n" +           
-          // " ?deg   rdfs:label   ?rawresult . \n" +           
-          // "}";            
-    
     private static String queryForGrants =        
           prefix +
 
@@ -80,15 +72,6 @@ public class DukeGrantFields extends ContextNodeFields {
           "}"; 
 
 
-           //"SELECT \n" +
-           //"(str(?rawresult) as ?result) WHERE \n" +
-           //"{\n" +              
-           //" ?uri   core:relates ?deg    . \n" +
-           //" ?deg   rdf:type     core:AwardedDegree . \n" +
-           //" ?deg   core:assignedBy ?org . \n" +
-           //" ?org   rdfs:label   ?rawresult . \n" +           
-           //"}";
-    
     static List<String> queries = new ArrayList<String>();
     
     static{
