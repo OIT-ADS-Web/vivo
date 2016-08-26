@@ -43,7 +43,7 @@ public class DukeEducationFields extends ContextNodeFields {
           + " prefix foaf: <http://xmlns.com/foaf/0.1/> \n"
           + " prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> \n" 
           + " prefix obo: <http://purl.obolibrary.org/obo/> \n"
-          + " prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#a> \n"
+          + " prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> \n"
           + " prefix dukeact:  <http://vivo.duke.edu/vivo/ontology/duke-activity-extension#> \n";
     
     public DukeEducationFields(RDFServiceFactory rdfServiceFactory){                
