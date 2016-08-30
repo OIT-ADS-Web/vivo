@@ -19,6 +19,12 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeGrantFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeVcardFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeProfessionalActivityFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeEducationFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeCourseFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeArtisticWorksFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeAwardsFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeNewsItemFields;
+
+
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonDepartmentFacet;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonDepartmentSearch;
 
@@ -43,6 +49,10 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
         modifiers.add( new DukeVcardFields( rdfServiceFactory ));
         modifiers.add( new DukeEducationFields( rdfServiceFactory ));
         modifiers.add( new DukeProfessionalActivityFields( rdfServiceFactory ));
+        modifiers.add( new DukeCourseFields( rdfServiceFactory ));
+        modifiers.add( new DukeArtisticWorksFields( rdfServiceFactory ));
+        modifiers.add( new DukeAwardsFields( rdfServiceFactory ));
+        modifiers.add( new DukeNewsItemFields( rdfServiceFactory ));
 
         modifiers.add( new PersonDepartmentFacet( rdfServiceFactory ));
         modifiers.add( new PersonDepartmentSearch( rdfServiceFactory ));
