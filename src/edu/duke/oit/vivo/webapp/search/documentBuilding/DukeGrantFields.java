@@ -55,7 +55,9 @@ WHERE {
 
 */
 
-public class DukeGrantFields extends ContextNodeFields {
+import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeContextNodeFields;
+
+public class DukeGrantFields extends DukeContextNodeFields {
  
     private static String VIVONS = "http://vivoweb.org/ontology/core#";
     

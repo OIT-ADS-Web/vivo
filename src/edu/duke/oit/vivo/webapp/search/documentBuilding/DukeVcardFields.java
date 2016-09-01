@@ -8,23 +8,17 @@ import edu.cornell.mannlib.vitro.webapp.search.documentBuilding.ContextNodeField
 
 /*
 
-FIXME: don't like the regex just to remove spaces
-should be a 'TRIM' method
-
-
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX vcard: <http://www.w3.org/2006/vcard/ns#> 
 
-SELECT (REPLACE(
-  (CONCAT(
+SELECT (CONCAT
+   (?title, ' ',
     COALESCE(?phoneNumber, ''), ' ', 
     COALESCE(?primaryAddress, ''), ' ', 
-    COALESCE(?primaryUrl, ''), ' ') 
-  ),
-  '^\\s+(.*?)\\s*$|^(.*?)\\s+$', '$1$2'
-) as $result)
+    COALESCE(?primaryUrl, ''), ' '
+  ) as ?result)
 WHERE {
-  <https://scholars.duke.edu/individual/per0015172> obo:ARG_2000028 ?individualVcard .
+  <https://scholars.duke.edu/individual/per4284062> obo:ARG_2000028 ?individualVcard .
   ?individualVcard vcard:hasTitle ?titleVcard .
   ?titleVcard vcard:title ?title .
   OPTIONAL {
@@ -42,8 +36,9 @@ WHERE {
 }
 */
 
+import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeContextNodeFields;
 
-public class DukeVcardFields extends ContextNodeFields {
+public class DukeVcardFields extends DukeContextNodeFields {
  
     private static String VIVONS = "http://vivoweb.org/ontology/core#";
     
@@ -59,33 +54,31 @@ public class DukeVcardFields extends ContextNodeFields {
     static List<String> queries = new ArrayList<String>();
  
     private static String queryForVcards =        
-      prefix + 
-      " SELECT (REPLACE( \n" +
-      "  (CONCAT( \n" +
-      "    COALESCE(?phoneNumber, ''), ' ', \n" +
-      "    COALESCE(?primaryAddress, ''), ' ', \n" + 
-      "    COALESCE(?primaryUrl, ''), ' ') \n" +
-      "  ),\n" +
-      "  '^\\\\s+(.*?)\\\\s*$|^(.*?)\\\\s+$', '$1$2' \n" +
-      " ) as ?result)\n" +
-      " WHERE {\n" +
-      "    ?uri obo:ARG_2000028 ?individualVcard . \n" +
-      "    ?individualVcard vcard:hasTitle ?titleVcard . \n" +
-      "    ?titleVcard vcard:title ?title . \n" +
-      "    OPTIONAL {\n" +
-      "      ?individualVcard vcard:hasTelephone ?phoneVcard . \n" +
-      "      ?phoneVcard vcard:telephone ?phoneNumber . \n" +
-      "    }\n" +
-      "    OPTIONAL {\n" +
-      "      ?individualVcard vcard:hasAddress ?addressVcard . \n" +
-      "      ?addressVcard vcard:address ?primaryAddress . \n" +
-      "    }\n" +
-      "    OPTIONAL {\n" +
-      "      ?individualVcard vcard:hasURL ?urlVcard . \n" +
-      "      ?urlVcard vcard:url ?primaryUrl . \n" +
-      "     } \n" +
-      "}";
-
+      prefix
+      + "SELECT (CONCAT \n"
+      + "   (?title, ' ', \n"
+      + "    COALESCE(?phoneNumber, ''), ' ', \n" 
+      + "    COALESCE(?primaryAddress, ''), ' ', \n"
+      + "    COALESCE(?primaryUrl, ''), ' ' \n"
+      + "  ) as ?result)\n"
+      + "WHERE {\n"
+      + "  ?uri obo:ARG_2000028 ?individualVcard . \n"
+      + "  ?individualVcard vcard:hasTitle ?titleVcard . \n"
+      + "  ?titleVcard vcard:title ?title . \n"
+      + "  OPTIONAL {\n"
+      + "    ?individualVcard vcard:hasTelephone ?phoneVcard . \n"
+      + "    ?phoneVcard vcard:telephone ?phoneNumber . \n"
+      + "  }\n"
+      + "  OPTIONAL {\n"
+      + "    ?individualVcard vcard:hasAddress ?addressVcard . \n"
+      + "    ?addressVcard vcard:address ?primaryAddress . \n"
+      + "  }\n"
+      + "  OPTIONAL {\n"
+      + "    ?individualVcard vcard:hasURL ?urlVcard . \n"
+      + "    ?urlVcard vcard:url ?primaryUrl . \n"
+      + "  }\n"
+      + "}";
+      
     
     static{
         queries.add( queryForVcards );
