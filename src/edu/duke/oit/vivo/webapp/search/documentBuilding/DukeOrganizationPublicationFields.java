@@ -6,26 +6,26 @@ import java.util.List;
 import edu.cornell.mannlib.vitro.webapp.rdfservice.RDFServiceFactory;
 import edu.cornell.mannlib.vitro.webapp.search.documentBuilding.ContextNodeFields;
 
-
 /*
+
+PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX core: <http://vivoweb.org/ontology/core#>
-PREFIX duke: <http://vivo.duke.edu/vivo/ontology/duke-extension#>
-  
-SELECT (CONCAT(?title, ' ', COALESCE(?publisher, '')) as ?result)
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+SELECT ?label
 WHERE {
-  <https://scholars.duke.edu/individual/per2103642> core:relatedBy ?newsItem .
-  ?newsItem a core:NewsRelease .
-  ?newsItem rdfs:label ?title .
-  ?newsItem duke:source ?publisher .
-} 
+  <https://scholars.duke.edu/individual/publisheruniversityofchicago> core:publisherOf ?publication .
+  ?publication rdfs:label ?label
+}
 
 */
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeContextNodeFields;
 
-public class DukeNewsItemFields extends DukeContextNodeFields {
+public class DukeOrganizationPublicationFields extends DukeContextNodeFields {
  
     private static String VIVONS = "http://vivoweb.org/ontology/core#";
     
@@ -34,25 +34,29 @@ public class DukeNewsItemFields extends DukeContextNodeFields {
           + " prefix core: <" + VIVONS + ">  \n"
           + " prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> \n" 
           + " prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> \n"
+          + " PREFIX obo: <http://purl.obolibrary.org/obo/> \n"
+          + " PREFIX foaf: <http://xmlns.com/foaf/0.1/> \n"
           + " PREFIX duke: <http://vivo.duke.edu/vivo/ontology/duke-extension#> \n";
     
-    public DukeNewsItemFields(RDFServiceFactory rdfServiceFactory){                
+    public DukeOrganizationPublicationFields(RDFServiceFactory rdfServiceFactory){                
         super(queries,rdfServiceFactory);        
     }
  
-    private static String queryForCourses =        
+    private static String query =        
           prefix
-          + "SELECT (CONCAT(?title, ' ', COALESCE(?publisher, '')) as ?result) \n"
+          + "SELECT ?label \n"
           + "WHERE {\n"
-          + "  ?uri core:relatedBy ?newsItem . \n"
-          + "  ?newsItem a core:NewsRelease . \n"
-          + "  ?newsItem rdfs:label ?title . \n"
-          + "  ?newsItem duke:source ?publisher . \n"
-          + "}"; 
+          + "  ?uri core:publisherOf ?publication . \n"
+          + "  ?publication rdfs:label ?label \n"
+          + "}";
+
 
     static List<String> queries = new ArrayList<String>();
     
     static{
-        queries.add( queryForCourses );
+        queries.add( query );
     }
 }
+
+
+

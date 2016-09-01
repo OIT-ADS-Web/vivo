@@ -27,7 +27,9 @@ where {
 } 
 */
 
-public class DukeCourseFields extends ContextNodeFields {
+import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeContextNodeFields;
+
+public class DukeCourseFields extends DukeContextNodeFields {
  
     private static String VIVONS = "http://vivoweb.org/ontology/core#";
     

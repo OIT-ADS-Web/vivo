@@ -24,6 +24,17 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeArtisticWorksFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeAwardsFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeNewsItemFields;
 
+import edu.duke.oit.vivo.webapp.search.documentBuilding.DukePersonFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.DukePersonPublicationFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.DukePublicationKeywordsFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.DukePersonAppointmentFields;
+ 
+import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeOrganizationAwardFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeOrganizationGrantFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeOrganizationPeopleFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeOrganizationPublicationFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeOrganizationTrainingFields;
+
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonDepartmentFacet;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonDepartmentSearch;
 
@@ -55,6 +66,19 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
         modifiers.add( new DukeAwardsFields( rdfServiceFactory ));
         modifiers.add( new DukeNewsItemFields( rdfServiceFactory ));
 
+        modifiers.add( new DukePersonFields( rdfServiceFactory ));
+        modifiers.add( new DukePersonPublicationFields( rdfServiceFactory ));
+        modifiers.add( new DukePublicationKeywordsFields( rdfServiceFactory ));
+        modifiers.add( new DukePersonAppointmentFields( rdfServiceFactory ));
+
+        modifiers.add( new DukeOrganizationAwardFields( rdfServiceFactory ));
+        modifiers.add( new DukeOrganizationGrantFields( rdfServiceFactory ));
+        modifiers.add( new DukeOrganizationPeopleFields( rdfServiceFactory ));
+        modifiers.add( new DukeOrganizationPublicationFields( rdfServiceFactory ));
+        modifiers.add( new DukeOrganizationTrainingFields( rdfServiceFactory ));
+        
+        modifiers.add( new PersonDepartmentFacet( rdfServiceFactory ));
+        modifiers.add( new PersonDepartmentSearch( rdfServiceFactory ));
     }
 
     @Override
