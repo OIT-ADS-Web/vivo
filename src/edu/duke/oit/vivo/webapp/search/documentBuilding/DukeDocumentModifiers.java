@@ -38,6 +38,9 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeOrganizationTraining
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonDepartmentFacet;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonDepartmentSearch;
 
+import edu.duke.oit.vivo.webapp.search.documentBuilding.AwardFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.ProfessionalActivityFields;
+
 public class DukeDocumentModifiers implements javax.servlet.ServletContextListener{
 
     @SuppressWarnings("unchecked")
@@ -78,6 +81,10 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
         
         modifiers.add( new PersonDepartmentFacet( rdfServiceFactory ));
         modifiers.add( new PersonDepartmentSearch( rdfServiceFactory ));
+    
+        modifiers.add( new AwardFields( rdfServiceFactory ));
+        modifiers.add( new ProfessionalActivityFields( rdfServiceFactory ));
+
     }
 
     @Override
