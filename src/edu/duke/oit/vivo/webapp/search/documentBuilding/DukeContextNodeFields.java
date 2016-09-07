@@ -7,6 +7,7 @@ import edu.cornell.mannlib.vitro.webapp.modules.searchEngine.SearchInputDocument
 import edu.cornell.mannlib.vitro.webapp.rdfservice.RDFServiceFactory;
 import edu.cornell.mannlib.vitro.webapp.search.documentBuilding.ContextNodeFields;
 
+import com.hp.hpl.jena.query.QuerySolution;
 
 public class DukeContextNodeFields extends ContextNodeFields {
  
@@ -26,8 +27,27 @@ public class DukeContextNodeFields extends ContextNodeFields {
         }
         /* get text from the context nodes and add the to ALLTEXT */        
         StringBuffer values = executeQueryForValues(individual, queries);        
-        doc.addField("duke_text", values);
+        
+        String className = this.getClass().getSimpleName();
+        String debugName = className.replace("Duke", "").replace("Fields", "");
+        values.insert(0, debugName + ":");      
+
+        doc.addField("duke_text", values.toString().trim());
     }
+
+    /* NOTE: just doing this to get rid of spaces - tried using a combination
+     * of COALESCE and CONCAT in SPARQL - but it involved to much nesting of
+     * e.g. (CONCAT(COALESCE(CONCAT etc... it was too ugly.  
+     */
+    @Override
+    protected String getTextForRow( QuerySolution row, boolean addSpace){
+        String text = super.getTextForRow(row, true);
+        String cleaner = text.replaceAll(" +", " ");
+        return cleaner.toString();
+
+    }
+    
+
 }
 
  
