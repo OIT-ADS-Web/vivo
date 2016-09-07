@@ -17,10 +17,12 @@ PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
 SELECT ?personLabel
 WHERE {
-  <https://scholars.duke.edu/individual/org50000844> core:relatedBy ?appointment .
+  ?orgUri core:relatedBy ?appointment .
+  ?orgUri a foaf:Organization .
   ?appointment core:relates ?related .
   ?related a foaf:Person .
   ?related rdfs:label ?personLabel
+  FILTER(?orgUri = <https://scholars.duke.edu/individual/org50000844>)
 }
 
 */
@@ -47,11 +49,13 @@ public class DukeOrganizationPeopleFields extends DukeContextNodeFields {
           prefix
           + "SELECT ?personLabel \n"
           + "WHERE {\n"
-          + "  ?uri core:relatedBy ?appointment . \n"
+          + "  ?orgUri core:relatedBy ?appointment . \n"
+          + "  ?orgUri a foaf:Organization . \n"
           + "  ?appointment core:relates ?related . \n"
           + "  ?related a foaf:Person . \n"
           + "  ?related rdfs:label ?personLabel \n"
-         + "}";
+          + "  FILTER(?orgUri = ?uri) \n"
+          + "}";
 
 
     static List<String> queries = new ArrayList<String>();
