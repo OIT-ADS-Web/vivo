@@ -28,9 +28,11 @@ public class DukeContextNodeFields extends ContextNodeFields {
         /* get text from the context nodes and add the to ALLTEXT */        
         StringBuffer values = executeQueryForValues(individual, queries);        
         
-        String className = this.getClass().getSimpleName();
-        String debugName = className.replace("Duke", "").replace("Fields", "");
-        values.insert(0, debugName + ":");      
+        if(log.isDebugEnabled()) {
+          String className = this.getClass().getSimpleName();
+          String debugName = className.replace("Duke", "").replace("Fields", "");
+          values.insert(0, debugName + ":");      
+        }
 
         doc.addField("duke_text", values.toString().trim());
     }
