@@ -39,6 +39,12 @@
                     </div>
                   </div>
                   <div class="item">
+                    <img src="../themes/duke/images/rfp-scholars.jpg" class="home_page_graphic">
+                    <div class="caption-wrap">
+                      <p class="caption"></p>
+                    </div>
+                  </div>
+                  <div class="item">
                     <img src="../themes/duke/images/049309_pimm_stuart042.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
                       <p class="caption"><a href="display/per6513062">Stuart Pimm</a>, Doris Duke Professor of Conservation Ecology in the Nicholas School of the Environment and Earth Sciences</p>
