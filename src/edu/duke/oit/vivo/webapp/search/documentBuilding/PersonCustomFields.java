@@ -47,7 +47,7 @@ PREFIX core: <http://vivoweb.org/ontology/core#>
 PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
 PREFIX duke: <http://vivo.duke.edu/vivo/ontology/duke-extension#>
 
-SELECT ?alternateId ?title ?primaryEmail ?netid ?officehours ?profileUrl
+SELECT ?alternateId ?title ?primaryEmail ?netid ?officehours ?profileURL
 WHERE { 
   ?personUri a foaf:Person .
   ?personUri rdfs:label ?label .
@@ -80,7 +80,7 @@ public class PersonCustomFields extends DukeJSONContextNodeFields {
  
   private static final String query = 
       prefix 
-      + "SELECT ?alternateId ?title ?primaryEmail ?netid ?officehours ?profileUrl \n"
+      + "SELECT ?alternateId ?title ?primaryEmail ?netid ?officehours ?profileURL \n"
       + "WHERE { \n"
       + " ?personUri a foaf:Person . \n"
       + " ?personUri rdfs:label ?label . \n"
