@@ -41,7 +41,7 @@ WHERE {
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeContextNodeFields;
 
-public class DukePersonAppointmentFields extends DukeContextNodeFields {
+public class PersonAppointmentFields extends DukeContextNodeFields {
  
     private static String VIVONS = "http://vivoweb.org/ontology/core#";
     
@@ -54,7 +54,7 @@ public class DukePersonAppointmentFields extends DukeContextNodeFields {
           + " PREFIX obo: <http://purl.obolibrary.org/obo/> \n"
           + " PREFIX foaf: <http://xmlns.com/foaf/0.1/> \n";
      
-    public DukePersonAppointmentFields(RDFServiceFactory rdfServiceFactory){                
+    public PersonAppointmentFields(RDFServiceFactory rdfServiceFactory){                
         super(queries,rdfServiceFactory);        
     }
  

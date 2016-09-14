@@ -35,6 +35,8 @@ public class DukeContextNodeFields extends ContextNodeFields {
         }
 
         doc.addField("duke_text", values.toString().trim());
+        doc.addField("duke_text_unstemmed", values.toString().trim());
+
     }
 
     /* NOTE: just doing this to get rid of spaces - tried using a combination

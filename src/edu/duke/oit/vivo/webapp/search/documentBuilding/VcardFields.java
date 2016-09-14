@@ -38,7 +38,7 @@ WHERE {
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeContextNodeFields;
 
-public class DukeVcardFields extends DukeContextNodeFields {
+public class VcardFields extends DukeContextNodeFields {
  
     private static String VIVONS = "http://vivoweb.org/ontology/core#";
     
@@ -47,7 +47,7 @@ public class DukeVcardFields extends DukeContextNodeFields {
           + " prefix obo: <http://purl.obolibrary.org/obo/> \n"
           + " prefix vcard: <http://www.w3.org/2006/vcard/ns#> \n";
    
-    public DukeVcardFields(RDFServiceFactory rdfServiceFactory){                
+    public VcardFields(RDFServiceFactory rdfServiceFactory){                
         super(queries,rdfServiceFactory);        
     }
     

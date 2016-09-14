@@ -15,25 +15,25 @@ import edu.cornell.mannlib.vitro.webapp.rdfservice.impl.RDFServiceUtils;
 
 import edu.cornell.mannlib.vitro.webapp.search.documentBuilding.DocumentModifier;
 
-import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeGrantFields;
-import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeVcardFields;
-import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeProfessionalActivityFields;
-import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeEducationFields;
-import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeCourseFields;
-import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeArtisticWorksFields;
-import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeAwardsFields;
-import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeNewsItemFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.GrantFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.VcardFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.ProfessionalActivityFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.EducationFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.CourseFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.ArtisticWorksFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.AwardsFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.NewsItemFields;
 
-import edu.duke.oit.vivo.webapp.search.documentBuilding.DukePersonFields;
-import edu.duke.oit.vivo.webapp.search.documentBuilding.DukePersonPublicationFields;
-import edu.duke.oit.vivo.webapp.search.documentBuilding.DukePublicationKeywordsFields;
-import edu.duke.oit.vivo.webapp.search.documentBuilding.DukePersonAppointmentFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonPublicationFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PublicationKeywordsFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonAppointmentFields;
  
-import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeOrganizationAwardFields;
-import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeOrganizationGrantFields;
-import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeOrganizationPeopleFields;
-import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeOrganizationPublicationFields;
-import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeOrganizationTrainingFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.OrganizationAwardFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.OrganizationGrantFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.OrganizationPeopleFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.OrganizationPublicationFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.OrganizationTrainingFields;
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonDepartmentFacet;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonDepartmentSearch;
@@ -60,26 +60,26 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
             context.setAttribute("DocumentModifiers", modifiers);
         }
 
-        modifiers.add( new DukeGrantFields( rdfServiceFactory ));
-        modifiers.add( new DukeVcardFields( rdfServiceFactory ));
-        modifiers.add( new DukeEducationFields( rdfServiceFactory ));
-        modifiers.add( new DukeProfessionalActivityFields( rdfServiceFactory ));
-        modifiers.add( new DukeCourseFields( rdfServiceFactory ));
-        modifiers.add( new DukeArtisticWorksFields( rdfServiceFactory ));
-        modifiers.add( new DukeAwardsFields( rdfServiceFactory ));
-        modifiers.add( new DukeNewsItemFields( rdfServiceFactory ));
+        modifiers.add( new GrantFields( rdfServiceFactory ));
+        modifiers.add( new VcardFields( rdfServiceFactory ));
+        modifiers.add( new EducationFields( rdfServiceFactory ));
+        modifiers.add( new ProfessionalActivityFields( rdfServiceFactory ));
+        modifiers.add( new CourseFields( rdfServiceFactory ));
+        modifiers.add( new ArtisticWorksFields( rdfServiceFactory ));
+        modifiers.add( new AwardsFields( rdfServiceFactory ));
+        modifiers.add( new NewsItemFields( rdfServiceFactory ));
 
         // NOTE: these add to index data that was is automatically added to ALLTEXT already
-        modifiers.add( new DukePersonFields( rdfServiceFactory ));
-        modifiers.add( new DukePersonPublicationFields( rdfServiceFactory ));
-        modifiers.add( new DukePublicationKeywordsFields( rdfServiceFactory ));
-        modifiers.add( new DukePersonAppointmentFields( rdfServiceFactory ));
+        modifiers.add( new PersonFields( rdfServiceFactory ));
+        modifiers.add( new PersonPublicationFields( rdfServiceFactory ));
+        modifiers.add( new PublicationKeywordsFields( rdfServiceFactory ));
+        modifiers.add( new PersonAppointmentFields( rdfServiceFactory ));
 
-        modifiers.add( new DukeOrganizationAwardFields( rdfServiceFactory ));
-        modifiers.add( new DukeOrganizationGrantFields( rdfServiceFactory ));
-        modifiers.add( new DukeOrganizationPeopleFields( rdfServiceFactory ));
-        modifiers.add( new DukeOrganizationPublicationFields( rdfServiceFactory ));
-        modifiers.add( new DukeOrganizationTrainingFields( rdfServiceFactory ));
+        modifiers.add( new OrganizationAwardFields( rdfServiceFactory ));
+        modifiers.add( new OrganizationGrantFields( rdfServiceFactory ));
+        modifiers.add( new OrganizationPeopleFields( rdfServiceFactory ));
+        modifiers.add( new OrganizationPublicationFields( rdfServiceFactory ));
+        modifiers.add( new OrganizationTrainingFields( rdfServiceFactory ));
         
         modifiers.add( new PersonDepartmentFacet( rdfServiceFactory ));
         modifiers.add( new PersonDepartmentSearch( rdfServiceFactory ));

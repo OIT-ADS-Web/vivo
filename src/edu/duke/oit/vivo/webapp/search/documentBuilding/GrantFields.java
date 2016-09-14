@@ -57,7 +57,7 @@ WHERE {
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeContextNodeFields;
 
-public class DukeGrantFields extends DukeContextNodeFields {
+public class GrantFields extends DukeContextNodeFields {
  
     private static String VIVONS = "http://vivoweb.org/ontology/core#";
     
@@ -69,7 +69,7 @@ public class DukeGrantFields extends DukeContextNodeFields {
           + " prefix obo: <http://purl.obolibrary.org/obo/> \n"
           + " prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#a> \n";
     
-    public DukeGrantFields(RDFServiceFactory rdfServiceFactory){                
+    public GrantFields(RDFServiceFactory rdfServiceFactory){                
         super(queries,rdfServiceFactory);        
     }
 

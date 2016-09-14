@@ -6,8 +6,8 @@ import java.util.List;
 import edu.cornell.mannlib.vitro.webapp.rdfservice.RDFServiceFactory;
 import edu.cornell.mannlib.vitro.webapp.search.documentBuilding.ContextNodeFields;
 
-
 /*
+
 PREFIX rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX vivo:     <http://vivoweb.org/ontology/core#>
@@ -15,34 +15,39 @@ PREFIX core: <http://vivoweb.org/ontology/core#>
 PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
 PREFIX dukeact:  <http://vivo.duke.edu/vivo/ontology/duke-activity-extension#>
 
-SELECT (CONCAT(
-  ?label, ' ', 
-  COALESCE(?serviceType, ''), ' ',
-  COALESCE(?nameOfTalk, ''), ' ',
-  COALESCE(?role, ''), ' ',
-  COALESCE(?hostOrganization, ''), ' ',
-  COALESCE(?locationOrVenue, ''), ' ',
-  COALESCE(?description, ''), ' ',
-  COALESCE(?committeeType, ''), ' ',
-  COALESCE(?committeeName, ''), ' ',
-  COALESCE(?geoFocus, '')
-) as ?result)
+SELECT
+        (str (CONCAT(
+           ?label, ' ',
+            COALESCE(?serviceType + ' ', ''), 
+            COALESCE(?nameOfTalk + ' ', ''), 
+            COALESCE(?locationOrVenue + ' ',  ''),  
+            COALESCE(?serviceOrEventName + ' ',  ''), 
+            COALESCE(?hostOrganization + ' ',  ''),       
+            COALESCE(?role + ' ', ' '), 
+            COALESCE(?committeeType + ' ', ''), 
+            COALESCE(?committeeName + ' ', ''), 
+            COALESCE(?geoFocus + ' ', ''), 
+            COALESCE(?description + ' ', ''))) as ?result
+       )
+
 WHERE {
-  ?activityUrl dukeact:description ?label .
-  OPTIONAL {?activityUrl dukeact:serviceType ?serviceType.}
-  OPTIONAL {?activityUrl dukeact:nameOfTalk ?nameOfTalk.}
-  OPTIONAL {?activityUrl dukeact:role ?role.}
-  OPTIONAL {?activityUrl dukeact:serviceOrEventName ?serviceOrEventName.}
-  OPTIONAL {?activityUrl dukeact:hostOrganization ?hostOrganization.}
-  OPTIONAL {?activityUrl dukeact:locationOrVenue ?locationOrVenue.}
-  OPTIONAL {?activityUrl dukeact:description ?description.}
-  OPTIONAL {?activityUrl dukeact:committeeType ?committeeType.}
-  OPTIONAL {?activityUrl dukeact:committeeName ?committeeName.}
+  <https://scholars.duke.edu/individual/per0015172> dukeact:performs ?activity.
+  ?activity rdf:type dukeact:ProfessionalActivity.
+  ?activity rdfs:label ?label.
+  ?activity vitro:mostSpecificType ?type.
+  OPTIONAL {?activity dukeact:serviceType ?serviceType.}
+  OPTIONAL {?activity dukeact:nameOfTalk ?nameOfTalk.}
+  OPTIONAL {?activity dukeact:role ?role.}
+  OPTIONAL {?activity dukeact:serviceOrEventName ?serviceOrEventName.}
+  OPTIONAL {?activity dukeact:hostOrganization ?hostOrganization.}
+  OPTIONAL {?activity dukeact:locationOrVenue ?locationOrVenue.}
+  OPTIONAL {?activity dukeact:description ?description.}
+  OPTIONAL {?activity dukeact:committeeType ?committeeType.}
+  OPTIONAL {?activity dukeact:committeeName ?committeeName.}
   OPTIONAL {
-    ?activityUrl core:geographicFocus ?geoFocusUri.
+    ?activity core:geographicFocus ?geoFocusUri.
     ?geoFocusUri rdfs:label ?geoFocus.
   }
-  FILTER(?activityUrl = <https://scholars.duke.edu/individual/presentation100079899>)
 } 
 */
 
@@ -55,45 +60,53 @@ public class ProfessionalActivityFields extends DukeContextNodeFields {
     protected static final String prefix =               
             " prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>  \n"
           + " prefix core: <" + VIVONS + ">  \n"
+          + " prefix foaf: <http://xmlns.com/foaf/0.1/> \n"
           + " prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> \n" 
-          + " PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> \n"
-          + " PREFIX dukeact: <http://vivo.duke.edu/vivo/ontology/duke-activity-extension#> \n";
+          + " prefix obo: <http://purl.obolibrary.org/obo/> \n"
+          + " prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> \n"
+          + " prefix dukeact:  <http://vivo.duke.edu/vivo/ontology/duke-activity-extension#> \n";
+
     
     public ProfessionalActivityFields(RDFServiceFactory rdfServiceFactory){                
         super(queries,rdfServiceFactory);        
     }
- 
+    
     private static String queryForProfessionalActivities =        
-          prefix
-          + "SELECT (CONCAT( \n"
-          + "  ?label, ' ', \n"
-          + "  COALESCE(?serviceType, ''), ' ', \n"
-          + "  COALESCE(?nameOfTalk, ''), ' ', \n"
-          + "  COALESCE(?role, ''), ' ', \n"
-          + "  COALESCE(?hostOrganization, ''), ' ', \n"
-          + "  COALESCE(?locationOrVenue, ''), ' ', \n"
-          + "  COALESCE(?description, ''), ' ', \n"
-          + "  COALESCE(?committeeType, ''), ' ', \n"
-          + "  COALESCE(?committeeName, ''), ' ', \n"
-          + "  COALESCE(?geoFocus, '') \n"
-          + ") as ?result) \n"
-          + "WHERE {\n"
-          + "  ?activityUrl dukeact:description ?label . \n"
-          + "  OPTIONAL {?activityUrl dukeact:serviceType ?serviceType.} \n"
-          + "  OPTIONAL {?activityUrl dukeact:nameOfTalk ?nameOfTalk.} \n"
-          + "  OPTIONAL {?activityUrl dukeact:role ?role.} \n"
-          + "  OPTIONAL {?activityUrl dukeact:serviceOrEventName ?serviceOrEventName.} \n"
-          + "  OPTIONAL {?activityUrl dukeact:hostOrganization ?hostOrganization.} \n"
-          + "  OPTIONAL {?activityUrl dukeact:locationOrVenue ?locationOrVenue.} \n"
-          + "  OPTIONAL {?activityUrl dukeact:description ?description.} \n"
-          + "  OPTIONAL {?activityUrl dukeact:committeeType ?committeeType.} \n"
-          + "  OPTIONAL {?activityUrl dukeact:committeeName ?committeeName.} \n"
-          + "  OPTIONAL {\n"
-          + "    ?activityUrl core:geographicFocus ?geoFocusUri. \n"
-          + "    ?geoFocusUri rdfs:label ?geoFocus. \n"
-          + "  }\n"
-          + "  FILTER(?activityUrl = ?uri) \n" 
-          + "}"; 
+      prefix + 
+
+      " SELECT \n" +
+      " (str (CONCAT( \n" +
+      "     ?label, ' ', \n" +
+      "      COALESCE(?serviceType + ' ', ''), \n" + 
+      "      COALESCE(?nameOfTalk + ' ', ''), \n" +
+      "      COALESCE(?locationOrVenue + ' ',  ''), \n" +  
+      "      COALESCE(?serviceOrEventName + ' ',  ''), \n" +
+      "      COALESCE(?hostOrganization + ' ',  ''), \n" +      
+      "      COALESCE(?role + ' ', ' '), \n" +
+      "      COALESCE(?committeeType + ' ', ''), \n" +
+      "      COALESCE(?committeeName + ' ', ''), \n" +
+      "      COALESCE(?geoFocus + ' ', ''), \n" +
+      "      COALESCE(?description + ' ', ''))) as ?result \n" +
+      " )\n" +
+      " WHERE {\n" +
+      " ?uri dukeact:performs ?activity. \n" +
+      " ?activity rdf:type dukeact:ProfessionalActivity. \n" +
+      " ?activity rdfs:label ?label. \n" +
+      " ?activity vitro:mostSpecificType ?type. \n" +
+      " OPTIONAL {?activity dukeact:serviceType ?serviceType.} \n" +
+      " OPTIONAL {?activity dukeact:nameOfTalk ?nameOfTalk.} \n" +
+      " OPTIONAL {?activity dukeact:role ?role.} \n" +
+      " OPTIONAL {?activity dukeact:serviceOrEventName ?serviceOrEventName.} \n" +
+      " OPTIONAL {?activity dukeact:hostOrganization ?hostOrganization.} \n" +
+      " OPTIONAL {?activity dukeact:locationOrVenue ?locationOrVenue.} \n" +
+      " OPTIONAL {?activity dukeact:description ?description.} \n" +
+      " OPTIONAL {?activity dukeact:committeeType ?committeeType.} \n" +
+      " OPTIONAL {?activity dukeact:committeeName ?committeeName.} \n" +
+      " OPTIONAL {\n" +
+      "   ?activity core:geographicFocus ?geoFocusUri. \n" +
+      "   ?geoFocusUri rdfs:label ?geoFocus.\n" +
+      "  }\n" +
+      " }";
 
     static List<String> queries = new ArrayList<String>();
     
@@ -101,3 +114,4 @@ public class ProfessionalActivityFields extends DukeContextNodeFields {
         queries.add( queryForProfessionalActivities );
     }
 }
+
