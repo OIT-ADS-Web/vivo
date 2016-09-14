@@ -34,7 +34,7 @@ WHERE
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeContextNodeFields;
 
-public class DukeEducationFields extends DukeContextNodeFields {
+public class EducationFields extends DukeContextNodeFields {
  
     private static String VIVONS = "http://vivoweb.org/ontology/core#";
     
@@ -47,7 +47,7 @@ public class DukeEducationFields extends DukeContextNodeFields {
           + " prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> \n"
           + " prefix dukeact:  <http://vivo.duke.edu/vivo/ontology/duke-activity-extension#> \n";
     
-    public DukeEducationFields(RDFServiceFactory rdfServiceFactory){                
+    public EducationFields(RDFServiceFactory rdfServiceFactory){                
         super(queries,rdfServiceFactory);        
     }
  

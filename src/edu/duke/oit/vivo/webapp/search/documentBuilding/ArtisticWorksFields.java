@@ -52,7 +52,7 @@ WHERE {
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeContextNodeFields;
 
-public class DukeArtisticWorksFields extends DukeContextNodeFields {
+public class ArtisticWorksFields extends DukeContextNodeFields {
  
     private static String VIVONS = "http://vivoweb.org/ontology/core#";
  
@@ -67,7 +67,7 @@ public class DukeArtisticWorksFields extends DukeContextNodeFields {
           + " PREFIX bibo: <http://purl.org/ontology/bibo/> \n"
           + " PREFIX vcard: <http://www.w3.org/2006/vcard/ns#> \n";
     
-    public DukeArtisticWorksFields(RDFServiceFactory rdfServiceFactory){                
+    public ArtisticWorksFields(RDFServiceFactory rdfServiceFactory){                
         super(queries,rdfServiceFactory);        
     }
  
