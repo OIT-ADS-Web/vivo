@@ -20,7 +20,7 @@
   <section id="individual-body" role="region">
   <#-- subject area  used for publications -->
   <ul class="section-navigation">
-  <#assign subjectAreaFor = propertyGroups.pullProperty("${core}subjectAreaFor")!>
+  <#assign subjectAreaFor = propertyGroups.pullProperty("${core}subjectAreaOf")!>
   <#if subjectAreaFor?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
     <@simpleCollapsiblePropertyListSection subjectAreaFor "Subject Areas on Research" />
   </#if>
