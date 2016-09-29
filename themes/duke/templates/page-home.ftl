@@ -20,48 +20,56 @@
             <section id="intro" role="region">
               <div id="home_page_carousel" class="carousel slide">
                 <div class="carousel-inner">
+
                   <div class="item">
-                    <img src="../themes/duke/images/163213_vanberg007.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/092899_petters071.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per8092472">Georg Vanberg</a>, Professor of Political Science</p>
+                      <p class="caption"><a href="display/per2643262">Arlie Petters</a>, Benjamin Powell Professor of Mathematics in Trinity College of Arts and Sciences</p>
                     </div>
                   </div>
+
                   <div class="item">
-                    <img src="../themes/duke/images/183911_mcdonnell036.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/134408_read023.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per9763252">Donald McDonnell</a>, Chair, Department of Pharmacology & Cancer Biology</p>
+                      <p class="caption"><a href="display/per3818982">Jen’nan Read</a>, Associate Professor of Sociology</p>
                     </div>
                   </div>
+
                   <div class="item">
-                    <img src="../themes/duke/images/013614_wall_lab013.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/051009_pfaff_class024.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per6012252">Christine Wall</a>, Research Professor in the Department of Evolutionary Anthropology</p>
+                      <p class="caption"><a href="display/per2994382">Alexander Pfaff</a>, Professor in the Sanford School of Public Policy</p>
                     </div>
                   </div>
+
                   <div class="item">
                     <img src="../themes/duke/images/rfp-scholars.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
                       <p class="caption"></p>
                     </div>
                   </div>
+
                   <div class="item">
-                    <img src="../themes/duke/images/049309_pimm_stuart042.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/156215_arshavsky015.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per6513062">Stuart Pimm</a>, Doris Duke Professor of Conservation Ecology in the Nicholas School of the Environment and Earth Sciences</p>
+                      <p class="caption"><a href="display/per5514572">Vadim Arshavsky</a>, Helena Rubinstein Foundation Professor of Ophthalmology</p>
                     </div>
                   </div>
+
                   <div class="item">
-                    <img src="../themes/duke/images/124315_duarts_mural139615_tweedy005.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/193206_huffman002.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per5907252">Damon Tweedy</a>, Assistant Professor of Psychiatry and Behavioral Sciences</p>
+                      <p class="caption"><a href="display/per1443762">Kim Huffman</a>, Assistant Professor of Medicine (Rheumatology and Immunology)</p>
                     </div>
                   </div>
+
                   <div class="item">
-                    <img src="../themes/duke/images/032613_volkan021.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/013410_river029.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per4904292">Pelin Volkan</a>, Assistant Professor of Biology and Investigator in the Duke Institute for Brain Sciences</p>
+                      <p class="caption"><a href="display/per4572962">Emily Bernhardt</a>, Professor of Biology</p>
                     </div>
                   </div>
+
                 </div>
               </div>
               <script type="text/javascript">
