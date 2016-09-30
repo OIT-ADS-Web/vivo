@@ -18,11 +18,11 @@ PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX bibo: <http://purl.org/ontology/bibo/>
 PREFIX duke:     <http://vivo.duke.edu/vivo/ontology/duke-extension#>
 
-select (CONCAT(?abstract, ' ', ?authorList, ' ', ?apaCitation, ' ', ?chicagoCitation, ' ', 
+select (CONCAT(COALESCE(?abstract,''), ' ', ?authorList, ' ', ?apaCitation, ' ', ?chicagoCitation, ' ', 
   ?icmjeCitation, ' ', ?mlaCitation) as ?result)
 WHERE {
   ?pubUri a bibo:Document .
-  ?pubUri bibo:abstract ?abstract .
+  OPTIONAL { ?pubUri bibo:abstract ?abstract . }
   ?pubUri duke:authorList ?authorList .
   ?pubUri duke:apaCitation ?apaCitation .
   ?pubUri duke:chicagoCitation ?chicagoCitation .
@@ -55,11 +55,11 @@ public class PublicationFields extends DukeContextNodeFields {
  
     private static String queryForPub =        
           prefix
-          + "select (CONCAT(?abstract, ' ', ?authorList, ' ', ?apaCitation, ' ', ?chicagoCitation, ' ', \n"
+          + "select (CONCAT(COALESCE(?abstract, ''), ' ', ?authorList, ' ', ?apaCitation, ' ', ?chicagoCitation, ' ', \n"
           + "?icmjeCitation, ' ', ?mlaCitation) as ?result) \n"
           + "WHERE { \n"
           + "  ?pubUri a bibo:Document . \n"
-          + "  ?pubUri bibo:abstract ?abstract . \n"
+          + "  OPTIONAL { ?pubUri bibo:abstract ?abstract . } \n"
           + "  ?pubUri duke:authorList ?authorList . \n"
           + "  ?pubUri duke:apaCitation ?apaCitation . \n"
           + "  ?pubUri duke:chicagoCitation ?chicagoCitation . \n"

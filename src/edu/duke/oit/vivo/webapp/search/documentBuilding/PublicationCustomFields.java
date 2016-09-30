@@ -53,7 +53,7 @@ PREFIX duke:     <http://vivo.duke.edu/vivo/ontology/duke-extension#>
 select ?abstract ?authorList 
 WHERE {
   ?pubUri a bibo:Document .
-  ?pubUri bibo:abstract ?abstract .
+  OPTIONAL { ?pubUri bibo:abstract ?abstract . }
   ?pubUri duke:authorList ?authorList .
   ?pubUri duke:apaCitation ?apaCitation .
   ?pubUri duke:chicagoCitation ?chicagoCitation .
@@ -82,7 +82,7 @@ public class PublicationCustomFields extends DukeJSONContextNodeFields {
       + "select ?abstract ?authorList \n"
       + "WHERE { \n"
       + "  ?pubUri a bibo:Document . \n"
-      + "  ?pubUri bibo:abstract ?abstract . \n"
+      + "  OPTIONAL { ?pubUri bibo:abstract ?abstract . } \n"
       + "  ?pubUri duke:authorList ?authorList . \n"
       + "  ?pubUri duke:apaCitation ?apaCitation . \n"
       + "  ?pubUri duke:chicagoCitation ?chicagoCitation . \n"
