@@ -9,6 +9,9 @@ import edu.cornell.mannlib.vitro.webapp.search.documentBuilding.ContextNodeField
 
 import com.hp.hpl.jena.query.QuerySolution;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
 public class DukeContextNodeFields extends ContextNodeFields {
  
     protected DukeContextNodeFields(List<String> queries, RDFServiceFactory rdfServiceFactory){   
@@ -47,8 +50,14 @@ public class DukeContextNodeFields extends ContextNodeFields {
     protected String getTextForRow( QuerySolution row, boolean addSpace){
         String text = super.getTextForRow(row, true);
         String cleaner = text.replaceAll(" +", " ");
-        return cleaner.toString();
+ 
+        // NOTE: People Overview has html - which is causing problems
+        // in display.  This is a bludgeon to get rid of *all* html
+        // in SOLR index - maybe too much       
+        Document doc = Jsoup.parse(cleaner);
+        String htmlSane = doc.text();
 
+        return htmlSane.toString();
     }
     
 

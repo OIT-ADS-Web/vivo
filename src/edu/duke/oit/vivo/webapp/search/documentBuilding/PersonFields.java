@@ -34,6 +34,10 @@ where {
 }
 
 
+Document doc = Jsoup.parse(html);
+System.out.println(doc.text());
+
+
 */
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeContextNodeFields;

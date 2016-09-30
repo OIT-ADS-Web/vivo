@@ -14,17 +14,23 @@ PREFIX core: <http://vivoweb.org/ontology/core#>
 PREFIX duke: <http://vivo.duke.edu/vivo/ontology/duke-extension#>
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
-   
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+  
 select (CONCAT(?label, ' ', ?author) as ?result)
 WHERE {
-  ?uri core:relatedBy ?authorship .
+  <https://scholars.duke.edu/individual/perdm253> a foaf:Person .
+  <https://scholars.duke.edu/individual/perdm253> core:relatedBy ?authorship .
   ?authorship vitro:mostSpecificType ?authorshipType .
   ?authorship core:relates ?publication .
   ?publication a obo:IAO_0000030 .
   ?publication rdfs:label ?label .
   ?authorship rdfs:label ?author .
-  FILTER(?authorshipType = core:Translatorship || core:Authorship || core:Editorship)
+  FILTER(?authorshipType = core:Translatorship ||?authorshipType = core:Authorship ||?authorshipType = core:Editorship)
 }
+
+NOTE: this matches pub too
+<https://scholars.duke.edu/individual/pub756502>
+
 */
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeContextNodeFields;
@@ -39,6 +45,7 @@ public class PersonPublicationFields extends DukeContextNodeFields {
           + " prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> \n" 
           + " prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> \n"
           + " PREFIX obo: <http://purl.obolibrary.org/obo/> \n"
+          + " PREFIX foaf: <http://xmlns.com/foaf/0.1/> \n"
           + " PREFIX duke: <http://vivo.duke.edu/vivo/ontology/duke-extension#> \n";
     
     public PersonPublicationFields(RDFServiceFactory rdfServiceFactory){                
@@ -49,6 +56,7 @@ public class PersonPublicationFields extends DukeContextNodeFields {
           prefix
           + "select (CONCAT(?label, ' ', ?author) as ?result)\n"
           + "WHERE {\n"
+          + "  ?uri a foaf:Person .\n"
           + "  ?uri core:relatedBy ?authorship .\n"
           + "  ?authorship vitro:mostSpecificType ?authorshipType .\n"
           + "  ?authorship core:relates ?publication .\n"
