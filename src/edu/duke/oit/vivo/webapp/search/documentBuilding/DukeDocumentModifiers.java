@@ -43,6 +43,9 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.ProfessionalActivityFiel
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonCustomFields;
 
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PublicationFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PublicationCustomFields;
+
 public class DukeDocumentModifiers implements javax.servlet.ServletContextListener{
 
     @SuppressWarnings("unchecked")
@@ -92,6 +95,8 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
         modifiers.add( new PersonDepartmentFacet( rdfServiceFactory ));
         modifiers.add( new PersonDepartmentSearch( rdfServiceFactory ));
  
+        modifiers.add( new PublicationFields( rdfServiceFactory ));
+        modifiers.add( new PublicationCustomFields( rdfServiceFactory ));
 
     }
 
