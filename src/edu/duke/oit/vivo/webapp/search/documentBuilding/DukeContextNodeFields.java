@@ -11,12 +11,26 @@ import com.hp.hpl.jena.query.QuerySolution;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.safety.Whitelist;
+import org.jsoup.nodes.TextNode;
 
 public class DukeContextNodeFields extends ContextNodeFields {
  
     protected DukeContextNodeFields(List<String> queries, RDFServiceFactory rdfServiceFactory){   
         super(queries, rdfServiceFactory);
-    }        
+    }
+
+
+    private boolean containsHtml;
+
+
+    protected boolean getContainsHtml() {
+      return this.containsHtml;
+    }
+
+    protected void setContainsHtml(boolean b) {
+      this.containsHtml = b;
+    }    
    
     @Override
     public void modifyDocument(Individual individual, SearchInputDocument doc, StringBuffer addUri) {        
@@ -42,6 +56,7 @@ public class DukeContextNodeFields extends ContextNodeFields {
 
     }
 
+
     /* NOTE: just doing this to get rid of spaces - tried using a combination
      * of COALESCE and CONCAT in SPARQL - but it involved to much nesting of
      * e.g. (CONCAT(COALESCE(CONCAT etc... it was too ugly.  
@@ -49,15 +64,17 @@ public class DukeContextNodeFields extends ContextNodeFields {
     @Override
     protected String getTextForRow( QuerySolution row, boolean addSpace){
         String text = super.getTextForRow(row, true);
-        String cleaner = text.replaceAll(" +", " ");
  
-        // NOTE: People Overview has html - which is causing problems
-        // in display.  This is a bludgeon to get rid of *all* html
-        // in SOLR index - maybe too much       
-        Document doc = Jsoup.parse(cleaner);
-        String htmlSane = doc.text();
+        // http://stackoverflow.com/questions/7130968/avoid-spaceless-concatenation-with-jsoup
+        if (this.getContainsHtml()) {
+          // FIXME:: have not found anything that works so far - but there should
+          // be something here someday.  Might need to upgrade jsoup.  But ...
+          //
+        }
 
-        return htmlSane.toString();
+        String cleaner = text.replaceAll(" +", " ");
+        return cleaner.toString();
+
     }
     
 
