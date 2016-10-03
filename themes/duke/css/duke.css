@@ -3405,12 +3405,8 @@ div.updates a {
 
 .widgets ul li {
 	padding: 10px 0 10px 5px;
-	margin: 0;
-}
-
-.widgets #people-search-form .search-vivo {
-	width: 100px;
-	margin-left: 1.2em;
+  margin-left: 2em;
+  text-indent: -2em;
 }
 
 .widgets #people-search-form .search {
@@ -3419,6 +3415,40 @@ div.updates a {
 	background: none;
 	font-size: 1em;
 	cursor: pointer;
+}
+
+.widgets #people-search-form .search-vivo {
+	margin-left: 1.2em;
+}
+
+@media (min-width: 894px) {
+	.widgets #people-search-form .search-vivo {
+		width: 100px;
+	}
+}
+
+@media (max-width: 893px) and (min-width: 769px) {
+	.widgets #people-search-form .search-vivo {
+		width: 77px;
+	}
+}
+
+@media (max-width: 768px) and (min-width: 622px) {
+	.widgets #people-search-form .search-vivo {
+		width: 100px;
+	}
+}
+
+@media (max-width: 621px) and (min-width: 541px) {
+	.widgets #people-search-form .search-vivo {
+		width: 77px;
+	}
+}
+
+@media (max-width: 540px) {
+	.widgets #people-search-form .search-vivo {
+		width: 100px;
+	}	
 }
 
 #intro .widgets ul li a {
