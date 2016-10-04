@@ -1,6 +1,9 @@
 package edu.duke.oit.vivo.webapp.search.documentBuilding;
 
 import java.util.List;
+import java.util.Iterator;
+
+import org.apache.commons.lang.StringUtils;
 
 import edu.cornell.mannlib.vitro.webapp.beans.Individual;
 import edu.cornell.mannlib.vitro.webapp.modules.searchEngine.SearchInputDocument;
@@ -8,11 +11,15 @@ import edu.cornell.mannlib.vitro.webapp.rdfservice.RDFServiceFactory;
 import edu.cornell.mannlib.vitro.webapp.search.documentBuilding.ContextNodeFields;
 
 import com.hp.hpl.jena.query.QuerySolution;
+import com.hp.hpl.jena.rdf.model.RDFNode;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.safety.Whitelist;
 import org.jsoup.nodes.TextNode;
+
+import java.io.StringReader; 
+import java.io.BufferedReader; 
 
 public class DukeContextNodeFields extends ContextNodeFields {
  
@@ -21,17 +28,6 @@ public class DukeContextNodeFields extends ContextNodeFields {
     }
 
 
-    private boolean containsHtml;
-
-
-    protected boolean getContainsHtml() {
-      return this.containsHtml;
-    }
-
-    protected void setContainsHtml(boolean b) {
-      this.containsHtml = b;
-    }    
-   
     @Override
     public void modifyDocument(Individual individual, SearchInputDocument doc, StringBuffer addUri) {        
         if( individual == null )
@@ -56,6 +52,45 @@ public class DukeContextNodeFields extends ContextNodeFields {
 
     }
 
+     public String parseHTMLToPlainText(String text) {
+         try {
+            Document doc = Jsoup.parse(text.toString());
+            text = doc.body().text();
+            return text; 
+         } catch(Exception e) {
+            log.debug("Could not strip HTML during search indexing. " + e);
+            return text; 
+         }
+      }
+
+     // NOTE: needed to parse out HTML, so was easiest to copy and paste this code from 
+     // cornell...ContextNodeFields 
+     protected String parseRow( QuerySolution row, boolean addSpace){
+        if( row == null )
+            return "";
+
+        StringBuffer text = new StringBuffer();
+        Iterator<String> iter =  row.varNames() ;
+        while( iter.hasNext()){
+            String name = iter.next();
+            RDFNode node = row.get( name );
+            if( node != null ){
+              String value = (node.isLiteral()) ? node.asLiteral().getString(): node.toString();
+              value = parseHTMLToPlainText(value);
+
+              if (StringUtils.isNotBlank(value)) {
+                if(addSpace) {
+                  text.append(" ").append( value );
+                } else {
+                  text.append(value);
+                }
+              }
+            }else{
+                log.debug(name + " is null");
+            }                        
+        }        
+        return text.toString();
+    }
 
     /* NOTE: just doing this to get rid of spaces - tried using a combination
      * of COALESCE and CONCAT in SPARQL - but it involved to much nesting of
@@ -63,14 +98,7 @@ public class DukeContextNodeFields extends ContextNodeFields {
      */
     @Override
     protected String getTextForRow( QuerySolution row, boolean addSpace){
-        String text = super.getTextForRow(row, true);
- 
-        // http://stackoverflow.com/questions/7130968/avoid-spaceless-concatenation-with-jsoup
-        if (this.getContainsHtml()) {
-          // FIXME:: have not found anything that works so far - but there should
-          // be something here someday.  Might need to upgrade jsoup.  But ...
-          //
-        }
+        String text = this.parseRow(row, true);
 
         String cleaner = text.replaceAll(" +", " ");
         return cleaner.toString();
