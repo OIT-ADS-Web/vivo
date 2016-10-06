@@ -48,18 +48,7 @@ public class DukeJSONContextNodeFields implements DocumentModifier {
   }
 
 
-  private void mapJSONFieldsToSOLRFields(JSONObject root, SearchInputDocument doc) {
-    String json = "";
-
-    try {
-
-      JSONObject results = root.getJSONObject("results");
-      JSONArray bindings = results.getJSONArray("bindings");
-
-      if (bindings.length() == 0) {
-        return;
-      }
-
+  protected void addBindingsToSOLR(JSONArray bindings, SearchInputDocument doc) throws JSONException {
       JSONObject objects = bindings.getJSONObject(0);
 
       // NOTE: getJSONObject(0) will throw Exception if it's empty (for URIs other than person)
@@ -73,9 +62,37 @@ public class DukeJSONContextNodeFields implements DocumentModifier {
         doc.addField(key + "_text", obj.getString("value"));
       }
 
+  }
+
+  private void mapJSONFieldsToSOLRFields(JSONObject root, SearchInputDocument doc) {
+
+    try {
+
+      JSONObject results = root.getJSONObject("results");
+      JSONArray bindings = results.getJSONArray("bindings");
+
+      if (bindings.length() == 0) {
+        return;
+      }
+
+      addBindingsToSOLR(bindings, doc);
+
+      //
+      //JSONObject objects = bindings.getJSONObject(0);
+
+      // NOTE: getJSONObject(0) will throw Exception if it's empty (for URIs other than person)
+      //
+      //Iterator<String> keys = objects.keys();
+
+      //while(keys.hasNext()) {
+      //  String key = (String)keys.next();
+      //  JSONObject obj = objects.getJSONObject(key);
+      //  log.debug("adding " + key + "_text as " + obj.getString("value"));
+      //  doc.addField(key + "_text", obj.getString("value"));
+      //}
+
     } catch (JSONException e) {
       log.error("JSON Exception:",e);
-      log.error(json);
     }
   }
 
