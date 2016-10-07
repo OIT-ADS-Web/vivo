@@ -77,20 +77,6 @@ public class DukeJSONContextNodeFields implements DocumentModifier {
 
       addBindingsToSOLR(bindings, doc);
 
-      //
-      //JSONObject objects = bindings.getJSONObject(0);
-
-      // NOTE: getJSONObject(0) will throw Exception if it's empty (for URIs other than person)
-      //
-      //Iterator<String> keys = objects.keys();
-
-      //while(keys.hasNext()) {
-      //  String key = (String)keys.next();
-      //  JSONObject obj = objects.getJSONObject(key);
-      //  log.debug("adding " + key + "_text as " + obj.getString("value"));
-      //  doc.addField(key + "_text", obj.getString("value"));
-      //}
-
     } catch (JSONException e) {
       log.error("JSON Exception:",e);
     }
