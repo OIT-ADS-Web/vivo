@@ -53,6 +53,7 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonCourseFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonAwardsFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonSubjectHeadingFields;
 
+import edu.duke.oit.vivo.webapp.search.documentBuilding.SubjectHeadingPeopleFields;
 
 public class DukeDocumentModifiers implements javax.servlet.ServletContextListener{
 
@@ -107,6 +108,9 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
         modifiers.add( new PersonCourseFields (rdfServiceFactory ));
         modifiers.add( new PersonAwardsFields (rdfServiceFactory ));
         modifiers.add( new PersonSubjectHeadingFields (rdfServiceFactory ));
+
+        modifiers.add( new SubjectHeadingPeopleFields (rdfServiceFactory ));
+
 
     }
 
