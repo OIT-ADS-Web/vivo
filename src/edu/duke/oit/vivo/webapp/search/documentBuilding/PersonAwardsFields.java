@@ -30,7 +30,7 @@ WHERE {
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeContextNodeFields;
 
-public class AwardsFields extends DukeContextNodeFields {
+public class PersonAwardsFields extends DukeContextNodeFields {
  
     private static String VIVONS = "http://vivoweb.org/ontology/core#";
     
@@ -40,7 +40,7 @@ public class AwardsFields extends DukeContextNodeFields {
           + " prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> \n" 
           + " PREFIX dukeact: <http://vivo.duke.edu/vivo/ontology/duke-activity-extension#> \n";
     
-    public AwardsFields(RDFServiceFactory rdfServiceFactory){                
+    public PersonAwardsFields(RDFServiceFactory rdfServiceFactory){                
         super(queries,rdfServiceFactory);        
     }
  

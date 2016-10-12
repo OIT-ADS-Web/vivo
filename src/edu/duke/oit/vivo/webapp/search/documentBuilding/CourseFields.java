@@ -8,6 +8,8 @@ import edu.cornell.mannlib.vitro.webapp.search.documentBuilding.ContextNodeField
 
 
 /*
+#https://scholars.duke.edu/individual/courseENVIRON999
+
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
@@ -15,17 +17,20 @@ PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX core: <http://vivoweb.org/ontology/core#>
 PREFIX vitro-public: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
 
-select (str (?label) as ?result)
+select (CONCAT(
+  ?teacher, ' ', ?roleTypeLabel
+) as ?result)
 where {
-  <https://scholars.duke.edu/individual/per2103642> obo:RO_0000053 ?role .
-  ?role a core:TeacherRole .
-  ?role rdfs:label ?roleName .
-  ?role obo:BFO_0000054 ?course .
-  ?course vitro:mostSpecificType ?type .
-  ?course a core:Course .
-  ?course rdfs:label ?label .
+  <https://scholars.duke.edu/individual/courseENVIRON999> vitro:mostSpecificType ?type .
+  <https://scholars.duke.edu/individual/courseENVIRON999> obo:BFO_0000055 ?role .
+  ?role rdfs:label ?roleLabel .
+  ?role vitro:mostSpecificType ?roleType .
+  ?role obo:RO_0000052 ?person .
+  ?person rdfs:label ?teacher .
+  ?roleType rdfs:label ?roleTypeLabel . 
 } 
 */
+
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeContextNodeFields;
 
@@ -36,31 +41,34 @@ public class CourseFields extends DukeContextNodeFields {
     protected static final String prefix =               
             " prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>  \n"
           + " prefix core: <" + VIVONS + ">  \n"
-          + " prefix foaf: <http://xmlns.com/foaf/0.1/> \n"
           + " prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> \n" 
-          + " prefix obo: <http://purl.obolibrary.org/obo/> \n"
-          + " prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> \n";
-    
+          + " PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> \n"
+          + " PREFIX obo: <http://purl.obolibrary.org/obo/> \n"
+          + " PREFIX core: <http://vivoweb.org/ontology/core#> \n"
+          + " PREFIX vitro-public: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>";
+
     public CourseFields(RDFServiceFactory rdfServiceFactory){                
         super(queries,rdfServiceFactory);        
     }
  
-    private static String queryForCourses =        
-          prefix +
-          "select (str (?label) as ?result) \n" +
-          "where {\n" +
-          "  ?uri obo:RO_0000053 ?role . \n" +
-          "  ?role a core:TeacherRole . \n" +
-          "  ?role rdfs:label ?roleName . \n" +
-          "  ?role obo:BFO_0000054 ?course . \n" +
-          "  ?course vitro:mostSpecificType ?type . \n" +
-          "  ?course a core:Course . \n" +
-          "  ?course rdfs:label ?label . \n" +
-          "}";
+    private static String queryForCourse =        
+          prefix
+          + "select (CONCAT( \n"
+          + "?teacher, ' ', ?roleTypeLabel \n"
+          + ") as ?result)\n"
+          + "where {\n"
+          + "  ?uri vitro:mostSpecificType ?type . \n"
+          + "  ?uri obo:BFO_0000055 ?role . \n"
+          + "  ?role rdfs:label ?roleLabel . \n"
+          + "  ?role vitro:mostSpecificType ?roleType . \n"
+          + "  ?role obo:RO_0000052 ?person . \n"
+          + "  ?person rdfs:label ?teacher . \n"
+          + "  ?roleType rdfs:label ?roleTypeLabel . \n" 
+          + "}";
 
     static List<String> queries = new ArrayList<String>();
     
     static{
-        queries.add( queryForCourses );
+        queries.add( queryForCourse );
     }
 }

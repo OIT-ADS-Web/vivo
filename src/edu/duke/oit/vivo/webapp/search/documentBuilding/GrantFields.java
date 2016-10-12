@@ -39,12 +39,14 @@ PREFIX core: <http://vivoweb.org/ontology/core#>
 PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
   
 SELECT (CONCAT(
+   ?roleLabel, ' ',
    ?agreementLabel, ' ',
    COALESCE(?assignedByLabel, '')
 ) as ?result)
 WHERE {
   <https://scholars.duke.edu/individual/per1544252> obo:RO_0000053 ?role .
   ?role a core:ResearcherRole .
+  ?role rdfs:label ?roleLabel .
   ?role core:relatedBy ?agreement .
   ?agreement rdfs:label ?agreementLabel .
   OPTIONAL { 
@@ -76,6 +78,7 @@ public class GrantFields extends DukeContextNodeFields {
     private static String queryForPerson =        
           prefix
           + "SELECT (CONCAT(\n"
+          + "  ?roleLabel, ' ', \n"
           + "  ?agreementLabel, ' ', \n"
           + "  COALESCE(?assignedByLabel, '') \n"
           + ") as ?result)\n"
@@ -100,6 +103,7 @@ public class GrantFields extends DukeContextNodeFields {
           + "  ?uri a core:Grant . \n"
           + "  ?uri core:relates ?role . \n"
           + "  ?role a core:ResearcherRole . \n"
+          + "  ?role rdfs:label ?roleLabel . \n"
           + "  ?role obo:RO_0000052 ?person . \n"
           + "  ?person rdfs:label ?personLabel . \n"
           + "  ?role core:relatedBy ?agreement . \n"

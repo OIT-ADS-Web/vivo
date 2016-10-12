@@ -33,11 +33,13 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeJSONContextNodeField
 
 /*
 
-
+# examples:
 # http://id.loc.gov/authorities/subjects/sh85037456#concept
+# https://scholars.duke.edu/individual/meshD054524
+ 
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX core: <http://vivoweb.org/ontology/core#>
-PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
      
 select ?label ?indCount ?pubCount
 (IF(?pubCount > 0, 'Of Publication', '') as ?hasPubs)
@@ -48,39 +50,6 @@ WHERE {
   { SELECT (count(?ind) as ?indCount) WHERE { <http://id.loc.gov/authorities/subjects/sh85037456#concept> core:researchAreaOf  ?ind . } }
   { SELECT (count(?pub) as ?pubCount) WHERE { <http://id.loc.gov/authorities/subjects/sh85037456#concept> core:subjectAreaOf  ?pub . } }  
 } 
-
-# example from acceptance server
-prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-prefix core: <http://vivoweb.org/ontology/core#>
-prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
-prefix foaf: <http://xmlns.com/foaf/0.1/>
-prefix skos:     <http://www.w3.org/2004/02/skos/core#>
-prefix obo: <http://purl.obolibrary.org/obo/>
- 
-select ?label ?indCount ?pubCount 
-(IF(?pubCount > 0, 'OfPublication', '') as ?hasPubs) 
-(IF(?indCount > 0, 'OfIndividual', '') as ?hasIndividual) 
-WHERE {
-  <https://scholars.duke.edu/individual/meshD054524> rdfs:label ?label . 
-  <https://scholars.duke.edu/individual/meshD054524> a skos:Concept . 
-  { SELECT (count(?ind) as ?indCount) WHERE { <https://scholars.duke.edu/individual/meshD054524> core:researchAreaOf  ?ind . } } 
-  { SELECT (count(?pub) as ?pubCount) WHERE { <https://scholars.duke.edu/individual/meshD054524> core:subjectAreaOf  ?pub . } }  
-}
-
-
-# http://id.loc.gov/authorities/subjects/sh85037456#concept
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX core: <http://vivoweb.org/ontology/core#>
-    
-select ?label ?indCount ?pubCount
-(IF(?pubCount > 0, 'OfPublication', '') as ?hasPubs)
-(IF(?indCount > 0, 'OfIndividual', '') as ?hasIndividual)
-WHERE {
-  <http://id.loc.gov/authorities/subjects/sh85037456#concept>  rdfs:label ?label .
-  { SELECT (count(?ind) as ?indCount) WHERE { <http://id.loc.gov/authorities/subjects/sh85037456#concept> core:researchAreaOf  ?ind . } }
-  { SELECT (count(?pub) as ?pubCount) WHERE { <http://id.loc.gov/authorities/subjects/sh85037456#concept> core:subjectAreaOf  ?pub . } }  
-} 
-
 
 */
 
@@ -139,12 +108,6 @@ public class SubjectHeadingOfFacet extends DukeJSONContextNodeFields {
     } else if (StringUtils.isNotBlank(ofIndividualText) && StringUtils.isBlank(ofPubText)) {
       doc.addField("subjectheading_facet_string", ofIndividualText);
     } else if (StringUtils.isNotBlank(ofIndividualText) && StringUtils.isNotBlank(ofPubText)) {
-      // NOTE: this is supposed to work, in theory, but it appears these were skipped
-      // it's possible there was another reason so I'm leaving the code in because
-      // the original reason I put the code in was that I was getting two "subjectheading_facet_string" fields
-      //
-      //String[] valuesArray = {ofPubText, ofIndividualText};
-      //ArrayList<String> values = new ArrayList<String>(Arrays.asList(valuesArray));
       doc.addField("subjectheading_facet_string", ofPubText);
       doc.addField("subjectheading_facet_string", ofIndividualText);
     } else {
