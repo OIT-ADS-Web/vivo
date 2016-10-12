@@ -19,9 +19,10 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.GrantFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.VcardFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.ProfessionalActivityFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.EducationFields;
+
 import edu.duke.oit.vivo.webapp.search.documentBuilding.CourseFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.ArtisticWorksFields;
-import edu.duke.oit.vivo.webapp.search.documentBuilding.AwardsFields;
+
 import edu.duke.oit.vivo.webapp.search.documentBuilding.NewsItemFields;
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonFields;
@@ -48,6 +49,12 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.PublicationCustomFields;
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.SubjectHeadingOfFacet; 
 
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonCourseFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonAwardsFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonSubjectHeadingFields;
+
+import edu.duke.oit.vivo.webapp.search.documentBuilding.SubjectHeadingPeopleFields;
+
 public class DukeDocumentModifiers implements javax.servlet.ServletContextListener{
 
     @SuppressWarnings("unchecked")
@@ -71,7 +78,6 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
         modifiers.add( new ProfessionalActivityFields( rdfServiceFactory ));
         modifiers.add( new CourseFields( rdfServiceFactory ));
         modifiers.add( new ArtisticWorksFields( rdfServiceFactory ));
-        modifiers.add( new AwardsFields( rdfServiceFactory ));
         modifiers.add( new NewsItemFields( rdfServiceFactory ));
 
         // NOTE: these add to index data to duke_text that is automatically added to ALLTEXT already
@@ -101,6 +107,13 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
         modifiers.add( new PublicationCustomFields( rdfServiceFactory ));
 
         modifiers.add( new SubjectHeadingOfFacet (rdfServiceFactory ));
+
+        modifiers.add( new PersonCourseFields (rdfServiceFactory ));
+        modifiers.add( new PersonAwardsFields (rdfServiceFactory ));
+        modifiers.add( new PersonSubjectHeadingFields (rdfServiceFactory ));
+
+        modifiers.add( new SubjectHeadingPeopleFields (rdfServiceFactory ));
+
 
     }
 
