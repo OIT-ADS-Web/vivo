@@ -21,7 +21,7 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.ProfessionalActivityFiel
 import edu.duke.oit.vivo.webapp.search.documentBuilding.EducationFields;
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.CourseFields;
-import edu.duke.oit.vivo.webapp.search.documentBuilding.ArtisticWorksFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonArtisticWorksFields;
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.NewsItemFields;
 
@@ -59,7 +59,8 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonGrantFields;
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.GeoSelfGoverningPersonFields;
 
-
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonArtisticWorkEventsFields;
+ 
 public class DukeDocumentModifiers implements javax.servlet.ServletContextListener{
 
     @SuppressWarnings("unchecked")
@@ -82,7 +83,7 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
         modifiers.add( new EducationFields( rdfServiceFactory ));
         modifiers.add( new ProfessionalActivityFields( rdfServiceFactory ));
         modifiers.add( new CourseFields( rdfServiceFactory ));
-        modifiers.add( new ArtisticWorksFields( rdfServiceFactory ));
+        modifiers.add( new PersonArtisticWorksFields( rdfServiceFactory ));
         modifiers.add( new NewsItemFields( rdfServiceFactory ));
 
         // NOTE: these add to index data that was is automatically added to ALLTEXT already
@@ -120,6 +121,8 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
 
         modifiers.add( new GeoSelfGoverningPersonFields (rdfServiceFactory));
 
+        modifiers.add( new PersonArtisticWorkEventsFields (rdfServiceFactory));
+ 
     }
 
     @Override
