@@ -13,30 +13,29 @@ PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX obo: <http://purl.obolibrary.org/obo/> 
 PREFIX core: <http://vivoweb.org/ontology/core#>
 PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
-    
+  
 SELECT (CONCAT(
- ?personLabel, ' ',
- COALESCE(?assignedByLabel, '')
+   ?roleLabel, ' ',
+   ?agreementLabel, ' ',
+   COALESCE(?assignedByLabel, '')
 ) as ?result)
 WHERE {
-  <https://scholars.duke.edu/individual/gra35440> a core:Grant .
-  <https://scholars.duke.edu/individual/gra35440> core:relates ?role .
+  <https://scholars.duke.edu/individual/per1544252> obo:RO_0000053 ?role .
   ?role a core:ResearcherRole .
-  ?role obo:RO_0000052 ?person .
-  ?person rdfs:label ?personLabel .
+  ?role rdfs:label ?roleLabel .
   ?role core:relatedBy ?agreement .
+  ?agreement rdfs:label ?agreementLabel .
   OPTIONAL { 
    ?agreement core:assignedBy ?assignedBy .
    ?assignedBy rdfs:label ?assignedByLabel
   } 
 }
 
-
 */
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeContextNodeFields;
 
-public class GrantFields extends DukeContextNodeFields {
+public class PersonGrantFields extends DukeContextNodeFields {
  
     private static String VIVONS = "http://vivoweb.org/ontology/core#";
     
@@ -48,34 +47,31 @@ public class GrantFields extends DukeContextNodeFields {
           + " prefix obo: <http://purl.obolibrary.org/obo/> \n"
           + " prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#a> \n";
     
-    public GrantFields(RDFServiceFactory rdfServiceFactory){                
+    public PersonGrantFields(RDFServiceFactory rdfServiceFactory){                
         super(queries,rdfServiceFactory);        
     }
 
-         
-    private static String queryForGrants =        
+    private static String queryForPerson =        
           prefix
-          + "SELECT (CONCAT(\n" 
-          + "?personLabel, ' ', \n"
-          + "COALESCE(?assignedByLabel, '') \n"
-          + ") as ?result) \n"
-          + "WHERE { \n"
-          + "  ?uri a core:Grant . \n"
-          + "  ?uri core:relates ?role . \n"
+          + "SELECT (CONCAT(\n"
+          + "  ?roleLabel, ' ', \n"
+          + "  ?agreementLabel, ' ', \n"
+          + "  COALESCE(?assignedByLabel, '') \n"
+          + ") as ?result)\n"
+          + "WHERE {\n"
+          + "  ?uri obo:RO_0000053 ?role . \n"
           + "  ?role a core:ResearcherRole . \n"
-          + "  ?role rdfs:label ?roleLabel . \n"
-          + "  ?role obo:RO_0000052 ?person . \n"
-          + "  ?person rdfs:label ?personLabel . \n"
           + "  ?role core:relatedBy ?agreement . \n"
-          + "  OPTIONAL {\n"
+          + "  ?agreement rdfs:label ?agreementLabel . \n"
+          + "  OPTIONAL { \n"
           + "    ?agreement core:assignedBy ?assignedBy . \n"
           + "    ?assignedBy rdfs:label ?assignedByLabel \n"
-          + "  } \n"
+          + "  }\n" 
           + "}";
-
+         
     static List<String> queries = new ArrayList<String>();
     
     static{
-        queries.add( queryForGrants );
+        queries.add( queryForPerson );
     }
 }

@@ -55,6 +55,11 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonSubjectHeadingFiel
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.SubjectHeadingPeopleFields;
 
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonGrantFields;
+
+import edu.duke.oit.vivo.webapp.search.documentBuilding.GeoSelfGoverningPersonFields;
+
+
 public class DukeDocumentModifiers implements javax.servlet.ServletContextListener{
 
     @SuppressWarnings("unchecked")
@@ -114,6 +119,9 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
 
         modifiers.add( new SubjectHeadingPeopleFields (rdfServiceFactory ));
 
+        modifiers.add( new PersonGrantFields (rdfServiceFactory ));
+
+        modifiers.add( new GeoSelfGoverningPersonFields (rdfServiceFactory));
 
     }
 
