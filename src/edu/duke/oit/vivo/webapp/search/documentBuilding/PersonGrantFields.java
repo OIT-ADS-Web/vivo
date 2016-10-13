@@ -31,6 +31,30 @@ WHERE {
   } 
 }
 
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX obo: <http://purl.obolibrary.org/obo/> 
+PREFIX core: <http://vivoweb.org/ontology/core#>
+PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
+  
+SELECT (CONCAT(
+   ?roleLabel, ' ',
+   ?agreementLabel, ' ',
+   COALESCE(?assignedByLabel, '')
+) as ?result)
+WHERE {
+  <https://scholars.duke.edu/individual/per6478442> obo:RO_0000053 ?role .
+  ?role a core:ResearcherRole .
+  ?role rdfs:label ?roleLabel .
+  ?role core:relatedBy ?agreement .
+  ?agreement rdfs:label ?agreementLabel .
+  OPTIONAL { 
+   ?agreement core:assignedBy ?assignedBy .
+   ?assignedBy rdfs:label ?assignedByLabel
+  } 
+}
+
 */
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeContextNodeFields;
@@ -61,6 +85,7 @@ public class PersonGrantFields extends DukeContextNodeFields {
           + "WHERE {\n"
           + "  ?uri obo:RO_0000053 ?role . \n"
           + "  ?role a core:ResearcherRole . \n"
+          + "  ?role rdfs:label ?roleLabel . \n"
           + "  ?role core:relatedBy ?agreement . \n"
           + "  ?agreement rdfs:label ?agreementLabel . \n"
           + "  OPTIONAL { \n"
