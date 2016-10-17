@@ -63,6 +63,8 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonArtisticWorkEvents
  
 import edu.duke.oit.vivo.webapp.search.documentBuilding.ArtisticWorkEventsFields;
  
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonGeographicallyRelatesToFields;
+ 
 public class DukeDocumentModifiers implements javax.servlet.ServletContextListener{
 
     @SuppressWarnings("unchecked")
@@ -127,6 +129,7 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
  
         modifiers.add( new ArtisticWorkEventsFields (rdfServiceFactory));
 
+        modifiers.add( new PersonGeographicallyRelatesToFields (rdfServiceFactory));
     }
 
     @Override
