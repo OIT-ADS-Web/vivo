@@ -18,7 +18,7 @@ PREFIX bibo: <http://purl.org/ontology/bibo/>
 PREFIX vcard: <http://www.w3.org/2006/vcard/ns#> 
  
 SELECT 
- (CONCAT (?label, ' ',
+ (CONCAT (?label, ' ', ?role, ' ',
   COALESCE(?type_description, ''), ' ',
   COALESCE(?role_description, ''), ' ',
   COALESCE(?collaborators, ''), ' ',
@@ -75,6 +75,7 @@ public class PersonArtisticWorksFields extends DukeContextNodeFields {
           prefix +
           "SELECT \n" +
           " (CONCAT (?label, ' ', \n" +
+          "    ?role, ' ', \n" +
           "    COALESCE(?type_description, ''), ' ', \n" +
           "    COALESCE(?role_description, ''), ' ', \n" +
           "    COALESCE(?collaborators, ''), ' ', \n" +
