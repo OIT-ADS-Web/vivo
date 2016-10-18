@@ -8,8 +8,13 @@ import edu.cornell.mannlib.vitro.webapp.search.documentBuilding.ContextNodeField
 
 /*
 
+# NOTE: phone number seems to have no information
+# also rdfs:label for address could also be vcard:streetAddress
+#
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX vcard: <http://www.w3.org/2006/vcard/ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
 
 SELECT (CONCAT
    (?title, ' ',
@@ -27,8 +32,8 @@ WHERE {
   }
   OPTIONAL {
     ?individualVcard vcard:hasAddress ?addressVcard .
-    ?addressVcard vcard:address ?primaryAddress .
-  }
+    ?addressVcard rdfs:label ?primaryAddress .
+  }  
   OPTIONAL {
     ?individualVcard vcard:hasURL ?urlVcard .
     ?urlVcard vcard:url ?primaryUrl .
@@ -38,16 +43,18 @@ WHERE {
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeContextNodeFields;
 
-public class VcardFields extends DukeContextNodeFields {
+public class PersonVcardFields extends DukeContextNodeFields {
  
     private static String VIVONS = "http://vivoweb.org/ontology/core#";
     
     protected static final String prefix =               
             " prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>  \n"
           + " prefix obo: <http://purl.obolibrary.org/obo/> \n"
-          + " prefix vcard: <http://www.w3.org/2006/vcard/ns#> \n";
+          + " prefix vcard: <http://www.w3.org/2006/vcard/ns#> \n"
+          + " PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> \n"; 
+
    
-    public VcardFields(RDFServiceFactory rdfServiceFactory){                
+    public PersonVcardFields(RDFServiceFactory rdfServiceFactory){                
         super(queries,rdfServiceFactory);        
     }
     
@@ -71,7 +78,7 @@ public class VcardFields extends DukeContextNodeFields {
       + "  }\n"
       + "  OPTIONAL {\n"
       + "    ?individualVcard vcard:hasAddress ?addressVcard . \n"
-      + "    ?addressVcard vcard:address ?primaryAddress . \n"
+      + "    ?addressVcard rdfs:label ?primaryAddress . \n"
       + "  }\n"
       + "  OPTIONAL {\n"
       + "    ?individualVcard vcard:hasURL ?urlVcard . \n"

@@ -47,7 +47,7 @@ PREFIX core: <http://vivoweb.org/ontology/core#>
 PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
 PREFIX duke: <http://vivo.duke.edu/vivo/ontology/duke-extension#>
 
-SELECT ?alternateId ?title ?primaryEmail ?netid ?officehours ?profileURL
+SELECT ?alternateId ?title ?primaryEmail ?address ?netid ?officehours ?profileURL
 WHERE { 
   ?personUri a foaf:Person .
   ?personUri rdfs:label ?label .
@@ -59,6 +59,10 @@ WHERE {
     ?individualVcard vcard:hasEmail ?emailVcard .
     ?emailVcard vcard:email ?primaryEmail .
   }
+  OPTIONAL {
+   ?individualVcard vcard:hasAddress ?addressVcard .
+   ?addressVcard rdfs:label ?address .
+  }   
   OPTIONAL { ?personUri duke:scopedNetid ?netid }
   OPTIONAL { ?personUri duke:officehours ?officehours }
   OPTIONAL { ?personUri duke:profileURL ?profileURL }
@@ -80,7 +84,7 @@ public class PersonCustomFields extends DukeJSONContextNodeFields {
  
   private static final String query = 
       prefix 
-      + "SELECT ?alternateId ?title ?primaryEmail ?netid ?officehours ?profileURL \n"
+      + "SELECT ?alternateId ?title ?primaryEmail ?address ?netid ?officehours ?profileURL \n"
       + "WHERE { \n"
       + " ?personUri a foaf:Person . \n"
       + " ?personUri rdfs:label ?label . \n"
@@ -92,6 +96,10 @@ public class PersonCustomFields extends DukeJSONContextNodeFields {
       + "  ?individualVcard vcard:hasEmail ?emailVcard . \n"
       + "  ?emailVcard vcard:email ?primaryEmail . \n"
       + "} \n"
+      + " OPTIONAL { \n"
+      + "   ?individualVcard vcard:hasAddress ?addressVcard . \n"
+      + "   ?addressVcard rdfs:label ?address . \n"
+      + "} \n"       
       + "  OPTIONAL { ?personUri duke:scopedNetid ?netid } \n"
       + "  OPTIONAL { ?personUri duke:officehours ?officehours } \n"
       + "  OPTIONAL { ?personUri duke:profileURL ?profileURL } \n"
