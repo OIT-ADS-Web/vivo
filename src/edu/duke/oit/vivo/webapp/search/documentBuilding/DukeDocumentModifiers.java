@@ -16,7 +16,7 @@ import edu.cornell.mannlib.vitro.webapp.rdfservice.impl.RDFServiceUtils;
 import edu.cornell.mannlib.vitro.webapp.search.documentBuilding.DocumentModifier;
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.GrantFields;
-import edu.duke.oit.vivo.webapp.search.documentBuilding.VcardFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonVcardFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.ProfessionalActivityFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.EducationFields;
 
@@ -83,7 +83,7 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
         }
 
         modifiers.add( new GrantFields( rdfServiceFactory ));
-        modifiers.add( new VcardFields( rdfServiceFactory ));
+        modifiers.add( new PersonVcardFields( rdfServiceFactory ));
         modifiers.add( new EducationFields( rdfServiceFactory ));
         modifiers.add( new ProfessionalActivityFields( rdfServiceFactory ));
         modifiers.add( new CourseFields( rdfServiceFactory ));
