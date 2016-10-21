@@ -182,12 +182,12 @@
   <!-- ****************************  End Vitro Fields *************************** -->
   <!-- ****************************  Dynamic Fields *************************** -->
   <dynamicField name="*_string" type="string" indexed="true" stored="true" multiValued="true"/>
-  <dynamicField name="*_text" type="text" indexed="true" stored="true" multiValued="true"/>
+  <dynamicField name="*_text" type="text" indexed="true" stored="true" multiValued="true" omitNorms="true"/>
   <dynamicField name="*_tdate" type="tdate" indexed="true" stored="true" multiValued="true"/>
   <dynamicField name="*_tint" type="tint" indexed="true" stored="true" multiValued="true"/>
 
   <!-- NOTE: this is the only duke specific config item -->
-  <dynamicField name="*_text_unstemmed" type="textgen" indexed="true" stored="false" multiValued="true"/>
+  <dynamicField name="*_text_unstemmed" type="textgen" indexed="true" stored="false" multiValued="true" omitNorms="true"/>
   
    <!-- ****************************  End Dynamic Fields *************************** -->
   
