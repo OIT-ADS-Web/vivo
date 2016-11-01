@@ -7,6 +7,7 @@ import edu.cornell.mannlib.vitro.webapp.rdfservice.RDFServiceFactory;
 import edu.cornell.mannlib.vitro.webapp.search.documentBuilding.ContextNodeFields;
 
 /*
+ *
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX core: <http://vivoweb.org/ontology/core#>
@@ -30,13 +31,8 @@ where {
    OPTIONAL { ?person duke:profileUrl ?profileUrl . }
    OPTIONAL { ?person duke:mentorshipAvailability ?mentorAvail . }
    OPTIONAL { ?person duke:mentoringOverview ?mentorOverview . }
-   FILTER (?person= ?uri) 
+   FILTER (?person= <https://scholars.duke.edu/individual/perdm253>)
 }
-
-
-Document doc = Jsoup.parse(html);
-System.out.println(doc.text());
-
 
 */
 

@@ -58,8 +58,15 @@ public class DukeJSONContextNodeFields implements DocumentModifier {
       while(keys.hasNext()) {
         String key = (String)keys.next();
         JSONObject obj = objects.getJSONObject(key);
+        
+        // https://jira.oit.duke.edu/browse/FDP-2811
+        // NOTE: could add _string so they can be faceted on (to find duplicates)
+        //log.debug("adding " + key + "_string as " + obj.getString("value"));
+        //doc.addField(key + "_string", obj.getString("value"));
+ 
         log.debug("adding " + key + "_text as " + obj.getString("value"));
         doc.addField(key + "_text", obj.getString("value"));
+  
       }
 
   }
