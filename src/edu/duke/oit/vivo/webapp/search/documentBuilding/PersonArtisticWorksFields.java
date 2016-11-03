@@ -79,7 +79,7 @@ public class PersonArtisticWorksFields extends DukeContextNodeFields {
           "    COALESCE(?type_description, ''), ' ', \n" +
           "    COALESCE(?role_description, ''), ' ', \n" +
           "    COALESCE(?collaborators, ''), ' ', \n" +
-          "    COALESCE(?abstract, ''), ' ', \n" +
+          "    #COALESCE(?abstract, ''), ' ', \n" +
           "    COALESCE(?commissioning_body, ''), ' ', \n" +
           "    COALESCE(?link_url, ''), ' ', \n" +
           "    COALESCE(?link_label, ''), ' ' \n" +
@@ -95,7 +95,7 @@ public class PersonArtisticWorksFields extends DukeContextNodeFields {
           "  ?work vitro:mostSpecificType ?type. \n" +
           "  ?work dukeart:workType ?type_description. \n" +
           "  ?work dukeart:collaboratorList ?collaborators. \n" + 
-          "  OPTIONAL {?work bibo:abstract ?abstract.} \n" +
+          "  #OPTIONAL {?work bibo:abstract ?abstract.} \n" +
           "  OPTIONAL {?work dukeart:commissioningBody ?commissioning_body.} \n" +
           "  OPTIONAL { \n" +
           "    ?work vcard:hasURL ?link. \n" +
