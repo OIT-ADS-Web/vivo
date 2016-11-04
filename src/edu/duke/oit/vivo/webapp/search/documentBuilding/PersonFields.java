@@ -73,8 +73,7 @@ public class PersonFields extends DukeContextNodeFields {
           + "   OPTIONAL { ?person duke:mentorshipAvailability ?mentorAvail . }\n"
           + "   OPTIONAL { ?person duke:mentoringOverview ?mentorOverview . }\n"
           + "   FILTER (?person= ?uri) \n"
-          + "} \n"
-          + "LIMIT 1";
+          + "}";
 
 
     static List<String> queries = new ArrayList<String>();
