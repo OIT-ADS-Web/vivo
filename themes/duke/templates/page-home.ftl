@@ -43,13 +43,6 @@
                   </div>
 
                   <div class="item">
-                    <img src="../themes/duke/images/rfp-scholars.jpg" class="home_page_graphic">
-                    <div class="caption-wrap">
-                      <p class="caption"></p>
-                    </div>
-                  </div>
-
-                  <div class="item">
                     <img src="../themes/duke/images/156215_arshavsky015.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
                       <p class="caption"><a href="display/per5514572">Vadim Arshavsky</a>, Helena Rubinstein Foundation Professor of Ophthalmology</p>
