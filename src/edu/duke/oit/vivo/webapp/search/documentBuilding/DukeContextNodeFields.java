@@ -3,6 +3,9 @@ package edu.duke.oit.vivo.webapp.search.documentBuilding;
 import java.util.List;
 import java.util.Iterator;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 import org.apache.commons.lang.StringUtils;
 
 import edu.cornell.mannlib.vitro.webapp.beans.Individual;
@@ -23,7 +26,9 @@ import java.io.BufferedReader;
 
 public class DukeContextNodeFields extends ContextNodeFields {
  
-    protected DukeContextNodeFields(List<String> queries, RDFServiceFactory rdfServiceFactory){   
+   public static final Log log = LogFactory.getLog(DukeContextNodeFields.class.getName());
+ 
+   protected DukeContextNodeFields(List<String> queries, RDFServiceFactory rdfServiceFactory){   
         super(queries, rdfServiceFactory);
     }
 
