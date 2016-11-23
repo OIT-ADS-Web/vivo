@@ -3,6 +3,7 @@
     xmlns:vitro-public="http://vitro.mannlib.cornell.edu/ns/vitro/public#"
     xmlns:ero="http://purl.obolibrary.org/obo/"
     xmlns:dukeact="http://vivo.duke.edu/vivo/ontology/duke-activity-extension#"
+    xmlns:dukecv="http://vivo.duke.edu/vivo/ontology/duke-cv-extension#"
     xmlns:pvs="http://vivoweb.org/ontology/provenance-support#"
     xmlns:j.0="http://www.w3.org/2006/12/owl2-xml#"
     xmlns:scirr="http://vivoweb.org/ontology/scientific-research-resource#"
