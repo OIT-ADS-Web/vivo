@@ -54,7 +54,8 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.SubjectHeadingPeopleFiel
 import edu.duke.oit.vivo.webapp.search.documentBuilding.GeoSelfGoverningPersonFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.ArtisticWorkEventsFields;
  
-
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PublicationAuthors; 
+ 
 public class DukeDocumentModifiers implements javax.servlet.ServletContextListener{
 
     @SuppressWarnings("unchecked")
@@ -111,7 +112,12 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
         modifiers.add( new GeoSelfGoverningPersonFields (rdfServiceFactory));
 
         modifiers.add( new ArtisticWorkEventsFields (rdfServiceFactory));
-   }
+   
+        modifiers.add( new PublicationAuthors (rdfServiceFactory));
+
+        // modifiers.add (new PublicationAuthorCustomFields (rdfServiceFactory).setIsFaceting(true));
+        //
+    }
 
     @Override
     public void contextDestroyed(ServletContextEvent arg0) {
