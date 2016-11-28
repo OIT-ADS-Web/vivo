@@ -63,7 +63,7 @@ public class ArtisticWorkEventsFields extends DukeContextNodeFields {
           + "  ?uri a dukeart:ArtisticWork . \n"
           + "  ?uri core:relatedBy ?relationship . \n"
           + "  ?relationship rdf:type dukeart:ArtisticRelationship . \n"
-          + "  ?relationship vivo:relates ?work . \n"
+          + "  ?relationship core:relates ?work . \n"
           + "  ?work  obo:RO_0002233 ?event . \n"
           + "  ?event rdfs:label ?eventLabel . \n"
           + "  OPTIONAL { ?event dukeart:venue ?venue } \n"
