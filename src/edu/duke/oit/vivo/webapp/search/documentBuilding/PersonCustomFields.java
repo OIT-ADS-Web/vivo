@@ -97,6 +97,7 @@ public class PersonCustomFields extends DukeJSONContextNodeFields {
       + "  OPTIONAL { ?personUri duke:officehours ?officehours } \n"
       + "  OPTIONAL { ?personUri duke:profileURL ?profileURL } \n"
       + "  OPTIONAL { ?personUri dukecv:interestsOverview ?interestsOverview } \n"
+      + "  OPTIONAL { ?personUri dukecv:teachingOverview ?teachingOverview } \n"
       + "  FILTER(?personUri = ?uri) \n"
       + "}";
 
