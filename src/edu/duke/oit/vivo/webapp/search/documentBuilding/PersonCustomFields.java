@@ -81,7 +81,7 @@ public class PersonCustomFields extends DukeJSONContextNodeFields {
  
   private static final String query = 
       prefix 
-      + "SELECT ?alternateId ?title ?primaryEmail ?netid ?officehours ?profileURL ?interestsOverview \n"
+      + "SELECT ?alternateId ?title ?primaryEmail ?netid ?officehours ?profileURL ?interestsOverview ?teachingOverview ?administrativeOverview \n"
       + "WHERE { \n"
       + " ?personUri a foaf:Person . \n"
       + " ?personUri rdfs:label ?label . \n"
@@ -98,6 +98,7 @@ public class PersonCustomFields extends DukeJSONContextNodeFields {
       + "  OPTIONAL { ?personUri duke:profileURL ?profileURL } \n"
       + "  OPTIONAL { ?personUri dukecv:interestsOverview ?interestsOverview } \n"
       + "  OPTIONAL { ?personUri dukecv:teachingOverview ?teachingOverview } \n"
+      + "  OPTIONAL { ?personUri dukecv:academicAdministrativeOverview ?administrativeOverview } \n"
       + "  FILTER(?personUri = ?uri) \n"
       + "}";
 
