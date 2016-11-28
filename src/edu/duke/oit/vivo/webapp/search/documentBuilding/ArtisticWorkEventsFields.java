@@ -58,7 +58,7 @@ public class ArtisticWorkEventsFields extends DukeContextNodeFields {
     private static String queryForEvents =        
           prefix
           + "SELECT \n"
-          + "(CONCAT(?eventLabel, ' ', COALESCE(?venue, ''), COALESCE(?description, '')) as ?result) \n"
+          + "(CONCAT(?eventLabel, ' ', COALESCE(?venue, ''), ' ', COALESCE(?description, '')) as ?result) \n"
           + "WHERE { \n"
           + "  ?uri a dukeart:ArtisticWork . \n"
           + "  ?uri core:relatedBy ?relationship . \n"
