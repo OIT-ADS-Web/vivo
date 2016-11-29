@@ -121,6 +121,7 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
         DukeJSONContextNodeFields publicationAuthors = new PublicationAuthorsCustomFields(rdfServiceFactory);
         publicationAuthors.setIsFaceting(true);
 
+        modifiers.add( publicationAuthors );
     }
 
     @Override
