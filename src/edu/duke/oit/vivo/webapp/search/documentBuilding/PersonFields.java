@@ -65,6 +65,7 @@ public class PersonFields extends DukeContextNodeFields {
           + "COALESCE(?teachingOverview, ''), ' ',\n"
           + "COALESCE(?administrativeOverview, ''), ' ',\n"
           + "COALESCE(?clinicalOverview, ''), ' ',\n"
+          + "COALESCE(?positionsOverview, ''), ' ',\n"
           + "COALESCE(?profileUrl, ''), ' ',\n"
           + "COALESCE(?mentorAvail, ''), ' ',\n"
           + "COALESCE(?mentorOverview, '')\n"
@@ -81,6 +82,7 @@ public class PersonFields extends DukeContextNodeFields {
           + "   OPTIONAL { ?personUri dukecv:teachingOverview ?teachingOverview } \n"
           + "   OPTIONAL { ?personUri dukecv:academicAdministrativeOverview ?administrativeOverview } \n"
           + "   OPTIONAL { ?personUri dukecv:clinicalOverview ?clinicalOverview } \n"
+          + "   OPTIONAL { ?personUri dukecv:positionsOverview ?positionsOverview } \n"
           + "   FILTER (?person= ?uri) \n"
           + "}";
 
