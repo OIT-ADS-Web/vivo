@@ -56,6 +56,11 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.ArtisticWorkEventsFields
  
 import edu.duke.oit.vivo.webapp.search.documentBuilding.ProfessionalActivityFields;
  
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PublicationAuthors; 
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PublicationAuthorsCustomFields; 
+ 
+import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeJSONContextNodeFields;
+
 public class DukeDocumentModifiers implements javax.servlet.ServletContextListener{
 
     @SuppressWarnings("unchecked")
@@ -117,6 +122,11 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
         modifiers.add( new ArtisticWorkEventsFields (rdfServiceFactory));
         modifiers.add( new ProfessionalActivityFields (rdfServiceFactory));
  
+        modifiers.add( new PublicationAuthors (rdfServiceFactory));
+        
+        DukeJSONContextNodeFields publicationAuthors = new PublicationAuthorsCustomFields(rdfServiceFactory);
+        publicationAuthors.setIsFaceting(true);
+
     }
 
     @Override
