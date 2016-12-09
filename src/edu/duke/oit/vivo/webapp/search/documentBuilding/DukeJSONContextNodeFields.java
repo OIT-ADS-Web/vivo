@@ -37,6 +37,7 @@ public class DukeJSONContextNodeFields implements DocumentModifier {
 
   protected List<String> queries = new ArrayList<String>();
   protected RDFServiceFactory rsf;
+  protected boolean isFaceting = false;
 
   public static final Log log = LogFactory.getLog(DukeJSONContextNodeFields.class.getName());
 
@@ -46,26 +47,31 @@ public class DukeJSONContextNodeFields implements DocumentModifier {
     this.queries = queries;
     this.rsf = rsf;
   }
-
+  
+  protected void setIsFaceting(boolean b) {
+    this.isFaceting = b;
+  }
 
   protected void addBindingsToSOLR(JSONArray bindings, SearchInputDocument doc) throws JSONException {
       JSONObject objects = bindings.getJSONObject(0);
 
       // NOTE: getJSONObject(0) will throw Exception if it's empty (for URIs other than person)
-      //
       Iterator<String> keys = objects.keys();
+      
+      String dynamicFieldSuffix = "text";
+      
+      if (this.isFaceting) {
+        dynamicFieldSuffix = "string";
+      }
 
       while(keys.hasNext()) {
         String key = (String)keys.next();
         JSONObject obj = objects.getJSONObject(key);
         
         // https://jira.oit.duke.edu/browse/FDP-2811
-        // NOTE: could add _string so they can be faceted on (to find duplicates)
-        //log.debug("adding " + key + "_string as " + obj.getString("value"));
-        //doc.addField(key + "_string", obj.getString("value"));
- 
-        log.debug("adding " + key + "_text as " + obj.getString("value"));
-        doc.addField(key + "_text", obj.getString("value"));
+        // NOTE: <field>_string can be faceted on, <field>_text cannot
+        log.debug("adding " + key + "_" + dynamicFieldSuffix + " as " + obj.getString("value"));
+        doc.addField(key + "_" + dynamicFieldSuffix, obj.getString("value"));
   
       }
 
