@@ -58,7 +58,8 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.ProfessionalActivityFiel
  
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PublicationAuthors; 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PublicationAuthorsCustomFields; 
- 
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonKeywordsCustomFields;
+
 import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeJSONContextNodeFields;
 
 public class DukeDocumentModifiers implements javax.servlet.ServletContextListener{
@@ -125,6 +126,12 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
         publicationAuthors.setIsFaceting(true);
 
         modifiers.add( publicationAuthors );
+
+        DukeJSONContextNodeFields personKeywords = new PersonKeywordsCustomFields(rdfServiceFactory);
+        personKeywords.setIsFaceting(true);
+
+        modifiers.add( personKeywords );
+ 
     }
 
     @Override
