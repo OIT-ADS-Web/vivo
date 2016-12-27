@@ -9,13 +9,16 @@
       </div>
   </form>
   <script type="text/javascript">
+    /*
     $("#people-search-form").submit(function(){
       var queryText = $("#people-search-form input[name=allWords]");
       var queryVal = queryText.val();
+
       if(queryVal != '' && queryVal.indexOf("*") == -1 && queryVal.indexOf('"') == -1 && queryVal.indexOf("'") == -1) {
         queryText.val(queryVal.toLowerCase() + "*");
       }
     });
+    */
   </script>
   <div class="overview-value">
     Search for people by typing their name or browsing by last name. To find people by organization, go to
