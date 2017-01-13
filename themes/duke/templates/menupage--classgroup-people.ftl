@@ -2,21 +2,23 @@
 
 <section class="main-content">
   <h1>People</h1>
-  <form id="people-search-form" class="search-form" action="${urls.search}" name="people-search" role="search">
+  <form id="people-search-form" class="search-form" action="/scholars_search/" name="people-search" role="search" method="GET">
       <div class="search-field">
-          <input type="hidden" name="classgroup" value="http://vivoweb.org/ontology#vitroClassGrouppeople" />
-          <input type="text" name="querytext" class="search-vivo" value="Search by Name, Title or Keyword" autocapitalize="off" onblur="if (this.value == '') {this.value = 'Search by Name, Title or Keyword';}" onfocus="if (this.value == 'Search by Name, Title or Keyword') {this.value = '';}" />
+          <input type="text" name="allWords" class="search-vivo" value="Search by Name, Title or Keyword" autocapitalize="off" onblur="if (this.value == '') {this.value = 'Search by Name, Title or Keyword';}" onfocus="if (this.value == 'Search by Name, Title or Keyword') {this.value = '';}" />
           <input type="submit" value="Search" class="search">
       </div>
   </form>
   <script type="text/javascript">
+    /*
     $("#people-search-form").submit(function(){
-      var queryText = $("#people-search-form input[name=querytext]");
+      var queryText = $("#people-search-form input[name=allWords]");
       var queryVal = queryText.val();
+
       if(queryVal != '' && queryVal.indexOf("*") == -1 && queryVal.indexOf('"') == -1 && queryVal.indexOf("'") == -1) {
         queryText.val(queryVal.toLowerCase() + "*");
       }
     });
+    */
   </script>
   <div class="overview-value">
     Search for people by typing their name or browsing by last name. To find people by organization, go to

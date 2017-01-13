@@ -18,8 +18,9 @@ PREFIX dukeart: <http://vivo.duke.edu/vivo/ontology/duke-art-extension#>
 # https://scholars.duke.edu/individual/art13620
 # https://scholars.duke.edu/individual/art13621
 # https://scholars.duke.edu/individual/art13662
+
 SELECT 
-(CONCAT(?eventLabel, ' ', COALESCE(?venue, ''), COALESCE(?description, '')) as ?result)
+(CONCAT(?eventLabel, ' ', COALESCE(?venue, ''), ' ', COALESCE(?description, '')) as ?result)
 WHERE {
   <https://scholars.duke.edu/individual/art13662> a dukeart:ArtisticWork . 
   <https://scholars.duke.edu/individual/art13662> core:relatedBy ?relationship . 
@@ -27,14 +28,8 @@ WHERE {
   ?relationship core:relates ?work .
   ?work  obo:RO_0002233 ?event .
   ?event rdfs:label ?eventLabel .
-  OPTIONAL
-  { 
-     ?event dukeart:venue ?venue 
-  }
-  OPTIONAL 
-  {
-  ?event dukeart:description ?description
-  } 
+  OPTIONAL { ?event dukeart:venue ?venue }
+  OPTIONAL { ?event core:description ?description } 
 } 
 
 */
@@ -63,7 +58,7 @@ public class ArtisticWorkEventsFields extends DukeContextNodeFields {
     private static String queryForEvents =        
           prefix
           + "SELECT \n"
-          + "(CONCAT(?eventLabel, ' ', COALESCE(?venue, ''), COALESCE(?description, '')) as ?result) \n"
+          + "(CONCAT(?eventLabel, ' ', COALESCE(?venue, ''), ' ', COALESCE(?description, '')) as ?result) \n"
           + "WHERE { \n"
           + "  ?uri a dukeart:ArtisticWork . \n"
           + "  ?uri core:relatedBy ?relationship . \n"
@@ -71,8 +66,8 @@ public class ArtisticWorkEventsFields extends DukeContextNodeFields {
           + "  ?relationship core:relates ?work . \n"
           + "  ?work  obo:RO_0002233 ?event . \n"
           + "  ?event rdfs:label ?eventLabel . \n"
-          + "  OPTIONAL {  ?event dukeart:venue ?venue } \n"
-          + "  OPTIONAL { ?event dukeart:description ?description } \n" 
+          + "  OPTIONAL { ?event dukeart:venue ?venue } \n"
+          + "  OPTIONAL { ?event core:description ?description } \n" 
           + "}"; 
 
     static List<String> queries = new ArrayList<String>();
