@@ -120,4 +120,25 @@
     <rdfs:label xml:lang="en-US">License State</rdfs:label>
   </owl:DatatypeProperty>
 
+  <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-cv-extension#NonDukePosition">
+    <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
+    <vitro:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >-1</vitro:displayLimitAnnot>
+    <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >-1</vitro:displayRankAnnot>
+    <rdfs:label xml:lang="en-US">Previous Academic Positions and Visiting Professorships</rdfs:label>
+    <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+      >A previous, non-Duke academic position or visiting professorship</vitro:shortDef>
+  </owl:Class>
+
+  <owl:DatatypeProperty rdf:about="http://vivo.duke.edu/vivo/ontology/duke-cv-extension#nonDukeAcademicRole">
+    <rdfs:label xml:lang="en-US">Non-Duke Academic Role</rdfs:label>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://vivo.duke.edu/vivo/ontology/duke-cv-extension#nonDukeAcademicInstitution">
+    <rdfs:label xml:lang="en-US">Non-Duke Academic Institution</rdfs:label>
+  </owl:DatatypeProperty>
+
 </rdf:RDF>
