@@ -103,4 +103,21 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
 
+  <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-cv-extension#MedicalLicensure">
+    <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
+    <vitro:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >-1</vitro:displayLimitAnnot>
+    <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >-1</vitro:displayRankAnnot>
+    <rdfs:label xml:lang="en-US">Medical Licensure</rdfs:label>
+    <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+      >A medical license</vitro:shortDef>
+  </owl:Class>
+
+  <owl:DatatypeProperty rdf:about="http://vivo.duke.edu/vivo/ontology/duke-cv-extension#licenseState">
+    <rdfs:label xml:lang="en-US">License State</rdfs:label>
+  </owl:DatatypeProperty>
+
 </rdf:RDF>
