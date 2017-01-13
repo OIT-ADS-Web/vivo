@@ -141,4 +141,37 @@
     <rdfs:label xml:lang="en-US">Non-Duke Academic Institution</rdfs:label>
   </owl:DatatypeProperty>
 
+  <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-cv-extension#Gift">
+    <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppublications"/>
+    <vitro:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >-1</vitro:displayLimitAnnot>
+    <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >-1</vitro:displayRankAnnot>
+    <rdfs:label xml:lang="en-US">Gifts and Other Support</rdfs:label>
+    <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+      >A gift or other form of support</vitro:shortDef>
+  </owl:Class>
+
+  <owl:DatatypeProperty rdf:about="http://vivo.duke.edu/vivo/ontology/duke-cv-extension#giftName">
+    <rdfs:label xml:lang="en-US">Title</rdfs:label>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://vivo.duke.edu/vivo/ontology/duke-cv-extension#donor">
+    <rdfs:label xml:lang="en-US">Sponsor/Donor</rdfs:label>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://vivo.duke.edu/vivo/ontology/duke-cv-extension#role">
+    <rdfs:label xml:lang="en-US">Role or Office Held</rdfs:label>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://vivo.duke.edu/vivo/ontology/duke-cv-extension#giftAmount">
+    <rdfs:label xml:lang="en-US">Amount</rdfs:label>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://vivo.duke.edu/vivo/ontology/duke-cv-extension#description">
+    <rdfs:label xml:lang="en-US">Description</rdfs:label>
+  </owl:DatatypeProperty>
+
 </rdf:RDF>
