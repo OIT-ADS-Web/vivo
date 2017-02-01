@@ -50,7 +50,7 @@ PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX bibo: <http://purl.org/ontology/bibo/>
 PREFIX duke:     <http://vivo.duke.edu/vivo/ontology/duke-extension#>
 
-select ?abstract ?authorList 
+select ?abstract ?authorList ?year 
 WHERE {
   ?pubUri a bibo:Document .
   OPTIONAL { ?pubUri bibo:abstract ?abstract . }
@@ -59,6 +59,10 @@ WHERE {
   ?pubUri duke:chicagoCitation ?chicagoCitation .
   ?pubUri duke:icmjeCitation ?icmjeCitation .
   ?pubUri duke:mlaCitation?mlaCitation .
+  OPTIONAL {
+    ?pubUri core:dateTimeValue ?datetime .
+    ?datetime core:dateTime ?year .
+  }
   FILTER(?pubUri = <https://scholars.duke.edu/individual/pub999688>)
 }
 
@@ -79,7 +83,7 @@ public class PublicationCustomFields extends DukeJSONContextNodeFields {
  
   private static final String query = 
       prefix 
-      + "select ?abstract ?authorList \n"
+      + "select ?abstract ?authorList ?year \n"
       + "WHERE { \n"
       + "  ?pubUri a bibo:Document . \n"
       + "  OPTIONAL { ?pubUri bibo:abstract ?abstract . } \n"
@@ -88,6 +92,10 @@ public class PublicationCustomFields extends DukeJSONContextNodeFields {
       + "  ?pubUri duke:chicagoCitation ?chicagoCitation . \n"
       + "  ?pubUri duke:icmjeCitation ?icmjeCitation . \n"
       + "  ?pubUri duke:mlaCitation?mlaCitation . \n"
+      + "  OPTIONAL { \n"
+      + "    ?pubUri core:dateTimeValue ?datetime . \n"
+      + "    ?datetime core:dateTime ?year . \n"
+      + "  } \n"
       + "  FILTER(?pubUri = ?uri) \n"
       + "}";
 
