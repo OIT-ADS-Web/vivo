@@ -22,44 +22,44 @@
                 <div class="carousel-inner">
 
                   <div class="item">
-                    <img src="../themes/duke/images/092899_petters071.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/156413_socolar005.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per2643262">Arlie Petters</a>, Benjamin Powell Professor of Mathematics in Trinity College of Arts and Sciences</p>
+                      <p class="caption"><a href="display/per1128152">Joshua Socolar</a>, Professor in the Department of Physics</p>
                     </div>
                   </div>
 
                   <div class="item">
-                    <img src="../themes/duke/images/134408_read023.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/214506_tornai007.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per3818982">Jen’nan Read</a>, Associate Professor of Sociology</p>
+                      <p class="caption"><a href="display/per5057052">Martin Tornai</a>, Associate Professor of Radiology</p>
                     </div>
                   </div>
 
                   <div class="item">
-                    <img src="../themes/duke/images/051009_pfaff_class024.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/124215_ipadrobot039.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per2994382">Alexander Pfaff</a>, Professor in the Sanford School of Public Policy</p>
+                      <p class="caption"><a href="display/per6961252">Rémi Hueckel</a>, Assistant Professor in the School of Nursing</p>
                     </div>
                   </div>
 
                   <div class="item">
-                    <img src="../themes/duke/images/156215_arshavsky015.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/104707_cook009.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per5514572">Vadim Arshavsky</a>, Helena Rubinstein Foundation Professor of Ophthalmology</p>
+                      <p class="caption"><a href="display/per1826042">Philip Cook</a>, ITT/Terry Sanford Professor of Public Policy Studies</p>
                     </div>
                   </div>
 
                   <div class="item">
-                    <img src="../themes/duke/images/193206_huffman002.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/155314_school_days012.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per1443762">Kim Huffman</a>, Assistant Professor of Medicine (Rheumatology and Immunology)</p>
+                      <p class="caption"><a href="display/per7278152">Joshua Sosin</a>, Associate Professor of Classical Studies</p>
                     </div>
                   </div>
 
                   <div class="item">
-                    <img src="../themes/duke/images/013410_river029.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/197613_ramanujam006.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per4572962">Emily Bernhardt</a>, Professor of Biology</p>
+                      <p class="caption"><a href="display/per9278572">Nimmi Ramanujam</a>, Robert W. Carr, Jr., Professor of Biomedical Engineering</p>
                     </div>
                   </div>
 
