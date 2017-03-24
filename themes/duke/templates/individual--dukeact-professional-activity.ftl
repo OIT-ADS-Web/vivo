@@ -20,12 +20,16 @@
           <p id="service-type">${dataPropertyValue(serviceType)}</p>
         </div>
       </#if>
-
+      <#assign description = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#description")!>
+      <#if description?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+        <div class="abstract">
+          <p>${dataPropertyValue(description)}</p>
+        </div>
+      </#if>
     </header>
   </section>
 
   <section id="individual-body" role="region">
-
     <#assign performer = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#performedBy")!>
     <#if performer?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
       <@simpleObjectPropertyListing performer "Service Performed By" />
@@ -34,11 +38,6 @@
     <#assign role = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#role")!>
     <#if role?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
       <@simpleDataPropertyListing role "Role" />
-    </#if>
-
-    <#assign description = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#description")!>
-    <#if description?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-      <@simpleDataPropertyListing description "Description" />
     </#if>
 
     <#assign committeeName = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#committeeName")!>
