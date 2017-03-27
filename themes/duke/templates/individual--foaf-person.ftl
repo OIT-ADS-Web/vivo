@@ -71,20 +71,21 @@
   <section id="individual-body" role="region">
     <ul class="section-navigation">
       <#assign educations = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000056", "${core}EducationalProcess")!>
-        <#if educations?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-          <li class="section-group-header">Background</li>
-           <#-- Education -->
-          <@collapsiblePropertyListSection "Education" educations editable />
-        </#if>
+      <#if educations?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+        <li class="section-group-header">Background</li>
+         <#-- Education -->
+        <@collapsiblePropertyListSection "Education" educations editable />
+      </#if>
 
-       <li class="section-group-header">Recognition</li>
+      <#assign newsfeeds = propertyGroups.pullProperty("${core}relatedBy", "${core}NewsRelease")!>
+      <#assign awards = propertyGroups.pullProperty("${core}relatedBy", "${core}AwardReceipt")!>
+      <#if newsfeeds?has_content || awards?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+        <li class="section-group-header">Recognition</li>
         <#-- In The News -->
-        <#assign newsfeeds = propertyGroups.pullProperty("${core}relatedBy", "${core}NewsRelease")!>
         <@collapsiblePropertyListSection "Newsfeed" newsfeeds editable />
-
         <#-- Awards -->
-        <#assign awards = propertyGroups.pullProperty("${core}relatedBy", "${core}AwardReceipt")!>
         <@collapsiblePropertyListSection "Award" awards editable />
+      </#if>
 
        <li class="section-group-header">Expertise</li>
         <#-- Research Areas -->
