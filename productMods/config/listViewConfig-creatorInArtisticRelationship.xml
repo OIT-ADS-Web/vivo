@@ -21,6 +21,7 @@
                         ?linkText
                         ?officialDate
                         ?roles
+                        ?isFeaturedRole
                         ?title
                         ?workTypeList
         WHERE {
@@ -45,6 +46,7 @@
                        FILTER(?artWork != ?subject)
             }
             OPTIONAL { ?artisticRelationship dukeart:roles ?roles }
+            OPTIONAL { ?artisticRelationship dukeart:isFeaturedRole ?isFeaturedRole }
 
         } ORDER BY <collated>?subclass</collated> DESC(?officialDate) ?artWorkName
     </query-select>

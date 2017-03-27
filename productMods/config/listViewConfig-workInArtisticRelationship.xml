@@ -14,6 +14,7 @@
                         ?artCreator
                         ?artCreatorName
                         ?roles
+                        ?isFeaturedRole
         WHERE {
             ?subject ?property ?artisticRelationship .
             OPTIONAL { ?artisticRelationship core:relates ?artCreator .
@@ -22,6 +23,7 @@
                        FILTER(?artCreator != ?subject)
             }
             OPTIONAL { ?artisticRelationship dukeart:roles ?roles }
+            OPTIONAL { ?artisticRelationship dukeart:isFeaturedRole ?isFeaturedRole }
 
         } ORDER BY <collated>?subclass</collated> ?artCreatorName
     </query-select>

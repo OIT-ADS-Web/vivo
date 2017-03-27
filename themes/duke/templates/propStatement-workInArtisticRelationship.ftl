@@ -16,5 +16,11 @@
       <#if statement.roles??><a href="${profileUrl(statement.uri("artisticRelationship"))}" title="artistic role">${statement.roles!}.</a></#if>
   </#local>
 
-${relatedTitle} ${roles}
+  ${relatedTitle} ${roles}
+  <#if statement.isFeaturedRole??>
+      <#if statement.isFeaturedRole == "true">
+          <span id="art-is-featured-role" style="font-weight: bold;">*Featured</span>
+      </#if>
+  </#if>
+
 </#macro>

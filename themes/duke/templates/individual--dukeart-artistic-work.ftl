@@ -63,13 +63,13 @@
       <@simpleDataPropertyListing commissioningBody "Commissioned By" />
     </#if>
 
-    <#-- collaborators -->
+    <#-- (Duke) collaborators -->
     <#assign relatedCollaborators = propertyGroups.pullProperty("${core}relatedBy", "http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticRelationship")!>
     <#if relatedCollaborators?has_content>
       <@simpleObjectPropertyListing relatedCollaborators "Duke Faculty Artists/Collaborators" />
     </#if>
 
-    <#-- all_collaborators -->
+    <#-- (non-Duke) all_collaborators -->
     <#assign collaboratorList = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-art-extension#collaboratorList")!>
     <#if collaboratorList?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
       <@simpleDataPropertyListing collaboratorList "Cited Artists/Collaborators" />
