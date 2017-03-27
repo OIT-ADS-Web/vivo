@@ -70,10 +70,12 @@
   </section>
   <section id="individual-body" role="region">
     <ul class="section-navigation">
-       <li class="section-group-header">Background</li>
-       <#-- Education -->
-        <#assign educations = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000056", "${core}EducationalProcess")!>
-        <@collapsiblePropertyListSection "Education" educations editable />
+      <#assign educations = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000056", "${core}EducationalProcess")!>
+        <#if educations?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+          <li class="section-group-header">Background</li>
+           <#-- Education -->
+          <@collapsiblePropertyListSection "Education" educations editable />
+        </#if>
 
        <li class="section-group-header">Recognition</li>
         <#-- In The News -->
