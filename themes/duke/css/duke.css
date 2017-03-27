@@ -3598,3 +3598,11 @@ p.caption {
   font-weight: bold;
   display: inline;
 }
+.section-group-header {
+	color: black;
+	font-size: 2em;
+	margin-top: 1.2em;
+}
+.section-group-header:first-child {
+	margin-top: 0;
+}

@@ -70,42 +70,45 @@
   </section>
   <section id="individual-body" role="region">
     <ul class="section-navigation">
+       <li class="section-group-header">Background</li>
        <#-- Education -->
         <#assign educations = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000056", "${core}EducationalProcess")!>
         <@collapsiblePropertyListSection "Education" educations editable />
 
+       <li class="section-group-header">Recognition</li>
         <#-- In The News -->
         <#assign newsfeeds = propertyGroups.pullProperty("${core}relatedBy", "${core}NewsRelease")!>
         <@collapsiblePropertyListSection "Newsfeed" newsfeeds editable />
-
-        <#-- Research Areas -->
-        <#assign researchAreas = propertyGroups.pullProperty("${core}hasResearchArea")!>
-        <@collapsiblePropertyListSection "Keywords" researchAreas editable />
 
         <#-- Awards -->
         <#assign awards = propertyGroups.pullProperty("${core}relatedBy", "${core}AwardReceipt")!>
         <@collapsiblePropertyListSection "Award" awards editable />
 
-        <#-- Professional Activities -->
-        <#assign presentations = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#performs")!>
-        <@collapsiblePropertyListSection "Presentation" presentations editable />
+       <li class="section-group-header">Expertise</li>
+        <#-- Research Areas -->
+        <#assign researchAreas = propertyGroups.pullProperty("${core}hasResearchArea")!>
+        <@collapsiblePropertyListSection "Keywords" researchAreas editable />
 
         <#-- Geographic Focus -->
         <#assign regions = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-geo-extension#geographicallyRelatesTo")!>
         <@collapsiblePropertyListSection "GeographicFocus" regions editable />
 
-        <#-- Artistic Works -->
-        <#assign artisticRelationships = propertyGroups.pullProperty("${core}relatedBy", "http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticRelationship")!>
-        <@collapsiblePropertyListSection "ArtisticWork" artisticRelationships editable />
 
+       <li class="section-group-header">Research</li>
+        <#-- Grants -->
+        <#assign grants = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000053", "${core}ResearcherRole")!>
+        <@collapsiblePropertyListSection "Grant" grants editable />
+
+       <li class="section-group-header">Publications and Artistic Works</li>
         <#-- Publication -->
         <#assign authorships = propertyGroups.pullProperty("${core}relatedBy", "${core}Authorship")!>
         <@collapsiblePropertyListSection "Publication" authorships editable />
 
-        <#-- Grants -->
-        <#assign grants = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000053", "${core}ResearcherRole")!>
-        <@collapsiblePropertyListSection "Grant" grants editable />
-        
+        <#-- Artistic Works -->
+        <#assign artisticRelationships = propertyGroups.pullProperty("${core}relatedBy", "http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticRelationship")!>
+        <@collapsiblePropertyListSection "ArtisticWork" artisticRelationships editable />
+
+       <li class="section-group-header">Teaching and Mentoring</li>
         <#-- Courses -->
         <#assign courses = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000053", "${core}TeacherRole")!>
         <@collapsiblePropertyListSection "Course" courses editable />
@@ -116,7 +119,6 @@
 
         <#-- Mentorship Availability -->
         <#assign mentorOverview = propertyGroups.pullProperty("${dukeact}mentorshipOverview")!>
-
         <#assign availabilities = propertyGroups.pullProperty("${dukeact}mentorshipAvailability")!>
         <#if availabilities?has_content || mentorOverview?has_content>
           <li class="section-collapsible" id="MentorshipAvailability">
