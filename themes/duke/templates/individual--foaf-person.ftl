@@ -98,10 +98,12 @@
        </#if>
 
 
-       <li class="section-group-header">Research</li>
-        <#-- Grants -->
-        <#assign grants = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000053", "${core}ResearcherRole")!>
-        <@collapsiblePropertyListSection "Grant" grants editable />
+       <#assign grants = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000053", "${core}ResearcherRole")!>
+       <#if grants?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+         <li class="section-group-header">Research</li>
+         <#-- Grants -->
+         <@collapsiblePropertyListSection "Grant" grants editable />
+       </#if>
 
        <li class="section-group-header">Publications and Artistic Works</li>
         <#-- Publication -->
