@@ -105,14 +105,15 @@
          <@collapsiblePropertyListSection "Grant" grants editable />
        </#if>
 
-       <li class="section-group-header">Publications and Artistic Works</li>
-        <#-- Publication -->
         <#assign authorships = propertyGroups.pullProperty("${core}relatedBy", "${core}Authorship")!>
-        <@collapsiblePropertyListSection "Publication" authorships editable />
-
-        <#-- Artistic Works -->
         <#assign artisticRelationships = propertyGroups.pullProperty("${core}relatedBy", "http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticRelationship")!>
-        <@collapsiblePropertyListSection "ArtisticWork" artisticRelationships editable />
+        <#if authorships?has_content || artisticRelationships?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+          <li class="section-group-header">Publications and Artistic Works</li>
+          <#-- Publication -->
+          <@collapsiblePropertyListSection "Publication" authorships editable />
+          <#-- Artistic Works -->
+          <@collapsiblePropertyListSection "ArtisticWork" artisticRelationships editable />
+       </#if>
 
        <li class="section-group-header">Teaching and Mentoring</li>
         <#-- Courses -->
