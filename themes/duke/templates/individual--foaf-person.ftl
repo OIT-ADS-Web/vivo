@@ -149,6 +149,10 @@
           </li>
         </#if>
 
+       <li class="section-group-header">Scholarly, Clinical and Service Activities</li>
+        <#-- Professional Activities -->
+        <#assign presentations = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#performs")!>
+        <@collapsiblePropertyListSection "Presentation" presentations editable />
     </ul>
 
     <p class='disclaimer'>Some information on this profile has been compiled automatically from
