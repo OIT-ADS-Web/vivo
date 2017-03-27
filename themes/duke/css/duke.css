@@ -3598,3 +3598,6 @@ p.caption {
   font-weight: bold;
   display: inline;
 }
+#publication-subtypes .display-title, #service-type {
+	font-size: 18.75px;
+}
