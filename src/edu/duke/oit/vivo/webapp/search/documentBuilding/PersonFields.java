@@ -47,7 +47,8 @@ public class PersonFields extends DukeContextNodeFields {
           + " prefix core: <" + VIVONS + ">  \n"
           + " prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> \n" 
           + " prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> \n"
-          + " PREFIX duke: <http://vivo.duke.edu/vivo/ontology/duke-extension#> \n";
+          + " PREFIX duke: <http://vivo.duke.edu/vivo/ontology/duke-extension#> \n"
+          + " PREFIX dukecv: <http://vivo.duke.edu/vivo/ontology/duke-cv-extension#> \n";
     
     public PersonFields(RDFServiceFactory rdfServiceFactory){                
         super(queries,rdfServiceFactory);        
@@ -60,6 +61,11 @@ public class PersonFields extends DukeContextNodeFields {
           + "COALESCE(?alias, ''), ' ',\n" 
           + "COALESCE(?overview, ''), ' ',\n"
           + "COALESCE(?officeHours, ''), ' ',\n"
+          + "COALESCE(?interestsOverview, ''), ' ',\n"
+          + "COALESCE(?teachingOverview, ''), ' ',\n"
+          + "COALESCE(?administrativeOverview, ''), ' ',\n"
+          + "COALESCE(?clinicalOverview, ''), ' ',\n"
+          + "COALESCE(?positionsOverview, ''), ' ',\n"
           + "COALESCE(?profileUrl, ''), ' ',\n"
           + "COALESCE(?mentorAvail, ''), ' ',\n"
           + "COALESCE(?mentorOverview, '')\n"
@@ -72,6 +78,11 @@ public class PersonFields extends DukeContextNodeFields {
           + "   OPTIONAL { ?person duke:profileUrl ?profileUrl . }\n"
           + "   OPTIONAL { ?person duke:mentorshipAvailability ?mentorAvail . }\n"
           + "   OPTIONAL { ?person duke:mentoringOverview ?mentorOverview . }\n"
+          + "   OPTIONAL { ?personUri dukecv:interestsOverview ?interestsOverview } \n"
+          + "   OPTIONAL { ?personUri dukecv:teachingOverview ?teachingOverview } \n"
+          + "   OPTIONAL { ?personUri dukecv:academicAdministrativeOverview ?administrativeOverview } \n"
+          + "   OPTIONAL { ?personUri dukecv:clinicalOverview ?clinicalOverview } \n"
+          + "   OPTIONAL { ?personUri dukecv:positionsOverview ?positionsOverview } \n"
           + "   FILTER (?person= ?uri) \n"
           + "}";
 
