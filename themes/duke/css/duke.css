@@ -3601,6 +3601,14 @@ p.caption {
 
 #publication-subtypes .display-title, #service-type {
 	font-size: 18.75px;
+
+.section-group-header {
+	color: black;
+	font-size: 2em;
+	margin-top: 1.2em;
+}
+.section-group-header:first-child {
+	margin-top: 0;
 }
 
 #artistic-work-type {

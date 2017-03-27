@@ -128,15 +128,57 @@ local:artisticWorkLinkConfig a :ObjectPropertyDisplayConfig ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
     :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
 
-local:performs a :ConfigContext ;
-    :hasConfiguration local:performsConfig ;
+local:performsPresentation a :ConfigContext ;
+    :hasConfiguration local:performsPresentationConfig ;
     :configContextFor <http://vivo.duke.edu/vivo/ontology/duke-activity-extension#performs> ;
     :qualifiedByDomain <http://xmlns.com/foaf/0.1/Person> ;
-    :qualifiedBy      <http://vivo.duke.edu/vivo/ontology/duke-activity-extension#ProfessionalActivity> .
+    :qualifiedBy      <http://vivo.duke.edu/vivo/ontology/duke-activity-extension#Presentation> .
 
-local:performsConfig a :ObjectPropertyDisplayConfig ;
+local:performsPresentationConfig a :ObjectPropertyDisplayConfig ;
     :listViewConfigFile "listViewConfig-performs.xml"^^xsd:string ;
-    :displayName "professional activities" ;
+    :displayName "presentations and appearances" ;
+    vitro:displayRankAnnot 15;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
+    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
+
+local:performsOutreach a :ConfigContext ;
+    :hasConfiguration local:performsOutreachConfig ;
+    :configContextFor <http://vivo.duke.edu/vivo/ontology/duke-activity-extension#performs> ;
+    :qualifiedByDomain <http://xmlns.com/foaf/0.1/Person> ;
+    :qualifiedBy      <http://vivo.duke.edu/vivo/ontology/duke-activity-extension#Outreach> .
+
+local:performsOutreachConfig a :ObjectPropertyDisplayConfig ;
+    :listViewConfigFile "listViewConfig-performs.xml"^^xsd:string ;
+    :displayName "outreach and engaged scholarship" ;
+    vitro:displayRankAnnot 15;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
+    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
+
+local:performsProfessional a :ConfigContext ;
+    :hasConfiguration local:performsProfessionalConfig ;
+    :configContextFor <http://vivo.duke.edu/vivo/ontology/duke-activity-extension#performs> ;
+    :qualifiedByDomain <http://xmlns.com/foaf/0.1/Person> ;
+    :qualifiedBy      <http://vivo.duke.edu/vivo/ontology/duke-activity-extension#ServiceToTheProfession> .
+
+local:performsProfessionalConfig a :ObjectPropertyDisplayConfig ;
+    :listViewConfigFile "listViewConfig-performs.xml"^^xsd:string ;
+    :displayName "service to the profession" ;
+    vitro:displayRankAnnot 15;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
+    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
+
+local:performsUniversity a :ConfigContext ;
+    :hasConfiguration local:performsUniversityConfig ;
+    :configContextFor <http://vivo.duke.edu/vivo/ontology/duke-activity-extension#performs> ;
+    :qualifiedByDomain <http://xmlns.com/foaf/0.1/Person> ;
+    :qualifiedBy      <http://vivo.duke.edu/vivo/ontology/duke-activity-extension#ServiceToTheUniversity> .
+
+local:performsUniversityConfig a :ObjectPropertyDisplayConfig ;
+    :listViewConfigFile "listViewConfig-performs.xml"^^xsd:string ;
+    :displayName "Service to Duke" ;
     vitro:displayRankAnnot 15;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
