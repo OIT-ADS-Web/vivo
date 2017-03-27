@@ -115,43 +115,45 @@
           <@collapsiblePropertyListSection "ArtisticWork" artisticRelationships editable />
        </#if>
 
-       <li class="section-group-header">Teaching and Mentoring</li>
-        <#-- Courses -->
         <#assign courses = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000053", "${core}TeacherRole")!>
-        <@collapsiblePropertyListSection "Course" courses editable />
-
-        <#-- Mentorships -->
         <#assign mentorships = propertyGroups.pullProperty("${core}advisorIn")!>
-        <@collapsiblePropertyListSection "Mentorship" mentorships editable />
-
-        <#-- Mentorship Availability -->
         <#assign mentorOverview = propertyGroups.pullProperty("${dukeact}mentorshipOverview")!>
         <#assign availabilities = propertyGroups.pullProperty("${dukeact}mentorshipAvailability")!>
-        <#if availabilities?has_content || mentorOverview?has_content>
-          <li class="section-collapsible" id="MentorshipAvailability">
-            <a name="MentorshipAvailability" class="expanderLink" data-open-image="${urls.theme}/images/button_minus_large.png" data-closed-image="${urls.theme}/images/button_plus_large.png"><img src="${urls.theme}/images/button_plus_large.png"/></a>
-            <h3 id="mentorship-availabilities">Mentorship Availability<@verboseDisplay availabilities /></h3>
-            <div class="hideshow" style="display:none">
-              <#if mentorOverview?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-                  <@p.addLinkWithLabel mentorOverview editable />
-                  <#list mentorOverview.statements as statement>
-                      <div class="individual-mentorOverview">
-                          <p>
-                              ${statement.value}
-                          </p>
-                          <@p.editingLinks "${mentorOverview.localName}" "${mentorOverview.name}" statement editable />
-                      </div>
-                  </#list>
-              </#if>
-              <#if availabilities?has_content>
-                <h4>Available to mentor:</h4>
-                <ul id="individual-mentorshipAvailability" role="list">
-                  <@dataPropertyList availabilities false />
-                </ul>
-              </#if>
-            </div>
-            <div style="clear:both"></div>
-          </li>
+        <#if courses?has_content || mentorships?has_content || mentorOverview?has_content || availabilities?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+          <li class="section-group-header">Teaching and Mentoring</li>
+          <#-- Courses -->
+          <@collapsiblePropertyListSection "Course" courses editable />
+
+          <#-- Mentorships -->
+          <@collapsiblePropertyListSection "Mentorship" mentorships editable />
+
+          <#-- Mentorship Availability -->
+          <#if availabilities?has_content || mentorOverview?has_content>
+            <li class="section-collapsible" id="MentorshipAvailability">
+              <a name="MentorshipAvailability" class="expanderLink" data-open-image="${urls.theme}/images/button_minus_large.png" data-closed-image="${urls.theme}/images/button_plus_large.png"><img src="${urls.theme}/images/button_plus_large.png"/></a>
+              <h3 id="mentorship-availabilities">Mentorship Availability<@verboseDisplay availabilities /></h3>
+              <div class="hideshow" style="display:none">
+                <#if mentorOverview?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+                    <@p.addLinkWithLabel mentorOverview editable />
+                    <#list mentorOverview.statements as statement>
+                        <div class="individual-mentorOverview">
+                            <p>
+                                ${statement.value}
+                            </p>
+                            <@p.editingLinks "${mentorOverview.localName}" "${mentorOverview.name}" statement editable />
+                        </div>
+                    </#list>
+                </#if>
+                <#if availabilities?has_content>
+                  <h4>Available to mentor:</h4>
+                  <ul id="individual-mentorshipAvailability" role="list">
+                    <@dataPropertyList availabilities false />
+                  </ul>
+                </#if>
+              </div>
+              <div style="clear:both"></div>
+            </li>
+          </#if>
         </#if>
 
        <li class="section-group-header">Scholarly, Clinical and Service Activities</li>
