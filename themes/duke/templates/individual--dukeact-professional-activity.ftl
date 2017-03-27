@@ -88,5 +88,10 @@
       <@simpleDataPropertyListing location "Location or Venue" />
     </#if>
 
+    <#assign geographicFocus = propertyGroups.pullProperty("${core}geographicFocus")!>
+    <#if geographicFocus?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+      <@simpleObjectPropertyListing geographicFocus "Geographic Region" />
+    </#if>
+
   </section>
 </section>
