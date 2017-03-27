@@ -156,10 +156,18 @@
           </#if>
         </#if>
 
-       <li class="section-group-header">Scholarly, Clinical and Service Activities</li>
-        <#-- Professional Activities -->
-        <#assign presentations = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#performs")!>
-        <@collapsiblePropertyListSection "Presentation" presentations editable />
+        <#assign presentations = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#performs","http://vivo.duke.edu/vivo/ontology/duke-activity-extension#Presentation")!>
+        <#assign outreach = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#performs","http://vivo.duke.edu/vivo/ontology/duke-activity-extension#Outreach")!>
+        <#assign profession = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#performs","http://vivo.duke.edu/vivo/ontology/duke-activity-extension#ServiceToTheProfession")!>
+        <#assign university = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#performs","http://vivo.duke.edu/vivo/ontology/duke-activity-extension#ServiceToTheUniversity")!>
+        <#if presentations?has_content || outreach?has_content || profession?has_content || university?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+          <li class="section-group-header">Scholarly, Clinical and Service Activities</li>
+          <#-- Professional Activities -->
+          <@collapsiblePropertyListSection "Presentation" presentations editable />
+          <@collapsiblePropertyListSection "Outreach" outreach editable />
+          <@collapsiblePropertyListSection "Profession" profession editable />
+          <@collapsiblePropertyListSection "University" university editable />
+        </#if>
     </ul>
 
     <p class='disclaimer'>Some information on this profile has been compiled automatically from
