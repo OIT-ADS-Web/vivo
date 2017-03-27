@@ -87,14 +87,15 @@
         <@collapsiblePropertyListSection "Award" awards editable />
       </#if>
 
-       <li class="section-group-header">Expertise</li>
-        <#-- Research Areas -->
-        <#assign researchAreas = propertyGroups.pullProperty("${core}hasResearchArea")!>
-        <@collapsiblePropertyListSection "Keywords" researchAreas editable />
-
-        <#-- Geographic Focus -->
-        <#assign regions = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-geo-extension#geographicallyRelatesTo")!>
-        <@collapsiblePropertyListSection "GeographicFocus" regions editable />
+       <#assign researchAreas = propertyGroups.pullProperty("${core}hasResearchArea")!>
+       <#assign regions = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-geo-extension#geographicallyRelatesTo")!>
+       <#if researchAreas?has_content || regions?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+         <li class="section-group-header">Expertise</li>
+         <#-- Research Areas -->
+         <@collapsiblePropertyListSection "Keywords" researchAreas editable />
+         <#-- Geographic Focus -->
+         <@collapsiblePropertyListSection "GeographicFocus" regions editable />
+       </#if>
 
 
        <li class="section-group-header">Research</li>
