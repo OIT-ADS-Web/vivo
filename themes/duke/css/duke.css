@@ -3601,3 +3601,8 @@ p.caption {
 #publication-subtypes .display-title, #service-type {
 	font-size: 18.75px;
 }
+
+#artistic-work-type {
+	font-size: 18.75px; 
+	margin-bottom: 20px;
+}
