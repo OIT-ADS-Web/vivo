@@ -13,7 +13,7 @@
 <#macro showStatement statement>
     <#local linkedIndividual>
       <#-- The query retrieves a type only for Persons. Post-processing will remove all but one. -->   
-      <a href="${profileUrl(statement.uri("profActObj"))}" title="${i18n().name}">${statement.activityName!statement.localName!}</a>&nbsp; ${statement.title!statement.type!}
+      <a href="${profileUrl(statement.uri("object"))}" title="${i18n().name}">${statement.activityName!statement.localName!}</a>&nbsp; ${statement.title!statement.type!}
     </#local>
     <@s.join [ linkedIndividual! ] /> <@dt.yearIntervalSpan "${statement.startTime!}" "${statement.endTime!}" />
 </#macro>
