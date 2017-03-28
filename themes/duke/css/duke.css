@@ -1306,21 +1306,8 @@ li.subtree ul.tree-navigation li.subtree {
 	border-top: 1px solid #BBBBBB;
 }
 
-#individual-relatedBy {
-	margin: -9px 0 0 -14px;
-}
-
-#individual-relatedBy li {
-	padding: 0.25em 1em;
-/*	border-top: 1px solid #BBBBBB;*/
-}
-
 #individual-relatedBy li h4 {
 	margin: 0 10px;
-}
-
-#individual-relatedBy h3{
-	padding: 0.25em 1em;
 }
 
 #individual-administers {
@@ -3608,11 +3595,39 @@ p.caption {
 	font-size: 18.75px;
 }
 
+.person .section-collapsible {
+  border: none;
+  padding: 4px 0;
+}
+
 .section-group-header {
 	color: black;
 	font-size: 2em;
 	margin-top: 1.2em;
+	margin-bottom: .5em;
 }
 .section-group-header:first-child {
 	margin-top: 0;
+}
+
+.person #individual-body .section-collapsible ul, .grant-disclaimer {
+	margin: 0;
+	padding: 0 0 0 40px;
+}
+
+.person #individual-relatedBy, .person #individual-relatedBy li {
+	padding: 0;
+}
+
+.person div.hideshow ul li {
+  margin: 0;
+}
+
+.person .section-collapsible h3, .person h3.collate_header, .person .section-collapsible li[role=listitem] {
+	margin-bottom: 10px;
+}
+
+.person .more-less {
+	margin: 0;
+	display: inline-block;
 }
