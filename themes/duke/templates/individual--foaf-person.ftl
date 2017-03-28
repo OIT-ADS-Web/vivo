@@ -12,7 +12,7 @@
 <#import "lib-vivo-properties.ftl" as vp>
 <#assign dukeact = "http://vivo.duke.edu/vivo/ontology/duke-activity-extension#">
 
-<section id="topcontainer" class="main-content">
+<section id="topcontainer" class="main-content person">
   <section id="individual-intro" class="vcard person" role="region">
     <section id="individual-info" ${infoClass!} role="region">
       <#include "individual-adminPanel.ftl">
