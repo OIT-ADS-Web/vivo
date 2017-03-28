@@ -86,9 +86,6 @@
             </#if>
         <#elseif start??>
             ${start}
-            <#if endAsRange>
-              &nbsp;-&nbsp;
-            </#if>
         <#elseif end??>
             <#if endAsRange>-&nbsp;</#if>${end}
         </#if>

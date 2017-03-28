@@ -90,6 +90,7 @@ public class PersonArtisticWorksFields extends DukeContextNodeFields {
           "  ?relationship core:relates ?work. \n" +
           "  ?relationship dukeart:roles ?role. \n" +
           "  OPTIONAL {?relationship core:description ?role_description.} \n" +
+          "  ?relationship dukeart:isFeaturedRole ?isFeaturedRole. \n" +
           "  ?work rdf:type dukeart:ArtisticWork. \n" +
           "  ?work rdfs:label ?label. \n" +
           "  ?work vitro:mostSpecificType ?type. \n" +

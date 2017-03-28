@@ -18,6 +18,14 @@
        </#assign>
       <h1>${workName}</h1>
 
+      <#-- work type -->
+      <#assign workType = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-art-extension#workType")!>
+      <#if workType?has_content>
+        <div id="artistic-work-type">
+          <@simpleDataPropertyListing workType " "/>
+        </div>
+      </#if>
+
       <#-- abstract -->
       <#assign abstract = propertyGroups.pullProperty("http://purl.org/ontology/bibo/abstract")!>
       <#if abstract?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
@@ -49,34 +57,28 @@
 
   <section id="individual-body" role="region">
 
-    <#-- work type -->
-    <#assign workType = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-art-extension#workType")!>
-    <#if workType?has_content>
-      <@simpleDataPropertyListing workType "Type" />
-    </#if>
-
     <#-- commissioning body -->
     <#assign commissioningBody = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-art-extension#commissioningBody")!>
     <#if commissioningBody?has_content>
       <@simpleDataPropertyListing commissioningBody "Commissioned By" />
     </#if>
 
-    <#-- creation date -->
-    <#assign creationDate = propertyGroups.pullProperty("${core}dateTimeValue")!>
-    <#if creationDate?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-      <@simpleObjectPropertyListing creationDate "Creation Date" />
-    </#if>
-
-    <#-- collaborators -->
+    <#-- (Duke) collaborators -->
     <#assign relatedCollaborators = propertyGroups.pullProperty("${core}relatedBy", "http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticRelationship")!>
     <#if relatedCollaborators?has_content>
       <@simpleObjectPropertyListing relatedCollaborators "Duke Faculty Artists/Collaborators" />
     </#if>
 
-    <#-- all_collaborators -->
+    <#-- (non-Duke) all_collaborators -->
     <#assign collaboratorList = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-art-extension#collaboratorList")!>
     <#if collaboratorList?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
       <@simpleDataPropertyListing collaboratorList "Cited Artists/Collaborators" />
+    </#if>
+
+    <#-- creation date -->
+    <#assign creationDate = propertyGroups.pullProperty("${core}dateTimeValue")!>
+    <#if creationDate?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+      <@simpleObjectPropertyListing creationDate "Creation Date" />
     </#if>
 
     <#-- related_works -->
