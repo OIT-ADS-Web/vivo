@@ -3631,3 +3631,7 @@ p.caption {
 	margin: 0;
 	display: inline-block;
 }
+
+.person .section-collapsible h4 {
+  margin-left: 40px;
+}

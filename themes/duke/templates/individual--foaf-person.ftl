@@ -136,12 +136,11 @@
                 <#if mentorOverview?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
                     <@p.addLinkWithLabel mentorOverview editable />
                     <#list mentorOverview.statements as statement>
-                        <div class="individual-mentorOverview">
-                            <p>
+                        <ul class="individual-mentorOverview" role="list">
+                            <li role="listitem">
                                 ${statement.value}
-                            </p>
-                            <@p.editingLinks "${mentorOverview.localName}" "${mentorOverview.name}" statement editable />
-                        </div>
+                            </li>
+                        </ul>
                     </#list>
                 </#if>
                 <#if availabilities?has_content>
