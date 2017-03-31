@@ -19,7 +19,7 @@ PREFIX bibo: <http://purl.org/ontology/bibo/>
 PREFIX duke:     <http://vivo.duke.edu/vivo/ontology/duke-extension#>
 
 select (CONCAT(COALESCE(?abstract,''), ' ', ?authorList, ' ', ?apaCitation, ' ', ?chicagoCitation, ' ', 
-  ?icmjeCitation, ' ', ?mlaCitation) as ?result)
+  ?icmjeCitation, ' ', ?mlaCitation, ' ', COALESCE(?year, '')) as ?result)
 WHERE {
   ?pubUri a bibo:Document .
   OPTIONAL { ?pubUri bibo:abstract ?abstract . }
@@ -28,9 +28,15 @@ WHERE {
   ?pubUri duke:chicagoCitation ?chicagoCitation .
   ?pubUri duke:icmjeCitation ?icmjeCitation .
   ?pubUri duke:mlaCitation?mlaCitation .
+  
+  OPTIONAL {
+    ?pubUri core:dateTimeValue ?datetime .
+    ?datetime core:dateTime ?year .
+  }
+
   FILTER(?pubUri = <https://scholars.duke.edu/individual/pub999688>)
 }
-
+ 
 */
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeContextNodeFields;
