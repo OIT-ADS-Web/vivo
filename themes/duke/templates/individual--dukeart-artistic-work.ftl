@@ -60,9 +60,7 @@
     <#-- commissioning body -->
     <#assign commissioningBody = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-art-extension#commissioningBody")!>
     <#assign cbValue = "${commissioningBody.statements[0].value}" />
-    <#if cbValue == "">
-
-    <#else>
+    <#if cbValue != "">
       <@simpleDataPropertyListing commissioningBody "Commissioned By" />
     </#if>
 
