@@ -15,7 +15,43 @@
     <@p.label individual false 1 />
   </#assign>
   <h1>${awardReceiptLabel}</h1>
+
+  <#-- service type -->
+  <#assign serviceType = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#serviceType")!>
+  <#if serviceType?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+    <div class="abstract">
+      <p id="service-type">${dataPropertyValue(serviceType)}</p>
+    </div>
+  </#if>
+
+  <#assign description = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#description")!>
+  <#if description?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+    <div class="abstract">
+      <p>${dataPropertyValue(description)}</p>
+    </div>
+  </#if>
+
+  <#-- link to webpage; hardcoded now to only one -->
+  <#assign link = propertyGroups.pullProperty("http://www.w3.org/2006/vcard/ns#hasURL","http://www.w3.org/2006/vcard/ns#URL")!>
+  <#if link?has_content && link.statements?has_content>
+    <#assign linkStatement = link.statements[0]>
+    <#assign linkAnchor = linkStatement.label>
+    <#assign linkUrl = linkStatement.url>
+  </#if>
+  <#if linkUrl??>
+    <#assign linkText>
+        <#if linkAnchor??>${linkAnchor}<#t>
+          <#else>${linkUrl}<#t>
+        </#if>
+    </#assign>
+    <div class="webpage" role="listitem">
+      <img class="icon-uri middle" src="${urls.images}/individual/uriIcon.gif" alt="uri icon" />
+      <a class='artWebpage' href="${linkUrl}" title="link text">${linkText}</a>
+    </div>
+  </#if>
 </header>
+
+
 
 <section id="topcontainer" class="main-content document">
   <section id="individual-body" role="region">

@@ -17,7 +17,7 @@
       <#assign serviceType = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#serviceType")!>
       <#if serviceType?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
         <div class="abstract">
-          <p id="service-type">${dataPropertyValue(serviceType)}</p>
+          <p id="service-type"><@simpleDataPropertyListing serviceType " "/></p>
         </div>
       </#if>
       <#assign description = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#description")!>
