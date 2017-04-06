@@ -19,7 +19,7 @@
   <#-- service type -->
   <#assign serviceType = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#serviceType")!>
   <#if serviceType?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-    <div class="abstract">
+    <div>
       <p id="service-type">${dataPropertyValue(serviceType)}</p>
     </div>
   </#if>
@@ -37,7 +37,7 @@
     <#assign linkValue = "${linkToItem.statements[0].value}"/>
     <#assign linkUrl = "<a href=\"${linkValue}\" target=\"_blank\">Link</a>">
 
-    <p><img class="icon-uri middle" src="/images/individual/uriIcon.gif" alt="uri icon" style="inline"> ${linkUrl}</p>
+    <p id="weblink"><img class="icon-uri middle" src="/images/individual/uriIcon.gif" alt="uri icon" style="inline"> ${linkUrl}</p>
   </#if>
 </header>
 
