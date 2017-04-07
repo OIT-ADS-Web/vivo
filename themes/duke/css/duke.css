@@ -279,7 +279,7 @@ form textarea {
 	text-decoration: none;
 }
 
-.artWebpage {
+.artWebpage, .awardWebpage {
 	font-size: 1.5em;
 }
 
@@ -3634,4 +3634,8 @@ p.caption {
 
 .person .section-collapsible h4 {
   margin-left: 40px;
+}
+
+#weblink {
+	font-size: 1.45em;
 }
