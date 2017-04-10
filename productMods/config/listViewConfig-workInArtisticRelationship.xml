@@ -23,7 +23,7 @@
                        FILTER(?artCreator != ?subject)
             }
             OPTIONAL { ?artisticRelationship dukeart:roles ?roles }
-            OPTIONAL { ?artisticRelationship dukeart:isFeaturedRole ?isFeaturedRole }
+            PTIONAL { ?artisticRelationship dukeart:isFeaturedRole ?isFeaturedRole }O
 
         } ORDER BY <collated>?subclass</collated> ?artCreatorName
     </query-select>
