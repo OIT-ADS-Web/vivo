@@ -10,19 +10,22 @@
     PREFIX vivo:     &lt;http://vivoweb.org/ontology/core#&gt;
     PREFIX vitro:    &lt;http://vitro.mannlib.cornell.edu/ns/vitro/0.7#&gt;
 
-    select <collated>?subclass</collated>
-           ?profActObj
+    select ?object
            ?activityName
            ?startTime
+           ?endTime
     where {
-      ?subject ?property ?profActObj .
-      ?profActObj rdfs:label ?activityName .
-      ?profActObj vivo:dateTimeInterval ?dateTimeObj .
+      ?subject ?property ?object .
+      ?object rdfs:label ?activityName .
+      ?object vivo:dateTimeInterval ?dateTimeObj .
       ?dateTimeObj vivo:start ?startObj .
       ?startObj vivo:dateTime ?startTime .
-      ?profActObj vitro:mostSpecificType ?subclass .
+      OPTIONAL {
+        ?dateTimeObj vivo:end ?endObj .
+        ?endObj vivo:dateTime ?endTime .
+      }
     }
-    order by ?subclass desc(?startTime) asc(?activityName)
+    order by desc(?startTime) asc(?activityName)
 
   </query-select>
 
@@ -33,22 +36,47 @@
     PREFIX vitro:    &lt;http://vitro.mannlib.cornell.edu/ns/vitro/0.7#&gt;
 
     construct {
-      ?subject ?property ?profActObj .
-      ?profActObj rdfs:label ?activityName .
-      ?profActObj vivo:dateTimeInterval ?dateTimeObj .
+      ?subject ?property ?object .
+      ?object rdfs:label ?activityName .
+      ?object vivo:dateTimeInterval ?dateTimeObj .
       ?dateTimeObj vivo:start ?startObj .
       ?startObj vivo:dateTime ?startTime .
-      ?profActObj vitro:mostSpecificType ?subclass .
     }
     where {
-      ?subject ?property ?profActObj .
-      ?profActObj rdfs:label ?activityName .
-      ?profActObj vivo:dateTimeInterval ?dateTimeObj .
+      ?subject ?property ?object .
+      ?object a ?objectType .
+      ?object rdfs:label ?activityName .
+      ?object vivo:dateTimeInterval ?dateTimeObj .
       ?dateTimeObj vivo:start ?startObj .
       ?startObj vivo:dateTime ?startTime .
-      ?profActObj vitro:mostSpecificType ?subclass .
     }
   </query-construct>
 
+  <query-construct>
+    PREFIX rdfs:     &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+    PREFIX dukeact:  &lt;http://vivo.duke.edu/vivo/ontology/duke-activity-extension#&gt;
+    PREFIX vivo:     &lt;http://vivoweb.org/ontology/core#&gt;
+    PREFIX vitro:    &lt;http://vitro.mannlib.cornell.edu/ns/vitro/0.7#&gt;
+
+    construct {
+      ?subject ?property ?object .
+      ?object rdfs:label ?activityName .
+      ?object vivo:dateTimeInterval ?dateTimeObj .
+      ?dateTimeObj vivo:start ?startObj .
+      ?startObj vivo:dateTime ?startTime .
+      ?dateTimeObj vivo:end ?endObj .
+      ?endObj vivo:dateTime ?endTime .
+    }
+    where {
+      ?subject ?property ?object .
+      ?object a ?objectType .
+      ?object rdfs:label ?activityName .
+      ?object vivo:dateTimeInterval ?dateTimeObj .
+      ?dateTimeObj vivo:start ?startObj .
+      ?startObj vivo:dateTime ?startTime .
+      ?dateTimeObj vivo:end ?endObj .
+      ?endObj vivo:dateTime ?endTime .
+    }
+  </query-construct>
   <template>propStatement-dukeact-performs.ftl</template>
 </list-view-config>

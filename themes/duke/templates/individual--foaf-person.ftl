@@ -12,7 +12,7 @@
 <#import "lib-vivo-properties.ftl" as vp>
 <#assign dukeact = "http://vivo.duke.edu/vivo/ontology/duke-activity-extension#">
 
-<section id="topcontainer" class="main-content">
+<section id="topcontainer" class="main-content person">
   <section id="individual-intro" class="vcard person" role="region">
     <section id="individual-info" ${infoClass!} role="region">
       <#include "individual-adminPanel.ftl">
@@ -70,81 +70,103 @@
   </section>
   <section id="individual-body" role="region">
     <ul class="section-navigation">
-       <#-- Education -->
-        <#assign educations = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000056", "${core}EducationalProcess")!>
+      <#assign educations = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000056", "${core}EducationalProcess")!>
+      <#if educations?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+        <li class="section-group-header">Background</li>
+         <#-- Education -->
         <@collapsiblePropertyListSection "Education" educations editable />
+      </#if>
 
+      <#assign newsfeeds = propertyGroups.pullProperty("${core}relatedBy", "${core}NewsRelease")!>
+      <#assign awards = propertyGroups.pullProperty("${core}relatedBy", "${core}AwardReceipt")!>
+      <#if newsfeeds?has_content || awards?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+        <li class="section-group-header">Recognition</li>
         <#-- In The News -->
-        <#assign newsfeeds = propertyGroups.pullProperty("${core}relatedBy", "${core}NewsRelease")!>
         <@collapsiblePropertyListSection "Newsfeed" newsfeeds editable />
-
-        <#-- Research Areas -->
-        <#assign researchAreas = propertyGroups.pullProperty("${core}hasResearchArea")!>
-        <@collapsiblePropertyListSection "Keywords" researchAreas editable />
-
         <#-- Awards -->
-        <#assign awards = propertyGroups.pullProperty("${core}relatedBy", "${core}AwardReceipt")!>
         <@collapsiblePropertyListSection "Award" awards editable />
+      </#if>
 
-        <#-- Professional Activities -->
-        <#assign presentations = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#performs")!>
-        <@collapsiblePropertyListSection "Presentation" presentations editable />
+       <#assign researchAreas = propertyGroups.pullProperty("${core}hasResearchArea")!>
+       <#assign regions = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-geo-extension#geographicallyRelatesTo")!>
+       <#if researchAreas?has_content || regions?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+         <li class="section-group-header">Expertise</li>
+         <#-- Research Areas -->
+         <@collapsiblePropertyListSection "Keywords" researchAreas editable />
+         <#-- Geographic Focus -->
+         <@collapsiblePropertyListSection "GeographicFocus" regions editable />
+       </#if>
 
-        <#-- Geographic Focus -->
-        <#assign regions = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-geo-extension#geographicallyRelatesTo")!>
-        <@collapsiblePropertyListSection "GeographicFocus" regions editable />
 
-        <#-- Artistic Works -->
-        <#assign artisticRelationships = propertyGroups.pullProperty("${core}relatedBy", "http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticRelationship")!>
-        <@collapsiblePropertyListSection "ArtisticWork" artisticRelationships editable />
+       <#assign grants = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000053", "${core}ResearcherRole")!>
+       <#if grants?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+         <li class="section-group-header">Research</li>
+         <#-- Grants -->
+         <@collapsiblePropertyListSection "Grant" grants editable />
+       </#if>
 
-        <#-- Publication -->
         <#assign authorships = propertyGroups.pullProperty("${core}relatedBy", "${core}Authorship")!>
-        <@collapsiblePropertyListSection "Publication" authorships editable />
+        <#assign artisticRelationships = propertyGroups.pullProperty("${core}relatedBy", "http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticRelationship")!>
+        <#if authorships?has_content || artisticRelationships?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+          <li class="section-group-header">Publications and Artistic Works</li>
+          <#-- Publication -->
+          <@collapsiblePropertyListSection "Publication" authorships editable />
+          <#-- Artistic Works -->
+          <@collapsiblePropertyListSection "ArtisticWork" artisticRelationships editable />
+       </#if>
 
-        <#-- Grants -->
-        <#assign grants = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000053", "${core}ResearcherRole")!>
-        <@collapsiblePropertyListSection "Grant" grants editable />
-        
-        <#-- Courses -->
         <#assign courses = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000053", "${core}TeacherRole")!>
-        <@collapsiblePropertyListSection "Course" courses editable />
-
-        <#-- Mentorships -->
         <#assign mentorships = propertyGroups.pullProperty("${core}advisorIn")!>
-        <@collapsiblePropertyListSection "Mentorship" mentorships editable />
-
-        <#-- Mentorship Availability -->
         <#assign mentorOverview = propertyGroups.pullProperty("${dukeact}mentorshipOverview")!>
-
         <#assign availabilities = propertyGroups.pullProperty("${dukeact}mentorshipAvailability")!>
-        <#if availabilities?has_content || mentorOverview?has_content>
-          <li class="section-collapsible" id="MentorshipAvailability">
-            <a name="MentorshipAvailability" class="expanderLink" data-open-image="${urls.theme}/images/button_minus_large.png" data-closed-image="${urls.theme}/images/button_plus_large.png"><img src="${urls.theme}/images/button_plus_large.png"/></a>
-            <h3 id="mentorship-availabilities">Mentorship Availability<@verboseDisplay availabilities /></h3>
-            <div class="hideshow" style="display:none">
-              <#if mentorOverview?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-                  <@p.addLinkWithLabel mentorOverview editable />
-                  <#list mentorOverview.statements as statement>
-                      <div class="individual-mentorOverview">
-                          <p>
-                              ${statement.value}
-                          </p>
-                          <@p.editingLinks "${mentorOverview.localName}" "${mentorOverview.name}" statement editable />
-                      </div>
-                  </#list>
-              </#if>
-              <#if availabilities?has_content>
-                <h4>Available to mentor:</h4>
-                <ul id="individual-mentorshipAvailability" role="list">
-                  <@dataPropertyList availabilities false />
-                </ul>
-              </#if>
-            </div>
-            <div style="clear:both"></div>
-          </li>
+        <#if courses?has_content || mentorships?has_content || mentorOverview?has_content || availabilities?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+          <li class="section-group-header">Teaching and Mentoring</li>
+          <#-- Courses -->
+          <@collapsiblePropertyListSection "Course" courses editable />
+
+          <#-- Mentorships -->
+          <@collapsiblePropertyListSection "Mentorship" mentorships editable />
+
+          <#-- Mentorship Availability -->
+          <#if availabilities?has_content || mentorOverview?has_content>
+            <li class="section-collapsible" id="MentorshipAvailability">
+              <a name="MentorshipAvailability" class="expanderLink" data-open-image="${urls.theme}/images/button_minus_large.png" data-closed-image="${urls.theme}/images/button_plus_large.png"><img src="${urls.theme}/images/button_plus_large.png"/></a>
+              <h3 id="mentorship-availabilities">Mentorship Availability<@verboseDisplay availabilities /></h3>
+              <div class="hideshow" style="display:none">
+                <#if mentorOverview?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+                    <@p.addLinkWithLabel mentorOverview editable />
+                    <#list mentorOverview.statements as statement>
+                        <ul class="individual-mentorOverview" role="list">
+                            <li role="listitem">
+                                ${statement.value}
+                            </li>
+                        </ul>
+                    </#list>
+                </#if>
+                <#if availabilities?has_content>
+                  <h4>Available to mentor:</h4>
+                  <ul id="individual-mentorshipAvailability" role="list">
+                    <@dataPropertyList availabilities false />
+                  </ul>
+                </#if>
+              </div>
+              <div style="clear:both"></div>
+            </li>
+          </#if>
         </#if>
 
+        <#assign presentations = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#performs","http://vivo.duke.edu/vivo/ontology/duke-activity-extension#Presentation")!>
+        <#assign outreach = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#performs","http://vivo.duke.edu/vivo/ontology/duke-activity-extension#Outreach")!>
+        <#assign profession = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#performs","http://vivo.duke.edu/vivo/ontology/duke-activity-extension#ServiceToTheProfession")!>
+        <#assign university = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#performs","http://vivo.duke.edu/vivo/ontology/duke-activity-extension#ServiceToTheUniversity")!>
+        <#if presentations?has_content || outreach?has_content || profession?has_content || university?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+          <li class="section-group-header">Scholarly, Clinical, and Service Activities</li>
+          <#-- Professional Activities -->
+          <@collapsiblePropertyListSection "Presentation" presentations editable />
+          <@collapsiblePropertyListSection "Outreach" outreach editable />
+          <@collapsiblePropertyListSection "Profession" profession editable />
+          <@collapsiblePropertyListSection "University" university editable />
+        </#if>
     </ul>
 
     <p class='disclaimer'>Some information on this profile has been compiled automatically from

@@ -76,11 +76,12 @@ public class PersonCustomFields extends DukeJSONContextNodeFields {
           + " prefix obo: <http://purl.obolibrary.org/obo/> \n"
           + " PREFIX vcard: <http://www.w3.org/2006/vcard/ns#> \n"
           + " PREFIX duke: <http://vivo.duke.edu/vivo/ontology/duke-extension#> \n"
-          + " prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#a> \n";
+          + " prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#a> \n"
+          + " PREFIX dukecv: <http://vivo.duke.edu/vivo/ontology/duke-cv-extension#> \n";
  
   private static final String query = 
       prefix 
-      + "SELECT ?alternateId ?title ?primaryEmail ?netid ?officehours ?profileURL \n"
+      + "SELECT ?alternateId ?title ?primaryEmail ?netid ?officehours ?profileURL ?interestsOverview ?teachingOverview ?administrativeOverview ?clinicalOverview ?positionsOverview \n"
       + "WHERE { \n"
       + " ?personUri a foaf:Person . \n"
       + " ?personUri rdfs:label ?label . \n"
@@ -95,6 +96,11 @@ public class PersonCustomFields extends DukeJSONContextNodeFields {
       + "  OPTIONAL { ?personUri duke:scopedNetid ?netid } \n"
       + "  OPTIONAL { ?personUri duke:officehours ?officehours } \n"
       + "  OPTIONAL { ?personUri duke:profileURL ?profileURL } \n"
+      + "  OPTIONAL { ?personUri dukecv:interestsOverview ?interestsOverview } \n"
+      + "  OPTIONAL { ?personUri dukecv:teachingOverview ?teachingOverview } \n"
+      + "  OPTIONAL { ?personUri dukecv:academicAdministrativeOverview ?administrativeOverview } \n"
+      + "  OPTIONAL { ?personUri dukecv:clinicalOverview ?clinicalOverview } \n"
+      + "  OPTIONAL { ?personUri dukecv:positionsOverview ?positionsOverview } \n"
       + "  FILTER(?personUri = ?uri) \n"
       + "}";
 

@@ -16,16 +16,31 @@
 
       <#assign serviceType = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#serviceType")!>
       <#if serviceType?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-        <div class="abstract">
+        <div>
           <p id="service-type">${dataPropertyValue(serviceType)}</p>
         </div>
+      </#if>
+
+      <#assign description = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#description")!>
+      <#if description?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+        <div class="abstract">
+          <p>${dataPropertyValue(description)}</p>
+        </div>
+      </#if>
+      
+      <#-- link to webpage -->
+      <#assign linkToItem = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#linkToItem")!>
+      <#if linkToItem?has_content && (linkToItem.statements)?has_content>
+        <#assign linkValue = "${linkToItem.statements[0].value}"/>
+        <#assign linkUrl = "<a href=\"${linkValue}\" target=\"_blank\">Link</a>">
+
+        <p id="weblink"><img class="icon-uri middle" src="/images/individual/uriIcon.gif" alt="uri icon" style="inline;"> ${linkUrl}</p>
       </#if>
 
     </header>
   </section>
 
   <section id="individual-body" role="region">
-
     <#assign performer = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#performedBy")!>
     <#if performer?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
       <@simpleObjectPropertyListing performer "Service Performed By" />
@@ -34,11 +49,6 @@
     <#assign role = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#role")!>
     <#if role?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
       <@simpleDataPropertyListing role "Role" />
-    </#if>
-
-    <#assign description = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#description")!>
-    <#if description?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-      <@simpleDataPropertyListing description "Description" />
     </#if>
 
     <#assign committeeName = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#committeeName")!>
@@ -69,6 +79,11 @@
     <#assign location = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#locationOrVenue")!>
     <#if location?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
       <@simpleDataPropertyListing location "Location or Venue" />
+    </#if>
+
+    <#assign geographicFocus = propertyGroups.pullProperty("${core}geographicFocus")!>
+    <#if geographicFocus?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+      <@simpleObjectPropertyListing geographicFocus "Geographic Region" />
     </#if>
 
   </section>

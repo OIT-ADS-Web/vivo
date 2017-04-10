@@ -2,6 +2,7 @@
     xmlns:duke="http://vivo.duke.edu/vivo/ontology/duke-extension#"
     xmlns:dukeart="http://vivo.duke.edu/vivo/ontology/duke-art-extension#"
     xmlns:dukegeo="http://vivo.duke.edu/vivo/ontology/duke-geo-extension#"
+    xmlns:dukecv="http://vivo.duke.edu/vivo/ontology/duke-cv-extension#"
     xmlns:vitro-public="http://vitro.mannlib.cornell.edu/ns/vitro/public#"
     xmlns:geo="http://aims.fao.org/aos/geopolitical.owl#"
     xmlns:skos="http://www.w3.org/2004/02/skos/core#"

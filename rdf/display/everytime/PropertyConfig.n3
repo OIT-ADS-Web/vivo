@@ -494,7 +494,7 @@ local:educationalTrainingContext a :ConfigContext ;
 
 local:educationalTrainingConfig a :ObjectPropertyDisplayConfig ;
     :listViewConfigFile "listViewConfig-educationalTraining.xml"^^xsd:string ;
-    :displayName "education and training" ;
+    :displayName "education, training, and certifications" ;
     vitro:displayRankAnnot 10;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
@@ -510,7 +510,7 @@ local:educationalProcessPersonContext a :ConfigContext ;
 
 local:educationalProcessPersonConfig a :ObjectPropertyDisplayConfig ;
     :listViewConfigFile "listViewConfig-fauxPropertyDefault.xml"^^xsd:string ;
-    :displayName "education and training of" ;
+    :displayName "education, training or certification of" ;
     vitro:displayRankAnnot 10;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
