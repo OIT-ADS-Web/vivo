@@ -160,7 +160,7 @@
         <#assign profession = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#performs","http://vivo.duke.edu/vivo/ontology/duke-activity-extension#ServiceToTheProfession")!>
         <#assign university = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#performs","http://vivo.duke.edu/vivo/ontology/duke-activity-extension#ServiceToTheUniversity")!>
         <#if presentations?has_content || outreach?has_content || profession?has_content || university?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-          <li class="section-group-header">Scholarly, Clinical and Service Activities</li>
+          <li class="section-group-header">Scholarly, Clinical, and Service Activities</li>
           <#-- Professional Activities -->
           <@collapsiblePropertyListSection "Presentation" presentations editable />
           <@collapsiblePropertyListSection "Outreach" outreach editable />
