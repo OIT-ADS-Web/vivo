@@ -35,12 +35,16 @@
 }
 
 .overview-value li {
-  list-style-type: disc;
+  list-style-type: decimal;
   margin-left: 14px;
 }
 
+.overview-value ol {
+  list-style-type: decimal;
+}
+
 li {
-  list-style-type:none
+  list-style-type: none;
 }
 
 textarea#embed {

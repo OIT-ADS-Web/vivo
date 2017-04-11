@@ -36,7 +36,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <@p.addLinkWithLabel overview editable />
     <#list overview.statements as statement>
         <div class="individual-overview">
-            <div class="overview-value">
+            <div class="overview-value-duke">
                 ${statement.value}
             </div>
         </div>
