@@ -12,6 +12,7 @@ $(document).ready(function(){
 
     // "more"/"less" HTML truncator for showing more or less content in data property core:overview & duke:authorList
     $('.overview-value').truncate({max_length: 500});
+    $('.overview-value-duke').truncate({max_length: 500});
     $('.author-list-value').truncate({max_length: 300});
     
     $.fn.exists = function () {
