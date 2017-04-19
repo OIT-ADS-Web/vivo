@@ -8,7 +8,7 @@
 <#include "duke-properties.ftl" >
 <#include "individual-setup.ftl">
 <#import "lib-vivo-properties.ftl" as vp>
-<#import "propStatement-awardOrHonor.ftl" as aoh>
+
 <#assign dukeact = "http://vivo.duke.edu/vivo/ontology/duke-activity-extension#">
 
 <header>
