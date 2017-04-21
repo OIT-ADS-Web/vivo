@@ -89,7 +89,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://vivo.duke.edu/vivo/ontology/duke-cv-extension#positionsOverview">
+  <rdf:Description rdf:about="http://vivo.duke.edu/vivo/ontology/duke-cv-extension#NonAppointmentsOverview">
     <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A summary of a person's administrative, clinical, and/or leadership positions at Duke that are not represented by formal faculty appointments.</vitro:publicDescriptionAnnot>
     <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
     <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
