@@ -100,7 +100,7 @@ public class PersonCustomFields extends DukeJSONContextNodeFields {
       + "  OPTIONAL { ?personUri dukecv:teachingOverview ?teachingOverview } \n"
       + "  OPTIONAL { ?personUri dukecv:academicAdministrativeOverview ?administrativeOverview } \n"
       + "  OPTIONAL { ?personUri dukecv:clinicalOverview ?clinicalOverview } \n"
-      + "  OPTIONAL { ?personUri dukecv:positionsOverview ?positionsOverview } \n"
+      + "  OPTIONAL { ?personUri dukecv:NonAppointmentsOverview ?positionsOverview } \n"
       + "  FILTER(?personUri = ?uri) \n"
       + "}";
 
