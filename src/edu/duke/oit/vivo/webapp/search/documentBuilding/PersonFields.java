@@ -13,7 +13,8 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX core: <http://vivoweb.org/ontology/core#>
 PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> 
 PREFIX duke: <http://vivo.duke.edu/vivo/ontology/duke-extension#>
- 
+PREFIX dukecv: <http://vivo.duke.edu/vivo/ontology/duke-cv-extension#> 
+
 select (CONCAT(
 ?label, ' ', 
 COALESCE(?alias, ''), ' ', 
@@ -21,7 +22,12 @@ COALESCE(?overview, ''), ' ',
 COALESCE(?officeHours, ''), ' ',
 COALESCE(?profileUrl, ''), ' ',
 COALESCE(?mentorAvail, ''), ' ',
-COALESCE(?mentorOverview, '')
+COALESCE(?mentorOverview, ''), ' ',
+COALESCE(?interestsOverview, ''), ' ',
+COALESCE(?teachingOverview, ''), ' ',
+COALESCE(?administrativeOverview, ''), ' ',
+COALESCE(?clinicalOverview, ''), ' ',
+COALESCE(?positionsOverview, '')
 ) as ?result)
 where { 
    ?person duke:profileLabel ?label .
@@ -31,6 +37,11 @@ where {
    OPTIONAL { ?person duke:profileUrl ?profileUrl . }
    OPTIONAL { ?person duke:mentorshipAvailability ?mentorAvail . }
    OPTIONAL { ?person duke:mentoringOverview ?mentorOverview . }
+   OPTIONAL { ?person dukecv:interestsOverview ?interestsOverview } 
+   OPTIONAL { ?person dukecv:teachingOverview ?teachingOverview } 
+   OPTIONAL { ?person dukecv:academicAdministrativeOverview ?administrativeOverview } 
+   OPTIONAL { ?person dukecv:clinicalOverview ?clinicalOverview } 
+   OPTIONAL { ?person dukecv:positionsOverview ?positionsOverview } 
    FILTER (?person= <https://scholars.duke.edu/individual/perdm253>)
 }
 
@@ -61,14 +72,14 @@ public class PersonFields extends DukeContextNodeFields {
           + "COALESCE(?alias, ''), ' ',\n" 
           + "COALESCE(?overview, ''), ' ',\n"
           + "COALESCE(?officeHours, ''), ' ',\n"
+          + "COALESCE(?profileUrl, ''), ' ',\n"
+          + "COALESCE(?mentorAvail, ''), ' ',\n"
+          + "COALESCE(?mentorOverview, ''), ' ',\n"
           + "COALESCE(?interestsOverview, ''), ' ',\n"
           + "COALESCE(?teachingOverview, ''), ' ',\n"
           + "COALESCE(?administrativeOverview, ''), ' ',\n"
           + "COALESCE(?clinicalOverview, ''), ' ',\n"
-          + "COALESCE(?positionsOverview, ''), ' ',\n"
-          + "COALESCE(?profileUrl, ''), ' ',\n"
-          + "COALESCE(?mentorAvail, ''), ' ',\n"
-          + "COALESCE(?mentorOverview, '')\n"
+          + "COALESCE(?positionsOverview, '')\n"
           + ") as ?result)\n"
           + "where { \n"
           + "   ?person duke:profileLabel ?label .\n"
@@ -78,11 +89,11 @@ public class PersonFields extends DukeContextNodeFields {
           + "   OPTIONAL { ?person duke:profileUrl ?profileUrl . }\n"
           + "   OPTIONAL { ?person duke:mentorshipAvailability ?mentorAvail . }\n"
           + "   OPTIONAL { ?person duke:mentoringOverview ?mentorOverview . }\n"
-          + "   OPTIONAL { ?personUri dukecv:interestsOverview ?interestsOverview } \n"
-          + "   OPTIONAL { ?personUri dukecv:teachingOverview ?teachingOverview } \n"
-          + "   OPTIONAL { ?personUri dukecv:academicAdministrativeOverview ?administrativeOverview } \n"
-          + "   OPTIONAL { ?personUri dukecv:clinicalOverview ?clinicalOverview } \n"
-          + "   OPTIONAL { ?personUri dukecv:positionsOverview ?positionsOverview } \n"
+          + "   OPTIONAL { ?person dukecv:interestsOverview ?interestsOverview } \n"
+          + "   OPTIONAL { ?person dukecv:teachingOverview ?teachingOverview } \n"
+          + "   OPTIONAL { ?person dukecv:academicAdministrativeOverview ?administrativeOverview } \n"
+          + "   OPTIONAL { ?person dukecv:clinicalOverview ?clinicalOverview } \n"
+          + "   OPTIONAL { ?person dukecv:positionsOverview ?positionsOverview } \n"
           + "   FILTER (?person= ?uri) \n"
           + "}";
 
