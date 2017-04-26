@@ -42,7 +42,7 @@
       </#if>
       <#if linkUrl??>
         <#assign linkText>
-            <#if linkStatement.label??>${linkAnchor}<#t>
+            <#if linkStatement.label??>${linkStatement.label}<#t>
             <#else>${linkUrl}<#t>
             </#if>
         </#assign>
