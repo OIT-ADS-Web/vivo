@@ -99,10 +99,17 @@
 
 
        <#assign grants = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000053", "${core}ResearcherRole")!>
-       <#if grants?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+       <#assign researchInterests = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-cv-extension#interestsOverview")!> 
+       <#if grants?has_content || researchInterests?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
          <li class="section-group-header">Research</li>
+       </#if>
+       <#if grants?has_content>
          <#-- Grants -->
          <@collapsiblePropertyListSection "Grant" grants editable />
+       </#if>
+       <#if researchInterests?has_content>
+        <#-- Office Hours -->
+        <#include "individual-officehours.ftl">
        </#if>
 
         <#assign authorships = propertyGroups.pullProperty("${core}relatedBy", "${core}Authorship")!>
