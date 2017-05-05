@@ -43,6 +43,15 @@
   list-style-type: decimal;
 }
 
+.officehours-value li {
+  list-style-type: decimal;
+  margin-left: 14px;
+}
+
+.officehours-value ol {
+  list-style-type: decimal;
+}
+
 li {
   list-style-type: none;
 }

@@ -88,7 +88,10 @@ td {
 body {    
     line-height: 1.5em;
 }
-ol,
+ol {
+    list-style: decimal;
+    font-weight: normal;
+}
 ul {
     list-style: none;
     font-weight: normal;
