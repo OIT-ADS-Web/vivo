@@ -5,11 +5,11 @@
     <#-- <#if !editable >
        <h2 id="facultyResearchInterests"></h2>
     </#if> -->
-    <h3>Research Interests</h3>
+    <h3 style="font-size: 18.75px;">Current Research Interests</h3>
     <@p.addLinkWithLabel researchInterests editable />
     <#list researchInterests.statements as statement>
         <div class="individual-research-interests">
-            <div class="research-interests-value">
+            <div class="research-interests-value" style="font-size: 15px;">
                 ${statement.value}
             </div>
         </div>
