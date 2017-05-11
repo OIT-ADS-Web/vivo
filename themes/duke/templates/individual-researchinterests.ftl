@@ -1,5 +1,7 @@
 <#-- Research Interests on individual profile page -->
 
+<#-- option: could create conditional logic that puts "Research" header up here wrapped with conditional for when there is no grant detected (depends on what is requested) -->
+
 <#assign researchInterests = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-cv-extension#interestsOverview")!> 
 <#if researchInterests?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
     <#-- <#if !editable >
