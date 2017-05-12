@@ -109,6 +109,9 @@
        <#-- Current Research Interests -->
        <#include "individual-researchinterests.ftl">
 
+       <#-- Leadership & Clinical Positions at Duke -->
+       <#include "individual-non-appointments-overview.ftl">
+
 
         <#assign authorships = propertyGroups.pullProperty("${core}relatedBy", "${core}Authorship")!>
         <#assign artisticRelationships = propertyGroups.pullProperty("${core}relatedBy", "http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticRelationship")!>
@@ -160,6 +163,9 @@
           </#if>
         </#if>
 
+        <#-- Teaching Activities -->
+        <#include "individual-teaching-overview.ftl">
+
         <#assign presentations = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#performs","http://vivo.duke.edu/vivo/ontology/duke-activity-extension#Presentation")!>
         <#assign outreach = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#performs","http://vivo.duke.edu/vivo/ontology/duke-activity-extension#Outreach")!>
         <#assign profession = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#performs","http://vivo.duke.edu/vivo/ontology/duke-activity-extension#ServiceToTheProfession")!>
@@ -172,6 +178,12 @@
           <@collapsiblePropertyListSection "Profession" profession editable />
           <@collapsiblePropertyListSection "University" university editable />
         </#if>
+
+        <#-- Academic & Administrative Activities -->
+        <#include "individual-academic-administrative-overview.ftl">
+
+        <#-- Clinical Activities -->
+        <#include "individual-clinical-activities.ftl">
     </ul>
 
     <p class='disclaimer'>Some information on this profile has been compiled automatically from
