@@ -174,4 +174,15 @@
     <rdfs:label xml:lang="en-US">Description</rdfs:label>
   </owl:DatatypeProperty>
 
+  <rdf:Description rdf:about="http://vivo.duke.edu/vivo/ontology/duke-cv-extension#DukePastPosition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en-US">Past Position at Duke</rdfs:label>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppeople"/>
+    <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A position that a person held at Duke in the past.</vitro:shortDef>
+    <vitro:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</vitro:displayLimitAnnot>
+    <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</vitro:displayRankAnnot>
+    <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+  </rdf:Description>
+
 </rdf:RDF>

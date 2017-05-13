@@ -43,6 +43,60 @@
   list-style-type: decimal;
 }
 
+.officehours-value li {
+  list-style-type: decimal;
+  margin-left: 14px;
+}
+
+.officehours-value ol {
+  list-style-type: decimal;
+}
+
+.research-interests-value li {
+  list-style-type: decimal;
+  margin-left: 14px;
+}
+
+.research-interests-value ol {
+  list-style-type: decimal;
+}
+
+.academic-activities-value li {
+  list-style-type: decimal;
+  margin-left: 14px;
+}
+
+.academic-activities-value ol {
+  list-style-type: decimal;
+}
+
+.individual-clinical-value li {
+  list-style-type: decimal;
+  margin-left: 14px;
+}
+
+.individual-clinical-value ol {
+  list-style-type: decimal;
+}
+
+.individual-teaching-value li {
+  list-style-type: decimal;
+  margin-left: 14px;
+}
+
+.individual-teaching-value ol {
+  list-style-type: decimal;
+}
+
+.individual-leadership-clinical-value li {
+  list-style-type: decimal;
+  margin-left: 14px;
+}
+
+.individual-leadership-clinical-value ol {
+  list-style-type: decimal;
+}
+
 li {
   list-style-type: none;
 }
