@@ -70,30 +70,30 @@
   list-style-type: decimal;
 }
 
-.individual-clinical-value li {
+.clinical-activities-value li {
   list-style-type: decimal;
   margin-left: 14px;
 }
 
-.individual-clinical-value ol {
+.clinical-activities-value ol {
   list-style-type: decimal;
 }
 
-.individual-teaching-value li {
-  list-style-type: decimal;
-  margin-left: 14px;
-}
-
-.individual-teaching-value ol {
-  list-style-type: decimal;
-}
-
-.individual-leadership-clinical-value li {
+.teaching-activities-value li {
   list-style-type: decimal;
   margin-left: 14px;
 }
 
-.individual-leadership-clinical-value ol {
+.teaching-activities-value ol {
+  list-style-type: decimal;
+}
+
+.leadership-clinical-positions-value li {
+  list-style-type: decimal;
+  margin-left: 14px;
+}
+
+.leadership-clinical-positions-value ol {
   list-style-type: decimal;
 }
 
