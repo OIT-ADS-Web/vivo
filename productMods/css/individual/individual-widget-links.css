@@ -65,56 +65,70 @@
   list-style-type: decimal;
 }
 
-.academic-activities-value {
+.individual-academicOverview {
   line-height: 19.5px;
 }
 
-.academic-activities-value li {
+.individual-academicOverview li {
   list-style-type: decimal;
   margin-left: 14px;
 }
 
-.academic-activities-value ol {
+.individual-academicOverview ol {
   list-style-type: decimal;
 }
 
-.clinical-activities-value {
+.individual-clinicalOverview {
   line-height: 19.5px;
 }
 
-.clinical-activities-value li {
+.individual-clinicalOverview li {
   list-style-type: decimal;
   margin-left: 14px;
 }
 
-.clinical-activities-value ol {
+.individual-clinicalOverview ol {
   list-style-type: decimal;
 }
 
-.teaching-activities-value {
+.individual-teachingOverview {
   line-height: 19.5px;
 }
 
-.teaching-activities-value li {
+.individual-teachingOverview li {
   list-style-type: decimal;
   margin-left: 14px;
 }
 
-.teaching-activities-value ol {
+.individual-teachingOverview ol {
   list-style-type: decimal;
 }
 
-.leadership-clinical-positions-value {
+.individual-leadershipPositions {
   line-height: 19.5px;
 }
 
-.leadership-clinical-positions-value li {
+.individual-leadershipPositions li {
   list-style-type: decimal;
   margin-left: 14px;
 }
 
-.leadership-clinical-positions-value ol {
+.individual-leadershipPositions ol {
   list-style-type: decimal;
+}
+
+.individual-mentorOverview {
+  line-height: 19.5px;
+}
+
+.individual-mentorOverview li {
+  list-style-type: decimal;
+  margin-left: 14px;
+}
+
+.individual-mentorOverview li {
+  list-style-type: decimal;
+  margin-left: 14px;
 }
 
 li {
