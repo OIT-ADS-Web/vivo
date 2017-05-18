@@ -47,6 +47,9 @@
         <#-- Overview -->
         <#include "individual-overview.ftl">
 
+        <#-- Current Research Interests -->
+        <#include "individual-researchinterests.ftl">
+
         <#-- Office Hours -->
         <#include "individual-officehours.ftl">
 
@@ -105,9 +108,6 @@
          <#-- Grants -->
          <@collapsiblePropertyListSection "Grant" grants editable />
        </#if>
-
-       <#-- Current Research Interests -->
-       <#include "individual-researchinterests.ftl">
 
        <#-- Leadership & Clinical Positions at Duke -->
        <#include "individual-non-appointments-overview.ftl">

@@ -52,6 +52,10 @@
   list-style-type: decimal;
 }
 
+.research-interests-value {
+  line-height: 19.5px;
+}
+
 .research-interests-value li {
   list-style-type: decimal;
   margin-left: 14px;
@@ -59,6 +63,10 @@
 
 .research-interests-value ol {
   list-style-type: decimal;
+}
+
+.academic-activities-value {
+  line-height: 19.5px;
 }
 
 .academic-activities-value li {
@@ -70,6 +78,10 @@
   list-style-type: decimal;
 }
 
+.clinical-activities-value {
+  line-height: 19.5px;
+}
+
 .clinical-activities-value li {
   list-style-type: decimal;
   margin-left: 14px;
@@ -79,6 +91,10 @@
   list-style-type: decimal;
 }
 
+.teaching-activities-value {
+  line-height: 19.5px;
+}
+
 .teaching-activities-value li {
   list-style-type: decimal;
   margin-left: 14px;
@@ -86,6 +102,10 @@
 
 .teaching-activities-value ol {
   list-style-type: decimal;
+}
+
+.leadership-clinical-positions-value {
+  line-height: 19.5px;
 }
 
 .leadership-clinical-positions-value li {
