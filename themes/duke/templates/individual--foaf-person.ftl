@@ -127,8 +127,10 @@
         <#assign mentorships = propertyGroups.pullProperty("${core}advisorIn")!>
         <#assign mentorOverview = propertyGroups.pullProperty("${dukeact}mentorshipOverview")!>
         <#assign availabilities = propertyGroups.pullProperty("${dukeact}mentorshipAvailability")!>
-        <#if courses?has_content || mentorships?has_content || mentorOverview?has_content || availabilities?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+        <#assign teachingOverview = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-cv-extension#teachingOverview")!>
+        <#if courses?has_content || mentorships?has_content || mentorOverview?has_content || availabilities?has_content || teachingOverview?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
           <li class="section-group-header">Teaching and Mentoring</li>
+
           <#-- Courses -->
           <@collapsiblePropertyListSection "Course" courses editable />
 
@@ -161,10 +163,30 @@
               <div style="clear:both"></div>
             </li>
           </#if>
+
+          <#-- Teaching Activities -->
+          <#if teachingOverview?has_content>
+            <li class="section-collapsible" id="TeachingOverview">
+              <a name="TeachingOverview" class="expanderLink" data-open-image="${urls.theme}/images/button_minus_large.png" data-closed-image="${urls.theme}/images/button_plus_large.png"><img src="${urls.theme}/images/button_plus_large.png"/></a>
+              <h3 id="teaching-overview">Teaching Activities</h3>
+              <div class="hideshow" style="display:none">
+                <#if teachingOverview?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+                    <@p.addLinkWithLabel teachingOverview editable />
+                    <#list teachingOverview.statements as statement>
+                        <ul class="individual-teachingOverview" role="list">
+                            <li role="listitem">
+                                ${statement.value}
+                            </li>
+                        </ul>
+                    </#list>
+                </#if>
+              </div>
+              <div style="clear:both"></div>
+            </li>
+          </#if>
+
         </#if>
 
-        <#-- Teaching Activities -->
-        <#include "individual-teaching-overview.ftl">
 
         <#assign presentations = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#performs","http://vivo.duke.edu/vivo/ontology/duke-activity-extension#Presentation")!>
         <#assign outreach = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#performs","http://vivo.duke.edu/vivo/ontology/duke-activity-extension#Outreach")!>
