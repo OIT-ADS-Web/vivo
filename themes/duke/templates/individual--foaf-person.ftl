@@ -74,8 +74,9 @@
   <section id="individual-body" role="region">
     <ul class="section-navigation">
       <#assign educations = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000056", "${core}EducationalProcess")!>
-      <#assign leadershipPositions = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-cv-extension#NonAppointmentsOverview")!> 
-      <#if educations?has_content || leadershipPositions?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+      <#assign leadershipPositions = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-cv-extension#NonAppointmentsOverview")!>
+      <#assign pastPositions = propertyGroups.pullProperty("${core}relatedBy", "http://vivo.duke.edu/vivo/ontology/duke-cv-extension#DukePastPosition")!>
+      <#if educations?has_content || leadershipPositions?has_content || pastPositions?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
         <li class="section-group-header">Background</li>
         <#-- Education -->
         <@collapsiblePropertyListSection "Education" educations editable />
@@ -100,7 +101,12 @@
             <div style="clear:both"></div>
           </li>
         </#if>
+
+        <#-- Duke Appointment History -->
+        <@collapsiblePropertyListSection "Duke Appointment History" pastPositions editable />
+
       </#if>
+
 
       <#assign newsfeeds = propertyGroups.pullProperty("${core}relatedBy", "${core}NewsRelease")!>
       <#assign awards = propertyGroups.pullProperty("${core}relatedBy", "${core}AwardReceipt")!>
