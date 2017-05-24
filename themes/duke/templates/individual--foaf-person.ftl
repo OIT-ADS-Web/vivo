@@ -75,37 +75,71 @@
     <ul class="section-navigation">
       <#assign educations = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000056", "${core}EducationalProcess")!>
       <#assign leadershipPositions = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-cv-extension#NonAppointmentsOverview")!>
-      <#assign pastPositions = propertyGroups.pullProperty("${core}relatedBy", "http://vivo.duke.edu/vivo/ontology/duke-cv-extension#DukePastPosition")!>
-      <#if educations?has_content || leadershipPositions?has_content || pastPositions?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-        <li class="section-group-header">Background</li>
-        <#-- Education -->
-        <@collapsiblePropertyListSection "Education" educations editable />
+      <#assign dukePastPositions = propertyGroups.pullProperty("${core}relatedBy", "http://vivo.duke.edu/vivo/ontology/duke-cv-extension#DukePastPosition")!>
 
-        <#-- Leadership & Clinical Positions at Duke -->
-        <#if leadershipPositions?has_content>
-          <li class="section-collapsible" id="LeadershipPositions">
-            <a name="LeadershipPositions" class="expanderLink" data-open-image="${urls.theme}/images/button_minus_large.png" data-closed-image="${urls.theme}/images/button_plus_large.png"><img src="${urls.theme}/images/button_plus_large.png"/></a>
-            <h3 id="leadership-positions">Leadership & Clinical Positions at Duke</h3>
-            <div class="hideshow" style="display:none">
-              <#if leadershipPositions?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-                  <@p.addLinkWithLabel leadershipPositions editable />
-                  <#list leadershipPositions.statements as statement>
-                      <ul class="individual-leadershipPositions" role="list">
-                          <li role="listitem">
-                              ${statement.value}
-                          </li>
-                      </ul>
-                  </#list>
-              </#if>
-            </div>
-            <div style="clear:both"></div>
-          </li>
+      <#if educations?has_content || leadershipPositions?has_content || dukePastPositions?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+        <li class="section-group-header">Background</li>
+      </#if>
+
+      <#-- Education -->
+      <@collapsiblePropertyListSection "Education" educations editable />
+
+      <#-- Leadership & Clinical Positions at Duke -->
+      <#if leadershipPositions?has_content>
+        <li class="section-collapsible" id="LeadershipPositions">
+          <a name="LeadershipPositions" class="expanderLink" data-open-image="${urls.theme}/images/button_minus_large.png" data-closed-image="${urls.theme}/images/button_plus_large.png"><img src="${urls.theme}/images/button_plus_large.png"/></a>
+          <h3 id="leadership-positions">Leadership & Clinical Positions at Duke</h3>
+          <div class="hideshow" style="display:none">  
+            <@p.addLinkWithLabel leadershipPositions editable />
+            <#list leadershipPositions.statements as statement>
+              <ul class="individual-leadershipPositions" role="list">
+                <li role="listitem">
+                    ${statement.value}
+                </li>
+              </ul>
+            </#list>
+          </div>
+          <div style="clear:both"></div>
+        </li>
+      </#if>
+
+      <#-- Duke Appointment History -->
+
+      
+        <#if dukePastPositions?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+          <#assign localName = dukePastPositions.localName>
+          <h3 id="${localName}" class="mainPropGroup">Duke Appointment History <@p.verboseDisplay dukePastPositions /></h3>
+          <ul id="individual-personInDukePastPosition" role="list">
+            <@p.objectProperty dukePastPositions false />
+          </ul>
         </#if>
 
-        <#-- Duke Appointment History -->
-        <@collapsiblePropertyListSection "Duke Appointment History" pastPositions editable />
 
+
+
+
+      <#if dukePastPositions?has_content>
+        There are past positions that exist
+        <#-- <@collapsiblePropertyListSection "Duke Appointment History" dukePastPositions editable /> -->
+
+
+        <li class="section-collapsible" id="DukePastPositions">
+          <a name="DukePastPositions" class="expanderLink" data-open-image="${urls.theme}/images/button_minus_large.png" data-closed-image="${urls.theme}/images/button_plus_large.png"><img src="${urls.theme}/images/button_plus_large.png"/></a>
+          <h3 id="duke-past-positions">Duke Appointment History</h3>
+          <div class="hideshow" style="display:none">  
+            <@p.addLinkWithLabel dukePastPositions editable />
+            <#list dukePastPositions.statements as statement>
+              <ul class="individual-dukePastPositions" role="list">
+                <li role="listitem">
+                    ${statement.value}
+                </li>
+              </ul>
+            </#list>
+          </div>
+          <div style="clear:both"></div>
+        </li>
       </#if>
+
 
 
       <#assign newsfeeds = propertyGroups.pullProperty("${core}relatedBy", "${core}NewsRelease")!>

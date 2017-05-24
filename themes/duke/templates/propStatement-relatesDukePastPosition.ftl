@@ -13,12 +13,11 @@
 <#macro showStatement statement>
   <#-- The query retrieves a type only for Persons. Post-processing will remove all but one. -->   
 
-  <div style="display:inline;">
+  <div>
     <#assign dukePastPositionLabel = "${statement.dukePastPositionLabel}"/>
     <#if dukePastPositionLabel != "">
       <span id="duke-past-position-label">${dukePastPositionLabel}</span>
     </#if>
-    
   </div>
 
 </#macro>

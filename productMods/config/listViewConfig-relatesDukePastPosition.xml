@@ -6,63 +6,67 @@
 <list-view-config>
   <query-select>    
     PREFIX rdfs:     &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
-    PREFIX vivo:     &lt;http://vivoweb.org/ontology/core#&gt;
+    PREFIX core:     &lt;http://vivoweb.org/ontology/core#&gt;
     PREFIX vitro:    &lt;http://vitro.mannlib.cornell.edu/ns/vitro/0.7#&gt;
     PREFIX dukecv:   &lt;http://vivo.duke.edu/vivo/ontology/duke-cv-extension&gt;
 
-    select <collated>?subclass</collated>
+    select 
            ?dukePastPositionObj
            ?dukePastPositionLabel
-           ?dateTimeStart ?dateTimeEnd 
+           #?dateTimeStart ?dateTimeEnd 
     where {
       ?subject ?property ?dukePastPositionObj .
-
+      ?dukePastPositionObj a dukecv:DukePastPosition .
       ?dukePastPositionObj rdfs:label ?dukePastPositionLabel .
-      OPTIONAL { ?dukePastPositionObj core:dateTimeInterval ?dateTimeInterval .
-                           ?dateTimeInterval core:start ?dateTimeStartValue .                    
-                           ?dateTimeStartValue core:dateTime ?dateTimeStart 
-                }
-                OPTIONAL { ?dukePastPositionObj core:dateTimeInterval ?dateTimeInterval .
-                           ?dateTimeInterval core:end ?dateTimeEndValue . 
-                           ?dateTimeEndValue core:dateTime ?dateTimeEnd
-                           }  
-      ?dukePastPositionObj vitro:mostSpecificType ?subclass .
-    ORDER BY ?subclass DESC(?dateTimeEnd) DESC(?dateTimeStart)
+
+      #OPTIONAL { ?dukePastPositionObj core:dateTimeInterval ?dateTimeInterval .
+       #                    ?dateTimeInterval core:start ?dateTimeStartValue .                    
+        #                   ?dateTimeStartValue core:dateTime ?dateTimeStart 
+         #       }
+
+          #      OPTIONAL { ?dukePastPositionObj core:dateTimeInterval ?dateTimeInterval .
+           #                ?dateTimeInterval core:end ?dateTimeEndValue . 
+            #               ?dateTimeEndValue core:dateTime ?dateTimeEnd
+             #              }  
+             }
+
+    #ORDER BY  DESC(?dateTimeEnd) DESC(?dateTimeStart)
 
   </query-select>
 
   <query-construct>
     PREFIX rdfs:     &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
-    PREFIX vivo:     &lt;http://vivoweb.org/ontology/core#&gt;
+    PREFIX core:     &lt;http://vivoweb.org/ontology/core#&gt;
     PREFIX vitro:    &lt;http://vitro.mannlib.cornell.edu/ns/vitro/0.7#&gt;
     PREFIX dukecv:   &lt;http://vivo.duke.edu/vivo/ontology/duke-cv-extension&gt;
 
     construct {
       ?subject ?property ?dukePastPositionObj .
+      ?dukePastPositionObj a dukecv:DukePastPosition .
       ?dukePastPositionObj rdfs:label ?dukePastPositionLabel .
-      OPTIONAL { ?dukePastPositionObj core:dateTimeInterval ?dateTimeInterval .
-                    ?dateTimeInterval core:start ?dateTimeStartValue .                    
-                  ?dateTimeStartValue core:dateTime ?dateTimeStart 
-                }
-      OPTIONAL { ?dukePastPositionObj core:dateTimeInterval ?dateTimeInterval .
-                    ?dateTimeInterval core:end ?dateTimeEndValue . 
-                    ?dateTimeEndValue core:dateTime ?dateTimeEnd
-                }  
-      ?dukePastPositionObj vitro:mostSpecificType ?subclass .
+
+      #?dukePastPositionObj core:dateTimeInterval ?dateTimeInterval .
+      #?dateTimeInterval core:start ?dateTimeStartValue .                    
+      #?dateTimeStartValue core:dateTime ?dateTimeStart .
+                
+      #?dukePastPositionObj core:dateTimeInterval ?dateTimeInterval .
+      #?dateTimeInterval core:end ?dateTimeEndValue . 
+      #?dateTimeEndValue core:dateTime ?dateTimeEnd .
+                
     }
+
     where {
       ?subject ?property ?dukePastPositionObj .
       ?dukePastPositionObj a dukecv:DukePastPosition .
       ?dukePastPositionObj rdfs:label ?dukePastPositionLabel.
-      OPTIONAL { ?dukePastPositionObj core:dateTimeInterval ?dateTimeInterval .
-                    ?dateTimeInterval core:start ?dateTimeStartValue .                    
-                  ?dateTimeStartValue core:dateTime ?dateTimeStart 
-                }
-      OPTIONAL { ?dukePastPositionObj core:dateTimeInterval ?dateTimeInterval .
-                    ?dateTimeInterval core:end ?dateTimeEndValue . 
-                    ?dateTimeEndValue core:dateTime ?dateTimeEnd
-                }  
-      ?dukePastPositionObj vitro:mostSpecificType ?subclass .
+
+      #?dukePastPositionObj core:dateTimeInterval ?dateTimeInterval .
+      #?dateTimeInterval core:start ?dateTimeStartValue .                    
+      #?dateTimeStartValue core:dateTime ?dateTimeStart .
+                
+      #?dukePastPositionObj core:dateTimeInterval ?dateTimeInterval .
+      #?dateTimeInterval core:end ?dateTimeEndValue . 
+      #?dateTimeEndValue core:dateTime ?dateTimeEnd .
     }
   </query-construct>
 

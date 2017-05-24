@@ -205,7 +205,7 @@ local:relatedDukePastPosition a :ConfigContext ;
 
 local:relatedDukePastPositionConfig a :ObjectPropertyDisplayConfig ;
     :listViewConfigFile "listViewConfig-relatesDukePastPosition.xml"^^xsd:string ;
-    :displayName "Duke Appointment History" ;
+    :displayName "duke appointment history" ;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
     :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
