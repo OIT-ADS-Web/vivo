@@ -49,7 +49,7 @@
             }
             <collated>
             OPTIONAL { ?pastPosition vitro:mostSpecificType ?subclass .
-                       ?subclass rdfs:subClassOf core:Position 
+                       ?subclass rdfs:subClassOf dukecv:DukePastPosition 
             } 
             </collated>
             <critical-data-required>
@@ -67,12 +67,12 @@
         CONSTRUCT {
             ?subject ?property ?pastPosition .
             ?pastPosition vitro:mostSpecificType ?subclass .
-            ?subclass rdfs:subClassOf core:Position 
+            ?subclass rdfs:subClassOf dukecv:DukePastPosition 
         } WHERE {
             ?subject ?property ?pastPosition .
             ?pastPosition a dukecv:DukePastPosition .
             ?pastPosition vitro:mostSpecificType ?subclass .
-            ?subclass rdfs:subClassOf core:Position 
+            ?subclass rdfs:subClassOf dukecv:DukePastPosition 
         }
     </query-construct>
     
