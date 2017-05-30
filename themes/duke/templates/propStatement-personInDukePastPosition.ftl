@@ -10,13 +10,13 @@
 <#import "lib-datetime.ftl" as dt>
 <@showPastPosition statement />
 
-  <#macro showPastPosition statement>
+<#macro showPastPosition statement>
   <#local linkedPastIndividual>
     <#if statement.org??>
         <a href="${profileUrl(statement.uri("org"))}" title="${i18n().organization_name}">${statement.orgName}</a>
     <#else>
         <#-- This shouldn't happen, but we must provide for it -->
-        <a href="${profileUrl(statement.uri("position"))}" title="${i18n().missing_organization}">${i18n().missing_organization}</a>
+        <a href="${profileUrl(statement.uri("pastPosition"))}" title="${i18n().missing_organization}">${i18n().missing_organization}</a>
     </#if>
   </#local>
   <#-- The sparql query returns both the org's parent (middleOrg) and grandparent (outerOrg).
@@ -27,6 +27,6 @@
     </#if>
   </#local>
 
-  <@s.join [ statement.positionTitle!statement.hrJobTitle!, linkedPastIndividual, middleOrganization! ]/>  <@dt.yearIntervalSpan "${statement.dateTimeStart!}" "${statement.dateTimeEnd!}" />
+  <@s.join [ statement.pastPositionTitle!statement.hrJobTitle!, linkedPastIndividual, middleOrganization! ]/>  <@dt.yearIntervalSpan "${statement.dateTimeStart!}" "${statement.dateTimeEnd!}" />
 
 </#macro>

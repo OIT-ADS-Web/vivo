@@ -103,35 +103,30 @@
         </li>
       </#if>
 
+
       <#-- Duke Appointment History -->
 
-      
-        <#if dukePastPositions?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-          <#assign localName = dukePastPositions.localName>
-          <h3 id="${localName}" class="mainPropGroup">Duke Appointment History <@p.verboseDisplay dukePastPositions /></h3>
-          <ul id="individual-personInDukePastPosition" role="list">
-            <@p.objectProperty dukePastPositions false />
-          </ul>
-        </#if>
-
-
-
+      <#if dukePastPositions?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+        <#assign localName = dukePastPositions.localName>
+        <h3 id="${localName}" class="mainPropGroup">Duke Appointment History (attempt 1 - inline, like current appointments)<@p.verboseDisplay dukePastPositions /></h3>
+        <ul id="individual-personInDukePastPosition" role="list">
+          <@p.objectProperty dukePastPositions false />
+        </ul>
+      </#if>
 
 
       <#if dukePastPositions?has_content>
-        There are past positions that exist
-        <#-- <@collapsiblePropertyListSection "Duke Appointment History" dukePastPositions editable /> -->
-
+        <@collapsiblePropertyListSection "Duke Appointment History (attempt 2)" dukePastPositions editable />
 
         <li class="section-collapsible" id="DukePastPositions">
           <a name="DukePastPositions" class="expanderLink" data-open-image="${urls.theme}/images/button_minus_large.png" data-closed-image="${urls.theme}/images/button_plus_large.png"><img src="${urls.theme}/images/button_plus_large.png"/></a>
-          <h3 id="duke-past-positions">Duke Appointment History</h3>
+          <h3 id="duke-past-positions">Duke Appointment History (attempt 3)</h3>
           <div class="hideshow" style="display:none">  
             <@p.addLinkWithLabel dukePastPositions editable />
             <#list dukePastPositions.statements as statement>
               <ul class="individual-dukePastPositions" role="list">
                 <li role="listitem">
-                    ${statement.value}
+                  ${statement.value}
                 </li>
               </ul>
             </#list>
