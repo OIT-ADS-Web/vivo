@@ -196,3 +196,16 @@ local:relatednewsConfig a :ObjectPropertyDisplayConfig ;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
     :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
+
+local:personInDukePastPosition a :ConfigContext ;
+    :hasConfiguration local:personInDukePastPositionConfig ;
+    :configContextFor vivo:relatedBy ;
+    :qualifiedByDomain <http://xmlns.com/foaf/0.1/Person> ;
+    :qualifiedBy      <http://vivo.duke.edu/vivo/ontology/duke-cv-extension#DukePastPosition> .
+
+local:personInDukePastPositionConfig a :ObjectPropertyDisplayConfig ;
+    :listViewConfigFile "listViewConfig-personInDukePastPosition.xml"^^xsd:string ;
+    :displayName "duke appointment history" ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
+    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
