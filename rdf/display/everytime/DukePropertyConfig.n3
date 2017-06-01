@@ -209,3 +209,16 @@ local:personInDukePastPositionConfig a :ObjectPropertyDisplayConfig ;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
     :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
+
+local:relatedGift a :ConfigContext ;
+    :hasConfiguration local:relatedGiftConfig ;
+    :configContextFor vivo:relatedBy ;
+    :qualifiedByDomain <http://xmlns.com/foaf/0.1/Person> ;
+    :qualifiedBy      <http://vivo.duke.edu/vivo/ontology/duke-cv-extension#Gift> .
+
+local:relatedGiftConfig a :ObjectPropertyDisplayConfig ;
+    :listViewConfigFile "listViewConfig-relatesGift.xml"^^xsd:string ;
+    :displayName "gifts and other support" ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
+    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
