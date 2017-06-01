@@ -89,11 +89,11 @@ public class PersonFields extends DukeContextNodeFields {
           + "   OPTIONAL { ?person duke:profileUrl ?profileUrl . }\n"
           + "   OPTIONAL { ?person duke:mentorshipAvailability ?mentorAvail . }\n"
           + "   OPTIONAL { ?person duke:mentoringOverview ?mentorOverview . }\n"
-          + "   OPTIONAL { ?personUri dukecv:interestsOverview ?interestsOverview } \n"
-          + "   OPTIONAL { ?personUri dukecv:teachingOverview ?teachingOverview } \n"
-          + "   OPTIONAL { ?personUri dukecv:academicAdministrativeOverview ?administrativeOverview } \n"
-          + "   OPTIONAL { ?personUri dukecv:clinicalOverview ?clinicalOverview } \n"
-          + "   OPTIONAL { ?personUri dukecv:NonAppointmentsOverview ?positionsOverview } \n"
+          + "   OPTIONAL { ?person dukecv:interestsOverview ?interestsOverview } \n"
+          + "   OPTIONAL { ?person dukecv:teachingOverview ?teachingOverview } \n"
+          + "   OPTIONAL { ?person dukecv:academicAdministrativeOverview ?administrativeOverview } \n"
+          + "   OPTIONAL { ?person dukecv:clinicalOverview ?clinicalOverview } \n"
+          + "   OPTIONAL { ?person dukecv:NonAppointmentsOverview ?positionsOverview } \n"
           + "   FILTER (?person= ?uri) \n"
           + "}";
 
