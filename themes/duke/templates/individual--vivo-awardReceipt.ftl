@@ -9,7 +9,6 @@
 <#include "individual-setup.ftl">
 <#import "lib-vivo-properties.ftl" as vp>
 
-<#assign dukeact = "http://vivo.duke.edu/vivo/ontology/duke-activity-extension#">
 
 <header>
   <#assign awardReceiptLabel>
@@ -17,29 +16,58 @@
   </#assign>
   <h1>${awardReceiptLabel}</h1>
 
+  
+
+  <#assign award = propertyGroups.pullProperty("${core}relates", "${core}Award")!>
+  <#assign awardStatement = award.statements[0]>
+  award statement: ${awardStatement}
+
+  <#if awardStatement.description??>
+    <#assign awardDescription = awardStatement.description>
+    <p>Award Description: ${awardDescription}</p>
+  </#if>
+
+  <p>Award: ${award}</p>
+ 
+  <#if award?has_content>
+    <p>award is related</p>
+  </#if>
+  
+
   <#-- service type -->
+
   <#assign serviceType = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#serviceType")!>
   <#if serviceType?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-    <div>
-      <p id="service-type">${dataPropertyValue(serviceType)}</p>
-    </div>
+    is there a service type?
+    <#-- <div> -->
+      <#-- <p id="service-type">${dataPropertyValue(serviceType)}</p> --> 
+    <#-- </div> -->
   </#if>
 
-  <#assign description = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#description")!>
+
+  <#-- description -->
+
+  <#assign description = propertyGroups.pullProperty("http://vivoweb.org/ontology/core#description")!>
   <#if description?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-    <div class="abstract">
-      <p>${dataPropertyValue(description)}</p>
-    </div>
+    is there a description?
+     <div class="abstract">
+       <p>${dataPropertyValue(description)}</p>
+     </div>
   </#if>
+
 
   <#-- link to webpage -->
+
   <#assign linkToItem = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#linkToItem")!>
   <#if linkToItem?has_content && (linkToItem.statements)?has_content>
-    <#assign linkValue = "${linkToItem.statements[0].value}"/>
-    <#assign linkUrl = "<a href=\"${linkValue}\" target=\"_blank\">Link</a>">
+    is there a link?
+    <#-- <p>${dataPropertyValue(linkToItem)}</p> -->
+    <#-- <#assign linkValue = "${linkToItem.statements[0].value}"/> -->
+    <#-- <#assign linkUrl = "<a href=\"${linkValue}\" target=\"_blank\">Link</a>"> -->
 
-    <p id="weblink"><img class="icon-uri middle" src="/images/individual/uriIcon.gif" alt="uri icon" style="inline"> ${linkUrl}</p>
+    <#-- <p id="weblink"><img class="icon-uri middle" src="/images/individual/uriIcon.gif" alt="uri icon" style="inline"> ${linkUrl}</p> -->
   </#if>
+
 </header>
 
 

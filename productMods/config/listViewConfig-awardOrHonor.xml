@@ -13,6 +13,7 @@
         PREFIX rdfs:  &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
         PREFIX vitro: &lt;http://vitro.mannlib.cornell.edu/ns/vitro/0.7#&gt;
         PREFIX dukeact: &lt;http://vivo.duke.edu/vivo/ontology/duke-activity-extension#&gt;
+        PREFIX duke:    &lt;http://vivo.duke.edu/vivo/ontology/duke-extension#&gt;
 
         SELECT DISTINCT ?awardReceipt
                         ?award
@@ -22,6 +23,8 @@
                         ?dateTime
                         ?precision
                         ?serviceType
+                        ?linkToItem
+                        ?description
         WHERE {
                     ?subject ?property ?awardReceipt .
                     ?awardReceipt a core:AwardReceipt .
@@ -33,11 +36,11 @@
                     OPTIONAL { ?awardReceipt core:assignedBy ?conferredBy .
                                ?conferredBy rdfs:label ?conferredByLabel
                     }                
-                    OPTIONAL {
-                      ?award dukeact:serviceType ?serviceType
-                    }
                     OPTIONAL { ?award rdfs:label ?awardLabel }
-                     OPTIONAL { ?awardReceipt core:dateTimeValue ?dateTimeValue .
+                    OPTIONAL { ?award dukeact:serviceType ?serviceType }
+                    OPTIONAL { ?award duke:linkToItem ?linkToItem }
+                    OPTIONAL { ?award core:description ?description }
+                    OPTIONAL { ?awardReceipt core:dateTimeValue ?dateTimeValue .
                                 ?dateTimeValue core:dateTime ?dateTime .
                                 ?dateTimeValue core:dateTimePrecision ?precision.
                               }  
@@ -50,6 +53,7 @@
             PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; 
             PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
             PREFIX dukeact: &lt;http://vivo.duke.edu/vivo/ontology/duke-activity-extension#&gt;
+            PREFIX duke:    &lt;http://vivo.duke.edu/vivo/ontology/duke-extension#&gt;
 
             CONSTRUCT {
                 ?subject ?property ?awardReceipt .
@@ -59,6 +63,8 @@
                 ?award core:relatedBy ?awardReceipt . 
                 ?award rdfs:label ?awardLabel .
                 ?award dukeact:serviceType ?serviceType .
+                ?award duke:linkToItem ?linkToItem .
+                ?award core:description ?description .
                 ?awardReceipt core:assignedBy ?conferredBy .
                 ?conferredBy rdfs:label ?conferredByLabel .
                 ?awardReceipt core:dateTimeValue ?dateTimeValue .
@@ -82,6 +88,20 @@
                 ?award a core:Award .
                 ?award core:relatedBy ?awardReceipt .
                 ?award dukeact:serviceType ?serviceType
+            } UNION {
+                ?subject ?property ?awardReceipt .
+                ?awardReceipt a core:AwardReceipt .
+                ?awardReceipt core:relates ?award .
+                ?award a core:Award .
+                ?award core:relatedBy ?awardReceipt .
+                ?award duke:linkToItem ?linkToItem
+            } UNION {
+                ?subject ?property ?awardReceipt .
+                ?awardReceipt a core:AwardReceipt .
+                ?awardReceipt core:relates ?award .
+                ?award a core:Award .
+                ?award core:relatedBy ?awardReceipt .
+                ?award core:description ?description
             } UNION {
                 ?subject ?property ?awardReceipt .
                 ?awardReceipt a core:AwardReceipt .
