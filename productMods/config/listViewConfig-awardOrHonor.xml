@@ -117,5 +117,7 @@
         }
     </query-construct>
 
+    <template>propStatement-awardOrHonor-entity.ftl</template>
     <template>propStatement-awardOrHonor.ftl</template>
+
 </list-view-config>
