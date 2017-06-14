@@ -17,15 +17,23 @@
   </#assign>
   <h1>${awardReceiptLabel}</h1>
 
+  <br><br>
   <#assign award = propertyGroups.pullProperty("${core}relates", "${core}Award")!>
+  <#if award?has_content>
+    <@simpleObjectPropertyListing award "Award" />
+  </#if>
+
+  <br><br>
   <#assign awardStatement = award.statements[0]>
+  <#if awardStatement.
 
   <p>awardStatement: ${awardStatement}</p>
+
   <#if awardStatement.serviceType??>
     <#assign awardServiceType = awardStatement.serviceType>
-    <div> award service type: "${awardServiceType}" </div>
+    <p> award service type: "${awardServiceType}" </p>
   <#else>
-    <div>It's not finding any serviceType info</div>
+    <p>It's not finding any serviceType info</p>
   </#if>
 
   <p>relates award: ${award}</p>
@@ -37,7 +45,13 @@
   <p> <a href="${profileUrl(awardUri)}">link to award</a> </p>
 
 
+  <#assign thing = individual.uri!""/>
 
+  <#assign thingtwo>
+      <@p.mostSpecificTypes individual />
+  </#assign>
+  <h1>${thingtwo}</h1>
+ 
   <br>
   <br>
 
