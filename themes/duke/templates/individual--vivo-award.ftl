@@ -13,7 +13,7 @@
   <#assign awardLabel>
     <@p.label individual false 1 />
   </#assign>
-  <h1>${awardLabel}</h1>
+  <h1 style="margin-bottom:15px;">${awardLabel}</h1>
 
   <#-- service type -->
   <#assign serviceType = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#serviceType")!>
@@ -35,7 +35,7 @@
   <#assign linkToItem = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#linkToItem")!>
   <#if linkToItem?has_content && (linkToItem.statements)?has_content>
   	<#assign linkValue = "${linkToItem.statements[0].value}"/>
-    <#assign linkUrl = "<a href=\"${linkValue}\" target=\"_blank\">${dataPropertyValue(linkToItem)}</a>">
+    <#assign linkUrl = "<a href=\"${linkValue}\" target=\"_blank\">Link to Item</a>">
     <p id="weblink"><img class="icon-uri middle" src="/images/individual/uriIcon.gif" alt="uri icon" style="inline"> ${linkUrl}</p>
   </#if>
 </header>

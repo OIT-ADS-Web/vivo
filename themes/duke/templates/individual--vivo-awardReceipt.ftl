@@ -14,13 +14,14 @@
   <#assign awardReceiptLabel>
     <@p.label individual false 1 />
   </#assign>
-  <h1>${awardReceiptLabel}</h1>
+  <h1 style="margin-bottom:15px;">${awardReceiptLabel}</h1>
 
   <#assign thingtwo>
     <@p.mostSpecificTypes individual />
   </#assign>
-  <h3>Award Receipt</h3>
-
+  <ul role="list">
+    <li role="listitem" style="font-size:18.75px;">Award Receipt</li>
+  </ul>
 </header>
 
 <section id="topcontainer" class="main-content document">
