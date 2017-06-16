@@ -36,15 +36,26 @@
                     OPTIONAL { ?awardReceipt core:assignedBy ?conferredBy .
                                ?conferredBy rdfs:label ?conferredByLabel
                     }                
-                    OPTIONAL { ?award rdfs:label ?awardLabel }
-                    OPTIONAL { ?award dukeact:serviceType ?serviceType }
-                    OPTIONAL { ?award duke:linkToItem ?linkToItem }
-                    OPTIONAL { ?award core:description ?description }
+                    OPTIONAL { ?awardReceipt core:relates ?award .
+                                ?award a core:Award .
+                                ?award core:relatedBy ?awardReceipt .
+                                ?award dukeact:serviceType ?serviceType 
+                    }
+                    OPTIONAL { ?awardReceipt core:relates ?award .
+                                ?award a core:Award .
+                                ?award core:relatedBy ?awardReceipt .
+                                ?award duke:linkToItem ?linkToItem 
+                    }
+                    OPTIONAL { ?awardReceipt core:relates ?award .
+                                ?award a core:Award .
+                                ?award core:relatedBy ?awardReceipt .
+                                ?award core:description ?description 
+                    }
                     OPTIONAL { ?awardReceipt core:dateTimeValue ?dateTimeValue .
                                 ?dateTimeValue core:dateTime ?dateTime .
                                 ?dateTimeValue core:dateTimePrecision ?precision.
-                              }  
-                    }  ORDER BY  DESC(?dateTime) ?awardLabel
+                    }  
+              }  ORDER BY  DESC(?dateTime) ?awardLabel
   </query-select>
 
     <query-construct>
@@ -117,7 +128,6 @@
         }
     </query-construct>
 
-    <template>propStatement-awardOrHonor-entity.ftl</template>
     <template>propStatement-awardOrHonor.ftl</template>
 
 </list-view-config>
