@@ -118,14 +118,21 @@ public class PersonExcluder implements SearchIndexExcluder {
 
   @Override
   public String checkForExclusion(Individual ind) {
-    // NOTE: return null means to *NOT* exclude
-    JSONObject json = findAlias(ind);
-    
-    boolean hasAlias = hasResult(json);
+    // NOTE: returning null means to *NOT* exclude
     String results = null;
+    
+    List<String> specificTypes = ind.getMostSpecificTypeURIs();
 
-    if (!(hasAlias)) { 
-      results = "SKIP " + ind.getURI();
+    // don't look for a PersonProfile record for anything *other* than these
+    if (specificTypes.contains("http://vivoweb.org/ontology/core#NonFacultyAcademic")
+       || specificTypes.contains("http://vivoweb.org/ontology/core#FacultyMember")) {
+
+     JSONObject json = findAlias(ind);
+    
+      boolean hasAlias = hasResult(json);
+      if (!(hasAlias)) { 
+        results = "SKIP " + ind.getURI();
+      }
     }
 
     return results;
