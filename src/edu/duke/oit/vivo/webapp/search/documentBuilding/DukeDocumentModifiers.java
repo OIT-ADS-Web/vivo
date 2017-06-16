@@ -14,6 +14,7 @@ import edu.cornell.mannlib.vitro.webapp.rdfservice.RDFServiceFactory;
 import edu.cornell.mannlib.vitro.webapp.rdfservice.impl.RDFServiceUtils;
 
 import edu.cornell.mannlib.vitro.webapp.search.documentBuilding.DocumentModifier;
+import edu.cornell.mannlib.vitro.webapp.search.documentBuilding.SearchIndexExcluder;
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.GrantFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.CourseFields;
@@ -60,6 +61,9 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.PublicationAuthors;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PublicationAuthorsCustomFields; 
  
 import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeJSONContextNodeFields;
+
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonExcluder;
+
 
 public class DukeDocumentModifiers implements javax.servlet.ServletContextListener{
 
@@ -125,6 +129,12 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
         publicationAuthors.setIsFaceting(true);
 
         modifiers.add( publicationAuthors );
+
+        List<SearchIndexExcluder> excludes = 
+            (List<SearchIndexExcluder>)context.getAttribute("SearchIndexExcludes");
+     
+        excludes.add(new PersonExcluder(rdfServiceFactory));       
+ 
     }
 
     @Override
