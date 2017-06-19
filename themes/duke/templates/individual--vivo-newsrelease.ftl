@@ -1,4 +1,4 @@
-<#-- Individual profile page template for foaf:Person individuals -->
+<#-- Individual profile page template for vivo:NewsRelease individuals -->
 <script type="text/javascript">
   $('body').addClass('entity');
   $('#main-nav a[href="/research"]').addClass('selected');

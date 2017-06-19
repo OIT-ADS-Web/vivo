@@ -10,7 +10,15 @@
 <@showStatement statement />
 
 <#macro showStatement statement>
+	<#local linkedIndividual>
+		<#if statement.gift??>
+	  	<a href="${profileUrl(statement.uri("gift"))}" data-uri="${statement.uri("gift")}" data-label="${statement.label!statement.label!}" title="gift name">${statement.label!}</a>
+	  <#else>
+	    <#-- This shouldn't happen, but we must provide for it -->
+	    <a href="${profileUrl(statement.uri("gift"))}" title="missing gift">missing gift</a>
+	  </#if>
+	</#local>
 
-  ${statement.label}. ${statement.donor}. <@dt.yearIntervalSpan "${statement.dateTimeStart!}" "${statement.dateTimeEnd!}" />
+   ${linkedIndividual}. ${statement.donor}. <@dt.yearIntervalSpan "${statement.dateTimeStart!}" "${statement.dateTimeEnd!}" />
 
 </#macro>
