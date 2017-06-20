@@ -8,21 +8,21 @@
 <#include "individual-setup.ftl">
 <#import "lib-vivo-properties.ftl" as vp>
 
+
 <section id="topcontainer" class="main-content document">
   <section id="individual-info" ${infoClass!} role="region">
     <header>
       <h1><@p.label individual false 1 /></h1>
+      <#-- Description -->
+      <#assign description = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-cv-extension#description")!> 
+      <#if description?has_content>
+         <div class="abstract">
+           <p>${dataPropertyValue(description)}</p>
+         </div>
+      </#if>
     </header>
   </section>
-  <section id="individual-body" role="region" style="margin-top:-30px;">
-
-    <#-- Description -->
-    <#assign description = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-cv-extension#description")!> 
-    <#if description?has_content>
-       <div class="abstract">
-         <p>${dataPropertyValue(description)}</p>
-       </div>
-    </#if>
+  <section id="individual-body" role="region">
 
     <#-- Sponsor/Donor -->
     <!-- needs heading, carat w/ indent to make it look like an object property -->
@@ -37,9 +37,40 @@
     </#if>
 
     <#-- Contributors -->
-    <#assign contributor = propertyGroups.pullProperty("${core}relates")!>  
-    <#if contributor?has_content>  
-      <@simpleObjectPropertyListing contributor "Contributors" />  
+    <#assign contributors = propertyGroups.pullProperty("http://vivoweb.org/ontology/core#relates")!>
+    <#assign giftRole = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-cv-extension#role")!> 
+
+    <#macro giftPropertyListItem property statement editable >
+      <#if property.rangeUri?? >
+        <#local rangeUri = property.rangeUri /> 
+      <#else>
+        <#local rangeUri = "" /> 
+      </#if>
+      <li role="listitem">    
+        <#nested>       
+          <a href="${profileUrl(statement.uri("object"))}" title="${i18n().name}">${statement.label!statement.localName!}</a>&nbsp;${dataPropertyValue(giftRole)}
+      </li>
+    </#macro> 
+
+    <#macro giftObjectPropertyList property editable statements=property.statements template=property.template>
+      <#list statements as statement>
+        <@giftPropertyListItem property statement editable></@giftPropertyListItem>
+      </#list>
+    </#macro>
+
+    <#macro giftObjectProperty property editable template=property.template>
+      <@giftObjectPropertyList property editable property.statements template />
+    </#macro>
+
+    <#macro giftSimpleObjectPropertyListing property label template=property.template>
+      <h3 id='${label?replace(" ", "")}'>${label} </h3>
+      <ul id='individual-${label?replace(" ", "")}' role="list">
+        <@giftObjectProperty property false template />
+      </ul>
+    </#macro>
+
+    <#if contributors?has_content>  
+      <@giftSimpleObjectPropertyListing contributors "Contributors" />
     </#if>  
 
     <#-- Amount -->
@@ -64,5 +95,5 @@
 </section>
 
 <section id="rightColumn" class="sidebar">
-
 </section>
+
