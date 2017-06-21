@@ -514,6 +514,10 @@
   </owl:Class>
 
   <!-- View Customizations -->
+  <rdf:Description rdf:about="http://vivoweb.org/ontology/core#Award">
+      <vitro:customDisplayViewAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">individual--vivo-award.ftl</vitro:customDisplayViewAnnot>
+  </rdf:Description>
+
   <rdf:Description rdf:about="http://vivoweb.org/ontology/core#AwardReceipt">
       <vitro:customDisplayViewAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">individual--vivo-awardReceipt.ftl</vitro:customDisplayViewAnnot>
   </rdf:Description>
