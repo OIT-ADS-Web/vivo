@@ -20,12 +20,17 @@
     <@p.mostSpecificTypes individual />
   </#assign>
   <ul role="list">
-    <li role="listitem" style="font-size:18.75px;">Award Receipt</li>
+    <li role="listitem" style="font-size:18.75px;">
+      <span id="award-type"></span>
+    </li>
   </ul>
+
+  <div id="award-description"></div>
+  <div id="award-weblink"></div>
 </header>
 
 <section id="topcontainer" class="main-content document">
-  <section id="individual-body" role="region">
+  <section id="individual-body" role="region" style="margin-top:-40px;">
     <ul class="section-navigation">
       <#assign org = propertyGroups.pullProperty("http://vivoweb.org/ontology/core#assignedBy")!>
       <#if org?has_content>
@@ -44,11 +49,15 @@
         <@simpleObjectPropertyListing awardedDate "Award Date" />
       </#if>
 
-      <#assign award = propertyGroups.pullProperty("${core}relates", "${core}Award")!>
-      <#if award?has_content>
-        <@simpleObjectPropertyListing award "Award" />
-      </#if>
-
     </ul>
   </section>
 </section>
+
+<#assign award = propertyGroups.pullProperty("${core}relates", "${core}Award")!>
+<#assign awardUri = "${award?replace('rec|http://vivoweb.org/ontology/core#relates on https://scholars.duke.edu/individual/', '', 'r')}">
+
+<script type="text/javascript">
+  $('#award-type').load('/display/${awardUri} #service-type');
+  $('#award-description').load('/display/${awardUri} .abstract');
+  $('#award-weblink').load('/display/${awardUri} #weblink');
+</script>
