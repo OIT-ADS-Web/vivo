@@ -129,5 +129,6 @@
     </query-construct>
 
     <template>propStatement-awardOrHonor.ftl</template>
-
+    
 </list-view-config>
+

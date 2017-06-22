@@ -35,7 +35,7 @@
   <#assign linkToItem = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#linkToItem")!>
   <#if linkToItem?has_content && (linkToItem.statements)?has_content>
   	<#assign linkValue = "${linkToItem.statements[0].value}"/>
-    <#assign linkUrl = "<a href=\"${linkValue}\" target=\"_blank\">Link to Item</a>">
+    <#assign linkUrl = "<a href=\"${linkValue}\" target=\"_blank\">Link</a>">
     <p id="weblink"><img class="icon-uri middle" src="/images/individual/uriIcon.gif" alt="uri icon" style="inline"> ${linkUrl}</p>
   </#if>
 </header>
@@ -49,4 +49,8 @@
       </#if>
     </ul>
   </section>
+<<<<<<< HEAD
 </section>
+=======
+</section>
+>>>>>>> FDP-2908_fix_award_entity_page
