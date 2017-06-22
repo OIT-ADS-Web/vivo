@@ -78,8 +78,9 @@
       <#assign leadershipPositions = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-cv-extension#NonAppointmentsOverview")!>
       <#assign dukePastPositions = propertyGroups.pullProperty("${core}relatedBy", "http://vivo.duke.edu/vivo/ontology/duke-cv-extension#DukePastPosition")!>
       <#assign licenses = propertyGroups.pullProperty("${core}relatedBy", "http://vivo.duke.edu/vivo/ontology/duke-cv-extension#MedicalLicensure")!>
+      <#assign nonDukePositions = propertyGroups.pullProperty("${core}relatedBy", "http://vivo.duke.edu/vivo/ontology/duke-cv-extension#NonDukePosition")!>
 
-      <#if educations?has_content || leadershipPositions?has_content || dukePastPositions?has_content || licenses?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+      <#if educations?has_content || leadershipPositions?has_content || dukePastPositions?has_content || licenses?has_content || nonDukePositions?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
         <li class="section-group-header">Background</li>
       </#if>
 
@@ -88,6 +89,9 @@
 
       <#-- Medical Licensure -->
       <@collapsiblePropertyListSection "Medical Licensure" licenses editable />
+
+      <#-- Duke Appointment History -->
+      <@collapsiblePropertyListSection "Duke Appointment History" dukePastPositions editable />
 
       <#-- Leadership & Clinical Positions at Duke -->
       <#if leadershipPositions?has_content>
@@ -108,8 +112,8 @@
         </li>
       </#if>
 
-      <#-- Duke Appointment History -->
-      <@collapsiblePropertyListSection "Duke Appointment History" dukePastPositions editable />
+      <#-- Academic Positions Outside Duke -->
+      <@collapsiblePropertyListSection "Academic Positions Outside Duke" nonDukePositions editable />
 
 
       <#assign newsfeeds = propertyGroups.pullProperty("${core}relatedBy", "${core}NewsRelease")!>

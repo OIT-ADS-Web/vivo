@@ -235,3 +235,16 @@ local:relatedMedicalLicensureConfig a :ObjectPropertyDisplayConfig ;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
     :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
+
+local:relatedNonDukePosition a :ConfigContext ;
+    :hasConfiguration local:relatedNonDukePositionConfig ;
+    :configContextFor vivo:relatedBy ;
+    :qualifiedByDomain <http://xmlns.com/foaf/0.1/Person> ;
+    :qualifiedBy      <http://vivo.duke.edu/vivo/ontology/duke-cv-extension#NonDukePosition> .
+
+local:relatedNonDukePositionConfig a :ObjectPropertyDisplayConfig ;
+    :listViewConfigFile "listViewConfig-relatesNonDukePosition.xml"^^xsd:string ;
+    :displayName "Previous Academic Positions and Visiting Professorships" ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
+    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
