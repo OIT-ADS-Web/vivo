@@ -92,6 +92,7 @@
                ?position ?positionProperty ?positionValue 
             } UNION {
                ?subject ?property ?position .
+               ?position a core:Position .
                ?position core:relates ?person .
                ?person a foaf:Person .
                ?person rdfs:label ?personName   
