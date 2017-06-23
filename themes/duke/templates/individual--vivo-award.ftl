@@ -49,8 +49,4 @@
       </#if>
     </ul>
   </section>
-<<<<<<< HEAD
 </section>
-=======
-</section>
->>>>>>> FDP-2908_fix_award_entity_page

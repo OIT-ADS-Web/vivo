@@ -56,7 +56,7 @@
                                 ?dateTimeValue core:dateTimePrecision ?precision.
                     }  
               }  ORDER BY  DESC(?dateTime) ?awardLabel
-  </query-select>
+    </query-select>
 
     <query-construct>
             PREFIX bibo: &lt;http://purl.org/ontology/bibo/&gt;
@@ -131,4 +131,3 @@
     <template>propStatement-awardOrHonor.ftl</template>
     
 </list-view-config>
-
