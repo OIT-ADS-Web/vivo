@@ -24,12 +24,12 @@
   </section>
   <section id="individual-body" role="region">
 
-    <#-- Sponsor/Donor -->
+    <#-- Awarded By (aka Sponsor/Donor) -->
     <!-- needs heading, carat w/ indent to make it look like an object property -->
     <#assign donor = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-cv-extension#donor")!>
     <#if donor?has_content>
       <div class="donor">
-        <h3>Sponsor/Donor</h3>
+        <h3>Awarded By</h3>
         <ul id="individual-sponsor-donors" role="list">
           <li role="listitem">${dataPropertyValue(donor)}</li>
         </ul>
