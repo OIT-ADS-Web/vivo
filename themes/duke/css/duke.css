@@ -2373,7 +2373,7 @@ h2 a.expanderLink {
 /*individual entity pages*/
 .entity .document h1,
 .entity .grant h1 {
-	line-height: 1.1em;
+	line-height: 1.3em;
 	margin-bottom: 15px;
 }
 
@@ -2396,11 +2396,12 @@ h2 a.expanderLink {
 
 .entity .grant #individual-body ul {
 	list-style: disc outside url(../../../images/individual/arrow-green.gif);
+	padding: 12px 8px;
 }
 
 .entity .grant #individual-body ul li {
-	font-size: 1.3em;
-	line-height: 1.8em;
+	font-size: 14.4px;
+	line-height: 18.7167px;
 	margin-left: 8px;
 }
 

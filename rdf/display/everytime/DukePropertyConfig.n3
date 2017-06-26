@@ -244,7 +244,7 @@ local:relatedNonDukePosition a :ConfigContext ;
 
 local:relatedNonDukePositionConfig a :ObjectPropertyDisplayConfig ;
     :listViewConfigFile "listViewConfig-relatesNonDukePosition.xml"^^xsd:string ;
-    :displayName "Previous Academic Positions and Visiting Professorships" ;
+    :displayName "Academic Positions Outside Duke" ;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
     :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
