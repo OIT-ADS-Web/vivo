@@ -20,7 +20,7 @@
                         ?endDatePrecision
 
         WHERE {
-          ?subject ?property ?event
+          ?subject ?property ?event .
           OPTIONAL { ?event rdfs:label ?title } 
           OPTIONAL { ?event core:description ?description.}
           OPTIONAL { ?event dukeart:venue ?venue.}
