@@ -8,8 +8,9 @@
         PREFIX vitro: &lt;http://vitro.mannlib.cornell.edu/ns/vitro/0.7#&gt;
         PREFIX duke: &lt;http://vivo.duke.edu/vivo/ontology/duke-extension#&gt;
         PREFIX dukeart: &lt;http://vivo.duke.edu/vivo/ontology/duke-art-extension#&gt;
+        PREFIX event: &lt;http://purl.org/NET/c4dm/event.owl#&gt;
 
-        SELECT DISTINCT <collated> ?subclass </collated>
+        SELECT
                         ?event
                         ?title
                         ?description
@@ -21,6 +22,7 @@
 
         WHERE {
           ?subject ?property ?event .
+          ?event a event:Event .
           OPTIONAL { ?event rdfs:label ?title } 
           OPTIONAL { ?event core:description ?description.}
           OPTIONAL { ?event dukeart:venue ?venue.}
@@ -33,26 +35,23 @@
                      ?endDateTimeValue core:dateTimePrecision ?endDatePrecision .
                    }
             
-          <collated>
-          OPTIONAL { ?event a ?subclass }
-          FILTER ( afn:namespace(?subclass) != "http://vitro.mannlib.cornell.edu/ns/vitro/0.7#" )   
-          </collated>
-        } ORDER BY <collated> ?subclass </collated> DESC(?startDate) DESC(?endDate) ASC( ?title )
+        } ORDER BY DESC(?startDate) DESC(?endDate) ASC(?title)
     </query-select>
 
     <query-construct>
         PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;  
         PREFIX vitro: &lt;http://vitro.mannlib.cornell.edu/ns/vitro/0.7#&gt;
+        PREFIX event: &lt;http://purl.org/NET/c4dm/event.owl#&gt;
         CONSTRUCT {
             ?subject ?property ?event .
-            ?event a ?subclass .
+            ?event a event:Event .
             ?event rdfs:label ?title .
         } WHERE {
             { 
                 ?subject ?property ?event .
             } UNION {                
                 ?subject ?property ?event .
-                ?event a ?subclass . 
+                ?event a event:Event . 
             } UNION {
                 ?subject ?property ?event .
                 ?event rdfs:label ?title .
@@ -64,6 +63,7 @@
         PREFIX core: &lt;http://vivoweb.org/ontology/core#&gt;
         PREFIX dukeart: &lt;http://vivo.duke.edu/vivo/ontology/duke-art-extension#&gt;
         PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+        PREFIX event: &lt;http://purl.org/NET/c4dm/event.owl#&gt;
         CONSTRUCT {
             ?subject ?property ?event .
             ?event core:description ?description .
@@ -85,8 +85,10 @@
         PREFIX core: &lt;http://vivoweb.org/ontology/core#&gt;
         PREFIX dukeart: &lt;http://vivo.duke.edu/vivo/ontology/duke-art-extension#&gt;
         PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+        PREFIX event: &lt;http://purl.org/NET/c4dm/event.owl#&gt;
         CONSTRUCT {
             ?subject ?property ?event .
+            ?event a event:Event .
             ?event core:start ?startDateTimeValue .
             ?startDateTimeValue core:dateTime ?startDate .
             ?startDateTimeValue core:dateTimePrecision ?startDatePrecision .
@@ -106,8 +108,10 @@
         PREFIX core: &lt;http://vivoweb.org/ontology/core#&gt;
         PREFIX dukeart: &lt;http://vivo.duke.edu/vivo/ontology/duke-art-extension#&gt;
         PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+        PREFIX event: &lt;http://purl.org/NET/c4dm/event.owl#&gt;
         CONSTRUCT {
             ?subject ?property ?event .
+            ?event a event:Event .
             ?event core:end ?endDateTimeValue .
             ?endDateTimeValue core:dateTime ?endDate .
             ?endDateTimeValue core:dateTimePrecision ?endDatePrecision .

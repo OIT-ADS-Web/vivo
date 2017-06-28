@@ -373,4 +373,8 @@
    <rdf:Description rdf:about="http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticRelationship">
        <vitro:customDisplayViewAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">individual--dukeart-artistic-relationship.ftl</vitro:customDisplayViewAnnot>
    </rdf:Description>
+
+   <rdf:Description rdf:about="http://purl.org/NET/c4dm/event.owl#Event">
+       <vitro:customDisplayViewAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">individual--event.ftl</vitro:customDisplayViewAnnot>
+   </rdf:Description>
 </rdf:RDF>

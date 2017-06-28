@@ -89,10 +89,16 @@
       <@simpleObjectPropertyListing relatedWorks "Related Works" "propStatement-relatedArtisticWork.ftl" />
     </#if>
 
-    <#-- events -->
-    <#assign events = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0002233", "http://purl.org/NET/c4dm/event.owl#Event")!>
+    <#-- events (new - how they are linked now) -->
+    <#assign events = propertyGroups.pullProperty("http://purl.org/NET/c4dm/event.owl#isFactorOf", "http://purl.org/NET/c4dm/event.owl#Event")!>
     <#if events?has_content>
       <@simpleObjectPropertyListing events "Events" />
+    </#if>
+
+    <#-- old events (how they used to be linked, pre 1.1) -->
+    <#assign oldEvents = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0002233", "http://purl.org/NET/c4dm/event.owl#Event")!>
+    <#if oldEvents?has_content>
+      <@simpleObjectPropertyListing oldEvents "Old Events" />
     </#if>
 
   </section>
