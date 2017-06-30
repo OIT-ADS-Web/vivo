@@ -38,9 +38,16 @@
               </#list>
             </#if>
             <#-- If preferredTitle is unpopulated, display mostSpecificTypes -->
+            <style>
+              .no-preferred-title.display-title {
+                font-size: 15.167px;
+              }
+            </style>
+
             <#if ! (title.statements)?has_content>
-              <@p.mostSpecificTypes individual />
+              <div class="no-preferred-title" style="margin-left:-22px;"><@p.mostSpecificTypes individual /></div>
             </#if>
+
           </h2>
         </#if>
 
