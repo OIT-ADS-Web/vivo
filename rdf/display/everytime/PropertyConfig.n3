@@ -464,7 +464,7 @@ local:awardOrHonorContext a :ConfigContext ;
 
 local:awardOrHonorConfig a :ObjectPropertyDisplayConfig ;
     :listViewConfigFile "listViewConfig-awardOrHonor.xml"^^xsd:string ;
-    :displayName "awards and honors" ;
+    :displayName "awards & honors" ;
     vitro:displayRankAnnot 20;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
@@ -479,7 +479,7 @@ local:orgHasAwardOrHonorContext a :ConfigContext ;
 
 local:orgHasAwardOrHonorConfig a :ObjectPropertyDisplayConfig ;
     :listViewConfigFile "listViewConfig-awardOrHonor.xml"^^xsd:string ;
-    :displayName "awards and honors received" ;
+    :displayName "awards & honors received" ;
     vitro:displayRankAnnot 75;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
@@ -494,7 +494,7 @@ local:educationalTrainingContext a :ConfigContext ;
 
 local:educationalTrainingConfig a :ObjectPropertyDisplayConfig ;
     :listViewConfigFile "listViewConfig-educationalTraining.xml"^^xsd:string ;
-    :displayName "education, training, and certifications" ;
+    :displayName "education, training, & certifications" ;
     vitro:displayRankAnnot 10;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;

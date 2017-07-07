@@ -85,7 +85,7 @@
       </#if>
 
       <#-- Education -->
-      <@collapsiblePropertyListSection "Education" educations editable />
+      <@collapsiblePropertyListSection "Education, Training, & Certifications" educations editable />
 
       <#-- Medical Licensure -->
       <@collapsiblePropertyListSection "Medical Licensure" licenses editable />
@@ -179,11 +179,11 @@
         <#-- Mentorships -->
         <@collapsiblePropertyListSection "Mentorship" mentorships editable />
 
-        <#-- Mentorship Availability -->
+        <#-- Advising & Mentoring -->
         <#if availabilities?has_content || mentorOverview?has_content>
           <li class="section-collapsible" id="MentorshipAvailability">
             <a name="MentorshipAvailability" class="expanderLink" data-open-image="${urls.theme}/images/button_minus_large.png" data-closed-image="${urls.theme}/images/button_plus_large.png"><img src="${urls.theme}/images/button_plus_large.png"/></a>
-            <h3 id="mentorship-availabilities">Mentorship Availability<@verboseDisplay availabilities /></h3>
+            <h3 id="mentorship-availabilities">Advising & Mentoring<@verboseDisplay availabilities /></h3>
             <div class="hideshow" style="display:none">
               <#if mentorOverview?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
                 <@p.addLinkWithLabel mentorOverview editable />
