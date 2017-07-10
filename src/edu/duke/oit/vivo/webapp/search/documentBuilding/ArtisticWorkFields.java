@@ -10,13 +10,13 @@ import edu.cornell.mannlib.vitro.webapp.search.documentBuilding.ContextNodeField
 /*
  *
 
+# ********* 1st query:
+
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX core: <http://vivoweb.org/ontology/core#>
 PREFIX dukeart: <http://vivo.duke.edu/vivo/ontology/duke-art-extension#> 
 PREFIX bibo:     <http://purl.org/ontology/bibo/>
-
-# https://scholars.duke.edu/individual/art11234
 
 SELECT (CONCAT(?label, ' ', ?collaborators, ' ', ?workType, ' ', ?abstract) as ?result)
 WHERE {
@@ -25,9 +25,27 @@ WHERE {
   ?workUri rdfs:label ?label .
    OPTIONAL { ?workUri  dukeart:workType ?workType. } 
    OPTIONAL { ?workUri bibo:abstract ?abstract. }
-  FILTER(?workUri = <https://scholars.duke.edu/individual/art11234>)
+  FILTER(?workUri = <https://scholars.duke.edu/individual/art14240>)
 }
  
+
+# ******* second query:
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX core: <http://vivoweb.org/ontology/core#>
+PREFIX dukeart: <http://vivo.duke.edu/vivo/ontology/duke-art-extension#> 
+PREFIX bibo:     <http://purl.org/ontology/bibo/>
+
+SELECT (group_concat(distinct ?roles) as ?role)
+WHERE {
+  ?workUri a dukeart:ArtisticWork . 
+  ?workUri core:relatedBy ?relatedBy . 
+  ?relatedBy dukeart:roles ?roles . 
+  FILTER(?workUri = <https://scholars.duke.edu/individual/art14240>)
+} 
+group by ?roles
+
 */
 
 
@@ -61,9 +79,21 @@ public class ArtisticWorkFields extends DukeContextNodeFields {
           + "  FILTER(?workUri = ?uri) \n"
           + "}"; 
 
+    private static String queryForRoles = 
+          prefix
+          + "SELECT (group_concat(distinct ?roles) as ?role) \n"
+          + "WHERE { \n"
+          + "  ?workUri a dukeart:ArtisticWork . \n" 
+          + "  ?workUri core:relatedBy ?relatedBy . \n"
+          + "  ?relatedBy dukeart:roles ?roles . \n"
+          + "  FILTER(?workUri = ?uri) \n"
+          + "} \n"
+          + "group by ?roles";
+
     static List<String> queries = new ArrayList<String>();
     
     static{
         queries.add( queryForWorks );
+        queries.add( queryForRoles );
     }
 }
