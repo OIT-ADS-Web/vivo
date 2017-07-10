@@ -64,7 +64,7 @@ Rules cribbed from http://kuwamoto.org/2007/12/17/improved-pluralizing-in-php-ac
     'teaching',
     'service to the profession',
     'service to the university'
-    'outreach and engaged scholarship',
+    'outreach & engaged scholarship',
     'service to duke university'
 ]/>
 

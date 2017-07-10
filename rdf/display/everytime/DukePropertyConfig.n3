@@ -35,7 +35,7 @@ local:creatorInArtisticRelationshipContext a :ConfigContext ;
 
 local:creatorInArtisticRelationshipConfig a :ObjectPropertyDisplayConfig ;
     :listViewConfigFile "listViewConfig-creatorInArtisticRelationship.xml"^^xsd:string ;
-    :displayName "Artistic Works and Non-Print Media" ;
+    :displayName "Artistic Works & Non-Print Media" ;
     vitro:collateBySubclassAnnot
               "true"^^xsd:boolean;
     vitro:displayRankAnnot 15;
@@ -136,7 +136,7 @@ local:performsPresentation a :ConfigContext ;
 
 local:performsPresentationConfig a :ObjectPropertyDisplayConfig ;
     :listViewConfigFile "listViewConfig-performs.xml"^^xsd:string ;
-    :displayName "presentations and appearances" ;
+    :displayName "presentations & appearances" ;
     vitro:displayRankAnnot 15;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
@@ -150,7 +150,7 @@ local:performsOutreach a :ConfigContext ;
 
 local:performsOutreachConfig a :ObjectPropertyDisplayConfig ;
     :listViewConfigFile "listViewConfig-performs.xml"^^xsd:string ;
-    :displayName "outreach and engaged scholarship" ;
+    :displayName "outreach & engaged scholarship" ;
     vitro:displayRankAnnot 15;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
@@ -218,7 +218,7 @@ local:relatedGift a :ConfigContext ;
 
 local:relatedGiftConfig a :ObjectPropertyDisplayConfig ;
     :listViewConfigFile "listViewConfig-relatesGift.xml"^^xsd:string ;
-    :displayName "gifts and other support" ;
+    :displayName "gifts & other support" ;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
     :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .

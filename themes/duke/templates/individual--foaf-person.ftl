@@ -57,7 +57,7 @@
         <#assign positions = propertyGroups.pullProperty("${core}relatedBy", "${core}Position")!>
         <#if positions?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
           <#assign localName = positions.localName>
-          <h3 id="${localName}" class="mainPropGroup">Current Appointments and Affiliations <@p.verboseDisplay positions /></h3>
+          <h3 id="${localName}" class="mainPropGroup">Current Appointments & Affiliations <@p.verboseDisplay positions /></h3>
           <ul id="individual-personInPosition" role="list">
             <@p.objectProperty positions false />
           </ul>
@@ -147,15 +147,15 @@
       <#-- Selected Grants -->
       <@collapsiblePropertyListSection "Selected Grants" grants editable />
        
-      <#-- Gifts and Other Support -->
-      <@collapsiblePropertyListSection "Gifts and Other Support" gifts editable />
+      <#-- Gifts & Other Support -->
+      <@collapsiblePropertyListSection "Gifts & Other Support" gifts editable />
 
 
       <#assign authorships = propertyGroups.pullProperty("${core}relatedBy", "${core}Authorship")!>
       <#assign artisticRelationships = propertyGroups.pullProperty("${core}relatedBy", "http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticRelationship")!>
       <#assign artisticEvents = propertyGroups.pullProperty("http://purl.org/NET/c4dm/event.owl#isAgentIn", "http://purl.org/NET/c4dm/event.owl#Event")!>
       <#if authorships?has_content || artisticRelationships?has_content || artisticEvents?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-        <li class="section-group-header">Publications and Artistic Works</li>
+        <li class="section-group-header">Publications & Artistic Works</li>
         <#-- Publication -->
         <@collapsiblePropertyListSection "Publication" authorships editable />
         <#-- Artistic Works -->
