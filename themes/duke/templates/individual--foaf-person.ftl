@@ -171,7 +171,7 @@
       <#assign teachingOverview = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-cv-extension#teachingOverview")!>
 
       <#if courses?has_content || mentorships?has_content || mentorOverview?has_content || availabilities?has_content || teachingOverview?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-        <li class="section-group-header">Teaching and Mentoring</li>
+        <li class="section-group-header">Teaching & Mentoring</li>
 
         <#-- Courses -->
         <@collapsiblePropertyListSection "Course" courses editable />
@@ -239,7 +239,7 @@
       <#assign clinicalOverview = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-cv-extension#clinicalOverview")!>
 
       <#if presentations?has_content || outreach?has_content || profession?has_content || university?has_content || academicOverview?has_content || clinicalOverview?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-        <li class="section-group-header">Scholarly, Clinical, and Service Activities</li>
+        <li class="section-group-header">Scholarly, Clinical, & Service Activities</li>
         <#-- Professional Activities -->
         <@collapsiblePropertyListSection "Presentation" presentations editable />
         <@collapsiblePropertyListSection "Outreach" outreach editable />

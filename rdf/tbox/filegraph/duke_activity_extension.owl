@@ -43,7 +43,7 @@
     >-1</vitro:displayLimitAnnot>
     <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
     >-1</vitro:displayRankAnnot>
-  <rdfs:label xml:lang="en-US">Presentations & Appearances</rdfs:label>
+  <rdfs:label xml:lang="en-US">Presentations and Appearances</rdfs:label>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Instance of a professional activity: presentation or appearance</vitro:shortDef>
     <rdfs:subClassOf>
@@ -59,7 +59,7 @@
     >-1</vitro:displayLimitAnnot>
     <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
     >-1</vitro:displayRankAnnot>
-  <rdfs:label xml:lang="en-US">Outreach & Engaged Scholarship</rdfs:label>
+  <rdfs:label xml:lang="en-US">Outreach and Engaged Scholarship</rdfs:label>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Instance of a professional activity: outreach or engaged scholarship</vitro:shortDef>
     <rdfs:subClassOf>
