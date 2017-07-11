@@ -91,7 +91,6 @@ local:contributingRoleContext a :ConfigContext ;
     :qualifiedByDomain <http://vivoweb.org/ontology/core#Grant> ;
     :qualifiedBy      <http://vivoweb.org/ontology/core#ResearcherRole> .
 
-
 local:contributingRoleConfig a :ObjectPropertyDisplayConfig ;
     :listViewConfigFile "listViewConfig-contributingRole.xml"^^xsd:string ;
     :displayName "contributor to grant" ;
@@ -109,6 +108,20 @@ local:outcomeOfEventContext a :ConfigContext ;
 local:outcomeOfEventConfig a :ObjectPropertyDisplayConfig ;
     :listViewConfigFile "listViewConfig-outcomeOfEvent.xml"^^xsd:string ;
     :displayName "artistic event" ;
+    vitro:displayRankAnnot 15;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
+    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
+
+local:artisticEventLinkContext a :ConfigContext ;
+    :hasConfiguration local:artisticEventLinkConfig ;
+    :configContextFor <http://www.w3.org/2006/vcard/ns#hasURL> ;
+    :qualifiedByDomain <http://purl.org/NET/c4dm/event.owl#Event> ;
+    :qualifiedBy      <http://www.w3.org/2006/vcard/ns#URL> .
+
+local:artisticEventLinkConfig a :ObjectPropertyDisplayConfig ;
+    :listViewConfigFile "listViewConfig-link.xml"^^xsd:string ;
+    :displayName "link" ;
     vitro:displayRankAnnot 15;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
