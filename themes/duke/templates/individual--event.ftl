@@ -57,9 +57,8 @@
 
 
     <#-- Duke Artist -->
-    <#assign dukeArtist = propertyGroups.pullProperty("http://purl.org/NET/c4dm/event.owl#agent", "http://xmlns.com/foaf/0.1/Person")!>
+    <#assign dukeArtist = propertyGroups.pullProperty("http://purl.org/NET/c4dm/event.owl#agent")!>
     <#if dukeArtist?has_content>
-    there is a duke artist
       <@simpleObjectPropertyListing dukeArtist "Duke Artist" />
     </#if>
 
