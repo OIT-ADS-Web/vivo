@@ -32,7 +32,6 @@
         </#list>
       </#if>
 
-
       <#-- web link -->
       <#assign link = propertyGroups.pullProperty("http://www.w3.org/2006/vcard/ns#hasURL","http://www.w3.org/2006/vcard/ns#URL")!>
       <#if link?has_content && link.statements?has_content>
@@ -58,7 +57,7 @@
 
 
     <#-- Duke Artist -->
-    <#assign dukeArtist = propertyGroups.pullProperty("http://purl.org/NET/c4dm/event.owl#agent")!>
+    <#assign dukeArtist = propertyGroups.pullProperty("http://purl.org/NET/c4dm/event.owl#agent", "http://xmlns.com/foaf/0.1/Person")!>
     <#if dukeArtist?has_content>
     there is a duke artist
       <@simpleObjectPropertyListing dukeArtist "Duke Artist" />
@@ -70,13 +69,14 @@
     <#if startDate?has_content>
       <@simpleObjectPropertyListing startDate "Published or Release Date" />
     </#if>
+
+    <#-- End Date -->
     <#if endDate?has_content>
       <@simpleObjectPropertyListing endDate "End Date" />
     </#if>
 
-
-    <#-- related artistic work -->
-    <#assign relatedArt = propertyGroups.pullProperty("http://purl.org/NET/c4dm/event.owl#factor")!>
+    <#-- Related Artistic Work -->
+    <#assign relatedArt = propertyGroups.pullProperty("http://purl.org/NET/c4dm/event.owl#factor", "http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork")!>
     <#-- "http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork" -->
     <#if relatedArt?has_content>
     there is related artistic work

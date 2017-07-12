@@ -101,13 +101,13 @@ local:contributingRoleConfig a :ObjectPropertyDisplayConfig ;
 
 local:outcomeOfEventContext a :ConfigContext ;
     :hasConfiguration local:outcomeOfEventConfig ;
-    :configContextFor <http://purl.obolibrary.org/obo/RO_0002233> ;
-    :qualifiedByDomain <http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork> ;
+    :configContextFor <http://purl.org/NET/c4dm/event.owl#isAgentIn> ;
+    :qualifiedByDomain <http://xmlns.com/foaf/0.1/Person> ;
     :qualifiedBy      <http://purl.org/NET/c4dm/event.owl#Event> .
 
 local:outcomeOfEventConfig a :ObjectPropertyDisplayConfig ;
     :listViewConfigFile "listViewConfig-outcomeOfEvent.xml"^^xsd:string ;
-    :displayName "artistic event" ;
+    :displayName "Exhibitions, Screenings, & Performances" ;
     vitro:displayRankAnnot 15;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;

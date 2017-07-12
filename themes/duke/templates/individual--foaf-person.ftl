@@ -115,7 +115,6 @@
       <#-- Academic Positions Outside Duke -->
       <@collapsiblePropertyListSection "Academic Positions Outside Duke" nonDukePositions editable />
 
-
       <#assign newsfeeds = propertyGroups.pullProperty("${core}relatedBy", "${core}NewsRelease")!>
       <#assign awards = propertyGroups.pullProperty("${core}relatedBy", "${core}AwardReceipt")!>
       <#if newsfeeds?has_content || awards?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
@@ -136,7 +135,6 @@
         <@collapsiblePropertyListSection "GeographicFocus" regions editable />
       </#if>
 
-
       <#assign grants = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000053", "${core}ResearcherRole")!>
       <#assign gifts = propertyGroups.pullProperty("${core}relatedBy", "http://vivo.duke.edu/vivo/ontology/duke-cv-extension#Gift")!>
 
@@ -150,7 +148,6 @@
       <#-- Gifts & Other Support -->
       <@collapsiblePropertyListSection "Gifts & Other Support" gifts editable />
 
-
       <#assign authorships = propertyGroups.pullProperty("${core}relatedBy", "${core}Authorship")!>
       <#assign artisticRelationships = propertyGroups.pullProperty("${core}relatedBy", "http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticRelationship")!>
       <#assign artisticEvents = propertyGroups.pullProperty("http://purl.org/NET/c4dm/event.owl#isAgentIn", "http://purl.org/NET/c4dm/event.owl#Event")!>
@@ -161,7 +158,7 @@
         <#-- Artistic Works -->
         <@collapsiblePropertyListSection "ArtisticWork" artisticRelationships editable />
         <#-- Artistic Events -->
-        <@collapsiblePropertyListSection "ArtisticEvent" artisticEvents editable />
+        <@collapsiblePropertyListSection "Exhibitions, Screenings, & Performances" artisticEvents editable />
       </#if>
 
       <#assign courses = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000053", "${core}TeacherRole")!>
@@ -229,7 +226,6 @@
 
       </#if>
 
-
       <#assign presentations = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#performs","http://vivo.duke.edu/vivo/ontology/duke-activity-extension#Presentation")!>
       <#assign outreach = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#performs","http://vivo.duke.edu/vivo/ontology/duke-activity-extension#Outreach")!>
       <#assign profession = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-activity-extension#performs","http://vivo.duke.edu/vivo/ontology/duke-activity-extension#ServiceToTheProfession")!>
@@ -266,7 +262,6 @@
             <div style="clear:both"></div>
           </li>
         </#if>
-
 
         <#-- Clinical Activities -->
         <#if clinicalOverview?has_content>
