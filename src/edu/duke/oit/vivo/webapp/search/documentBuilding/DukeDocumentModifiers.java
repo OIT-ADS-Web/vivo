@@ -54,7 +54,8 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.SubjectHeadingOfFacet;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.SubjectHeadingPeopleFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.GeoSelfGoverningPersonFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.ArtisticWorkEventsFields;
- 
+import edu.duke.oit.vivo.webapp.search.documentBuilding.ArtisticWorkFields;
+  
 import edu.duke.oit.vivo.webapp.search.documentBuilding.ProfessionalActivityFields;
  
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PublicationAuthors; 
@@ -124,6 +125,8 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
         modifiers.add( new GeoSelfGoverningPersonFields (rdfServiceFactory));
 
         modifiers.add( new ArtisticWorkEventsFields (rdfServiceFactory));
+        modifiers.add( new ArtisticWorkFields (rdfServiceFactory));
+ 
         modifiers.add( new ProfessionalActivityFields (rdfServiceFactory));
  
         modifiers.add( new PublicationAuthors (rdfServiceFactory));
