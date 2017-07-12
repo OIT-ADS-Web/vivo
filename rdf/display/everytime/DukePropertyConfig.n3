@@ -107,7 +107,7 @@ local:outcomeOfEventContext a :ConfigContext ;
 
 local:outcomeOfEventConfig a :ObjectPropertyDisplayConfig ;
     :listViewConfigFile "listViewConfig-outcomeOfEvent.xml"^^xsd:string ;
-    :displayName "Exhibitions, Screenings, & Performances" ;
+    :displayName "exhibitions, screenings, & performances" ;
     vitro:displayRankAnnot 15;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
