@@ -89,7 +89,7 @@
       <@simpleObjectPropertyListing relatedWorks "Related Works" "propStatement-relatedArtisticWork.ftl" />
     </#if>
 
-    <#-- events (new - how they are linked now) -->
+    <#-- events -->
     <#assign events = propertyGroups.pullProperty("http://purl.org/NET/c4dm/event.owl#isFactorOf")!>
     <#if events?has_content>
       <@simpleObjectPropertyListing events "Events" />
