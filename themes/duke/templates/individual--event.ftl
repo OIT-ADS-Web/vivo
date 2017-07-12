@@ -75,10 +75,9 @@
     </#if>
 
     <#-- Related Artistic Work -->
-    <#assign relatedArt = propertyGroups.pullProperty("http://purl.org/NET/c4dm/event.owl#factor", "http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork")!>
+    <#assign relatedArt = propertyGroups.pullProperty("http://purl.org/NET/c4dm/event.owl#factor")!>
     <#-- "http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork" -->
     <#if relatedArt?has_content>
-    there is related artistic work
       <@simpleObjectPropertyListing relatedArt "Related Artistic Work" />
     </#if>
 

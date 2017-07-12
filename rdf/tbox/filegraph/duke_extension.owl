@@ -629,5 +629,18 @@
   </owl:ObjectProperty>
 
 
+  <!-- http://purl.org/NET/c4dm/event.owl#isFactorOf -->
+
+  <owl:ObjectProperty rdf:about="http://purl.org/NET/c4dm/event.owl#isFactorOf">
+    <owl:inverseOf rdf:resource="http://purl.org/NET/c4dm/event.owl#factor"/>
+  </owl:ObjectProperty>
+
+  <!-- http://purl.org/NET/c4dm/event.owl#factor -->
+
+  <owl:ObjectProperty rdf:about="http://purl.org/NET/c4dm/event.owl#factor">
+    <owl:inverseOf rdf:resource="http://purl.org/NET/c4dm/event.owl#isFactorOf"/>
+    <rdfs:domain rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+  </owl:ObjectProperty>
+
 
 </rdf:RDF>
