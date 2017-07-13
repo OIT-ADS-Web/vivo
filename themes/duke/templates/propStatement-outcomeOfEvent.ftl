@@ -2,16 +2,11 @@
 <@showStatement statement />
 
 <#macro showStatement statement>
+
   <#local title>
     <#if statement.title??>
       ${statement.title!}
     </#if>
-  </#local>
-
-  <#local description>
-    <#if statement.description??>
-      | ${statement.description}
-    </#if> 
   </#local>
 
   <#local venue>
@@ -24,5 +19,14 @@
     <@dt.intervalSpan "${statement.startDate!}" "${statement.startDatePrecision!}" "${statement.endDate!}" "${statement.endDatePrecision!}" false />
   </#local>
 
-${title} ${description} ${venue} ${date}
+  <#local linkedIndividual>
+    <#if statement.event??>
+      <a href="${profileUrl(statement.uri("event"))}" data-uri="${statement.uri("event")}" data-label="${statement.title!statement.title!}" title="event name">${statement.title!}</a>
+    <#else>
+      <#-- This shouldn't happen, but we must provide for it -->
+      <a href="${profileUrl(statement.uri("event"))}" title="missing event">missing event</a>
+    </#if>
+  </#local>
+
+  ${linkedIndividual} ${date}
 </#macro>

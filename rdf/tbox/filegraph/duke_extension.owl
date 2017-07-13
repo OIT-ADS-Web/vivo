@@ -613,4 +613,34 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
 
+
+  <!-- http://purl.org/NET/c4dm/event.owl#isAgentIn -->
+
+  <owl:ObjectProperty rdf:about="http://purl.org/NET/c4dm/event.owl#isAgentIn">
+    <owl:inverseOf rdf:resource="http://purl.org/NET/c4dm/event.owl#agent"/>
+  </owl:ObjectProperty>
+
+  <!-- http://purl.org/NET/c4dm/event.owl#agent -->
+
+  <owl:ObjectProperty rdf:about="http://purl.org/NET/c4dm/event.owl#agent">
+    <owl:inverseOf rdf:resource="http://purl.org/NET/c4dm/event.owl#isAgentIn"/>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdfs:domain rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+  </owl:ObjectProperty>
+
+
+  <!-- http://purl.org/NET/c4dm/event.owl#isFactorOf -->
+
+  <owl:ObjectProperty rdf:about="http://purl.org/NET/c4dm/event.owl#isFactorOf">
+    <owl:inverseOf rdf:resource="http://purl.org/NET/c4dm/event.owl#factor"/>
+  </owl:ObjectProperty>
+
+  <!-- http://purl.org/NET/c4dm/event.owl#factor -->
+
+  <owl:ObjectProperty rdf:about="http://purl.org/NET/c4dm/event.owl#factor">
+    <owl:inverseOf rdf:resource="http://purl.org/NET/c4dm/event.owl#isFactorOf"/>
+    <rdfs:domain rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+  </owl:ObjectProperty>
+
+
 </rdf:RDF>

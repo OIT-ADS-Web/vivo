@@ -32,9 +32,23 @@
         </#list>
       </#if>
 
-
       <#-- web link -->
-
+      <#assign link = propertyGroups.pullProperty("http://www.w3.org/2006/vcard/ns#hasURL","http://www.w3.org/2006/vcard/ns#URL")!>
+      <#if link?has_content && link.statements?has_content>
+        <#assign linkStatement = link.statements[0]>
+        <#assign linkUrl = linkStatement.url>
+      </#if>
+      <#if linkUrl??>
+        <#assign linkText>
+            <#if linkStatement.label??>${linkStatement.label}<#t>
+            <#else>${linkUrl}<#t>
+            </#if>
+        </#assign>
+        <div class="webpage" role="listitem">
+          <img class="icon-uri middle" src="${urls.images}/individual/uriIcon.gif" alt="uri icon" />
+          <a class='artWebpage' href="${linkUrl}" title="link text">${linkText}</a>
+        </div>
+      </#if>
 
     </header>
   </section>
@@ -45,7 +59,6 @@
     <#-- Duke Artist -->
     <#assign dukeArtist = propertyGroups.pullProperty("http://purl.org/NET/c4dm/event.owl#agent")!>
     <#if dukeArtist?has_content>
-    there is a duke artist
       <@simpleObjectPropertyListing dukeArtist "Duke Artist" />
     </#if>
 
@@ -55,16 +68,16 @@
     <#if startDate?has_content>
       <@simpleObjectPropertyListing startDate "Published or Release Date" />
     </#if>
+
+    <#-- End Date -->
     <#if endDate?has_content>
       <@simpleObjectPropertyListing endDate "End Date" />
     </#if>
 
-
-    <#-- related artistic work -->
+    <#-- Related Artistic Work -->
     <#assign relatedArt = propertyGroups.pullProperty("http://purl.org/NET/c4dm/event.owl#factor")!>
     <#-- "http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork" -->
     <#if relatedArt?has_content>
-    there is related artistic work
       <@simpleObjectPropertyListing relatedArt "Related Artistic Work" />
     </#if>
 

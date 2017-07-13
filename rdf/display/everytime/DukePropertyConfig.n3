@@ -35,7 +35,7 @@ local:creatorInArtisticRelationshipContext a :ConfigContext ;
 
 local:creatorInArtisticRelationshipConfig a :ObjectPropertyDisplayConfig ;
     :listViewConfigFile "listViewConfig-creatorInArtisticRelationship.xml"^^xsd:string ;
-    :displayName "Artistic Works and Non-Print Media" ;
+    :displayName "Artistic Works & Non-Print Media" ;
     vitro:collateBySubclassAnnot
               "true"^^xsd:boolean;
     vitro:displayRankAnnot 15;
@@ -91,7 +91,6 @@ local:contributingRoleContext a :ConfigContext ;
     :qualifiedByDomain <http://vivoweb.org/ontology/core#Grant> ;
     :qualifiedBy      <http://vivoweb.org/ontology/core#ResearcherRole> .
 
-
 local:contributingRoleConfig a :ObjectPropertyDisplayConfig ;
     :listViewConfigFile "listViewConfig-contributingRole.xml"^^xsd:string ;
     :displayName "contributor to grant" ;
@@ -102,13 +101,41 @@ local:contributingRoleConfig a :ObjectPropertyDisplayConfig ;
 
 local:outcomeOfEventContext a :ConfigContext ;
     :hasConfiguration local:outcomeOfEventConfig ;
-    :configContextFor <http://purl.obolibrary.org/obo/RO_0002233> ;
-    :qualifiedByDomain <http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork> ;
+    :configContextFor <http://purl.org/NET/c4dm/event.owl#isAgentIn> ;
+    :qualifiedByDomain <http://xmlns.com/foaf/0.1/Person> ;
     :qualifiedBy      <http://purl.org/NET/c4dm/event.owl#Event> .
 
 local:outcomeOfEventConfig a :ObjectPropertyDisplayConfig ;
     :listViewConfigFile "listViewConfig-outcomeOfEvent.xml"^^xsd:string ;
-    :displayName "artistic event" ;
+    :displayName "exhibitions, screenings, & performances" ;
+    vitro:displayRankAnnot 15;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
+    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
+
+local:relatedEventContext a :ConfigContext ;
+    :hasConfiguration local:relatedEventConfig ;
+    :configContextFor <http://purl.org/NET/c4dm/event.owl#isFactorOf> ;
+    :qualifiedByDomain <http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticWork> ;
+    :qualifiedBy      <http://purl.org/NET/c4dm/event.owl#Event> .
+
+local:relatedEventConfig a :ObjectPropertyDisplayConfig ;
+    :listViewConfigFile "listViewConfig-outcomeOfEvent.xml"^^xsd:string ;
+    :displayName "events" ;
+    vitro:displayRankAnnot 15;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
+    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
+
+local:artisticEventLinkContext a :ConfigContext ;
+    :hasConfiguration local:artisticEventLinkConfig ;
+    :configContextFor <http://www.w3.org/2006/vcard/ns#hasURL> ;
+    :qualifiedByDomain <http://purl.org/NET/c4dm/event.owl#Event> ;
+    :qualifiedBy      <http://www.w3.org/2006/vcard/ns#URL> .
+
+local:artisticEventLinkConfig a :ObjectPropertyDisplayConfig ;
+    :listViewConfigFile "listViewConfig-link.xml"^^xsd:string ;
+    :displayName "link" ;
     vitro:displayRankAnnot 15;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
@@ -136,7 +163,7 @@ local:performsPresentation a :ConfigContext ;
 
 local:performsPresentationConfig a :ObjectPropertyDisplayConfig ;
     :listViewConfigFile "listViewConfig-performs.xml"^^xsd:string ;
-    :displayName "presentations and appearances" ;
+    :displayName "presentations & appearances" ;
     vitro:displayRankAnnot 15;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
@@ -150,7 +177,7 @@ local:performsOutreach a :ConfigContext ;
 
 local:performsOutreachConfig a :ObjectPropertyDisplayConfig ;
     :listViewConfigFile "listViewConfig-performs.xml"^^xsd:string ;
-    :displayName "outreach and engaged scholarship" ;
+    :displayName "outreach & engaged scholarship" ;
     vitro:displayRankAnnot 15;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
@@ -218,7 +245,7 @@ local:relatedGift a :ConfigContext ;
 
 local:relatedGiftConfig a :ObjectPropertyDisplayConfig ;
     :listViewConfigFile "listViewConfig-relatesGift.xml"^^xsd:string ;
-    :displayName "gifts and other support" ;
+    :displayName "gifts & other support" ;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
     :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
