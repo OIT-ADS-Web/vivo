@@ -52,8 +52,6 @@ public class IndividualRequestAnalyzer {
 	public IndividualRequestInfo analyze() {
 		// If this is a request for RDF using an accept header, redirect it to
 		// the preferred URL.
-		log.info("Step 1");
-
 		String redirectUrl = checkForRedirect();
 		if (redirectUrl != null) {
 			return IndividualRequestInfo.buildRdfRedirectInfo(redirectUrl);
@@ -178,7 +176,6 @@ public class IndividualRequestAnalyzer {
 	 */
 	public Individual getIndividualFromRequest() {
 		try {
-			log.info("Step 2");
 			// Check for "uri" parameter.
 			String uri = getRequestParameter("uri", "");
 			if (!uri.isEmpty()) {
@@ -192,14 +189,9 @@ public class IndividualRequestAnalyzer {
 				return getIndividualByNetId(netId);
 			}
 
-			log.info("Step 3");
 			Matcher nameMatch = NAMED_URL.matcher(url);
 			if(nameMatch.matches()){
-				//System.log.out("We have a matching");
-				//log.info(nameMatch);
 				return getIndividualByName(nameMatch.group(1));
-				//log.info("we've got pattern match");
-
 			}
 	
 			// Check for just a local name
