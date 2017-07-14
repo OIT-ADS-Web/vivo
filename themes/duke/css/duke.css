@@ -3581,6 +3581,11 @@ p.caption {
 	line-height: 1.3em;
 }
 
+.description-value {
+  font-size: 1.5em;
+  line-height: 1.3em;
+}
+
 #publication-subtype-color {
 	color: #004D69; 
 	padding-left: 10px;
