@@ -74,6 +74,7 @@ public class PersonArtisticWorksFields extends DukeContextNodeFields {
         super(queries,rdfServiceFactory);        
     }
  
+    // NOTE: commented out 'abstract' because it can sometimes cause GC Overhead error
     private static String queryForArtisticWorks =        
           prefix +
           "SELECT \n" +
@@ -94,7 +95,6 @@ public class PersonArtisticWorksFields extends DukeContextNodeFields {
           "  ?relationship core:relates ?work. \n" +
           "  ?relationship dukeart:roles ?role. \n" +
           "  OPTIONAL {?relationship core:description ?role_description.} \n" +
-          "  ?relationship dukeart:isFeaturedRole ?isFeaturedRole. \n" +
           "  ?work rdf:type dukeart:ArtisticWork. \n" +
           "  ?work rdfs:label ?label. \n" +
           "  ?work vitro:mostSpecificType ?type. \n" +
