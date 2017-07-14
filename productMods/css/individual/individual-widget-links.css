@@ -41,6 +41,7 @@
 
 .overview-value ol {
   list-style-type: decimal;
+  margin-left: 4px;
 }
 
 .officehours-value li {
@@ -50,10 +51,11 @@
 
 .officehours-value ol {
   list-style-type: decimal;
+  margin-left: 4px;
 }
 
 .research-interests-value {
-  line-height: 19.5px;
+  line-height: 1.3em;
 }
 
 .research-interests-value li {
@@ -63,72 +65,77 @@
 
 .research-interests-value ol {
   list-style-type: decimal;
-}
-
-.individual-academicOverview {
-  line-height: 19.5px;
-}
-
-.individual-academicOverview li {
-  list-style-type: decimal;
-  margin-left: 14px;
-}
-
-.individual-academicOverview ol {
-  list-style-type: decimal;
+  margin-left: 4px;
 }
 
 .individual-clinicalOverview {
-  line-height: 19.5px;
+  line-height: 1.3em;
 }
 
-.individual-clinicalOverview li {
+.clinicalOverview-value li {
   list-style-type: decimal;
   margin-left: 14px;
 }
 
-.individual-clinicalOverview ol {
+.clinicalOverview-value ol {
   list-style-type: decimal;
+  margin-left: 16px;
+}
+
+.individual-academicOverview {
+  line-height: 1.3em;
+}
+
+.academicOverview-value li {
+  list-style-type: decimal;
+  margin-left: 14px;
+}
+
+.academicOverview-value ol {
+  list-style-type: decimal;
+  margin-left: 16px;
 }
 
 .individual-teachingOverview {
-  line-height: 19.5px;
+  line-height: 1.3em;
 }
 
-.individual-teachingOverview li {
+.teachingOverview-value li {
   list-style-type: decimal;
   margin-left: 14px;
 }
 
-.individual-teachingOverview ol {
+.teachingOverview-value ol {
   list-style-type: decimal;
+  margin-left: 16px;
 }
 
 .individual-leadershipPositions {
-  line-height: 19.5px;
+  line-height: 1.3em;
 }
 
-.individual-leadershipPositions li {
+.leadershipPositions-value li {
   list-style-type: decimal;
   margin-left: 14px;
 }
 
-.individual-leadershipPositions ol {
+.leadershipPositions-value ol {
   list-style-type: decimal;
+  margin-left: 16px;
 }
 
 .individual-mentorOverview {
-  line-height: 19.5px;
+  line-height: 1.3em;
 }
 
-.individual-mentorOverview li {
+.mentorOverview-value li {
   list-style-type: decimal;
   margin-left: 14px;
 }
 
-.individual-mentorOverview li {
+.mentorOverview-value ol {
   list-style-type: decimal;
-  margin-left: 14px;
+  margin-left: 16px;
 }
 
 li {

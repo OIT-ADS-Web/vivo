@@ -844,16 +844,6 @@ input.search-home-vivo {
 	padding-bottom: 20px;
 }
 
-.overview-value-duke li {
-  list-style-type: decimal;
-}
-
-.overview-value-duke ol {
-  font-size: 15px;
-  margin-left: 20px;
-  line-height: 1.3em;
-}
-
 #find-person h2 {
 	font-size: 2.5em;
 }
@@ -1057,7 +1047,8 @@ ul#individual-personInPosition {
 #individual-intro.person #individual-info {
 	float: left;
 	margin-bottom: 1.25em;
-	padding-left: 19px;
+/*	padding-left: 19px;*/
+	margin-left: -4px;
 	width: 90%;
 }
 

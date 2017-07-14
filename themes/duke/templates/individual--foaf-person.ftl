@@ -102,7 +102,7 @@
             <@p.addLinkWithLabel leadershipPositions editable />
             <#list leadershipPositions.statements as statement>
               <ul class="individual-leadershipPositions" role="list">
-                <li role="listitem">
+                <li class="leadershipPositions-value" role="listitem">
                   ${statement.value}
                 </li>
               </ul>
@@ -186,7 +186,7 @@
                 <@p.addLinkWithLabel mentorOverview editable />
                 <#list mentorOverview.statements as statement>
                   <ul class="individual-mentorOverview" role="list">
-                    <li role="listitem">
+                    <li class="mentorOverview-value" role="listitem">
                       ${statement.value}
                     </li>
                   </ul>
@@ -213,7 +213,7 @@
                 <@p.addLinkWithLabel teachingOverview editable />
                 <#list teachingOverview.statements as statement>
                   <ul class="individual-teachingOverview" role="list">
-                    <li role="listitem">
+                    <li class="teachingOverview-value" role="listitem">
                       ${statement.value}
                     </li>
                   </ul>
@@ -252,7 +252,7 @@
                 <@p.addLinkWithLabel academicOverview editable />
                 <#list academicOverview.statements as statement>
                   <ul class="individual-academicOverview" role="list">
-                    <li role="listitem">
+                    <li class="academicOverview-value" role="listitem">
                       ${statement.value}
                     </li>
                   </ul>
@@ -273,7 +273,7 @@
                 <@p.addLinkWithLabel clinicalOverview editable />
                 <#list clinicalOverview.statements as statement>
                   <ul class="individual-clinicalOverview" role="list">
-                    <li role="listitem">
+                    <li class="clinicalOverview-value" role="listitem">
                       ${statement.value}
                     </li>
                   </ul>
