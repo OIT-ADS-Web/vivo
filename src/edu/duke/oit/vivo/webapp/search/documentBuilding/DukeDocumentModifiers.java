@@ -37,6 +37,7 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonArtisticWorkEvents
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonGeographicallyRelatesToFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonCustomFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonGrantFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonEventFields;
 
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.OrganizationAwardFields;
@@ -102,6 +103,7 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
         modifiers.add( new PersonGeographicallyRelatesToFields (rdfServiceFactory));
         modifiers.add( new PersonVcardFields( rdfServiceFactory ));
         modifiers.add( new PersonNewsItemFields( rdfServiceFactory ));
+        modifiers.add( new PersonEventFields( rdfServiceFactory ));
 
         modifiers.add( new OrganizationAwardFields( rdfServiceFactory ));
         modifiers.add( new OrganizationGrantFields( rdfServiceFactory ));
