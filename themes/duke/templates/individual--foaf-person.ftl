@@ -155,10 +155,10 @@
         <li class="section-group-header">Publications & Artistic Works</li>
         <#-- Publication -->
         <@collapsiblePropertyListSection "Publication" authorships editable />
-        <#-- Artistic Works -->
-        <@collapsiblePropertyListSection "ArtisticWork" artisticRelationships editable />
         <#-- Artistic Events -->
         <@collapsiblePropertyListSection "Exhibitions, Screenings, & Performances" artisticEvents editable />
+        <#-- Artistic Works -->
+        <@collapsiblePropertyListSection "ArtisticWork" artisticRelationships editable />
       </#if>
 
       <#assign courses = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000053", "${core}TeacherRole")!>
