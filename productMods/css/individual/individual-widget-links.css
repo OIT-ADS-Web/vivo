@@ -21,22 +21,26 @@
 }
 
 #close {
-  display:block;
-  float:right
+  display: block;
+  float: right
 }
 
 .body ul {
-  width:575px
+  width: 575px
 }
 
 #modal ul {
-  margin:2px;
-  padding:2px
+  margin: 2px;
+  padding: 2px;
 }
 
-.overview-value li {
+.overview-value li, .officehours-value li, .research-interests-value li, .clinicalOverview-value li, .academicOverview-value li, .teachingOverview-value li, .leadershipPositions-value li, .mentorOverview-value li, .description-value li  {
   list-style-type: decimal;
   margin-left: 14px;
+}
+
+.research-interests-value {
+  line-height: 1.3em;
 }
 
 .overview-value ol {
@@ -44,23 +48,9 @@
   margin-left: 4px;
 }
 
-.officehours-value li {
-  list-style-type: decimal;
-  margin-left: 14px;
-}
-
 .officehours-value ol {
   list-style-type: decimal;
   margin-left: 4px;
-}
-
-.research-interests-value {
-  line-height: 1.3em;
-}
-
-.research-interests-value li {
-  list-style-type: decimal;
-  margin-left: 14px;
 }
 
 .research-interests-value ol {
@@ -68,13 +58,9 @@
   margin-left: 4px;
 }
 
-.individual-clinicalOverview {
-  line-height: 1.3em;
-}
-
-.clinicalOverview-value li {
+.description-value ol {
   list-style-type: decimal;
-  margin-left: 14px;
+  margin-left: 4px;
 }
 
 .clinicalOverview-value ol {
@@ -82,27 +68,9 @@
   margin-left: 16px;
 }
 
-.individual-academicOverview {
-  line-height: 1.3em;
-}
-
-.academicOverview-value li {
-  list-style-type: decimal;
-  margin-left: 14px;
-}
-
 .academicOverview-value ol {
   list-style-type: decimal;
   margin-left: 16px;
-}
-
-.individual-teachingOverview {
-  line-height: 1.3em;
-}
-
-.teachingOverview-value li {
-  list-style-type: decimal;
-  margin-left: 14px;
 }
 
 .teachingOverview-value ol {
@@ -110,42 +78,14 @@
   margin-left: 16px;
 }
 
-.individual-leadershipPositions {
-  line-height: 1.3em;
-}
-
-.leadershipPositions-value li {
-  list-style-type: decimal;
-  margin-left: 14px;
-}
-
 .leadershipPositions-value ol {
   list-style-type: decimal;
   margin-left: 16px;
 }
 
-.individual-mentorOverview {
-  line-height: 1.3em;
-}
-
-.mentorOverview-value li {
-  list-style-type: decimal;
-  margin-left: 14px;
-}
-
 .mentorOverview-value ol {
   list-style-type: decimal;
   margin-left: 16px;
-}
-
-.description-value li {
-  list-style-type: decimal;
-  margin-left: 14px;
-}
-
-.description-value ol {
-  list-style-type: decimal;
-  margin-left: 4px;
 }
 
 li {
