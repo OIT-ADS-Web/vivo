@@ -53,7 +53,10 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.SubjectHeadingOfFacet;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.SubjectHeadingPeopleFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.GeoSelfGoverningPersonFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.ArtisticWorkEventsFields;
- 
+
+// NOTE: have to add a space so git see this to merge
+import edu.duke.oit.vivo.webapp.search.documentBuilding.ArtisticWorkFields;
+  
 import edu.duke.oit.vivo.webapp.search.documentBuilding.ProfessionalActivityFields;
  
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PublicationAuthors; 
@@ -117,6 +120,9 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
         modifiers.add( new GeoSelfGoverningPersonFields (rdfServiceFactory));
 
         modifiers.add( new ArtisticWorkEventsFields (rdfServiceFactory));
+        // NOTE: have to add a space so Git sees this to merge
+        modifiers.add( new ArtisticWorkFields (rdfServiceFactory));
+ 
         modifiers.add( new ProfessionalActivityFields (rdfServiceFactory));
  
         modifiers.add( new PublicationAuthors (rdfServiceFactory));
