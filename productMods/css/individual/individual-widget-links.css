@@ -21,114 +21,71 @@
 }
 
 #close {
-  display:block;
-  float:right
+  display: block;
+  float: right
 }
 
 .body ul {
-  width:575px
+  width: 575px
 }
 
 #modal ul {
-  margin:2px;
-  padding:2px
+  margin: 2px;
+  padding: 2px;
 }
 
-.overview-value li {
+.overview-value li, .officehours-value li, .research-interests-value li, .clinicalOverview-value li, .academicOverview-value li, .teachingOverview-value li, .leadershipPositions-value li, .mentorOverview-value li, .description-value li  {
   list-style-type: decimal;
   margin-left: 14px;
+}
+
+.research-interests-value {
+  line-height: 1.3em;
 }
 
 .overview-value ol {
   list-style-type: decimal;
-}
-
-.officehours-value li {
-  list-style-type: decimal;
-  margin-left: 14px;
+  margin-left: 4px;
 }
 
 .officehours-value ol {
   list-style-type: decimal;
-}
-
-.research-interests-value {
-  line-height: 19.5px;
-}
-
-.research-interests-value li {
-  list-style-type: decimal;
-  margin-left: 14px;
+  margin-left: 4px;
 }
 
 .research-interests-value ol {
   list-style-type: decimal;
+  margin-left: 4px;
 }
 
-.individual-academicOverview {
-  line-height: 19.5px;
-}
-
-.individual-academicOverview li {
+.description-value ol {
   list-style-type: decimal;
-  margin-left: 14px;
+  margin-left: 4px;
 }
 
-.individual-academicOverview ol {
+.clinicalOverview-value ol {
   list-style-type: decimal;
+  margin-left: 16px;
 }
 
-.individual-clinicalOverview {
-  line-height: 19.5px;
-}
-
-.individual-clinicalOverview li {
+.academicOverview-value ol {
   list-style-type: decimal;
-  margin-left: 14px;
+  margin-left: 16px;
 }
 
-.individual-clinicalOverview ol {
+.teachingOverview-value ol {
   list-style-type: decimal;
+  margin-left: 16px;
 }
 
-.individual-teachingOverview {
-  line-height: 19.5px;
-}
-
-.individual-teachingOverview li {
+.leadershipPositions-value ol {
   list-style-type: decimal;
-  margin-left: 14px;
+  margin-left: 16px;
 }
 
-.individual-teachingOverview ol {
+.mentorOverview-value ol {
   list-style-type: decimal;
-}
-
-.individual-leadershipPositions {
-  line-height: 19.5px;
-}
-
-.individual-leadershipPositions li {
-  list-style-type: decimal;
-  margin-left: 14px;
-}
-
-.individual-leadershipPositions ol {
-  list-style-type: decimal;
-}
-
-.individual-mentorOverview {
-  line-height: 19.5px;
-}
-
-.individual-mentorOverview li {
-  list-style-type: decimal;
-  margin-left: 14px;
-}
-
-.individual-mentorOverview li {
-  list-style-type: decimal;
-  margin-left: 14px;
+  margin-left: 16px;
 }
 
 li {

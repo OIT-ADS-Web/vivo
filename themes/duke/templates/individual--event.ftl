@@ -24,8 +24,8 @@
       <#assign description = propertyGroups.pullProperty("http://vivoweb.org/ontology/core#description")!>
       <#if description?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
         <#list description.statements as statement>
-          <div class="individual-overview">
-            <div class="overview-value">
+          <div class="individual-description">
+            <div class="description-value">
               ${statement.value}
             </div>
           </div>
