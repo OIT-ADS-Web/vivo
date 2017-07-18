@@ -18,8 +18,8 @@ PREFIX foaf: <http://xmlns.com/foaf/0.1/>
   
 select (CONCAT(?label, ' ', ?author) as ?result)
 WHERE {
-  <https://scholars.duke.edu/individual/perdm253> a foaf:Person .
-  <https://scholars.duke.edu/individual/perdm253> core:relatedBy ?authorship .
+  <https://scholars.duke.edu/individual/per0482202> a foaf:Person .
+  <https://scholars.duke.edu/individual/per0482202> core:relatedBy ?authorship .
   ?authorship vitro:mostSpecificType ?authorshipType .
   ?authorship core:relates ?publication .
   ?publication a obo:IAO_0000030 .

@@ -31,7 +31,7 @@ where {
    OPTIONAL { ?person duke:profileUrl ?profileUrl . }
    OPTIONAL { ?person duke:mentorshipAvailability ?mentorAvail . }
    OPTIONAL { ?person duke:mentoringOverview ?mentorOverview . }
-   FILTER (?person= <https://scholars.duke.edu/individual/perdm253>)
+   FILTER (?person= <https://scholars.duke.edu/individual/per0482202>)
 }
 
 */
