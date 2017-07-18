@@ -3641,7 +3641,7 @@ p.caption {
 }
 
 .person .section-collapsible h3, .person h3.collate_header, .person .section-collapsible li[role=listitem] {
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 }
 
 .person .more-less {
