@@ -838,12 +838,12 @@ input.search-home-vivo {
 }
 
 .overview-value {
-	font-size: 2.4em;
-	margin: 20px 0;
+	font-size: 1.5em;
+	margin-top: 10px;
 	line-height: 1.3em;
 	width: 100%;
 	display: inline-block;
-	padding-bottom: 15px;
+	padding-bottom: 4px;
 }
 
 #find-person h2 {
@@ -945,6 +945,7 @@ ul#individual-advisorIn li  {
 
 ul#individual-hasResearchArea li, ul#individual-geographicFocus li {
   width: 45%;
+  margin-left: 0px;
 }
 
 div.hideshow ul[role=list], #MentorshipAvailability p {
@@ -1050,7 +1051,6 @@ ul#individual-personInPosition {
 #individual-intro.person #individual-info {
 	float: left;
 	margin-bottom: 1.25em;
-/*	padding-left: 19px;*/
 	margin-left: -4px;
 	width: 90%;
 }
@@ -1137,11 +1137,6 @@ h2.fn .display-title {
 	color: #A1B70D;
 	font-weight: 700;
 	padding-top: 0;
-}
-
-.overview-value {
-	margin: 10px 0;
-	font-size: 1.5em;
 }
 
 #individual-info h3 {
@@ -3663,5 +3658,5 @@ p.caption {
 }
 
 .individual-officehours {
-	margin-bottom: -10px;
+	margin-bottom: 12px;
 }
