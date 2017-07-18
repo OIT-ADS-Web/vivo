@@ -16,6 +16,7 @@ PREFIX vitro-public: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
 PREFIX dukeart: <http://vivo.duke.edu/vivo/ontology/duke-art-extension#>
 PREFIX bibo: <http://purl.org/ontology/bibo/>
 PREFIX vcard: <http://www.w3.org/2006/vcard/ns#> 
+PREFIX foaf:     <http://xmlns.com/foaf/0.1/>
  
 SELECT 
  (CONCAT (?label, ' ', ?role, ' ',
@@ -29,6 +30,7 @@ SELECT
  ) as ?result)
 
 WHERE {
+  <https://scholars.duke.edu/individual/perdm253> a foaf:Person . 
   <https://scholars.duke.edu/individual/perdm253> core:relatedBy ?relationship. 
   ?relationship rdf:type dukeart:ArtisticRelationship.
   ?relationship core:relates ?work.
@@ -65,12 +67,14 @@ public class PersonArtisticWorksFields extends DukeContextNodeFields {
           + " prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> \n" 
           + " PREFIX dukeart: <http://vivo.duke.edu/vivo/ontology/duke-art-extension#> \n"
           + " PREFIX bibo: <http://purl.org/ontology/bibo/> \n"
-          + " PREFIX vcard: <http://www.w3.org/2006/vcard/ns#> \n";
+          + " PREFIX vcard: <http://www.w3.org/2006/vcard/ns#> \n"
+          + " PREFIX foaf:     <http://xmlns.com/foaf/0.1/> \n";
     
     public PersonArtisticWorksFields(RDFServiceFactory rdfServiceFactory){                
         super(queries,rdfServiceFactory);        
     }
  
+    // NOTE: commented out 'abstract' because it can sometimes cause GC Overhead error
     private static String queryForArtisticWorks =        
           prefix +
           "SELECT \n" +
@@ -85,12 +89,12 @@ public class PersonArtisticWorksFields extends DukeContextNodeFields {
           "    COALESCE(?link_label, ''), ' ' \n" +
           "  )as ?result)\n" +
           "WHERE {\n" +
+          "  ?uri a foaf:Person . \n" +
           "  ?uri core:relatedBy ?relationship. \n" +
           "  ?relationship rdf:type dukeart:ArtisticRelationship. \n" +
           "  ?relationship core:relates ?work. \n" +
           "  ?relationship dukeart:roles ?role. \n" +
           "  OPTIONAL {?relationship core:description ?role_description.} \n" +
-          "  ?relationship dukeart:isFeaturedRole ?isFeaturedRole. \n" +
           "  ?work rdf:type dukeart:ArtisticWork. \n" +
           "  ?work rdfs:label ?label. \n" +
           "  ?work vitro:mostSpecificType ?type. \n" +
