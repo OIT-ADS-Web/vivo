@@ -57,7 +57,7 @@
         <#assign positions = propertyGroups.pullProperty("${core}relatedBy", "${core}Position")!>
         <#if positions?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
           <#assign localName = positions.localName>
-          <h3 id="${localName}" class="mainPropGroup">Current Appointments & Affiliations <@p.verboseDisplay positions /></h3>
+          <h3 id="${localName}" class="mainPropGroup" style="margin-bottom:-2px;">Current Appointments & Affiliations <@p.verboseDisplay positions /></h3>
           <ul id="individual-personInPosition" role="list">
             <@p.objectProperty positions false />
           </ul>

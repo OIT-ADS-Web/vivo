@@ -480,8 +480,8 @@ a.ingestMenu: hover,a.ingestMenu: active,a.account-menu: hover,a.account-menu: a
 
 .collaboratorship-link-separator {
 	border-top: 1px dotted #A6B1B0;
-	margin-top: 35px;
-	padding-top: 20px;
+	margin-top: 15px;
+	padding-top: 15px;
 }
 
 .collaboratorship-link {
@@ -503,6 +503,8 @@ a.ingestMenu: hover,a.ingestMenu: active,a.account-menu: hover,a.account-menu: a
 .sidebar {
 	float: right;
 	margin-top: 5px;
+	padding-top: 12px;
+/*	margin-right: 4px;*/
 	width: 20%;
 }
 
@@ -682,7 +684,7 @@ ul#main-nav {
 	margin: 0 auto;
 	max-width: 100%;
 	min-height: 550px;
-	padding: .9em;
+	padding: .9em 1em .9em .9em;
 }
 
 #intro {
@@ -841,7 +843,7 @@ input.search-home-vivo {
 	line-height: 1.3em;
 	width: 100%;
 	display: inline-block;
-	padding-bottom: 20px;
+	padding-bottom: 15px;
 }
 
 #find-person h2 {
@@ -901,14 +903,14 @@ input.search-home-vivo {
 /*INdividual People Page*/
 #topcontainer {
 	float: left;
-	margin: 10px 0;
+	margin: 3px 0;
 	width: 80%;
 }
 
 #individual-body {
 	clear: both;
 	margin: 0 10px 1.5em;
-	padding: 25px 0;
+	padding: 5px 0;
 	width: 95%;
 }
 
@@ -922,7 +924,7 @@ input.search-home-vivo {
 }
 
 #individual-body ul h3 {
-		padding-top: 0px;
+	padding-top: 0px;
 }
 
 ul#individual-hasResearchArea li, ul#individual-geographicFocus li, ul#individual-awardOrHonor li, ul#individual-mentorshipAvailability li {
@@ -978,7 +980,7 @@ ul#individual-outcomeOf li {
 }
 
 .email_and_phone {
-	padding-bottom: 20px;
+	padding-bottom: 2px;
 }
 
 #individual-contactInformation li {
@@ -1025,6 +1027,7 @@ ul.subclass-property-list li {
 ul#individual-personInPosition {
 	list-style-type: circle;
 	padding-left: 0;
+	margin-bottom: -10px;
 }
 
 #individual-intro.person {
@@ -1090,13 +1093,13 @@ ul#individual-hasResearchArea li a {
 }
 
 section#researchAreas h3{
-font-size: 2em;
-margin: 10px 0;
-padding: 0;
+	font-size: 2em;
+	margin: 10px 0;
+	padding: 0;
 }
 
 .sidebar section {
-    margin-bottom: 1em;
+  margin-bottom: .5em;
 }
 
 img.individual-photo {
@@ -1144,6 +1147,17 @@ h2.fn .display-title {
 #individual-info h3 {
 	line-height: 1.2em;
 	font-size: 1.875em;
+	padding-top: 10px;
+	padding-bottom: 7px;
+}
+
+img.individual-photo {
+  width: 160px;
+  margin-left: 0;
+  float: left;
+  margin-top: 24px;
+  margin-right: 20px;
+  margin-bottom: 30px;
 }
 
 h3#personInPosition {
@@ -1182,6 +1196,7 @@ h3#personInPosition {
   width: 176px;
   height: 32px;
   display: block;
+  margin-left: -2px;
 }
 
 .sidebar .individual_widget_links a {
@@ -3610,7 +3625,7 @@ p.caption {
 .section-group-header {
 	color: black;
 	font-size: 2em;
-	margin-top: 1.2em;
+	margin-top: .9em;
 	margin-bottom: .5em;
 }
 .section-group-header:first-child {
@@ -3631,7 +3646,7 @@ p.caption {
 }
 
 .person .section-collapsible h3, .person h3.collate_header, .person .section-collapsible li[role=listitem] {
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 }
 
 .person .more-less {
@@ -3645,4 +3660,8 @@ p.caption {
 
 #weblink {
 	font-size: 1.45em;
+}
+
+.individual-officehours {
+	margin-bottom: -10px;
 }

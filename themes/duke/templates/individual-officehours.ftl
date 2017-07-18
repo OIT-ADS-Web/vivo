@@ -5,7 +5,7 @@
     <#-- <#if !editable >
        <h2 id="facultyOfficehours"></h2>
     </#if> -->
-    <h3>Office Hours</h3>
+    <h3 style="margin-top:-3px;">Office Hours</h3>
     <@p.addLinkWithLabel officehours editable />
     <#list officehours.statements as statement>
         <div class="individual-officehours">
