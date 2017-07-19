@@ -30,7 +30,7 @@
 </header>
 
 <section id="topcontainer" class="main-content document">
-  <section id="individual-body" role="region" style="margin-top:-40px;">
+  <section id="individual-body" role="region" style="margin-top:-40px; margin-left:0;">
     <ul class="section-navigation">
       <#assign org = propertyGroups.pullProperty("http://vivoweb.org/ontology/core#assignedBy")!>
       <#if org?has_content>
