@@ -32,3 +32,7 @@
 </section>
 ${headScripts.add('<script type="text/javascript" src="${urls.base}/js/individual/dukeUtils.js"></script>')}
 
+<style>
+  .hideshow {font-size:7.7px;}
+  .listDateTime {font-size:11.04px;}
+</style>
