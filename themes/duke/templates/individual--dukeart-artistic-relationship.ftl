@@ -35,7 +35,7 @@
       <#assign roleList = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-art-extension#roles")!>
       <#if roleList?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
         <div class="abstract">
-           <p>${dataPropertyValue(roleList)}</p>
+           <p id="service-type">${dataPropertyValue(roleList)}</p>
         </div>
       </#if>
 
