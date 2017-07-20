@@ -63,15 +63,9 @@
     </#if>
 
     <#-- Published or Release Date -->
-    <#assign startDate = propertyGroups.pullProperty("${core}start")!>
-    <#assign endDate = propertyGroups.pullProperty("${core}end")!>
-    <#if startDate?has_content>
-      <@simpleObjectPropertyListing startDate "Published or Release Date" />
-    </#if>
-
-    <#-- End Date -->
-    <#if endDate?has_content>
-      <@simpleObjectPropertyListing endDate "End Date" />
+    <#assign startEnd = propertyGroups.pullProperty("${core}dateTimeInterval")!>
+    <#if startEnd?has_content>
+      <@simpleObjectPropertyListing startEnd "Start/End" />
     </#if>
 
     <#-- Related Artistic Work -->

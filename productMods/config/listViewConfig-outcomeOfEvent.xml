@@ -15,10 +15,8 @@
                         ?title
                         ?description
                         ?venue
-                        ?startDate
-                        ?startDatePrecision
-                        ?endDate
-                        ?endDatePrecision
+                        ?dateTimeStart ?dateTimeEnd 
+
 
         WHERE {
           ?subject ?property ?event .
@@ -26,16 +24,16 @@
           OPTIONAL { ?event rdfs:label ?title } 
           OPTIONAL { ?event core:description ?description.}
           OPTIONAL { ?event dukeart:venue ?venue.}
-          OPTIONAL { ?event core:start ?startDateTimeValue .
-                     ?startDateTimeValue core:dateTime ?startDate .
-                     ?startDateTimeValue core:dateTimePrecision ?startDatePrecision .
-                   }
-          OPTIONAL { ?event core:end ?endDateTimeValue .
-                     ?endDateTimeValue core:dateTime ?endDate .
-                     ?endDateTimeValue core:dateTimePrecision ?endDatePrecision .
-                   }
-            
-        } ORDER BY DESC(?startDate) DESC(?endDate) ASC(?title)
+          OPTIONAL { ?gift core:dateTimeInterval ?dateTimeInterval .
+                     ?dateTimeInterval core:start ?dateTimeStartValue .                     
+                     ?dateTimeStartValue core:dateTime ?dateTimeStart 
+          }
+          OPTIONAL { ?gift core:dateTimeInterval ?dateTimeInterval .
+                     ?dateTimeInterval core:end ?dateTimeEndValue .   
+                     ?dateTimeEndValue core:dateTime ?dateTimeEnd  
+          }
+
+        } ORDER BY DESC(?dateTimeStart) ASC(?title)
     </query-select>
 
     <query-construct>
@@ -89,17 +87,17 @@
         CONSTRUCT {
             ?subject ?property ?event .
             ?event a event:Event .
-            ?event core:start ?startDateTimeValue .
-            ?startDateTimeValue core:dateTime ?startDate .
-            ?startDateTimeValue core:dateTimePrecision ?startDatePrecision .
+            ?event core:dateTimeInterval ?dateTimeInterval .
+            ?dateTimeInterval core:start ?dateTimeStartValue .
+            ?dateTimeStartValue core:dateTime ?dateTimeStart .
         } WHERE {
             {
                 ?subject ?property ?event .
             } UNION {
                 ?subject ?property ?event .
-                ?event core:start ?startDateTimeValue .
-                ?startDateTimeValue core:dateTime ?startDate .
-                ?startDateTimeValue core:dateTimePrecision ?startDatePrecision .
+                ?event core:dateTimeInterval ?dateTimeInterval .
+                ?dateTimeInterval core:start ?dateTimeStartValue .
+                ?dateTimeStartValue core:dateTime ?dateTimeStart .
             }
         }
     </query-construct>
@@ -112,17 +110,17 @@
         CONSTRUCT {
             ?subject ?property ?event .
             ?event a event:Event .
-            ?event core:end ?endDateTimeValue .
-            ?endDateTimeValue core:dateTime ?endDate .
-            ?endDateTimeValue core:dateTimePrecision ?endDatePrecision .
+            ?event core:dateTimeInterval ?dateTimeInterval .
+            ?dateTimeInterval core:end ?dateTimeEndValue .
+            ?dateTimeEndValue core:dateTime ?dateTimeEnd 
         } WHERE {
             {
                 ?subject ?property ?event .
             } UNION {
                 ?subject ?property ?event .
-                ?event core:end ?endDateTimeValue .
-                ?endDateTimeValue core:dateTime ?endDate .
-                ?endDateTimeValue core:dateTimePrecision ?endDatePrecision .
+                ?event core:dateTimeInterval ?dateTimeInterval .
+                ?dateTimeInterval core:end ?dateTimeEndValue .
+                ?dateTimeEndValue core:dateTime ?dateTimeEnd
             }
         }
     </query-construct>
