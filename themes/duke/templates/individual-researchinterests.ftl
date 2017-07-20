@@ -11,7 +11,7 @@
   <@p.addLinkWithLabel researchInterests editable />
   <#list researchInterests.statements as statement>
     <div class="individual-research-interests">
-      <div class="research-interests-value" style="font-size: 15px;">
+      <div class="research-interests-value">
         ${statement.value}
       </div>
     </div>
