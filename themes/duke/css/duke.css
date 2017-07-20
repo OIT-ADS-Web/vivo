@@ -844,6 +844,7 @@ input.search-home-vivo {
 	width: 100%;
 	display: inline-block;
 	padding-bottom: 4px;
+	margin-bottom: -30px;
 }
 
 #find-person h2 {
@@ -3667,4 +3668,8 @@ p.caption {
 
 #award-weblink {
 	padding-bottom: 25px;
+}
+
+.below-overview-wrap {
+	margin-top: -10px;
 }

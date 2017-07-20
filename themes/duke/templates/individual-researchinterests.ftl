@@ -7,7 +7,7 @@
   <#-- <#if !editable >
     <h2 id="facultyResearchInterests"></h2>
   </#if> -->
-  <h3 style="font-size: 18.75px;">Current Research Interests</h3>
+  <h3 style="font-size: 18.75px; color: #000000;">Current Research Interests</h3>
   <@p.addLinkWithLabel researchInterests editable />
   <#list researchInterests.statements as statement>
     <div class="individual-research-interests">
