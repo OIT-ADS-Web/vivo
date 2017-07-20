@@ -34,57 +34,26 @@
   padding: 2px;
 }
 
-.overview-value li, .officehours-value li, .research-interests-value li, .clinicalOverview-value li, .academicOverview-value li, .teachingOverview-value li, .leadershipPositions-value li, .mentorOverview-value li, .description-value li  {
+.overview-value ul li, .officehours-value ul li, .research-interests-value ul li, .clinicalOverview-value ul li, .academicOverview-value ul li, .teachingOverview-value ul li, .leadershipPositions-value ul li, .mentorOverview-value ul li, .description-value ul li {
+  list-style-type: disc;
+  margin-left: 14px;
+}
+
+.overview-value ol li, .officehours-value ol li, .research-interests-value ol li, .clinicalOverview-value ol li, .academicOverview-value ol li, .teachingOverview-value ol li, .leadershipPositions-value ol li, .mentorOverview-value ol li, .description-value ol li {
   list-style-type: decimal;
   margin-left: 14px;
 }
 
 .research-interests-value {
   line-height: 1.3em;
+  font-size: 15px;
 }
 
-.overview-value ol {
-  list-style-type: decimal;
+.overview-value ol, .officehours-value ol, .research-interests-value ol, .description-value ol {
   margin-left: 4px;
 }
 
-.officehours-value ol {
-  list-style-type: decimal;
-  margin-left: 4px;
-}
-
-.research-interests-value ol {
-  list-style-type: decimal;
-  margin-left: 4px;
-}
-
-.description-value ol {
-  list-style-type: decimal;
-  margin-left: 4px;
-}
-
-.clinicalOverview-value ol {
-  list-style-type: decimal;
-  margin-left: 16px;
-}
-
-.academicOverview-value ol {
-  list-style-type: decimal;
-  margin-left: 16px;
-}
-
-.teachingOverview-value ol {
-  list-style-type: decimal;
-  margin-left: 16px;
-}
-
-.leadershipPositions-value ol {
-  list-style-type: decimal;
-  margin-left: 16px;
-}
-
-.mentorOverview-value ol {
-  list-style-type: decimal;
+.clinicalOverview-value ol, .academicOverview-value ol, .teachingOverview-value ol, .leadershipPositions-value ol, .mentorOverview-value ol {
   margin-left: 16px;
 }
 

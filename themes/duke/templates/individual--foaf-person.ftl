@@ -47,25 +47,27 @@
         <#-- Overview -->
         <#include "individual-overview.ftl">
 
-        <#-- Current Research Interests -->
-        <#include "individual-researchinterests.ftl">
+        <div class="below-overview-wrap">
+          <#-- Current Research Interests -->
+          <#include "individual-researchinterests.ftl">
 
-        <#-- Office Hours -->
-        <#include "individual-officehours.ftl">
+          <#-- Office Hours -->
+          <#include "individual-officehours.ftl">
 
-        <#-- Positions -->
-        <#assign positions = propertyGroups.pullProperty("${core}relatedBy", "${core}Position")!>
-        <#if positions?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-          <#assign localName = positions.localName>
-          <h3 id="${localName}" class="mainPropGroup" style="margin-bottom: -2px;">Current Appointments & Affiliations <@p.verboseDisplay positions /></h3>
-          <ul id="individual-personInPosition" role="list">
-            <@p.objectProperty positions false />
-          </ul>
-        </#if>
+          <#-- Positions -->
+          <#assign positions = propertyGroups.pullProperty("${core}relatedBy", "${core}Position")!>
+          <#if positions?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+            <#assign localName = positions.localName>
+            <h3 id="${localName}" class="mainPropGroup" style="margin-bottom: -2px; color: #000000;">Current Appointments & Affiliations <@p.verboseDisplay positions /></h3>
+            <ul id="individual-personInPosition" role="list">
+              <@p.objectProperty positions false />
+            </ul>
+          </#if>
 
-        <#-- Contact Info -->
-        <div id="individual-contactInformation">
-          <#include "individual-contactInfo.ftl">
+          <#-- Contact Info -->
+          <div id="individual-contactInformation">
+            <#include "individual-contactInfo.ftl">
+          </div>
         </div>
 
       </header>

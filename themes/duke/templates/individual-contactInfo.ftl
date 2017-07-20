@@ -1,4 +1,4 @@
-<h3 style="margin-bottom: -8px;">Contact Information</h3>
+<h3 style="margin-bottom: -8px; color: #000000;">Contact Information</h3>
 <#-- Contact info on individual profile page -->
 <#import "lib-sequence.ftl" as s>
 
