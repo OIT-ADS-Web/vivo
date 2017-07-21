@@ -16,7 +16,7 @@
   </#local>
 
   <#local date>
-    <@dt.intervalSpan "${statement.startDate!}" "${statement.startDatePrecision!}" "${statement.endDate!}" "${statement.endDatePrecision!}" false />
+    <@dt.yearIntervalSpan "${statement.dateTimeStart!}" "${statement.dateTimeEnd!}" />
   </#local>
 
   <#local linkedIndividual>

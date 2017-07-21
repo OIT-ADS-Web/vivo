@@ -3670,6 +3670,16 @@ p.caption {
 	padding-bottom: 25px;
 }
 
-.below-overview-wrap {
-	margin-top: -10px;
+/* firefox */
+@-moz-document url-prefix() {
+	.below-overview-wrap {
+		margin-top: -10px;
+	}
+}
+
+/* webkit-based browsers (Chrome, Safari, etc.) */  
+@media screen and (-webkit-min-device-pixel-ratio:0) {  
+  .below-overview-wrap {
+		margin-top: 10px;
+	} 
 }
