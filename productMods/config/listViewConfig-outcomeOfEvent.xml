@@ -24,11 +24,11 @@
           OPTIONAL { ?event rdfs:label ?title } 
           OPTIONAL { ?event core:description ?description.}
           OPTIONAL { ?event dukeart:venue ?venue.}
-          OPTIONAL { ?gift core:dateTimeInterval ?dateTimeInterval .
+          OPTIONAL { ?event core:dateTimeInterval ?dateTimeInterval .
                      ?dateTimeInterval core:start ?dateTimeStartValue .                     
                      ?dateTimeStartValue core:dateTime ?dateTimeStart 
           }
-          OPTIONAL { ?gift core:dateTimeInterval ?dateTimeInterval .
+          OPTIONAL { ?event core:dateTimeInterval ?dateTimeInterval .
                      ?dateTimeInterval core:end ?dateTimeEndValue .   
                      ?dateTimeEndValue core:dateTime ?dateTimeEnd  
           }
