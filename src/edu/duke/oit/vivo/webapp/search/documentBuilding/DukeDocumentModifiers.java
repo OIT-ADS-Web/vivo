@@ -54,6 +54,7 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.PublicationCustomFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.SubjectHeadingOfFacet; 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.SubjectHeadingPeopleFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.GeoSelfGoverningPersonFields;
+
 import edu.duke.oit.vivo.webapp.search.documentBuilding.ArtisticWorkEventsFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.ArtisticEventFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.ArtisticWorkFields;

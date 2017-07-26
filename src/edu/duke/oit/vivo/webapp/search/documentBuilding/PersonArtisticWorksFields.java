@@ -36,6 +36,7 @@ WHERE {
   ?relationship core:relates ?work.
   ?relationship dukeart:roles ?role.
   OPTIONAL {?relationship core:description ?role_description.}
+  OPTIONAL {?relationship dukeart:isFeaturedRole ?isFeaturedRole.}
   ?work rdf:type dukeart:ArtisticWork.
   ?work rdfs:label ?label.
   ?work vitro:mostSpecificType ?type.
