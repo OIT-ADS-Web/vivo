@@ -30,7 +30,7 @@
       
       <#-- link to webpage -->
       <#assign linkToItem = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#linkToItem")!>
-      <#if linkToItem?has_content && (linkToItem.statements)?has_content>
+      <#if linkToItem?has_content && (linkToItem.statements[0].value)?has_content>
         <#assign linkValue = "${linkToItem.statements[0].value}"/>
         <#assign linkUrl = "<a href=\"${linkValue}\" target=\"_blank\">Link</a>">
 

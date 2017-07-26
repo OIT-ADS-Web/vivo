@@ -1,4 +1,4 @@
-<h3>Contact Information</h3>
+<h3 style="margin-bottom: -8px; color: #000000;">Contact Information</h3>
 <#-- Contact info on individual profile page -->
 <#import "lib-sequence.ftl" as s>
 
@@ -38,7 +38,7 @@
       <#if phone.statements?has_content> <#-- if there are any statements -->
         <#list phone.statements as statement>
           <span class="phone">
-            <img class ="icon-phone  middle" src="${urls.images}/individual/phoneIcon.gif" alt="phone icon" />${statement.number!}
+            <img class ="icon-phone middle" src="${urls.images}/individual/phoneIcon.gif" alt="phone icon" />${statement.number!}
           </span>
         </#list>
       </#if>
