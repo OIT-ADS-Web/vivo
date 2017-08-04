@@ -1,6 +1,6 @@
 #artistic-work-type {
 	font-size: 18.75px; 
-	margin-bottom: 20px;
+	margin: -10px 0 20px 0;
 }
 
 a.expanderLink {
@@ -3613,6 +3613,10 @@ p.caption {
 	font-size: 18.75px;
 }
 
+#service-type {
+	padding-top: 7px;
+}
+
 .person .section-collapsible {
   border: none;
   padding: 4px 0;
@@ -3663,7 +3667,7 @@ p.caption {
 }
 
 .webpage {
-	margin: 20px 0 20px 0;
+	margin: 0 0 20px 0;
 }
 
 #award-weblink {
@@ -3682,4 +3686,8 @@ p.caption {
   .below-overview-wrap {
 		margin-top: 10px;
 	} 
+}
+
+.individual-description {
+	margin-bottom: 20px;
 }
