@@ -64,6 +64,9 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.PublicationAuthorsCustom
  
 import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeJSONContextNodeFields;
 
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonPublicImageCheck;
+
+
 public class DukeDocumentModifiers implements javax.servlet.ServletContextListener{
 
     @SuppressWarnings("unchecked")
@@ -131,6 +134,9 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
         publicationAuthors.setIsFaceting(true);
 
         modifiers.add( publicationAuthors );
+
+        modifiers.add( new PersonPublicImageCheck(rdfServiceFactory));
+
     }
 
     @Override
