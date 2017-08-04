@@ -89,7 +89,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://vivo.duke.edu/vivo/ontology/duke-cv-extension#positionsOverview">
+  <rdf:Description rdf:about="http://vivo.duke.edu/vivo/ontology/duke-cv-extension#NonAppointmentsOverview">
     <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A summary of a person's administrative, clinical, and/or leadership positions at Duke that are not represented by formal faculty appointments.</vitro:publicDescriptionAnnot>
     <vitro:hiddenFromPublishBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
     <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
@@ -114,6 +114,7 @@
     <rdfs:label xml:lang="en-US">Medical Licensure</rdfs:label>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
       >A medical license</vitro:shortDef>
+    <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#Licensure"/>
   </owl:Class>
 
   <owl:DatatypeProperty rdf:about="http://vivo.duke.edu/vivo/ontology/duke-cv-extension#licenseState">
@@ -152,6 +153,7 @@
     <rdfs:label xml:lang="en-US">Gifts and Other Support</rdfs:label>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
       >A gift or other form of support</vitro:shortDef>
+    <vitro:customDisplayViewAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">individual--dukecv-gift.ftl</vitro:customDisplayViewAnnot>
   </owl:Class>
 
   <owl:DatatypeProperty rdf:about="http://vivo.duke.edu/vivo/ontology/duke-cv-extension#giftName">
@@ -173,5 +175,17 @@
   <owl:DatatypeProperty rdf:about="http://vivo.duke.edu/vivo/ontology/duke-cv-extension#description">
     <rdfs:label xml:lang="en-US">Description</rdfs:label>
   </owl:DatatypeProperty>
+
+  <rdf:Description rdf:about="http://vivo.duke.edu/vivo/ontology/duke-cv-extension#DukePastPosition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en-US">Past Position at Duke</rdfs:label>
+    <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppeople"/>
+    <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A position that a person held at Duke in the past.</vitro:publicDescriptionAnnot>
+    <vitro:displayLimitAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</vitro:displayLimitAnnot>
+    <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-1</vitro:displayRankAnnot>
+    <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <vitro:prohibitedFromUpdateBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
+    <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#Relationship"/>
+  </rdf:Description>
 
 </rdf:RDF>

@@ -21,26 +21,40 @@
 }
 
 #close {
-  display:block;
-  float:right
+  display: block;
+  float: right
 }
 
 .body ul {
-  width:575px
+  width: 575px
 }
 
 #modal ul {
-  margin:2px;
-  padding:2px
+  margin: 2px;
+  padding: 2px;
 }
 
-.overview-value li {
+.overview-value ul li, .officehours-value ul li, .research-interests-value ul li, .clinicalOverview-value ul li, .academicOverview-value ul li, .teachingOverview-value ul li, .leadershipPositions-value ul li, .mentorOverview-value ul li, .description-value ul li {
+  list-style-type: disc;
+  margin-left: 14px;
+}
+
+.overview-value ol li, .officehours-value ol li, .research-interests-value ol li, .clinicalOverview-value ol li, .academicOverview-value ol li, .teachingOverview-value ol li, .leadershipPositions-value ol li, .mentorOverview-value ol li, .description-value ol li {
   list-style-type: decimal;
   margin-left: 14px;
 }
 
-.overview-value ol {
-  list-style-type: decimal;
+.research-interests-value {
+  line-height: 1.3em;
+  font-size: 15px;
+}
+
+.overview-value ol, .officehours-value ol, .research-interests-value ol, .description-value ol {
+  margin-left: 4px;
+}
+
+.clinicalOverview-value ol, .academicOverview-value ol, .teachingOverview-value ol, .leadershipPositions-value ol, .mentorOverview-value ol {
+  margin-left: 16px;
 }
 
 li {

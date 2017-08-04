@@ -55,7 +55,7 @@ public class DukeJSONContextNodeFields implements DocumentModifier {
   protected void addBindingsToSOLR(JSONArray bindings, SearchInputDocument doc) throws JSONException {
       JSONObject objects = bindings.getJSONObject(0);
 
-      // NOTE: getJSONObject(0) will throw Exception if it's empty (for URIs other than person)
+      // NOTE: getJSONObject(0) will throw Exception if it's empty 
       Iterator<String> keys = objects.keys();
       
       String dynamicFieldSuffix = "text";

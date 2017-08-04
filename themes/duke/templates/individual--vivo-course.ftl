@@ -18,16 +18,21 @@
     </header>
   </section>
   <section id="individual-body" role="region">
-  <#-- instructors -->
-  <ul class="section-navigation">
-  <#assign realizedRole = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/BFO_0000055")!>
-  <#if realizedRole?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-    <@simpleCollapsiblePropertyListSection realizedRole "Instructors" />
-  </#if>
-  </ul>
+    <#-- instructors -->
+    <ul class="section-navigation">
+      <#assign realizedRole = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/BFO_0000055")!>
+      <#if realizedRole?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+        <@simpleCollapsiblePropertyListSection realizedRole "Instructors" />
+      </#if>
+    </ul>
   </section>
 </section>
+
 <section id="rightColumn" class="sidebar">
 </section>
 ${headScripts.add('<script type="text/javascript" src="${urls.base}/js/individual/dukeUtils.js"></script>')}
 
+<style>
+  .hideshow {font-size:7.7px;}
+  .listDateTime {font-size:11.04px;}
+</style>

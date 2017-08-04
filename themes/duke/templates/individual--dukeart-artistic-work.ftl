@@ -90,7 +90,7 @@
     </#if>
 
     <#-- events -->
-    <#assign events = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0002233", "http://purl.org/NET/c4dm/event.owl#Event")!>
+    <#assign events = propertyGroups.pullProperty("http://purl.org/NET/c4dm/event.owl#isFactorOf")!>
     <#if events?has_content>
       <@simpleObjectPropertyListing events "Events" />
     </#if>

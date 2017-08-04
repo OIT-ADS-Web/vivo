@@ -1,6 +1,6 @@
 #artistic-work-type {
 	font-size: 18.75px; 
-	margin-bottom: 20px;
+	margin: -10px 0 20px 0;
 }
 
 a.expanderLink {
@@ -480,8 +480,8 @@ a.ingestMenu: hover,a.ingestMenu: active,a.account-menu: hover,a.account-menu: a
 
 .collaboratorship-link-separator {
 	border-top: 1px dotted #A6B1B0;
-	margin-top: 35px;
-	padding-top: 20px;
+	margin-top: 15px;
+	padding-top: 15px;
 }
 
 .collaboratorship-link {
@@ -503,6 +503,8 @@ a.ingestMenu: hover,a.ingestMenu: active,a.account-menu: hover,a.account-menu: a
 .sidebar {
 	float: right;
 	margin-top: 5px;
+	padding-top: 12px;
+/*	margin-right: 4px;*/
 	width: 20%;
 }
 
@@ -682,7 +684,7 @@ ul#main-nav {
 	margin: 0 auto;
 	max-width: 100%;
 	min-height: 550px;
-	padding: .9em;
+	padding: .9em 1em .9em .9em;
 }
 
 #intro {
@@ -836,22 +838,13 @@ input.search-home-vivo {
 }
 
 .overview-value {
-	font-size: 2.4em;
-	margin: 20px 0;
+	font-size: 1.5em;
+	margin-top: 10px;
 	line-height: 1.3em;
 	width: 100%;
 	display: inline-block;
-	padding-bottom: 20px;
-}
-
-.overview-value-duke li {
-  list-style-type: decimal;
-}
-
-.overview-value-duke ol {
-  font-size: 15px;
-  margin-left: 20px;
-  line-height: 1.3em;
+	padding-bottom: 4px;
+	margin-bottom: -30px;
 }
 
 #find-person h2 {
@@ -911,14 +904,14 @@ input.search-home-vivo {
 /*INdividual People Page*/
 #topcontainer {
 	float: left;
-	margin: 10px 0;
+	margin: 3px 0;
 	width: 80%;
 }
 
 #individual-body {
 	clear: both;
 	margin: 0 10px 1.5em;
-	padding: 25px 0;
+	padding: 5px 0;
 	width: 95%;
 }
 
@@ -932,7 +925,7 @@ input.search-home-vivo {
 }
 
 #individual-body ul h3 {
-		padding-top: 0px;
+	padding-top: 0px;
 }
 
 ul#individual-hasResearchArea li, ul#individual-geographicFocus li, ul#individual-awardOrHonor li, ul#individual-mentorshipAvailability li {
@@ -953,6 +946,7 @@ ul#individual-advisorIn li  {
 
 ul#individual-hasResearchArea li, ul#individual-geographicFocus li {
   width: 45%;
+  margin-left: 0px;
 }
 
 div.hideshow ul[role=list], #MentorshipAvailability p {
@@ -988,7 +982,7 @@ ul#individual-outcomeOf li {
 }
 
 .email_and_phone {
-	padding-bottom: 20px;
+	padding-bottom: 2px;
 }
 
 #individual-contactInformation li {
@@ -1035,6 +1029,7 @@ ul.subclass-property-list li {
 ul#individual-personInPosition {
 	list-style-type: circle;
 	padding-left: 0;
+	margin-bottom: -10px;
 }
 
 #individual-intro.person {
@@ -1057,7 +1052,7 @@ ul#individual-personInPosition {
 #individual-intro.person #individual-info {
 	float: left;
 	margin-bottom: 1.25em;
-	padding-left: 19px;
+	margin-left: -4px;
 	width: 90%;
 }
 
@@ -1099,13 +1094,13 @@ ul#individual-hasResearchArea li a {
 }
 
 section#researchAreas h3{
-font-size: 2em;
-margin: 10px 0;
-padding: 0;
+	font-size: 2em;
+	margin: 10px 0;
+	padding: 0;
 }
 
 .sidebar section {
-    margin-bottom: 1em;
+  margin-bottom: .5em;
 }
 
 img.individual-photo {
@@ -1145,14 +1140,20 @@ h2.fn .display-title {
 	padding-top: 0;
 }
 
-.overview-value {
-	margin: 10px 0;
-	font-size: 1.5em;
-}
-
 #individual-info h3 {
 	line-height: 1.2em;
 	font-size: 1.875em;
+	padding-top: 10px;
+	padding-bottom: 7px;
+}
+
+img.individual-photo {
+  width: 160px;
+  margin-left: 0;
+  float: left;
+  margin-top: 24px;
+  margin-right: 20px;
+  margin-bottom: 30px;
 }
 
 h3#personInPosition {
@@ -1191,6 +1192,7 @@ h3#personInPosition {
   width: 176px;
   height: 32px;
   display: block;
+  margin-left: -2px;
 }
 
 .sidebar .individual_widget_links a {
@@ -2373,7 +2375,7 @@ h2 a.expanderLink {
 /*individual entity pages*/
 .entity .document h1,
 .entity .grant h1 {
-	line-height: 1.1em;
+	line-height: 1.3em;
 	margin-bottom: 15px;
 }
 
@@ -2396,11 +2398,12 @@ h2 a.expanderLink {
 
 .entity .grant #individual-body ul {
 	list-style: disc outside url(../../../images/individual/arrow-green.gif);
+	padding: 12px 8px;
 }
 
 .entity .grant #individual-body ul li {
-	font-size: 1.3em;
-	line-height: 1.8em;
+	font-size: 14.4px;
+	line-height: 18.7167px;
 	margin-left: 8px;
 }
 
@@ -3589,6 +3592,11 @@ p.caption {
 	line-height: 1.3em;
 }
 
+.description-value {
+  font-size: 1.5em;
+  line-height: 1.3em;
+}
+
 #publication-subtype-color {
 	color: #004D69; 
 	padding-left: 10px;
@@ -3605,6 +3613,10 @@ p.caption {
 	font-size: 18.75px;
 }
 
+#service-type {
+	padding-top: 7px;
+}
+
 .person .section-collapsible {
   border: none;
   padding: 4px 0;
@@ -3613,7 +3625,7 @@ p.caption {
 .section-group-header {
 	color: black;
 	font-size: 2em;
-	margin-top: 1.2em;
+	margin-top: .9em;
 	margin-bottom: .5em;
 }
 .section-group-header:first-child {
@@ -3648,4 +3660,34 @@ p.caption {
 
 #weblink {
 	font-size: 1.45em;
+}
+
+.individual-officehours {
+	margin-bottom: 12px;
+}
+
+.webpage {
+	margin: 0 0 20px 0;
+}
+
+#award-weblink {
+	padding-bottom: 25px;
+}
+
+/* firefox */
+@-moz-document url-prefix() {
+	.below-overview-wrap {
+		margin-top: -10px;
+	}
+}
+
+/* webkit-based browsers (Chrome, Safari, etc.) */  
+@media screen and (-webkit-min-device-pixel-ratio:0) {  
+  .below-overview-wrap {
+		margin-top: 10px;
+	} 
+}
+
+.individual-description {
+	margin-bottom: 20px;
 }

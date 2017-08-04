@@ -45,7 +45,7 @@
             <#assign coInvestigatorIcon = "${urls.images}/visualization/coauthorship/co_investigator_icon.png">
             
             <div id="coinvestigator_link_container" class="collaboratorship-link-container">
-                <div class="collaboratorship-icon">
+                <div class="collaboratorship-icon" style="margin-top:11px;">
                     <a href="${coInvestigatorVisUrl}" title="co-investigator network"><img src="${coInvestigatorIcon}" alt="Co-investigator network icon" width="30px" height="30px" /></a>
                 </div>
                 <div class="collaboratorship-link"><a href="${coInvestigatorVisUrl}" title="co-investigator network">Co-Investigator Network</a></div>

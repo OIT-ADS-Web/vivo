@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- $This file is distributed under the terms of the license in /doc/license.txt$ -->
+
+<!-- See guidelines in vitro/doc/list_view_configuration_guidelines.txt -->
+
+<list-view-config>
+    <query-select>    
+        PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+        PREFIX core:   &lt;http://vivoweb.org/ontology/core#&gt;
+        PREFIX vitro:  &lt;http://vitro.mannlib.cornell.edu/ns/vitro/0.7#&gt;
+        PREFIX obo:    &lt;http://purl.obolibrary.org/obo/&gt;
+        PREFIX dukecv: &lt;http://vivo.duke.edu/vivo/ontology/duke-cv-extension#&gt;
+        
+        SELECT DISTINCT ?gift
+                        ?label
+                        ?donor
+                        ?role
+                        ?giftAmount
+                        ?description
+                        ?dateTimeStart ?dateTimeEnd 
+        WHERE {
+            ?subject ?property ?gift .
+            ?gift rdfs:label ?label .
+            ?gift dukecv:donor ?donor .
+            OPTIONAL { ?gift dukecv:role ?role 
+            }
+            OPTIONAL { ?gift dukecv:giftAmount ?giftAmount
+            } 
+            OPTIONAL { ?gift dukecv:description ?description
+            }
+            OPTIONAL { ?gift core:dateTimeInterval ?dateTimeInterval .
+                       ?dateTimeInterval core:start ?dateTimeStartValue .                     
+                       ?dateTimeStartValue core:dateTime ?dateTimeStart 
+            }
+            OPTIONAL { ?gift core:dateTimeInterval ?dateTimeInterval .
+                       ?dateTimeInterval core:end ?dateTimeEndValue .   
+                       ?dateTimeEndValue core:dateTime ?dateTimeEnd  
+            }
+        } ORDER BY DESC(?dateTimeStart) 
+    </query-select>
+    
+    <query-construct>
+        PREFIX core:   &lt;http://vivoweb.org/ontology/core#&gt;
+        PREFIX rdfs:   &lt;http://www.w3.org/2000/01/rdf-schema#&gt;    
+        PREFIX foaf:   &lt;http://xmlns.com/foaf/0.1/&gt;
+        PREFIX obo:    &lt;http://purl.obolibrary.org/obo/&gt;
+        PREFIX dukecv: &lt;http://vivo.duke.edu/vivo/ontology/duke-cv-extension#&gt;
+        
+        CONSTRUCT { 
+            ?subject ?property ?gift .
+            ?gift rdfs:label ?label .
+            ?gift dukecv:donor ?donor .
+            ?gift dukecv:role ?role .
+            ?gift dukecv:giftAmount ?giftAmount . 
+            ?gift dukecv:description ?description .
+        }
+        WHERE {
+            ?subject ?property ?gift .
+            ?gift a dukecv:Gift. 
+            ?gift rdfs:label ?label .
+            ?gift dukecv:donor ?donor .
+            ?gift dukecv:role ?role .
+            ?gift dukecv:giftAmount ?giftAmount . 
+            ?gift dukecv:description ?description .
+        } 
+    </query-construct>
+    
+    <query-construct>
+        PREFIX core:   &lt;http://vivoweb.org/ontology/core#&gt;  
+        PREFIX dukecv: &lt;http://vivo.duke.edu/vivo/ontology/duke-cv-extension#&gt; 
+        
+        CONSTRUCT { 
+            ?subject ?property ?gift .
+            ?gift core:dateTimeInterval ?dateTimeInterval .
+            ?dateTimeInterval core:start ?dateTimeStartValue .
+            ?dateTimeStartValue core:dateTime ?dateTimeStart .
+        } WHERE {
+            ?subject ?property ?gift .  
+            ?gift a dukecv:Gift .  
+            ?gift core:dateTimeInterval ?dateTimeInterval .
+            ?dateTimeInterval core:start ?dateTimeStartValue .
+            ?dateTimeStartValue core:dateTime ?dateTimeStart .
+        } 
+    </query-construct>
+
+    <query-construct>
+        PREFIX core:   &lt;http://vivoweb.org/ontology/core#&gt;   
+        PREFIX dukecv: &lt;http://vivo.duke.edu/vivo/ontology/duke-cv-extension#&gt; 
+        
+        CONSTRUCT { 
+            ?subject ?property ?gift .  
+            ?gift core:dateTimeInterval ?dateTimeInterval .
+            ?dateTimeInterval core:end ?dateTimeEndValue .
+            ?dateTimeEndValue core:dateTime ?dateTimeEnd 
+        } WHERE {
+            ?subject ?property ?gift .  
+            ?gift a dukecv:Gift .  
+            ?gift core:dateTimeInterval ?dateTimeInterval .
+            ?dateTimeInterval core:end ?dateTimeEndValue .
+            ?dateTimeEndValue core:dateTime ?dateTimeEnd 
+        } 
+    </query-construct>
+              
+    <template>propStatement-relatesGift.ftl</template>
+</list-view-config>

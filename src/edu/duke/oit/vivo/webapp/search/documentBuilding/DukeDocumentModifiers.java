@@ -14,6 +14,7 @@ import edu.cornell.mannlib.vitro.webapp.rdfservice.RDFServiceFactory;
 import edu.cornell.mannlib.vitro.webapp.rdfservice.impl.RDFServiceUtils;
 
 import edu.cornell.mannlib.vitro.webapp.search.documentBuilding.DocumentModifier;
+import edu.cornell.mannlib.vitro.webapp.search.documentBuilding.SearchIndexExcluder;
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.GrantFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.CourseFields;
@@ -36,6 +37,7 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonArtisticWorkEvents
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonGeographicallyRelatesToFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonCustomFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonGrantFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonEventFields;
 
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.OrganizationAwardFields;
@@ -52,9 +54,9 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.PublicationCustomFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.SubjectHeadingOfFacet; 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.SubjectHeadingPeopleFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.GeoSelfGoverningPersonFields;
-import edu.duke.oit.vivo.webapp.search.documentBuilding.ArtisticWorkEventsFields;
 
-// NOTE: have to add a space so git see this to merge
+import edu.duke.oit.vivo.webapp.search.documentBuilding.ArtisticWorkEventsFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.ArtisticEventFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.ArtisticWorkFields;
   
 import edu.duke.oit.vivo.webapp.search.documentBuilding.ProfessionalActivityFields;
@@ -65,7 +67,7 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.PublicationAuthorsCustom
 import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeJSONContextNodeFields;
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonPublicImageCheck;
-
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonExcluder;
 
 public class DukeDocumentModifiers implements javax.servlet.ServletContextListener{
 
@@ -103,6 +105,7 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
         modifiers.add( new PersonGeographicallyRelatesToFields (rdfServiceFactory));
         modifiers.add( new PersonVcardFields( rdfServiceFactory ));
         modifiers.add( new PersonNewsItemFields( rdfServiceFactory ));
+        modifiers.add( new PersonEventFields( rdfServiceFactory ));
 
         modifiers.add( new OrganizationAwardFields( rdfServiceFactory ));
         modifiers.add( new OrganizationGrantFields( rdfServiceFactory ));
@@ -123,7 +126,7 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
         modifiers.add( new GeoSelfGoverningPersonFields (rdfServiceFactory));
 
         modifiers.add( new ArtisticWorkEventsFields (rdfServiceFactory));
-        // NOTE: have to add a space so Git sees this to merge
+        modifiers.add( new ArtisticEventFields (rdfServiceFactory));
         modifiers.add( new ArtisticWorkFields (rdfServiceFactory));
  
         modifiers.add( new ProfessionalActivityFields (rdfServiceFactory));
@@ -137,6 +140,11 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
 
         modifiers.add( new PersonPublicImageCheck(rdfServiceFactory));
 
+        List<SearchIndexExcluder> excludes = 
+            (List<SearchIndexExcluder>)context.getAttribute("SearchIndexExcludes");
+     
+        excludes.add(new PersonExcluder(rdfServiceFactory));       
+ 
     }
 
     @Override
