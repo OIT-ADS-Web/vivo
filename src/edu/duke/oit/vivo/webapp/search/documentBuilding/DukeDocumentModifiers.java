@@ -66,8 +66,8 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.PublicationAuthorsCustom
  
 import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeJSONContextNodeFields;
 
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonPublicImageCheck;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonExcluder;
-
 
 public class DukeDocumentModifiers implements javax.servlet.ServletContextListener{
 
@@ -137,6 +137,8 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
         publicationAuthors.setIsFaceting(true);
 
         modifiers.add( publicationAuthors );
+
+        modifiers.add( new PersonPublicImageCheck(rdfServiceFactory));
 
         List<SearchIndexExcluder> excludes = 
             (List<SearchIndexExcluder>)context.getAttribute("SearchIndexExcludes");
