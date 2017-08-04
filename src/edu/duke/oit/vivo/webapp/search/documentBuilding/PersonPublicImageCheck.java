@@ -37,19 +37,23 @@ import org.json.JSONArray;
 
 /*
 
-# does not have public_image (on test):
-#https://scholars.duke.edu/individual/per1040112
-# does have public image:
-#https://scholars.duke.edu/individual/per5313602
+# does not have a valid public_image (on test):
+# https://scholars.duke.edu/individual/per4923992
+# does have valid public image (on test):
+# https://scholars.duke.edu/individual/per8709172
 
 PREFIX foaf:     <http://xmlns.com/foaf/0.1/>
 PREFIX vitro-public: <http://vitro.mannlib.cornell.edu/ns/vitro/public#>
 select  ?public_image
 {
-?personUri  a foaf:Person .
-OPTIONAL { ?personUri vitro-public:mainImage ?public_image . }
-FILTER (?personUri = <https://scholars.duke.edu/individual/per1040112> )
+  ?personUri  a foaf:Person .
+  OPTIONAL { 
+    ?personUri vitro-public:mainImage ?main_image . 
+    ?main_image vitro-public:filename ?public_image .
+  }
+  FILTER (?personUri = <https://scholars.duke.edu/individual/per4923992> )
 }
+
 */
 
 public class PersonPublicImageCheck extends DukeJSONContextNodeFields {
@@ -65,7 +69,10 @@ public class PersonPublicImageCheck extends DukeJSONContextNodeFields {
       + "select ?public_image \n"
       + "{ \n"
       + "  ?personUri  a foaf:Person . \n"
-      + "  OPTIONAL { ?personUri vitro-public:mainImage ?public_image . } \n"
+      + "  OPTIONAL { \n"
+      + "    ?personUri vitro-public:mainImage ?main_image . \n"
+      + "    ?main_image vitro-public:filename ?public_image . \n"
+      + "  } \n"
       + "  FILTER (?personUri = ?uri) \n"
       + "}";
 
