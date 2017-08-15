@@ -17,7 +17,7 @@ PREFIX vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#>
    
 select (str(?label) as ?result)
 WHERE {
-  <https://scholars.duke.edu/individual/perdm253> core:hasResearchArea ?subjectArea .
+  <https://scholars.duke.edu/individual/per0482202> core:hasResearchArea ?subjectArea .
   ?subjectArea rdfs:label ?label .
 }
 

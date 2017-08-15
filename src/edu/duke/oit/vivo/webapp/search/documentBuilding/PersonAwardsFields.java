@@ -18,7 +18,7 @@ SELECT (CONCAT(
   ?label, ' ', ?name
 ) as ?result)
 WHERE {
-  <https://scholars.duke.edu/individual/perdm253> core:relatedBy ?awardReceipt.
+  <https://scholars.duke.edu/individual/per0482202> core:relatedBy ?awardReceipt.
   ?awardReceipt a core:AwardReceipt.
   ?awardReceipt rdfs:label ?label.
   ?awardReceipt core:relates ?award.
