@@ -11,9 +11,9 @@ import edu.cornell.mannlib.vitro.webapp.search.documentBuilding.ContextNodeField
 PREFIX foaf:     <http://xmlns.com/foaf/0.1/>
 PREFIX dukecv:   <http://vivo.duke.edu/vivo/ontology/duke-cv-extension#>
 
-select ?dukePositions {
+select ?result {
   ?personUri a foaf:Person . 
-  ?personUri dukecv:NonAppointmentsOverview ?dukePositions .
+  ?personUri dukecv:NonAppointmentsOverview ?result .
   FILTER(?personUri =  <https://scholars.duke.edu/individual/per2350142>)
  }
 
@@ -37,9 +37,9 @@ public class PersonDukePositionsFields extends DukeContextNodeFields {
  
     private static String queryForPositions =        
           prefix +
-          "select ?dukePositions { \n" +
+          "select ?result { \n" +
           "?personUri a foaf:Person . \n" +
-          "?personUri dukecv:NonAppointmentsOverview ?dukePositions . \n" +
+          "?personUri dukecv:NonAppointmentsOverview ?result . \n" +
           "FILTER(?personUri =  ?uri) \n" +
           "}";
 
