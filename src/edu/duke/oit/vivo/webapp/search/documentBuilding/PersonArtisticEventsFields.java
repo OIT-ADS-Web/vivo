@@ -21,7 +21,7 @@ WHERE {
   ?personUri a foaf:Person. 
   ?personUri event:isAgentIn ?event .
   ?event a event:Event. 
-  ?eventLabel rdfs:label ?label .
+  ?event rdfs:label ?eventLabel .
   OPTIONAL { ?event dukeart:venue ?venue }
   OPTIONAL { ?event core:description ?description }   
   FILTER(?personUri =  <https://scholars.duke.edu/individual/per0482202>)
