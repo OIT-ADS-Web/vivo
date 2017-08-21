@@ -29,8 +29,11 @@
             <li class="browse_header">Browse By</li>
 
             <#assign activitySubclasses = ['Service to the Profession', 'Service to the University', 'Award or Honor', 'Outreach & Engaged Scholarship', 'Students/Advising/Mentoring', 'Presentations & Appearances'] />
+
             <#assign venueSubclasses = ["Journal", "Newspaper"] />
-            <#assign grantSubclasses = ["Grant","Grants","Clinical Trial Grant","Conference Grant","Construction Renovation Grant","Equipment Grant","Fellowship Grant","Institutional Support Grant","Institutional Training Grant","Professorship","Public Service Grant","Research Grant"] />
+
+            <#assign grantSubclasses = ["Grant","Grants","Clinical Trial Grant","Conference Grant","Construction Renovation Grant","Equipment Grant","Fellowship Grant","Institutional Support Grant","Institutional Training Grant","Professorship","Public Service Grant","Research Grant","Gift"] />
+
             <#assign workSubclasses = ["Artistic Work and Non-Print Media", "Audio Recording",
                                        "Ceramic","Choreography","Composition","Costume Design","CostumeDesign"
                                        "Dance",
