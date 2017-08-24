@@ -71,6 +71,7 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonExcluder;
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.GiftFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonGiftFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonDukePositionsFields;
 
 public class DukeDocumentModifiers implements javax.servlet.ServletContextListener{
 
@@ -151,6 +152,7 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
         modifiers.add( new GiftFields (rdfServiceFactory));
         modifiers.add( new PersonGiftFields (rdfServiceFactory));
   
+        modifiers.add( new PersonDukePositionsFields (rdfServiceFactory));
     }
 
     @Override

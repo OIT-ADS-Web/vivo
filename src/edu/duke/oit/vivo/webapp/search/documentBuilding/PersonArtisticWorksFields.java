@@ -30,8 +30,8 @@ SELECT
  ) as ?result)
 
 WHERE {
-  <https://scholars.duke.edu/individual/perdm253> a foaf:Person . 
-  <https://scholars.duke.edu/individual/perdm253> core:relatedBy ?relationship. 
+  <https://scholars.duke.edu/individual/per0482202> a foaf:Person . 
+  <https://scholars.duke.edu/individual/per0482202> core:relatedBy ?relationship. 
   ?relationship rdf:type dukeart:ArtisticRelationship.
   ?relationship core:relates ?work.
   ?relationship dukeart:roles ?role.
