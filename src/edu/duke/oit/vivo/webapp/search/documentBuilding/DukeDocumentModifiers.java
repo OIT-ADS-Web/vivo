@@ -72,7 +72,8 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonExcluder;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.GiftFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonGiftFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonDukePositionsFields;
-
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonAcademicPositionsFields; 
+ 
 public class DukeDocumentModifiers implements javax.servlet.ServletContextListener{
 
     @SuppressWarnings("unchecked")
@@ -153,6 +154,8 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
         modifiers.add( new PersonGiftFields (rdfServiceFactory));
   
         modifiers.add( new PersonDukePositionsFields (rdfServiceFactory));
+        modifiers.add(new PersonAcademicPositionsFields(rdfServiceFactory));
+
     }
 
     @Override
