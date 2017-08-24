@@ -69,6 +69,9 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeJSONContextNodeField
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonPublicImageCheck;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonExcluder;
 
+import edu.duke.oit.vivo.webapp.search.documentBuilding.GiftFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonGiftFields;
+
 public class DukeDocumentModifiers implements javax.servlet.ServletContextListener{
 
     @SuppressWarnings("unchecked")
@@ -144,7 +147,10 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
             (List<SearchIndexExcluder>)context.getAttribute("SearchIndexExcludes");
      
         excludes.add(new PersonExcluder(rdfServiceFactory));       
- 
+
+        modifiers.add( new GiftFields (rdfServiceFactory));
+        modifiers.add( new PersonGiftFields (rdfServiceFactory));
+  
     }
 
     @Override
