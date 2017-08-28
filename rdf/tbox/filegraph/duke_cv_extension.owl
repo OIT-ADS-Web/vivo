@@ -151,6 +151,7 @@
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
       >A gift or other form of support</vitro:shortDef>
     <vitro:customDisplayViewAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">individual--dukecv-gift.ftl</vitro:customDisplayViewAnnot>
+    <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#Grant"/>
   </owl:Class>
 
   <owl:DatatypeProperty rdf:about="http://vivo.duke.edu/vivo/ontology/duke-cv-extension#giftName">

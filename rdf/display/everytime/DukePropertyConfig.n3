@@ -248,7 +248,7 @@ local:relatedGiftConfig a :ObjectPropertyDisplayConfig ;
     :displayName "gifts & other support" ;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
-    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
+    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupresearch> .
 
 local:relatedMedicalLicensure a :ConfigContext ;
     :hasConfiguration local:relatedMedicalLicensureConfig ;

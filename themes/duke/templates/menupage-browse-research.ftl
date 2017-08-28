@@ -32,7 +32,7 @@
 
             <#assign venueSubclasses = ["Journal", "Newspaper"] />
 
-            <#assign grantSubclasses = ["Grant","Grants","Clinical Trial Grant","Conference Grant","Construction Renovation Grant","Equipment Grant","Fellowship Grant","Institutional Support Grant","Institutional Training Grant","Professorship","Public Service Grant","Research Grant","Gift"] />
+            <#assign grantSubclasses = ["Grant","Grants","Clinical Trial Grant","Conference Grant","Construction Renovation Grant","Equipment Grant","Fellowship Grant","Institutional Support Grant","Institutional Training Grant","Gifts and Other Support","Professorship","Public Service Grant","Research Grant"] />
 
             <#assign workSubclasses = ["Artistic Work and Non-Print Media", "Audio Recording",
                                        "Ceramic","Choreography","Composition","Costume Design","CostumeDesign"
@@ -64,6 +64,8 @@
             <#assign workMenuItems = [] />
             <#assign venueMenuItems = [] />
             <#assign activityMenuItems = [] />
+
+            <#assign eventMenuItems = [] />
 
             <li class="menu_header">
             Publications
@@ -110,7 +112,19 @@
                       <#assign grantName = vClass.name />
                     </#if>
                     <li id="${vClassCamel}"><a href="#${vClassCamel}" title="Browse all individuals in this class" data-uri="${vClass.URI}">${grantName} <span class="count-classes">(${vClass.entityCount})</span></a></li>
+
+                    <#assign giftPosition = vClass.name?last_index_of("Gift") />
+                    <#if (giftPosition > 0)>
+                      <#assign giftName = vclass.name?substring(0,giftPosition) />
+                      <li id="Gift"><a href="#Gift" title="Browse all individuals in this class" data-uri="http://vivo.duke.edu/vivo/ontology/duke-cv-extension#Gift">Gift <span class="count-classes">(some number)</span></a></li>
+                    </#if>
+                    
                 </#if>
+
+
+              
+
+
             </#list>
             </ul>
             </li>
@@ -130,6 +144,26 @@
                       <#assign workName = vClass.name />
                     </#if>
                     <li id="${vClassCamel}"><a href="#${vClassCamel}" title="Browse all individuals in this class" data-uri="${vClass.URI}">${workName} <span class="count-classes">(${vClass.entityCount})</span></a></li>
+                </#if>
+            </#list>
+            </ul>
+            </li>
+            </#if>
+
+            <#if (eventMenuItems?size > 0)>
+            <li class="menu_header">
+              Events
+            <ul>
+            <#list eventMenuItems as vClass>
+                <#assign vClassCamel = str.camelCase(vClass.name) />
+                <#if (vClass.entityCount > 0)>
+                    <#assign eventTitle = vClass.name?last_index_of("ArtisticEvent") />
+                    <#if (eventTitle > 0)>
+                      <#assign eventName = vClass.name?substring(0,eventTitle) />
+                    <#else>
+                      <#assign eventName = vClass.name />
+                    </#if>
+                    <li id="${vClassCamel}"><a href="#${vClassCamel}" title="Browse all individuals in this class" data-uri="${vClass.URI}">${eventName} <span class="count-classes">(${vClass.entityCount})</span></a></li>
                 </#if>
             </#list>
             </ul>
