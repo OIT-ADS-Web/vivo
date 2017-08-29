@@ -44,10 +44,12 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
     <#local linkedIndividual>
         <#if statement.org??>
+          <#if "${statement.orgName}" != "Georgetown University">
             <a href="${profileUrl(statement.uri("org"))}" data-uri="${statement.uri("edTraining")}" data-label="${statement.orgName}" title="organization name">${statement.orgName}</a>
+          </#if>
         <#elseif editable>
-            <#-- Show the link to the context node only if the user is editing the page. -->
-            <a href="${profileUrl(statement.uri("edTraining"))}" title="missing organization">missing organization</a>
+          <#-- Show the link to the context node only if the user is editing the page. -->
+          <a href="${profileUrl(statement.uri("edTraining"))}" title="missing organization">missing organization</a>
         </#if>
     </#local>
 
@@ -60,9 +62,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
           ${statement.degreeAbbr!statement.degreeName} 
           <#if statement.majorField??> in ${statement.majorField}</#if>
       </#local>
-
-       <@s.join [ degree, linkedIndividual!, statement.deptOrSchool!, statement.info! ] /> <@dt.yearSpan "${statement.dateTimeEnd!}" />
+      <@s.join [ degree, linkedIndividual!, statement.deptOrSchool!, statement.info! ] /> <@dt.yearSpan "${statement.dateTimeEnd!}" />
+      
     <#else>
-       <@s.join [ statement.edTrainingLabel!, linkedIndividual! ] /> <@dt.yearIntervalSpan "${statement.dateTimeStart!}" "${statement.dateTimeEnd!}" />
+      <@s.join [ statement.edTrainingLabel!, linkedIndividual! ] /> <@dt.yearIntervalSpan "${statement.dateTimeStart!}" "${statement.dateTimeEnd!}" />
     </#if>
 </#macro>
