@@ -112,13 +112,6 @@
                       <#assign grantName = vClass.name />
                     </#if>
                     <li id="${vClassCamel}"><a href="#${vClassCamel}" title="Browse all individuals in this class" data-uri="${vClass.URI}">${grantName} <span class="count-classes">(${vClass.entityCount})</span></a></li>
-
-                    <#assign giftPosition = vClass.name?last_index_of("Gift") />
-                    <#if (giftPosition > 0)>
-                      <#assign giftName = vclass.name?substring(0,giftPosition) />
-                      <li id="Gift"><a href="#Gift" title="Browse all individuals in this class" data-uri="http://vivo.duke.edu/vivo/ontology/duke-cv-extension#Gift">Gift <span class="count-classes">(some number)</span></a></li>
-                    </#if>
-                    
                 </#if>
 
 
@@ -133,7 +126,7 @@
             <#if (workMenuItems?size > 0)>
             <li class="menu_header">
             Artistic Works
-            <ul>
+            <ul style="width: 95%;">
             <#list workMenuItems as vClass>
                 <#assign vClassCamel = str.camelCase(vClass.name) />
                 <#if (vClass.entityCount > 0)>
