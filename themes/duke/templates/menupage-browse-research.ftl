@@ -58,20 +58,25 @@
                                        "Theatrical Production",
                                        "Video","Video Recording"] />
 
+            <#assign eventSubclasses = ["Event"] />
+
             <#assign ignoreClasses = ["Article","Artistic Work","Artistic Relationship"] />
 
             <#assign grantMenuItems = [] />
             <#assign workMenuItems = [] />
             <#assign venueMenuItems = [] />
             <#assign activityMenuItems = [] />
-
             <#assign eventMenuItems = [] />
 
             <li class="menu_header">
             Publications
             <ul>
             <#list vClassGroup as vClass>
+
                 <#assign vClassCamel = str.camelCase(vClass.name) />
+                <#-- ${vClass} -->
+                <#-- ${vClass.name} -->
+
                 <#-- Only display vClasses with individuals, save grants and works to display in separate sections -->
 
                 <#if (workSubclasses?seq_contains(vClass.name) && vClass.entityCount > 0)>
@@ -80,6 +85,8 @@
                   <#assign venueMenuItems = venueMenuItems + [vClass] />
                 <#elseif (grantSubclasses?seq_contains(vClass.name) && vClass.entityCount > 0)>
                   <#assign grantMenuItems = grantMenuItems + [vClass] />
+                <#elseif (eventSubclasses?seq_contains(vClass.name) && vClass.entityCount > 0)>
+                  <#assign eventMenuItems = eventMenuItems + ['Event(http://purl.org/NET/c4dm/event.owl#Event)'] />
                 <#elseif (activitySubclasses?seq_contains(vClass.name) && vClass.entityCount > 0)>
                   <#assign activityMenuItems = activityMenuItems + [vClass] />
                 <#elseif (ignoreClasses?seq_contains(vClass.name))>
@@ -113,11 +120,6 @@
                     </#if>
                     <li id="${vClassCamel}"><a href="#${vClassCamel}" title="Browse all individuals in this class" data-uri="${vClass.URI}">${grantName} <span class="count-classes">(${vClass.entityCount})</span></a></li>
                 </#if>
-
-
-              
-
-
             </#list>
             </ul>
             </li>
@@ -143,25 +145,16 @@
             </li>
             </#if>
 
-            <#if (eventMenuItems?size > 0)>
-            <li class="menu_header">
-              Events
-            <ul>
-            <#list eventMenuItems as vClass>
-                <#assign vClassCamel = str.camelCase(vClass.name) />
-                <#if (vClass.entityCount > 0)>
-                    <#assign eventTitle = vClass.name?last_index_of("ArtisticEvent") />
-                    <#if (eventTitle > 0)>
-                      <#assign eventName = vClass.name?substring(0,eventTitle) />
-                    <#else>
-                      <#assign eventName = vClass.name />
-                    </#if>
-                    <li id="${vClassCamel}"><a href="#${vClassCamel}" title="Browse all individuals in this class" data-uri="${vClass.URI}">${eventName} <span class="count-classes">(${vClass.entityCount})</span></a></li>
-                </#if>
-            </#list>
-            </ul>
-            </li>
-            </#if>
+            <#-- <#if (eventMenuItems?size > 0)> THIS LINE ISN'T WORKING -->
+              <li class="menu_header">
+                Events
+                <ul style="width: 95%;">
+                  <li id="event"><a href="#event" title="Browse all individuals in this class" data-uri="http://purl.org/NET/c4dm/event.owl#Event">Event <span class="count-classes">(This is where the event count would go)</span></a></li>
+            <#-- the vClass value is apparently: Event(http://purl.org/NET/c4dm/event.owl#Event) -->
+                  
+                </ul>
+              </li>
+            <#-- </#if> -->
 
             <#if (venueMenuItems?size > 0)>
             <li class="menu_header">

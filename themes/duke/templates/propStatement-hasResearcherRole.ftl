@@ -24,16 +24,15 @@
     
     <#local awardOrAdminBy>
         <#if statement.awardedByLabel??>
-            &nbsp;${i18n().awarded_by}&nbsp;<a href="${profileUrl(statement.uri("awardedBy"))}" title="${i18n().awarded_by}">${statement.awardedByLabel!}</a>
+            ${i18n().awarded_by}&nbsp;<a href="${profileUrl(statement.uri("awardedBy"))}" title="${i18n().awarded_by}">${statement.awardedByLabel!}</a>
         <#elseif statement.adminedByLabel??>
-            &nbsp;${i18n().administered_by}&nbsp;<a href="${profileUrl(statement.uri("adminedBy"))}" title="${i18n().administered_by}">${statement.adminedByLabel!}</a>
+            ${i18n().administered_by}&nbsp;<a href="${profileUrl(statement.uri("adminedBy"))}" title="${i18n().administered_by}">${statement.adminedByLabel!}</a>
         </#if>
     </#local>
         
     <#local dateTime>
         <@dt.yearIntervalSpan "${statement.dateTimeStartGrant!}" "${statement.dateTimeEndGrant!}" />
     </#local>
-   
-    ${linkedIndividual} ${awardOrAdminBy} ${dateTime!}
 
+    ${linkedIndividual} ${awardOrAdminBy} ${dateTime!}
 </#macro>
