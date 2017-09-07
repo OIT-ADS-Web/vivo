@@ -44,7 +44,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
     <#local linkedIndividual>
         <#if statement.org??>
-          <#if "${statement.orgName}" != "Georgetown University">
+          <#if "${statement.orgName}" != "-">
             <a href="${profileUrl(statement.uri("org"))}" data-uri="${statement.uri("edTraining")}" data-label="${statement.orgName}" title="organization name">${statement.orgName}</a>
           </#if>
         <#elseif editable>
