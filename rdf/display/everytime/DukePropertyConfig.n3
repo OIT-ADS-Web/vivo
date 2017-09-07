@@ -245,7 +245,7 @@ local:relatedGift a :ConfigContext ;
 
 local:relatedGiftConfig a :ObjectPropertyDisplayConfig ;
     :listViewConfigFile "listViewConfig-relatesGift.xml"^^xsd:string ;
-    :displayName "gifts & other support" ;
+    :displayName "fellowships, supported research, & other grants" ;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
     :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
