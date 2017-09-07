@@ -865,15 +865,6 @@
   </servlet-mapping>
 
   <servlet>
-    <servlet-name>SearchController</servlet-name>
-    <servlet-class>edu.cornell.mannlib.vitro.webapp.search.controller.PagedSearchController</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>SearchController</servlet-name>
-    <url-pattern>/search</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
     <servlet-name>SearchHelpController</servlet-name>
     <servlet-class>edu.cornell.mannlib.vitro.webapp.search.controller.SearchHelpController</servlet-class>
   </servlet>
@@ -889,20 +880,6 @@
   <servlet-mapping>
     <servlet-name>DeveloperAjax</servlet-name>
     <url-pattern>/admin/developerAjax</url-pattern>
-  </servlet-mapping>
-
-  <!-- for now, need to make sure the links on CALS' site doesn't break -->
-  <servlet-mapping>
-    <servlet-name>SearchController</servlet-name>
-    <url-pattern>/search.jsp</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>SearchController</servlet-name>
-    <url-pattern>/fedsearch</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>SearchController</servlet-name>
-    <url-pattern>/searchcontroller</url-pattern>
   </servlet-mapping>
 
   <servlet>
