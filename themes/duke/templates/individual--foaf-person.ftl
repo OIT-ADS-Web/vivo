@@ -147,8 +147,8 @@
       <#-- Selected Grants -->
       <@collapsiblePropertyListSection "Selected Grants" grants editable />
        
-      <#-- Gifts & Other Support -->
-      <@collapsiblePropertyListSection "Gifts & Other Support" gifts editable />
+      <#-- Fellowships, Supported Research, & Other Grants -->
+      <@collapsiblePropertyListSection "Fellowships, Supported Research, & Other Grants" gifts editable />
 
       <#assign authorships = propertyGroups.pullProperty("${core}relatedBy", "${core}Authorship")!>
       <#assign artisticRelationships = propertyGroups.pullProperty("${core}relatedBy", "http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticRelationship")!>
