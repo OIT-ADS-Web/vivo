@@ -45,6 +45,7 @@
                                   "Construction Renovation Grant",
                                   "Equipment Grant",
                                   "Fellowship Grant",
+                                  "Fellowships, Supported Research, and Other Grants",
                                   "Institutional Support Grant",
                                   "Institutional Training Grant",
                                   "Gifts and Other Support",
@@ -92,7 +93,8 @@
                                  "Theatrical Production",
                                  "Video","Video Recording"] />
 
-      <#assign eventSubclasses = ["Event"] />
+      <#assign eventSubclasses = ["Event",
+                                  "Exhibitions, Screenings, and Performances"] />
 
       <#assign ignoreClasses = ["Article",
                                 "Artistic Work",
@@ -106,7 +108,7 @@
 
       <li class="menu_header">
         Publications
-        <ul>
+        <ul style="width:95%;">
           <#list vClassGroup as vClass>
             <#assign vClassCamel = str.camelCase(vClass.name) />
 
@@ -149,7 +151,7 @@
       <#if (grantMenuItems?size > 0)>
         <li class="menu_header">
           Grants
-          <ul>
+          <ul style="width:95%;">
             <#list grantMenuItems as vClass>
               <#------------------------------------------------------------
               Need to replace vClassCamel with full URL that allows function
@@ -204,9 +206,9 @@
       <#-- ${eventMenuItems?size} what is the size -->
       <#-- if (eventMenuItems?size > 0) -->
         <li class="menu_header">
-          Events
+          Exhibitions, Screenings, and Performances
           <ul style="width: 95%;">
-            <li id="event"><a href="#event" title="Browse all individuals in this class" data-uri="http://purl.org/NET/c4dm/event.owl#Event">Event <span class="count-classes">(This is where the event count would go)</span></a></li>
+            <li id="event"><a href="#event" title="Browse all individuals in this class" data-uri="http://purl.org/NET/c4dm/event.owl#Event">Exhibitions, Screenings, and Performances<span class="count-classes"></span></a></li>
       <#-- the vClass value: Event(http://purl.org/NET/c4dm/event.owl#Event) -->
             
           </ul>
