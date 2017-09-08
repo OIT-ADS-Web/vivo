@@ -148,7 +148,7 @@
       >-1</vitro:displayLimitAnnot>
     <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
       >-1</vitro:displayRankAnnot>
-    <rdfs:label xml:lang="en-US">Gifts and Other Support</rdfs:label>
+    <rdfs:label xml:lang="en-US">Fellowships, Supported Research, and Other Grants</rdfs:label>
     <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
       >A gift or other form of support</vitro:shortDef>
     <vitro:customDisplayViewAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">individual--dukecv-gift.ftl</vitro:customDisplayViewAnnot>
