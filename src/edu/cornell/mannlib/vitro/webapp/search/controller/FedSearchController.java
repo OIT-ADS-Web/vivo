@@ -57,7 +57,7 @@ public class FedSearchController extends PagedSearchController {
         Matcher matcher = pattern.matcher(serverBase);
         if(matcher.find())
         {
-            serverBase = matcher.group(2) + matcher.group(3);
+            serverBase = matcher.group(2) + "//" + matcher.group(3);
         }
 
         if (request.getRequestURI().contains("FS.xml")) {
