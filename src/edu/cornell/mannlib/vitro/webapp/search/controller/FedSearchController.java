@@ -19,6 +19,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class FedSearchController extends PagedSearchController {
     private static final Log log = LogFactory.getLog(FedSearchController.class);
 
@@ -48,6 +51,14 @@ public class FedSearchController extends PagedSearchController {
         StringBuffer url = request.getRequestURL();
         String uri = request.getRequestURI();
         String serverBase = url.substring(0, url.indexOf(uri));
+
+        Pattern pattern = Pattern.compile("^((.*:)//([a-z0-9\\-.]+)(|:[0-9]+))$");
+        
+        Matcher matcher = pattern.matcher(serverBase);
+        if(matcher.find())
+        {
+            serverBase = matcher.group(2) + matcher.group(3);
+        }
 
         if (request.getRequestURI().contains("FS.xml")) {
             try {
@@ -86,8 +97,8 @@ public class FedSearchController extends PagedSearchController {
                 body.putAll(rvalues.getMap());
 
                 // Template requires the following values from the map above
-//                body.put("querytext", rvalues.getMap().get("querytext"));
-//                body.put("hitCount", rvalues.getMap().get("hitCount"));
+                //body.put("querytext", rvalues.getMap().get("querytext"));
+                //body.put("hitCount", rvalues.getMap().get("hitCount"));
 
 
                 body.put("serverBase", serverBase);
