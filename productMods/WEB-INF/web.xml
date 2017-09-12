@@ -1417,7 +1417,21 @@
     <servlet-name>OrcidIntegrationController</servlet-name>
     <url-pattern>/orcid/*</url-pattern>
   </servlet-mapping>
-  
+ 
+  <!-- ctsa -->
+  <servlet>
+    <servlet-name>FedSearchController</servlet-name>
+    <servlet-class>edu.cornell.mannlib.vitro.webapp.search.controller.FedSearchController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FedSearchController</servlet-name>
+    <url-pattern>/ctsasearch</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FedSearchController</servlet-name>
+    <url-pattern>/FS.xml</url-pattern>
+  </servlet-mapping>
+ 
   <!-- ==================== tag libraries ============================== -->
   <jsp-config>
     <taglib>
