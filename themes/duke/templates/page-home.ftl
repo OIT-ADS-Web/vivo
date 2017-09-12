@@ -22,44 +22,52 @@
                 <div class="carousel-inner">
 
                   <div class="item">
-                    <img src="../themes/duke/images/156413_socolar005.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/033009_french005_sized.png" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per1128152">Joshua Socolar</a>, Professor in the Department of Physics</p>
+                      <p class="caption"><a href="display/per2845042">John French</a>, Professor of History</p>
                     </div>
                   </div>
 
                   <div class="item">
-                    <img src="../themes/duke/images/214506_tornai007.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/157408_bejan031_sized.jpg
+" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per5057052">Martin Tornai</a>, Associate Professor of Radiology</p>
+                      <p class="caption"><a href="display/per7813042">Adrian Bejan</a>, J.A. Jones Professor of Mechanical Engineering</p>
                     </div>
                   </div>
 
                   <div class="item">
-                    <img src="../themes/duke/images/124215_ipadrobot039.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/038912_katsanis003_sized.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per6961252">Rémi Hueckel</a>, Assistant Professor in the School of Nursing</p>
+                      <p class="caption"><a href="display/per3728292">Nicholas Katsanis</a>, Jean and George W. Brumley, Jr., M.D. Professor of Developmental Biology</p>
                     </div>
                   </div>
 
                   <div class="item">
-                    <img src="../themes/duke/images/104707_cook009.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/210106_secord001_sized.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per1826042">Philip Cook</a>, ITT/Terry Sanford Professor of Public Policy Studies</p>
+                      <p class="caption"><a href="display/per3951252">Angeles Secord</a>, Professor of Obstetrics and Gynecology</p>
                     </div>
                   </div>
 
                   <div class="item">
-                    <img src="../themes/duke/images/155314_school_days012.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/094005_turk071_sized.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per7278152">Joshua Sosin</a>, Associate Professor of Classical Studies</p>
+                      <p class="caption"><a href="display/per8155252">Orin Starn</a>, Professor of Cultural Anthropology</p>
                     </div>
                   </div>
 
                   <div class="item">
-                    <img src="../themes/duke/images/197613_ramanujam006.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/166013_townmtg130_sized.png" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per9278572">Nimmi Ramanujam</a>, Robert W. Carr, Jr., Professor of Biomedical Engineering</p>
+                      <p class="caption"><a href="display/per0150102">Luke Powery</a>, Dean of Duke Chapel and Associate Professor of Homiletics</p>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <img src="../themes/duke/images/bc_rfp_scholars.png" class="home_page_graphic">
+                    <div class="caption-wrap">
+                      <p class="caption"></p>
                     </div>
                   </div>
 
