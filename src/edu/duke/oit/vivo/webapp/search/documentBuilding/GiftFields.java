@@ -13,12 +13,14 @@ PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX dukecv:   <http://vivo.duke.edu/vivo/ontology/duke-cv-extension#>
 PREFIX core:     <http://vivoweb.org/ontology/core#>
 
-SELECT (CONCAT(?label, ' ', ?role, ' ', ?description) as ?result)
+SELECT (CONCAT(?label, ' ', ?personLabel, ' ', ?role, ' ', ?description) as ?result)
 WHERE {
   GRAPH ?g  {
   ?giftUri a dukecv:Gift .
   ?giftUri rdfs:label ?label .
   ?giftUri dukecv:donor ?donor .
+  ?giftUri core:relates ?person .
+  ?person  rdfs:label ?personLabel .  
   OPTIONAL { ?giftUri dukecv:role ?role . }
   OPTIONAL { ?giftUri dukecv:description ?description .}  
   FILTER(?giftUri=<https://scholars.duke.edu/individual/gift10180>)
@@ -45,11 +47,13 @@ public class GiftFields extends DukeContextNodeFields {
  
     private static String queryForGift =        
           prefix
-          + "SELECT (CONCAT(?label, ' ', ?role, ' ', ?description) as ?result) \n"
+          + "SELECT (CONCAT(?label, ' ', ?personLabel, ' ', ?role, ' ', ?description) as ?result) \n"
           + "WHERE { \n"
           + "  ?giftUri a dukecv:Gift . \n"
           + "  ?giftUri rdfs:label ?label . \n"
           + "  ?giftUri dukecv:donor ?donor . \n"
+          + "  ?giftUri core:relates ?person . \n"
+          + "  ?person  rdfs:label ?personLabel . \n" 
           + "  OPTIONAL { ?giftUri dukecv:role ?role . } \n"
           + "  OPTIONAL { ?giftUri dukecv:description ?description .}  \n" 
           + "  FILTER(?giftUri=?uri) \n"
