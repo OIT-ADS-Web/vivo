@@ -74,7 +74,8 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonDukePositionsField
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonAcademicPositionsFields; 
 
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonLicensureFields; 
-  
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonPastAppointmentsFields;
+ 
 public class DukeDocumentModifiers implements javax.servlet.ServletContextListener{
 
     @SuppressWarnings("unchecked")
@@ -157,7 +158,8 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
         modifiers.add(new PersonAcademicPositionsFields(rdfServiceFactory));
 
         modifiers.add(new PersonLicensureFields(rdfServiceFactory));
-
+        
+        modifiers.add(new PersonPastAppointmentsFields(rdfServiceFactory));
 
     }
 
