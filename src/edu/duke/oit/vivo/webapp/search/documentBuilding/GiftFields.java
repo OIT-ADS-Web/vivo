@@ -47,7 +47,7 @@ public class GiftFields extends DukeContextNodeFields {
  
     private static String queryForGift =        
           prefix
-          + "SELECT (CONCAT(?label, ' ', personLabel, ' ', ?role, ' ', ?description) as ?result) \n"
+          + "SELECT (CONCAT(?label, ' ', ?personLabel, ' ', ?role, ' ', ?description) as ?result) \n"
           + "WHERE { \n"
           + "  ?giftUri a dukecv:Gift . \n"
           + "  ?giftUri rdfs:label ?label . \n"
