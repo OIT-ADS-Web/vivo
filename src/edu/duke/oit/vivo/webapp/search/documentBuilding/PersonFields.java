@@ -42,7 +42,7 @@ where {
    OPTIONAL { ?person dukecv:academicAdministrativeOverview ?administrativeOverview } 
    OPTIONAL { ?person dukecv:clinicalOverview ?clinicalOverview } 
    OPTIONAL { ?person dukecv:positionsOverview ?positionsOverview } 
-   FILTER (?person= <https://scholars.duke.edu/individual/perdm253>)
+   FILTER (?person= <https://scholars.duke.edu/individual/per0482202>)
 }
 
 */

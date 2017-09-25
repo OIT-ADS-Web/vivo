@@ -33,7 +33,7 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonDepartmentSearch;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonCourseFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonAwardsFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonSubjectHeadingFields;
-import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonArtisticWorkEventsFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonArtisticEventsFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonGeographicallyRelatesToFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonCustomFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonGrantFields;
@@ -55,7 +55,6 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.SubjectHeadingOfFacet;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.SubjectHeadingPeopleFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.GeoSelfGoverningPersonFields;
 
-import edu.duke.oit.vivo.webapp.search.documentBuilding.ArtisticWorkEventsFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.ArtisticEventFields;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.ArtisticWorkFields;
   
@@ -69,6 +68,14 @@ import edu.duke.oit.vivo.webapp.search.documentBuilding.DukeJSONContextNodeField
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonPublicImageCheck;
 import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonExcluder;
 
+import edu.duke.oit.vivo.webapp.search.documentBuilding.GiftFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonGiftFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonDukePositionsFields;
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonAcademicPositionsFields; 
+
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonLicensureFields; 
+import edu.duke.oit.vivo.webapp.search.documentBuilding.PersonPastAppointmentsFields;
+ 
 public class DukeDocumentModifiers implements javax.servlet.ServletContextListener{
 
     @SuppressWarnings("unchecked")
@@ -101,7 +108,7 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
         modifiers.add( new PersonCourseFields (rdfServiceFactory ));
         modifiers.add( new PersonAwardsFields (rdfServiceFactory ));
         modifiers.add( new PersonSubjectHeadingFields (rdfServiceFactory ));
-        modifiers.add( new PersonArtisticWorkEventsFields (rdfServiceFactory));
+        modifiers.add( new PersonArtisticEventsFields (rdfServiceFactory));
         modifiers.add( new PersonGeographicallyRelatesToFields (rdfServiceFactory));
         modifiers.add( new PersonVcardFields( rdfServiceFactory ));
         modifiers.add( new PersonNewsItemFields( rdfServiceFactory ));
@@ -125,7 +132,6 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
         modifiers.add( new SubjectHeadingPeopleFields (rdfServiceFactory ));
         modifiers.add( new GeoSelfGoverningPersonFields (rdfServiceFactory));
 
-        modifiers.add( new ArtisticWorkEventsFields (rdfServiceFactory));
         modifiers.add( new ArtisticEventFields (rdfServiceFactory));
         modifiers.add( new ArtisticWorkFields (rdfServiceFactory));
  
@@ -144,7 +150,17 @@ public class DukeDocumentModifiers implements javax.servlet.ServletContextListen
             (List<SearchIndexExcluder>)context.getAttribute("SearchIndexExcludes");
      
         excludes.add(new PersonExcluder(rdfServiceFactory));       
- 
+
+        modifiers.add( new GiftFields (rdfServiceFactory));
+        modifiers.add( new PersonGiftFields (rdfServiceFactory));
+  
+        modifiers.add( new PersonDukePositionsFields (rdfServiceFactory));
+        modifiers.add(new PersonAcademicPositionsFields(rdfServiceFactory));
+
+        modifiers.add(new PersonLicensureFields(rdfServiceFactory));
+        
+        modifiers.add(new PersonPastAppointmentsFields(rdfServiceFactory));
+
     }
 
     @Override
