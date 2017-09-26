@@ -74,9 +74,8 @@
     </#if>  
 
     <#-- Amount -->
-    <!-- needs heading, carat w/ indent to make it look like an object property -->
     <#assign giftAmount = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-cv-extension#giftAmount")!>
-    <#if giftAmount?has_content>
+    <#if giftAmount?has_content && dataPropertyValue(giftAmount)?length != 0 && dataPropertyValue(giftAmount) != "$0.00">
       <div class="gift-amount">
         <h3>Amount</h3>
         <ul id="individual-amounts" role="list">
