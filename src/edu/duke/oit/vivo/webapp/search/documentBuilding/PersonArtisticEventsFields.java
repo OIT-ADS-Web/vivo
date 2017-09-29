@@ -55,7 +55,7 @@ public class PersonArtisticEventsFields extends DukeContextNodeFields {
           + "  ?personUri a foaf:Person. \n" 
           + "  ?personUri event:isAgentIn ?event . \n"
           + "  ?event a event:Event. \n"
-          + "  ?eventLabel rdfs:label ?label . \n"
+          + "  ?event rdfs:label ?eventLabel . \n"
           + "  OPTIONAL { ?event dukeart:venue ?venue } \n"
           + "  OPTIONAL { ?event core:description ?description } \n"   
           + "  FILTER(?personUri =  ?uri) \n"
