@@ -132,7 +132,7 @@
 
     <#-- duke contributors -->
     <#assign dukeContributors = propertyGroups.pullProperty("${core}relatedBy", "${core}Contribution")!>
-    <#if dukeContributorss?has_content>
+    <#if dukeContributors?has_content>
       <@simpleObjectPropertyListing dukeContributors "Duke Contributors" />
     </#if>
 
