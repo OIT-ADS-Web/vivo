@@ -16,9 +16,11 @@
 <#macro showContact addresses email phone webpage>
   <ul class="contact_list">
   <#if addresses?has_content>    
-    <li class="adr">
-      ${addresses.statements[0].label!}
-    </li>
+    <#list addresses.statements as statement>
+      <li class="adr">
+        ${statement.label!}
+      </li>
+    </#list>
   </#if>
   <#if email?has_content || phone?has_content >
     <li class="email_and_phone" role="listitem">
@@ -34,9 +36,11 @@
     </#if>
     <#if phone?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
       <#if phone.statements?has_content> <#-- if there are any statements -->
-        <span class="phone">
-          <img class ="icon-phone middle" src="${urls.images}/individual/phoneIcon.gif" alt="phone icon" />${phone.statements[0].number!}
-        </span>
+        <#list phone.statements as statement>
+          <span class="phone">
+            <img class ="icon-phone middle" src="${urls.images}/individual/phoneIcon.gif" alt="phone icon" />${statement.number!}
+          </span>
+        </#list>
       </#if>
     </#if>
     </li>
