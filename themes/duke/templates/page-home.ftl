@@ -64,13 +64,6 @@
                     </div>
                   </div>
 
-                  <div class="item">
-                    <img src="../themes/duke/images/bc_rfp_scholars.png" class="home_page_graphic">
-                    <div class="caption-wrap">
-                      <p class="caption"></p>
-                    </div>
-                  </div>
-
                 </div>
               </div>
               <script type="text/javascript">
