@@ -33,7 +33,7 @@ $(document).ready(function() {
 	$(window).load(function(){
 		$('a[name=Grant]').one('click',function() {
 			var disclaimerText = '<p class="grant-disclaimer">Awards that do not permit publicity, particularly prior to 2012, are not displayed.</p>'
-			var grantCollapsibleSection = $('li#Grant.section-collapsible').find('.hideshow');
+			var grantCollapsibleSection = $("li[id='Selected Grants'].section-collapsible").find('.hideshow');
 			$(disclaimerText).appendTo(grantCollapsibleSection);
 		});
 	});
@@ -42,7 +42,7 @@ $(document).ready(function() {
 function removeExtraCitationSpaces() {
 	$('.citation-element').html(function( index,html ) {
 	  return html
-	  .replace(/\s+([,.])/g, "$1") 
+	  .replace(/\s+([,.])/g, "$1")
 	});
 }
 window.onload = removeExtraCitationSpaces;
