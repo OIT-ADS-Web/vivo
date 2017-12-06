@@ -31,7 +31,7 @@ jQuery(function() {
 $(document).ready(function() {
 	$('.individual-overview, .webpages, .webpage').find("a").attr("target", "_blank");
 	$(window).load(function(){
-		$('a[name=Grant]').one('click',function() {
+		$("a[name='Selected Grants']").one('click',function() {
 			var disclaimerText = '<p class="grant-disclaimer">Awards that do not permit publicity, particularly prior to 2012, are not displayed.</p>'
 			var grantCollapsibleSection = $("li[id='Selected Grants'].section-collapsible").find('.hideshow');
 			$(disclaimerText).appendTo(grantCollapsibleSection);
