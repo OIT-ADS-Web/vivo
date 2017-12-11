@@ -3549,7 +3549,7 @@ p.caption {
 	}
 }
 
-@media (max-width: 390px) {
+@media (max-width: 421px) {
 	p.caption {
 		height: 67px;
 	}
