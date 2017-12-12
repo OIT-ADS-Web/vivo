@@ -29,6 +29,13 @@
                   </div>
 
                   <div class="item">
+                    <img src="../themes/duke/images/together_duke.png" class="home_page_graphic">
+                    <div class="caption-wrap">
+                      <p class="long-caption">The Provost is pleased to offer several opportunities for faculty and student support as part of Together Duke -- more information and full RFPs available on the <a href="https://strategicplan.duke.edu/initiatives/">Together Duke</a> website.</p>
+                    </div>
+                  </div>
+
+                  <div class="item">
                     <img src="../themes/duke/images/157408_bejan031_sized.jpg
 " class="home_page_graphic">
                     <div class="caption-wrap">
