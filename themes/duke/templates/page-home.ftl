@@ -21,20 +21,20 @@
               <div id="home_page_carousel" class="carousel slide">
                 <div class="carousel-inner">
 
- <!--                 <div class="item">
+                  <div class="item">
                     <img src="../themes/duke/images/033009_french005_sized.png" class="home_page_graphic">
                     <div class="caption-wrap">
                       <p class="caption"><a href="display/per2845042">John French</a>, Professor of History</p>
                     </div>
                   </div>
--->
+
                   <div class="item">
                     <img src="../themes/duke/images/together_duke.png" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption" style="margin-bottom: 35px;">The Provost is pleased to offer several opportunities for faculty and student support as part of Together Duke -- more information and full RFPs available on the <a href="https://strategicplan.duke.edu/initiatives/">Together Duke</a> website.</p>
+                      <p class="long-caption">The Provost is pleased to offer several opportunities for faculty and student support as part of Together Duke -- more information and full RFPs available on the <a href="https://strategicplan.duke.edu/initiatives/">Together Duke</a> website.</p>
                     </div>
                   </div>
-<!--
+
                   <div class="item">
                     <img src="../themes/duke/images/157408_bejan031_sized.jpg
 " class="home_page_graphic">
@@ -70,7 +70,7 @@
                       <p class="caption"><a href="display/per0150102">Luke Powery</a>, Dean of Duke Chapel and Associate Professor of Homiletics</p>
                     </div>
                   </div>
--->
+
                 </div>
               </div>
               <script type="text/javascript">
