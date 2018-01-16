@@ -546,7 +546,8 @@ h1.vivo-logo a {
 	float: left;
 }
 
-#header-nav li:first-child a {
+#header-nav li:nth-child(1) a,
+#header-nav li:nth-child(2) a {
 	border-right: 1px solid #cccccc;
 }
 

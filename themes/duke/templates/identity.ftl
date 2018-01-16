@@ -60,6 +60,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <ul role="list">
           <li role="listitem"><a href="http://about.scholars.duke.edu/support-duke-faculty-delegates">Support</a></li>
           <li role="listitem"><a href="${urls.index}">Index</a></li>
+          <li role="listitem"><a href="https://lists.duke.edu/sympa/subscribe/scholars-announcements">Subscribe to Announcements</a></li>
         </ul>
         <div id="mobile-header-nav">
           <a id="mobile-menu-button" href="#">Menu</a>
