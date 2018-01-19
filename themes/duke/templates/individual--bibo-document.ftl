@@ -139,7 +139,7 @@
     <#-- cited contributors -->
     <#assign citedContributors = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#contributorList")!>
     <#if citedContributors?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-      <@simpleDataPropertyListing citedContributors "Other Contributors" />
+      <@simpleDataPropertyListing citedContributors "Cited Contributors" />
     </#if>
 
 
