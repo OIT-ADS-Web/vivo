@@ -15,7 +15,7 @@
 
 <#macro showContact addresses email phone webpage>
   <ul class="contact_list">
-  <#if addresses?has_content>
+  <#if addresses?has_content>    
     <#list addresses.statements as statement>
       <li class="adr">
         ${statement.label!}
