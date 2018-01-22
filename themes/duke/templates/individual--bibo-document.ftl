@@ -136,10 +136,10 @@
       <@simpleObjectPropertyListing dukeContributors "Duke Contributors" />
     </#if>
 
-    <#-- cited contributors -->
-    <#assign otherContributors = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#contributorList")!>
-    <#if otherContributors?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-      <@simpleDataPropertyListing otherContributors "Other Contributors" />
+    <#-- contributors -->
+    <#assign allContributors = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#contributorList")!>
+    <#if allContributors?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+      <@simpleDataPropertyListing allContributors "Contributors" />
     </#if>
 
 
