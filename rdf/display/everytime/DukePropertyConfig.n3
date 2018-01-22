@@ -27,6 +27,20 @@ local:informationResourceInTranslatorshipConfig a :ObjectPropertyDisplayConfig ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
     :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupoverview> .
 
+local:informationResourceInContributionContext a :ConfigContext ;
+    :hasConfiguration local:informationResourceInContributionConfig ;
+    :configContextFor <http://vivoweb.org/ontology/core#relatedBy> ;
+    :qualifiedByDomain      <http://purl.obolibrary.org/obo/IAO_0000030> ; # Information Content Entity
+    :qualifiedBy      <http://vivoweb.org/ontology/core#Contribution> .
+
+local:informationResourceInContributionConfig a :ObjectPropertyDisplayConfig ;
+    :listViewConfigFile "listViewConfig-informationResourceInContribution.xml"^^xsd:string ;
+    :displayName "contributors" ;
+    vitro:displayRankAnnot 14;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
+    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupoverview> .
+
 local:creatorInArtisticRelationshipContext a :ConfigContext ;
     :hasConfiguration local:creatorInArtisticRelationshipConfig ;
     :configContextFor <http://vivoweb.org/ontology/core#relatedBy> ;
