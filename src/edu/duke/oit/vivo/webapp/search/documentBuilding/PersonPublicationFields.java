@@ -63,7 +63,7 @@ public class PersonPublicationFields extends DukeContextNodeFields {
           + "  ?publication a obo:IAO_0000030 .\n"
           + "  ?publication rdfs:label ?label .\n"
           + "  ?authorship rdfs:label ?author .\n"
-          + "  FILTER(?authorshipType = core:Translatorship || ?authorshipType = core:Authorship || ?authorshipType = core:Editorship)\n"
+          + "  FILTER(?authorshipType = core:Contribution || ?authorshipType = core:Translatorship || ?authorshipType = core:Authorship || ?authorshipType = core:Editorship)\n"
           + "}";
 
     static List<String> queries = new ArrayList<String>();

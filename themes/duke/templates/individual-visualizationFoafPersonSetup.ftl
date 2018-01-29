@@ -1,7 +1,10 @@
 <#-- Determine whether this person is an author -->
-<#assign isAuthor = (p.hasVisualizationStatements(propertyGroups, "${core}relatedBy", "${core}Authorship") ||
+<#assign isAuthor = (
+p.hasVisualizationStatements(propertyGroups, "${core}relatedBy", "${core}Authorship") ||
+p.hasVisualizationStatements(propertyGroups, "${core}relatedBy", "${core}Editorship") ||
 p.hasVisualizationStatements(propertyGroups, "${core}relatedBy", "${core}Translatorship") ||
-p.hasVisualizationStatements(propertyGroups, "${core}relatedBy", "${core}Translatorship")) />
+p.hasVisualizationStatements(propertyGroups, "${core}relatedBy", "${core}Contribution")
+) />
 
 <#-- Determine whether this person is involved in any grants -->
 <#assign obo_RO53 = "http://purl.obolibrary.org/obo/RO_0000053">
