@@ -22,52 +22,44 @@
                 <div class="carousel-inner">
 
                   <div class="item">
-                    <img src="../themes/duke/images/033009_french005_sized.png" class="home_page_graphic">
+                    <img src="../themes/duke/images/135117_silva_0002_sized.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per2845042">John French</a>, Professor of History</p>
+                      <p class="caption"><a href="person/Gustavo.Monteiro.Silva">Gustavo Monteiro Silva</a>, Assistant Professor of Biology</p>
                     </div>
                   </div>
 
                   <div class="item">
-                    <img src="../themes/duke/images/together_duke.png" class="home_page_graphic">
+                    <img src="../themes/duke/images/155909_belcher002_sized.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="long-caption">The Provost is pleased to offer several opportunities for faculty and student support as part of Together Duke -- more information and full RFPs available on the <a href="https://strategicplan.duke.edu/initiatives/">Together Duke</a> website.</p>
+                      <p class="caption"><a href="person/vernee.belcher">Vernee Nicole Belcher</a>, Assistant Professor of Medicine</p>
                     </div>
                   </div>
 
                   <div class="item">
-                    <img src="../themes/duke/images/157408_bejan031_sized.jpg
-" class="home_page_graphic">
+                    <img src="../themes/duke/images/126707_vodinh033_sized.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per7813042">Adrian Bejan</a>, J.A. Jones Professor of Mechanical Engineering</p>
+                      <p class="caption"><a href="person/tuan.vodinh">Tuan Vo-Dinh</a>, R. Eugene and Susie E. Goodson Professor of Biomedical Engineering</p>
                     </div>
                   </div>
 
                   <div class="item">
-                    <img src="../themes/duke/images/038912_katsanis003_sized.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/163809_patton_andrew_sized.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per3728292">Nicholas Katsanis</a>, Jean and George W. Brumley, Jr., M.D. Professor of Developmental Biology</p>
+                      <p class="caption"><a href="person/andrew.patton">Andrew J. Patton</a>, Zelter Family Professor (Economics)</p>
                     </div>
                   </div>
 
                   <div class="item">
-                    <img src="../themes/duke/images/210106_secord001_sized.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/069208_0603_pendergast_ann025_sized.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per3951252">Angeles Secord</a>, Professor of Obstetrics and Gynecology</p>
+                      <p class="caption"><a href="person/pende014">Ann Marie Pendergast</a>, Anthony R. Means Cancer Biology Professor</p>
                     </div>
                   </div>
 
                   <div class="item">
-                    <img src="../themes/duke/images/094005_turk071_sized.jpg" class="home_page_graphic">
+                    <img src="../themes/duke/images/001213_ko005_sized.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
-                      <p class="caption"><a href="display/per8155252">Orin Starn</a>, Professor of Cultural Anthropology</p>
-                    </div>
-                  </div>
-
-                  <div class="item">
-                    <img src="../themes/duke/images/166013_townmtg130_sized.png" class="home_page_graphic">
-                    <div class="caption-wrap">
-                      <p class="caption"><a href="display/per0150102">Luke Powery</a>, Dean of Duke Chapel and Associate Professor of Homiletics</p>
+                      <p class="caption"><a href="person/dennis.ko">Dennis Ko</a>, Assistant Professor in Molecular Genetics and Microbiology</p>
                     </div>
                   </div>
 
