@@ -4,6 +4,8 @@
   $('#main-nav a[href="/research"]').addClass('selected');
 </script>
 
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+
 <#include "duke-properties.ftl" >
 <#include "individual-setup.ftl">
 <#import "lib-vivo-properties.ftl" as vp>
@@ -55,6 +57,9 @@
         <#assign doiValue = "${doi.statements[0].value}"/>
         <#assign doiUrl = "<a href=\"http://dx.doi.org/${doiValue}\" target=\"_blank\">Published version (via Digital Object Identifier)</a>">
         <#assign fullTextLinks = fullTextLinks + [doiUrl]/>
+
+        <#-- altmetric badge  -->
+        <div class='altmetric-embed' data-badge-type='donut' data-doi=\"${doiValue}\"></div>
       </#if>
 
       <#assign pmcid = propertyGroups.pullProperty("${core}pmcid")!>
