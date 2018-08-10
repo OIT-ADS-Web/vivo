@@ -57,9 +57,6 @@
         <#assign doiValue = "${doi.statements[0].value}"/>
         <#assign doiUrl = "<a href=\"http://dx.doi.org/${doiValue}\" target=\"_blank\">Published version (via Digital Object Identifier)</a>">
         <#assign fullTextLinks = fullTextLinks + [doiUrl]/>
-
-        <#-- altmetric badge  -->
-        <div class='altmetric-embed' data-badge-type='donut' data-doi=\"${doiValue}\"></div>
       </#if>
 
       <#assign pmcid = propertyGroups.pullProperty("${core}pmcid")!>
@@ -237,6 +234,11 @@
     <#assign isbn10 = propertyGroups.pullProperty("http://purl.org/ontology/bibo/isbn10")!>
     <#if isbn10?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
       <@simpleDataPropertyListing isbn10 "International Standard Book Number 10 (ISBN-10)" />
+    </#if>
+
+    <#-- altmetric badge  -->
+    <#if doi?has_content && (doi.statements)?has_content>
+      <div class='altmetric-embed' data-badge-type='donut' data-doi="${doiValue}" style="float:right; display:inline;"></div>
     </#if>
 
     <#-- isbn13 -->
