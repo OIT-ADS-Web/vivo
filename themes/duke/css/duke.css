@@ -3700,3 +3700,8 @@ p.long-caption {
 .individual-description {
 	margin-bottom: 20px;
 }
+
+.altmetric-embed {
+	float: right; 
+	display: inline;
+}

@@ -144,7 +144,6 @@
       <@simpleDataPropertyListing allContributors "Contributors" />
     </#if>
 
-
     <#-- published date -->
     <#assign publishedDate = propertyGroups.pullProperty("${core}dateTimeValue")!>
     <#if publishedDate?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
@@ -236,9 +235,9 @@
       <@simpleDataPropertyListing isbn10 "International Standard Book Number 10 (ISBN-10)" />
     </#if>
 
-    <#-- altmetric badge  -->
-    <#if doi?has_content && (doi.statements)?has_content>
-      <div class='altmetric-embed' data-badge-type='donut' data-doi="${doiValue}" style="float:right; display:inline;"></div>
+    <#-- altmetric badge (only displayed if pub has doi)  -->
+    <#if doi?has_content>
+      <div class='altmetric-embed' data-badge-type='donut' data-doi="${doiValue}"></div>
     </#if>
 
     <#-- isbn13 -->
