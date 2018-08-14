@@ -4,6 +4,8 @@
   $('#main-nav a[href="/research"]').addClass('selected');
 </script>
 
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+
 <#include "duke-properties.ftl" >
 <#include "individual-setup.ftl">
 <#import "lib-vivo-properties.ftl" as vp>
@@ -142,7 +144,6 @@
       <@simpleDataPropertyListing allContributors "Contributors" />
     </#if>
 
-
     <#-- published date -->
     <#assign publishedDate = propertyGroups.pullProperty("${core}dateTimeValue")!>
     <#if publishedDate?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
@@ -243,6 +244,12 @@
     <#-- doi -->
     <#if doi?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
       <@simpleDataPropertyListing doi "Digital Object Identifier (DOI)" />
+    </#if>
+
+    <#-- altmetric badge (only displayed if pub has doi)  -->
+    <#if doi?has_content>
+      <h3>Attention Stats</h3>
+      <div class='altmetric-embed' data-badge-type='medium-donut' data-badge-details='right' data-doi="${doiValue}"></div>
     </#if>
 
     <#-- language -->
