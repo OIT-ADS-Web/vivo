@@ -3702,6 +3702,15 @@ p.long-caption {
 }
 
 .altmetric-embed {
-	float: right; 
-	display: inline;
+	padding: 12px 0 12px 0;
+}
+
+.altmetric-see-more-details a:link {
+	font-size: 1.44em;
+	text-decoration: none;
+}
+
+.altmetric-see-more-details a:hover {
+	font-size: 1.44em;
+	text-decoration: underline;
 }
