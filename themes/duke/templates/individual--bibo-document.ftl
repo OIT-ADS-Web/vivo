@@ -246,12 +246,6 @@
       <@simpleDataPropertyListing doi "Digital Object Identifier (DOI)" />
     </#if>
 
-    <#-- altmetric badge (only displayed if pub has doi)  -->
-    <#if doi?has_content>
-      <h3>Attention Stats</h3>
-      <div class='altmetric-embed' data-badge-type='medium-donut' data-badge-details='right' data-doi="${doiValue}"></div>
-    </#if>
-
     <#-- language -->
     <#assign language = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#language")!>
     <#if language?has_content && (language.statements)?has_content>
@@ -299,6 +293,14 @@
   <#assign subjectAreas = propertyGroups.pullProperty("${core}hasSubjectArea")!>
   <#if subjectAreas?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
     <@navObjectPropertyListing subjectAreas "Subject Areas on Research" />
+  </#if>
+
+  <#-- altmetric badge (only displayed if pub has doi)  -->
+  <#if doi?has_content>
+    <div class="altmetric-wrapper">
+      <h3>Attention Stats</h3>
+      <div class='altmetric-embed' data-badge-type='medium-donut' data-badge-details='right' data-doi="${doiValue}"></div>
+    </div>
   </#if>
 </section>
 
