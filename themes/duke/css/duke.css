@@ -3701,9 +3701,9 @@ p.long-caption {
 	margin-bottom: 20px;
 }
 
-@media (min-width: 584px) {
+@media (min-width: 630px) {
 	.altmetric-embed {
-		padding: 12px 0 12px 20px;
+		padding: 12px 0 12px 15px;
 	}
 
 	.altmetric-see-more-details a:link {
@@ -3722,7 +3722,7 @@ p.long-caption {
 	}
 }
 
-@media (max-width: 583px) {
+@media (max-width: 629px) {
 	.altmetric-wrapper {
 		display: none;
 	}
