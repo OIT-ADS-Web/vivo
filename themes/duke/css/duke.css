@@ -3700,3 +3700,30 @@ p.long-caption {
 .individual-description {
 	margin-bottom: 20px;
 }
+
+@media (min-width: 630px) {
+	.altmetric-embed {
+		padding: 12px 0 12px 15px;
+	}
+
+	.altmetric-see-more-details a:link {
+		font-size: 14.4px;
+		text-decoration: none;
+	}
+
+	.altmetric-see-more-details a:hover {
+		font-size: 14.4px;
+		text-decoration: underline;
+	}
+
+	.altmetric-wrapper {
+		margin-left: 36px;
+		min-width: 120px;
+	}
+}
+
+@media (max-width: 629px) {
+	.altmetric-wrapper {
+		display: none;
+	}
+}
