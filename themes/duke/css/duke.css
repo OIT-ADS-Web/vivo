@@ -3706,6 +3706,10 @@ p.long-caption {
 		padding: 12px 0 12px 15px;
 	}
 
+	#attention-stats {
+		display: none;
+	}
+
 	.altmetric-see-more-details a:link {
 		font-size: 14.4px;
 		text-decoration: none;

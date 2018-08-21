@@ -298,8 +298,8 @@
   <#-- altmetric badge (only displayed if pub has doi)  -->
   <#if doi?has_content>
     <div class="altmetric-wrapper">
-      <h3>Attention Stats</h3>
-      <div class='altmetric-embed' data-badge-type='medium-donut' data-badge-details='right' data-doi="${doiValue}"></div>
+      <h3 id="attention-stats">Attention Stats</h3>
+      <div class='altmetric-embed' data-hide-no-mentions="true"  data-badge-type='medium-donut' data-badge-details='right' data-doi="${doiValue}"></div>
     </div>
   </#if>
 </section>
