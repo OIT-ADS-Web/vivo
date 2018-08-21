@@ -36,6 +36,9 @@ $(document).ready(function() {
 			var grantCollapsibleSection = $("li[id='Selected Grants'].section-collapsible").find('.hideshow');
 			$(disclaimerText).appendTo(grantCollapsibleSection);
 		});
+		if ($('.altmetric-hidden').length == 0) { 
+		  $('#attention-stats').show();
+		}
 	});
 });
 
@@ -46,7 +49,6 @@ function removeExtraCitationSpaces() {
 	});
 }
 window.onload = removeExtraCitationSpaces;
-
 
 
 
