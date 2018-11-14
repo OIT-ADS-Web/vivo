@@ -11,7 +11,7 @@
         PREFIX duke: &lt;http://vivo.duke.edu/vivo/ontology/duke-extension#&gt;
         PREFIX vitro: &lt;http://vitro.mannlib.cornell.edu/ns/vitro/0.7#&gt;
 
-        SELECT DISTINCT ?subclass 
+        SELECT DISTINCT <collated> ?subclass </collated>
                         ?authorship
                         ?infoResource
                         ?dateTime
@@ -30,17 +30,21 @@
             OPTIONAL {
               ?infoResource duke:chicagoCitation ?chicagoCitation.
             }
+            <collated>           
+            OPTIONAL { ?infoResource vitro:mostSpecificType ?subclass .
+                        OPTIONAL { ?subclass vitro:displayRankAnnot ?displayRank . }
+            }   
+            </collated>
             OPTIONAL { ?infoResource duke:onlineContent  ?onlineContent }
             OPTIONAL { ?infoResource duke:linkToItem     ?linkToItem }
             OPTIONAL { ?infoResource bibo:doi ?doi }
-            OPTIONAL { ?infoResource vitro:mostSpecificType ?subclass . }
             OPTIONAL { ?infoResource core:dateTimeValue ?dateTimeValue .
                        ?dateTimeValue core:dateTime ?dateTime
             }
             <critical-data-required>
             FILTER ( bound(?infoResource) )
             </critical-data-required>
-        } ORDER BY ?subclass  DESC(?dateTime) ?preferredCitation
+        } ORDER BY <collated> ?subclass </collated>  DESC(?dateTime) ?preferredCitation
     </query-select>
 
     <query-construct>
@@ -51,12 +55,14 @@
             ?authorship core:relates ?infoResource .
             ?infoResource a &lt;http://purl.obolibrary.org/obo/IAO_0000030&gt; .
             ?infoResource vitro:mostSpecificType ?subclass .
+            ?subclass vitro:displayRankAnnot ?displayRank
         } WHERE {
             ?subject ?property ?authorship .
             ?authorship a core:Authorship .
             ?authorship core:relates ?infoResource .
             ?infoResource a &lt;http://purl.obolibrary.org/obo/IAO_0000030&gt; .
             ?infoResource vitro:mostSpecificType ?subclass .
+            ?subclass vitro:displayRankAnnot ?displayRank
         }
     </query-construct>
 
@@ -68,12 +74,14 @@
             ?authorship core:relates ?infoResource .
             ?infoResource a &lt;http://purl.obolibrary.org/obo/IAO_0000030&gt; .
             ?infoResource vitro:mostSpecificType ?subclass .
+            ?subclass vitro:displayRankAnnot ?displayRank
         } WHERE {
             ?subject ?property ?authorship .
             ?authorship a core:Editorship .
             ?authorship core:relates ?infoResource .
             ?infoResource a &lt;http://purl.obolibrary.org/obo/IAO_0000030&gt; .
             ?infoResource vitro:mostSpecificType ?subclass .
+            ?subclass vitro:displayRankAnnot ?displayRank
         }
     </query-construct>
 
@@ -85,12 +93,14 @@
             ?authorship core:relates ?infoResource .
             ?infoResource a &lt;http://purl.obolibrary.org/obo/IAO_0000030&gt; .
             ?infoResource vitro:mostSpecificType ?subclass .
+            ?subclass vitro:displayRankAnnot ?displayRank
         } WHERE {
             ?subject ?property ?authorship .
             ?authorship a core:Translatorship .
             ?authorship core:relates ?infoResource .
             ?infoResource a &lt;http://purl.obolibrary.org/obo/IAO_0000030&gt; .
             ?infoResource vitro:mostSpecificType ?subclass .
+            ?subclass vitro:displayRankAnnot ?displayRank
         }
     </query-construct>
 
@@ -102,12 +112,14 @@
             ?authorship core:relates ?infoResource .
             ?infoResource a &lt;http://purl.obolibrary.org/obo/IAO_0000030&gt; .
             ?infoResource vitro:mostSpecificType ?subclass .
+            ?subclass vitro:displayRankAnnot ?displayRank
         } WHERE {
             ?subject ?property ?authorship .
             ?authorship a core:Contribution .
             ?authorship core:relates ?infoResource .
             ?infoResource a &lt;http://purl.obolibrary.org/obo/IAO_0000030&gt; .
             ?infoResource vitro:mostSpecificType ?subclass .
+            ?subclass vitro:displayRankAnnot ?displayRank
         }
     </query-construct>
 
@@ -130,6 +142,8 @@
             ?authorship core:relates ?infoResource .
             ?infoResource a &lt;http://purl.obolibrary.org/obo/IAO_0000030&gt; .
             ?infoResource ?infoResourceProperty ?infoResourceValue .
+            ?infoResource vitro:mostSpecificType ?subclass .
+            ?subclass vitro:displayRankAnnot ?displayRank .
             ?infoResource core:dateTimeValue ?dateTimeValue .
             ?dateTimeValue core:dateTime ?dateTime
         } WHERE {
@@ -142,7 +156,9 @@
                ?authorship a core:Authorship .
                ?authorship core:relates ?infoResource .
                ?infoResource a &lt;http://purl.obolibrary.org/obo/IAO_0000030&gt; .
-               ?infoResource ?infoResourceProperty ?infoResourceValue
+               ?infoResource ?infoResourceProperty ?infoResourceValue .
+               ?infoResource vitro:mostSpecificType ?subclass .
+               ?subclass vitro:displayRankAnnot ?displayRank
             } UNION {
                ?subject ?property ?authorship .
                ?authorship a core:Authorship .
@@ -164,6 +180,8 @@
             ?authorship core:relates ?infoResource .
             ?infoResource a &lt;http://purl.obolibrary.org/obo/IAO_0000030&gt; .
             ?infoResource ?infoResourceProperty ?infoResourceValue .
+            ?infoResource vitro:mostSpecificType ?subclass .
+            ?subclass vitro:displayRankAnnot ?displayRank .
             ?infoResource core:dateTimeValue ?dateTimeValue .
             ?dateTimeValue core:dateTime ?dateTime
         } WHERE {
@@ -176,7 +194,9 @@
                ?authorship a core:Editorship .
                ?authorship core:relates ?infoResource .
                ?infoResource a &lt;http://purl.obolibrary.org/obo/IAO_0000030&gt; .
-               ?infoResource ?infoResourceProperty ?infoResourceValue
+               ?infoResource ?infoResourceProperty ?infoResourceValue .
+               ?infoResource vitro:mostSpecificType ?subclass .
+               ?subclass vitro:displayRankAnnot ?displayRank
             } UNION {
                ?subject ?property ?authorship .
                ?authorship a core:Editorship .
@@ -198,6 +218,8 @@
             ?authorship core:relates ?infoResource .
             ?infoResource a &lt;http://purl.obolibrary.org/obo/IAO_0000030&gt; .
             ?infoResource ?infoResourceProperty ?infoResourceValue .
+            ?infoResource vitro:mostSpecificType ?subclass .
+            ?subclass vitro:displayRankAnnot ?displayRank .
             ?infoResource core:dateTimeValue ?dateTimeValue .
             ?dateTimeValue core:dateTime ?dateTime
         } WHERE {
@@ -211,6 +233,8 @@
                ?authorship core:relates ?infoResource .
                ?infoResource a &lt;http://purl.obolibrary.org/obo/IAO_0000030&gt; .
                ?infoResource ?infoResourceProperty ?infoResourceValue
+               ?infoResource vitro:mostSpecificType ?subclass .
+               ?subclass vitro:displayRankAnnot ?displayRank
             } UNION {
                ?subject ?property ?authorship .
                ?authorship a core:Translatorship .
@@ -233,6 +257,8 @@
             ?authorship core:relates ?infoResource .
             ?infoResource a &lt;http://purl.obolibrary.org/obo/IAO_0000030&gt; .
             ?infoResource ?infoResourceProperty ?infoResourceValue .
+            ?infoResource vitro:mostSpecificType ?subclass .
+            ?subclass vitro:displayRankAnnot ?displayRank .
             ?infoResource core:dateTimeValue ?dateTimeValue .
             ?dateTimeValue core:dateTime ?dateTime
         } WHERE {
@@ -245,7 +271,9 @@
                ?authorship a core:Contribution .
                ?authorship core:relates ?infoResource .
                ?infoResource a &lt;http://purl.obolibrary.org/obo/IAO_0000030&gt; .
-               ?infoResource ?infoResourceProperty ?infoResourceValue
+               ?infoResource ?infoResourceProperty ?infoResourceValue .
+               ?infoResource vitro:mostSpecificType ?subclass .
+               ?subclass vitro:displayRankAnnot ?displayRank
             } UNION {
                ?subject ?property ?authorship .
                ?authorship a core:Contribution .

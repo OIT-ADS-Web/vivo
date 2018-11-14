@@ -398,12 +398,6 @@
     <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
   </rdf:Description>
 
-  <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-extension#OtherArticle">
-    <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Other Article</vitro:shortDef>
-    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Article"/>
-    <rdfs:label xml:lang="en-US">Other Article</rdfs:label>
-  </owl:Class>
-
   <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-extension#DigitalPublication">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
@@ -612,11 +606,7 @@
     <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Document"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://vivoweb.org/ontology/core#Review">
-    <rdfs:label xml:lang="en-US">Book Review</rdfs:label>
-  </rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/ontology/bibo/Thesis">
+  <rdf:Description rdf:about="http://purl.org/ontology/bibo/Thesis">
     <rdfs:label xml:lang="en-US">Theses and Dissertations</rdfs:label>
   </rdf:Description>
 
@@ -663,5 +653,33 @@
     <rdfs:domain rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
   </owl:ObjectProperty>
 
+
+  <!-- FDP-3009 work for custom sorting of publication subtypes  -->  
+
+
+
+  <rdf:Description rdf:about="http://purl.org/ontology/bibo/Book">
+    <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</vitro:displayRankAnnot>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://vivoweb.org/ontology/core#Review">
+    <rdfs:label xml:lang="en-US">Book Review</rdfs:label>
+    <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</vitro:displayRankAnnot>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://purl.org/ontology/bibo/BookSection">
+    <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</vitro:displayRankAnnot>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://purl.org/ontology/bibo/AcademicArticle">
+    <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</vitro:displayRankAnnot>
+  </rdf:Description>
+
+  <owl:Class rdf:about="http://vivo.duke.edu/vivo/ontology/duke-extension#OtherArticle">
+    <vitro:shortDef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Other Article</vitro:shortDef>
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Article"/>
+    <rdfs:label xml:lang="en-US">Other Article</rdfs:label>
+    <vitro:displayRankAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</vitro:displayRankAnnot>
+  </owl:Class>
 
 </rdf:RDF>
