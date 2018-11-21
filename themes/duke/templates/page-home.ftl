@@ -43,13 +43,6 @@
                   </div>
 
                   <div class="item">
-                    <img src="../themes/duke/images/RFP-2019-20-600x320.png" class="home_page_graphic">
-                    <div class="caption-wrap">
-                      <p class="caption">Bass Connections <a href="https://bassconnections.duke.edu/about/news/bass-connections-invites-proposals-2019-2020-projects-november-5">invites faculty proposals</a> for 2019-20 team-based research projects by November 5.</p>
-                    </div>
-                  </div>
-
-                  <div class="item">
                     <img src="../themes/duke/images/163809_patton_andrew_sized.jpg" class="home_page_graphic">
                     <div class="caption-wrap">
                       <p class="caption"><a href="person/andrew.patton">Andrew J. Patton</a>, Zelter Family Professor (Economics)</p>
