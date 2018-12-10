@@ -50,10 +50,3 @@ function removeExtraCitationSpaces() {
 }
 window.onload = removeExtraCitationSpaces;
 
-
-
-
-
-
-
-
