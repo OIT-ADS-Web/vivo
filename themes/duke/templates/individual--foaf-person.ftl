@@ -44,15 +44,6 @@
           </h2>
         </#if>
 
-        <p>most specific type:</p>
-        ${individual.mostSpecificTypes}
-
-        <#if individual.mostSpecificTypes?? && individual.mostSpecificTypes?seq_contains("Faculty Member")>
-          this person is a faculty member
-        <#elseif individual.mostSpecificTypes?? && individual.mostSpecificTypes?seq_contains("Non-Faculty Academic")>
-          this person is a non-faculty member
-        </#if>
-
         <#-- Overview -->
         <#include "individual-overview.ftl">
 
