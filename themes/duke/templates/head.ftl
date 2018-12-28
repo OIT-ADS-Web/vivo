@@ -45,8 +45,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 		</#if>
 	<#else>
 		<title>${title} | Scholars@Duke</title>
-			<meta name="description" content="${title}">
+		<meta name="description" content="${title}">
 	</#if>
+<#else>
+	<title>${title} | Scholars@Duke</title>
+	<meta name="description" content="${title}">
 </#if>
 
 <#include "stylesheets.ftl">
