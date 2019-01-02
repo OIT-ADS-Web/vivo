@@ -32,14 +32,24 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 <meta name="viewport" content="width=device-width"/>
 
-<#if title?contains(",")>
-<#assign arr=title?split(",")>
-<#assign dukelabel>${arr[1]?trim} ${arr[0]?trim}</#assign>
-<title>${dukelabel} | Scholars@Duke</title>
-<meta name="description" content="${dukelabel}’s profile, publications, research topics, and co-authors">
+<#if individual??>
+	<#if individual.mostSpecificTypes?? && individual.mostSpecificTypes?seq_contains("Faculty Member") || individual.mostSpecificTypes?? && individual.mostSpecificTypes?seq_contains("Non-Faculty Academic")>
+	  <#if title?contains(",")>
+			<#assign arr=title?split(",")>
+			<#assign dukelabel>${arr[1]?trim} ${arr[0]?trim}</#assign>
+			<title>${dukelabel} | Scholars@Duke</title>
+			<meta name="description" content="${dukelabel}’s profile, publications, research topics, and co-authors">
+		<#else>
+			<title>${title} | Scholars@Duke</title>
+			<meta name="description" content="${title}’s profile, publications, research topics, and co-authors">
+		</#if>
+	<#else>
+		<title>${title} | Scholars@Duke</title>
+		<meta name="description" content="${title}">
+	</#if>
 <#else>
-<title>${title} | Scholars@Duke</title>
-<meta name="description" content="${title}’s profile, publications, research topics, and co-authors">
+	<title>${title} | Scholars@Duke</title>
+	<meta name="description" content="${title}">
 </#if>
 
 <#include "stylesheets.ftl">
