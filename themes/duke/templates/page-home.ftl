@@ -22,44 +22,44 @@
           <div class="carousel-inner">
 
             <div class="item">
-              <img src="../themes/duke/images/135117_silva_0002_sized.jpg" class="home_page_graphic">
+              <img src="../themes/duke/images/038318_nuamah012.png" class="home_page_graphic">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/Gustavo.Monteiro.Silva">Gustavo Monteiro Silva</a>, Assistant Professor of Biology</p>
+                <p class="caption"><a href="person/sally.nuamah">Sally Nuamah</a>, Assistant Professor in the Sanford School of Public Policy</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/155909_belcher002_sized.jpg" class="home_page_graphic">
+              <img src="../themes/duke/images/048818a_ciompi_lunch091.png" class="home_page_graphic">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/vernee.belcher">Vernee Nicole Belcher</a>, Assistant Professor of Medicine</p>
+                <p class="caption"><a href="person/hmku">Hsiao-Mei Ku</a>, Professor of the Practice of Music</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/126707_vodinh033_sized.jpg" class="home_page_graphic">
+              <img src="../themes/duke/images/115217_opti_lab_0041.png" class="home_page_graphic">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/tuan.vodinh">Tuan Vo-Dinh</a>, R. Eugene and Susie E. Goodson Professor of Biomedical Engineering</p>
+                <p class="caption"><a href="person/greg1">Greg Appelbaum</a>, Associate Professor in Psychiatry and Behavioral Sciences</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/163809_patton_andrew_sized.jpg" class="home_page_graphic">
+              <img src="../themes/duke/images/023217_martin_smith_teaching094.png" class="home_page_graphic">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/andrew.patton">Andrew J. Patton</a>, Zelter Family Professor (Economics)</p>
+                <p class="caption"><a href="person/Martin.Smith1">Martin Paul Smith</a>, Assistant Professor of the Practice of Education</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/069208_0603_pendergast_ann025_sized.jpg" class="home_page_graphic">
+              <img src="../themes/duke/images/108017_randles024.png" class="home_page_graphic">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/pende014">Ann Marie Pendergast</a>, Anthony R. Means Cancer Biology Professor</p>
+                <p class="caption"><a href="person/amanda.randles">Amanda Randles</a>, Alfred Winborne and Victoria Stover Mordecai Assistant Professor of Biomedical Sciences</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/001213_ko005_sized.jpg" class="home_page_graphic">
+              <img src="../themes/duke/images/144510_tcheng008.png" class="home_page_graphic">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/dennis.ko">Dennis Ko</a>, Assistant Professor in Molecular Genetics and Microbiology</p>
+                <p class="caption"><a href="person/tchen001">James Tcheng</a>, Professor of Medicine</p>
               </div>
             </div>
 
