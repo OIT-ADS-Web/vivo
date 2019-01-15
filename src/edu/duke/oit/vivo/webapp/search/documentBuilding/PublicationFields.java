@@ -6,7 +6,6 @@ import java.util.List;
 import edu.cornell.mannlib.vitro.webapp.rdfservice.RDFServiceFactory;
 import edu.cornell.mannlib.vitro.webapp.search.documentBuilding.ContextNodeFields;
 
-
 /*
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -18,11 +17,14 @@ PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX bibo: <http://purl.org/ontology/bibo/>
 PREFIX duke:     <http://vivo.duke.edu/vivo/ontology/duke-extension#>
 
-select (CONCAT(COALESCE(?abstract,''), ' ', ?authorList, ' ', ?apaCitation, ' ', ?chicagoCitation, ' ', 
+select (CONCAT(COALESCE(?abstract,''), ' ',
+  COALESCE(?doi, ''), ' ',
+  ?authorList, ' ', ?apaCitation, ' ', ?chicagoCitation, ' ', 
   ?icmjeCitation, ' ', ?mlaCitation) as ?result)
 WHERE {
   ?pubUri a bibo:Document .
   OPTIONAL { ?pubUri bibo:abstract ?abstract . }
+  OPTIONAL { ?pubUri bibo:doi ?doi . } 
   ?pubUri duke:authorList ?authorList .
   ?pubUri duke:apaCitation ?apaCitation .
   ?pubUri duke:chicagoCitation ?chicagoCitation .
@@ -55,11 +57,14 @@ public class PublicationFields extends DukeContextNodeFields {
  
     private static String queryForPub =        
           prefix
-          + "select (CONCAT(COALESCE(?abstract, ''), ' ', ?authorList, ' ', ?apaCitation, ' ', ?chicagoCitation, ' ', \n"
+          + "select (CONCAT(COALESCE(?abstract, ''), ' ', \n" 
+          + "COALESCE(?doi, ''), ' ', \n"
+          + "?authorList, ' ', ?apaCitation, ' ', ?chicagoCitation, ' ', \n"
           + "?icmjeCitation, ' ', ?mlaCitation) as ?result) \n"
           + "WHERE { \n"
           + "  ?pubUri a bibo:Document . \n"
           + "  OPTIONAL { ?pubUri bibo:abstract ?abstract . } \n"
+          + "  OPTIONAL { ?pubUri bibo:doi ?doi . } \n"
           + "  ?pubUri duke:authorList ?authorList . \n"
           + "  ?pubUri duke:apaCitation ?apaCitation . \n"
           + "  ?pubUri duke:chicagoCitation ?chicagoCitation . \n"
