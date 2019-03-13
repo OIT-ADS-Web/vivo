@@ -16,8 +16,16 @@
   <span class="citation-element">
     ${citation}
   </span>
-  <#if statement.doi??>
-     &nbsp;<a href="http://dx.doi.org/${statement.doi}" class="link-to-content full-text" target="_blank" title="view full text">Full Text</a>
+  <#if statement.subclass??>
+    <#if statement.subclass == "http://vivoweb.org/ontology/core#Dataset">
+      <#if statement.doi??>
+         &nbsp;<a href="http://dx.doi.org/${statement.doi}" class="link-to-content full-text" target="_blank" title="view data">Data Access</a>
+      </#if>
+    <#else>
+      <#if statement.doi??>
+         &nbsp;<a href="http://dx.doi.org/${statement.doi}" class="link-to-content full-text" target="_blank" title="view full text">Full Text</a>
+      </#if>
+    </#if>
   </#if>
   <#if statement.onlineContent??>
      &nbsp;<a href="${statement.onlineContent}" class="link-to-content open-access" target="_blank" title="view open access copy">Open Access Copy</a>
