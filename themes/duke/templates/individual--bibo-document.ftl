@@ -13,88 +13,91 @@
 <section id="topcontainer" class="main-content document">
   <section id="individual-info" ${infoClass!} role="region">
     <header>
-        <#assign docName>
-          <@p.label individual false 1 />
-        </#assign>
-        <h1>
-          ${docName}
-        </h1>
+      <#assign docName>
+        <@p.label individual false 1 />
+      </#assign>
+      <h1>${docName}</h1>
 
-        <#-- publication status -->
-        <#assign pstatus = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#publicationStatus")!>
-        <#if pstatus?has_content>
-           <p class='publication-status'>${dataPropertyValue(pstatus)}</p>
+      <#-- publication status -->
+      <#assign pstatus = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#publicationStatus")!>
+      <#if pstatus?has_content>
+         <p class='publication-status'>${dataPropertyValue(pstatus)}</p>
+      </#if>
+
+      <#-- pubtypes and subtypes -->
+      <#assign subtypes = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#subtypes")!>
+      <#assign subContent = "${dataPropertyValue(subtypes)}"/>
+      <p id="publication-subtypes">
+        <@p.mostSpecificTypes individual />
+        <#if subtypes?has_content && (subContent?length > 0) >
+          <span id="publication-subtype-color">
+            (${subContent})
+          </span>
         </#if>
+      </p>
 
-        <#-- pubtypes and subtypes -->
-        <#assign subtypes = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#subtypes")!>
-        <#assign subContent = "${dataPropertyValue(subtypes)}"/>
-        <p id="publication-subtypes">
-          <@p.mostSpecificTypes individual />
-          <#if subtypes?has_content && (subContent?length > 0) >
-            <span id="publication-subtype-color">
-              (${subContent})
-            </span>
-          </#if>
-        </p>
-
-        <#-- abstract -->
-        <#assign abstract = propertyGroups.pullProperty("http://purl.org/ontology/bibo/abstract")!>
-        <#if abstract?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+      <#-- abstract -->
+      <#assign abstract = propertyGroups.pullProperty("http://purl.org/ontology/bibo/abstract")!>
+      <#if abstract?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
         <div class="abstract">
           <p>${dataPropertyValue(abstract)}</p>
         </div>
-        </#if>
+      </#if>
     </header>
   </section>
+
   <section id="individual-body" role="region">
 
-     <#-- full text links -->
-      <#assign fullTextLinks = []/>
+    <#-- full text links -->
+    <#assign fullTextLinks = []/>
 
-      <#assign doi = propertyGroups.pullProperty("http://purl.org/ontology/bibo/doi")!>
-      <#if doi?has_content && (doi.statements)?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-        <#assign doiValue = "${doi.statements[0].value}"/>
-        <#assign doiUrl = "<a href=\"http://dx.doi.org/${doiValue}\" target=\"_blank\">Published version (via Digital Object Identifier)</a>">
-        <#assign fullTextLinks = fullTextLinks + [doiUrl]/>
-      </#if>
+    <#assign doi = propertyGroups.pullProperty("http://purl.org/ontology/bibo/doi")!>
+    <#if doi?has_content && (doi.statements)?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+      <#assign doiValue = "${doi.statements[0].value}"/>
+      <#assign doiUrl = "<a href=\"http://dx.doi.org/${doiValue}\" target=\"_blank\">Published version (via Digital Object Identifier)</a>">
+      <#assign fullTextLinks = fullTextLinks + [doiUrl]/>
+    </#if>
 
-      <#assign pmcid = propertyGroups.pullProperty("${core}pmcid")!>
-      <#if pmcid?has_content && (pmcid.statements)?has_content>
-        <#assign pmcidValue = "${pmcid.statements[0].value}"/>
-        <#assign pmcidUrl = "<a href=\"http://www.ncbi.nlm.nih.gov/pmc/articles/${pmcidValue}\" target=\"_blank\">Pubmed Central version</a>">
-        <#assign fullTextLinks = fullTextLinks + [pmcidUrl]/>
-      </#if>
+    <#assign pmcid = propertyGroups.pullProperty("${core}pmcid")!>
+    <#if pmcid?has_content && (pmcid.statements)?has_content>
+      <#assign pmcidValue = "${pmcid.statements[0].value}"/>
+      <#assign pmcidUrl = "<a href=\"http://www.ncbi.nlm.nih.gov/pmc/articles/${pmcidValue}\" target=\"_blank\">Pubmed Central version</a>">
+      <#assign fullTextLinks = fullTextLinks + [pmcidUrl]/>
+    </#if>
 
-      <#assign contentLink = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#onlineContent")!>
-      <#if contentLink?has_content && (contentLink.statements)?has_content>
-         <#assign contentValue = "${contentLink.statements[0].value}"/>
-         <#assign contentUrl = "<a href=\"${contentValue}\" target=\"_blank\">Open Access Copy from Duke</a>"/>
-         <#assign fullTextLinks = fullTextLinks + [contentUrl]/>
-      </#if>
+    <#assign contentLink = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#onlineContent")!>
+    <#if contentLink?has_content && (contentLink.statements)?has_content>
+       <#assign contentValue = "${contentLink.statements[0].value}"/>
+       <#assign contentUrl = "<a href=\"${contentValue}\" target=\"_blank\">Open Access Copy from Duke</a>"/>
+       <#assign fullTextLinks = fullTextLinks + [contentUrl]/>
+    </#if>
 
-      <#assign pubLink = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#publisherLink")!>
-      <#if pubLink?has_content && (pubLink.statements)?has_content>
-        <#assign pubValue = "${pubLink.statements[0].value}"/>
-        <#assign pubUrl = "<a href=\"${pubValue}\" target=\"_blank\">Publisher Link</a>">
-        <#assign fullTextLinks = fullTextLinks + [pubUrl]/>
-      </#if>
+    <#assign pubLink = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#publisherLink")!>
+    <#if pubLink?has_content && (pubLink.statements)?has_content>
+      <#assign pubValue = "${pubLink.statements[0].value}"/>
+      <#assign pubUrl = "<a href=\"${pubValue}\" target=\"_blank\">Publisher Link</a>">
+      <#assign fullTextLinks = fullTextLinks + [pubUrl]/>
+    </#if>
 
-      <#assign linkToItem = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#linkToItem")!>
-      <#if linkToItem?has_content && (linkToItem.statements)?has_content>
-        <#assign linkValue = "${linkToItem.statements[0].value}"/>
-        <#assign linkUrl = "<a href=\"${linkValue}\" target=\"_blank\">Link to Item</a>">
-        <#assign fullTextLinks = fullTextLinks + [linkUrl]/>
-      </#if>
+    <#assign linkToItem = propertyGroups.pullProperty("http://vivo.duke.edu/vivo/ontology/duke-extension#linkToItem")!>
+    <#if linkToItem?has_content && (linkToItem.statements)?has_content>
+      <#assign linkValue = "${linkToItem.statements[0].value}"/>
+      <#assign linkUrl = "<a href=\"${linkValue}\" target=\"_blank\">Link to Item</a>">
+      <#assign fullTextLinks = fullTextLinks + [linkUrl]/>
+    </#if>
 
-      <#if (fullTextLinks?size > 0)>
+    <#if (fullTextLinks?size > 0)>
+      <#if individual.mostSpecificTypes?? && individual.mostSpecificTypes?seq_contains("Dataset")>
+        <h3>Data Access</h3>
+      <#else>
         <h3>Full Text</h3>
-        <ul role="list">
-        <#list fullTextLinks as ft_link>
-           <li role="listitem">${ft_link}</li>
-        </#list>
-        </ul>
       </#if>
+      <ul role="list">
+      <#list fullTextLinks as ft_link>
+         <li role="listitem">${ft_link}</li>
+      </#list>
+      </ul>
+    </#if>
 
     <#-- duke authors -->
     <#assign dukeAuthors = propertyGroups.pullProperty("${core}relatedBy", "${core}Authorship")!>
@@ -285,10 +288,11 @@
     <#if endDate?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
       <@simpleObjectPropertyListing endDate "Conference End Date" />
     </#if>
-
   </section>
 </section>
+
 <section id="rightColumn" class="sidebar">
+
   <#-- subject area -->
   <#assign subjectAreas = propertyGroups.pullProperty("${core}hasSubjectArea")!>
   <#if subjectAreas?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
