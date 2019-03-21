@@ -14,7 +14,6 @@
     <!-- This is for monitoring, please do not change or delete: The scholarly dog jumped a red fence. -->
     <div id="wrapper-main" class="wrapper-main">
       <#include "identity.ftl">
-
       <#include "menu.ftl">
 
       <section id="intro" role="region">
@@ -81,7 +80,7 @@
           <a href="http://about.scholars.duke.edu/recent-updates">Read Updates From the Scholars Team >></a>
         </div>
 
-        <div class="widgets ">
+        <div class="widgets">
           <div class="widget one-third">
             <h3 class="scholars_title"><span class="icon icon--search"></span>Explore</h3>
 
@@ -90,7 +89,6 @@
             </ul>
 
             <form id="people-search-form" action="/scholars_search/" class="search-form inline" name="people-search" role="search" method="GET">
-
               <label for="allWords2" class="sr-only">Search</label>
               <input id="allWords2"
                      name="allWords2" 
