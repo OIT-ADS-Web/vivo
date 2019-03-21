@@ -22,42 +22,42 @@
           <div class="carousel-inner">
 
             <div class="item">
-              <img src="../themes/duke/images/038318_nuamah012.png" class="home_page_graphic">
+              <img src="../themes/duke/images/038318_nuamah012.png" class="home_page_graphic" alt="Photo of Sally Nuamah">
               <div class="caption-wrap">
                 <p class="caption"><a href="person/sally.nuamah">Sally Nuamah</a>, Assistant Professor in the Sanford School of Public Policy</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/048818a_ciompi_lunch091.png" class="home_page_graphic">
+              <img src="../themes/duke/images/048818a_ciompi_lunch091.png" class="home_page_graphic" alt="Photo of Hsiao-Mei Ku">
               <div class="caption-wrap">
                 <p class="caption"><a href="person/hmku">Hsiao-Mei Ku</a>, Professor of the Practice of Music</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/115217_opti_lab_0041.png" class="home_page_graphic">
+              <img src="../themes/duke/images/115217_opti_lab_0041.png" class="home_page_graphic" alt="Photo of Greg Appelbaum">
               <div class="caption-wrap">
                 <p class="caption"><a href="person/greg1">Greg Appelbaum</a>, Associate Professor in Psychiatry and Behavioral Sciences</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/023217_martin_smith_teaching094.png" class="home_page_graphic">
+              <img src="../themes/duke/images/023217_martin_smith_teaching094.png" class="home_page_graphic" alt="Photo of Martin Paul Smith">
               <div class="caption-wrap">
                 <p class="caption"><a href="person/Martin.Smith1">Martin Paul Smith</a>, Assistant Professor of the Practice of Education</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/108017_randles024.png" class="home_page_graphic">
+              <img src="../themes/duke/images/108017_randles024.png" class="home_page_graphic" alt="Photo of Amanda Randles">
               <div class="caption-wrap">
                 <p class="caption"><a href="person/amanda.randles">Amanda Randles</a>, Alfred Winborne and Victoria Stover Mordecai Assistant Professor of Biomedical Sciences</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/144510_tcheng008.png" class="home_page_graphic">
+              <img src="../themes/duke/images/144510_tcheng008.png" class="home_page_graphic" alt="Photo of James Tcheng">
               <div class="caption-wrap">
                 <p class="caption"><a href="person/tchen001">James Tcheng</a>, Professor of Medicine</p>
               </div>
@@ -90,7 +90,15 @@
             </ul>
 
             <form id="people-search-form" action="/scholars_search/" class="search-form inline" name="people-search" role="search" method="GET">
-              <input name="allWords" type="text" class="search-vivo" width="30" onfocus="if (this.value == 'Search') {this.value = '';}" placeholder="" value="Search" autocapitalize="off" onblur="if (this.value == '') {this.value = 'Search';}">
+
+              <label for="allWords2" class="sr-only">Search</label>
+              <input id="allWords2"
+                     name="allWords2" 
+                     type="text" 
+                     class="search-vivo" 
+                     width="30" 
+                     placeholder="Search" 
+                     autocapitalize="off">
               <input type="submit" class="search" value="GO" />
             </form>
 
