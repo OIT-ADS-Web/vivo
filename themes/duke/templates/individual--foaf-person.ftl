@@ -1,6 +1,5 @@
 <#-- Individual profile page template for foaf:Person individuals -->
 
-
 <script type="text/javascript">
   $('#main-nav a[href="/people"]').addClass('selected');
 </script>
@@ -98,7 +97,12 @@
       <#-- Leadership & Clinical Positions at Duke -->
       <#if leadershipPositions?has_content>
         <li class="section-collapsible" id="LeadershipPositions">
-          <a name="LeadershipPositions" class="expanderLink" data-open-image="${urls.theme}/images/button_minus_large.png" data-closed-image="${urls.theme}/images/button_plus_large.png"><img src="${urls.theme}/images/button_plus_large.png"/></a>
+          <a name="LeadershipPositions" 
+             class="expanderLink" 
+             data-open-image="${urls.theme}/images/button_minus_large.png" 
+             data-closed-image="${urls.theme}/images/button_plus_large.png">
+            <img src="${urls.theme}/images/button_plus_large.png" alt="show hide toggle">
+          </a>
           <h3 id="leadership-positions">Leadership & Clinical Positions at Duke</h3>
           <div class="hideshow" style="display:none">  
             <@p.addLinkWithLabel leadershipPositions editable />
@@ -185,7 +189,12 @@
         <#-- Advising & Mentoring -->
         <#if availabilities?has_content || mentorOverview?has_content>
           <li class="section-collapsible" id="MentorshipAvailability">
-            <a name="MentorshipAvailability" class="expanderLink" data-open-image="${urls.theme}/images/button_minus_large.png" data-closed-image="${urls.theme}/images/button_plus_large.png"><img src="${urls.theme}/images/button_plus_large.png"/></a>
+            <a name="MentorshipAvailability" 
+               class="expanderLink" 
+               data-open-image="${urls.theme}/images/button_minus_large.png" 
+               data-closed-image="${urls.theme}/images/button_plus_large.png">
+              <img src="${urls.theme}/images/button_plus_large.png" alt="show hide toggle">
+            </a>
             <h3 id="mentorship-availabilities">Advising & Mentoring<@verboseDisplay availabilities /></h3>
             <div class="hideshow" style="display:none">
               <#if mentorOverview?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
@@ -212,7 +221,12 @@
         <#-- Teaching Activities -->
         <#if teachingOverview?has_content>
           <li class="section-collapsible" id="TeachingOverview">
-            <a name="TeachingOverview" class="expanderLink" data-open-image="${urls.theme}/images/button_minus_large.png" data-closed-image="${urls.theme}/images/button_plus_large.png"><img src="${urls.theme}/images/button_plus_large.png"/></a>
+            <a name="TeachingOverview" 
+               class="expanderLink" 
+               data-open-image="${urls.theme}/images/button_minus_large.png" 
+               data-closed-image="${urls.theme}/images/button_plus_large.png">
+               <img src="${urls.theme}/images/button_plus_large.png" alt="show hide toggle">
+            </a>
             <h3 id="teaching-overview">Teaching Activities</h3>
             <div class="hideshow" style="display:none">
               <#if teachingOverview?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
@@ -251,7 +265,12 @@
         <#-- Academic & Administrative Activities -->
         <#if academicOverview?has_content>
           <li class="section-collapsible" id="AcademicOverview">
-            <a name="AcademicOverview" class="expanderLink" data-open-image="${urls.theme}/images/button_minus_large.png" data-closed-image="${urls.theme}/images/button_plus_large.png"><img src="${urls.theme}/images/button_plus_large.png"/></a>
+            <a name="AcademicOverview" 
+               class="expanderLink" 
+               data-open-image="${urls.theme}/images/button_minus_large.png" 
+               data-closed-image="${urls.theme}/images/button_plus_large.png">
+               <img src="${urls.theme}/images/button_plus_large.png" alt="show hide toggle">
+            </a>
             <h3 id="academic-overview">Academic & Administrative Activities</h3>
             <div class="hideshow" style="display:none">
               <#if academicOverview?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
@@ -272,7 +291,12 @@
         <#-- Clinical Activities -->
         <#if clinicalOverview?has_content>
           <li class="section-collapsible" id="ClinicalOverview">
-            <a name="ClinicalOverview" class="expanderLink" data-open-image="${urls.theme}/images/button_minus_large.png" data-closed-image="${urls.theme}/images/button_plus_large.png"><img src="${urls.theme}/images/button_plus_large.png"/></a>
+            <a name="ClinicalOverview" 
+               class="expanderLink" 
+               data-open-image="${urls.theme}/images/button_minus_large.png" 
+               data-closed-image="${urls.theme}/images/button_plus_large.png">
+               <img src="${urls.theme}/images/button_plus_large.png" alt="show hide toggle">
+            </a>
             <h3 id="clinical-overview">Clinical Activities</h3>
             <div class="hideshow" style="display:none">
               <#if clinicalOverview?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
@@ -293,19 +317,16 @@
       </#if>
     </ul>
 
-    <p class='disclaimer'>Some information on this profile has been compiled automatically from
-    Duke databases and external sources. (Our 
-    <a href='http://about.scholars.duke.edu/'>About page</a> explains how this works.)
-    If you see a problem with the information, please write to 
-    <a href='mailto:scholars@duke.edu'>Scholars@Duke</a> and let us know. We will
-    reply promptly.<p>
+    <p class='disclaimer'>
+      Some information on this profile has been compiled automatically from Duke databases and external sources. (Our <a href='http://about.scholars.duke.edu/'>About page</a> explains how this works.) If you see a problem with the information, please write to <a href='mailto:scholars@duke.edu'>Scholars@Duke</a> and let us know. We will reply promptly.
+    </p>
 
   </section>
 </section>
-<section id="rightColumn" class="sidebar">
 
+<section id="rightColumn" class="sidebar">
   <section class="vivo_admin_links">
-     <a class="manage_this_profile hide-text" href="/vivo_admin/people?uri=${individual.uri}" title="Manage This Profile">Manage this Profile</a>
+    <a class="manage_this_profile hide-text" href="/vivo_admin/people?uri=${individual.uri}" title="Manage This Profile">Manage this Profile</a>
   </section>
 
   <section class="individual_widget_links">
@@ -318,8 +339,7 @@
     <@p.image individual=individual
               propertyGroups=propertyGroups
               namespaces=namespaces
-              editable=editable
-               />
+              editable=editable />
   </#assign>
 
   <#if ( individualImage?contains('<img class="individual-photo"') )>
@@ -345,7 +365,6 @@
     <p class="view-all-coauthors"><a class="view-all-style" href="#">View All <img src="${urls.images}/arrowIcon.gif" alt="arrow icon" /></a></p>
 </section>
 -->
-
 
 <#-- assign nameForOtherGroup = "other" --> <#-- used by both individual-propertyGroupMenu.ftl and individual-properties.ftl -->
 
