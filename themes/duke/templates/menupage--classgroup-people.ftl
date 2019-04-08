@@ -6,8 +6,8 @@
     <div class="search-field">
       <label for="allWords" class="sr-only">Search</label>
       <input id="allWords" 
-             type="text" 
              name="allWords" 
+             type="text" 
              class="search-vivo" 
              placeholder="Search by Name, Title or Keyword" 
              autocapitalize="off">
