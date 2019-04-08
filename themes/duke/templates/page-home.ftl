@@ -89,9 +89,9 @@
             </ul>
 
             <form id="people-search-form" action="/scholars_search/" class="search-form inline" name="people-search" role="search" method="GET">
-              <label for="allWords2" class="sr-only">Search</label>
-              <input id="allWords2"
-                     name="allWords2" 
+              <label for="allWords" class="sr-only">Search</label>
+              <input id="allWords"
+                     name="allWords" 
                      type="text" 
                      class="search-vivo" 
                      width="30" 

@@ -48,9 +48,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       <legend>Search form</legend>
       <form id="search-form" action="/scholars_search/" name="search" role="search" method="GET"> 
         <div id="search-field">
-          <label for="allWords1" class="sr-only">Search</label>
-          <input id="allWords1"
-                 name="allWords1" 
+          <label for="allWords" class="sr-only">Search</label>
+          <input id="allWords"
+                 name="allWords" 
                  type="text"
                  class="search-vivo"
                  width="30"
