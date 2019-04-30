@@ -21,44 +21,44 @@
           <div class="carousel-inner">
 
             <div class="item">
-              <img src="../themes/duke/images/038318_nuamah012.png" class="home_page_graphic" alt="Photo of Sally Nuamah">
+              <img src="../themes/duke/images/021317_eyepage083.jpg" class="home_page_graphic" alt="Photo of Preeya Gupta">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/sally.nuamah">Sally Nuamah</a>, Assistant Professor in the Sanford School of Public Policy</p>
+                <p class="caption"><a href="person/preeya.gupta">Preeya Gupta</a>, Associate Professor of Ophthalmology</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/048818a_ciompi_lunch091.png" class="home_page_graphic" alt="Photo of Hsiao-Mei Ku">
+              <img src="../themes/duke/images/031318_gill_025.jpg" class="home_page_graphic" alt="Photo of David Gill">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/hmku">Hsiao-Mei Ku</a>, Professor of the Practice of Music</p>
+                <p class="caption"><a href="person/David.Gill">David Gill</a>, Assistant Professor in the Department of Marine Science and Conservation</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/115217_opti_lab_0041.png" class="home_page_graphic" alt="Photo of Greg Appelbaum">
+              <img src="../themes/duke/images/140015b_levy_teaching006.jpg" class="home_page_graphic" alt="Photo of Marin Levy">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/greg1">Greg Appelbaum</a>, Associate Professor in Psychiatry and Behavioral Sciences</p>
+                <p class="caption"><a href="person/levy">Marin Levy</a>, Associate Professor of Law</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/023217_martin_smith_teaching094.png" class="home_page_graphic" alt="Photo of Martin Paul Smith">
+              <img src="../themes/duke/images/004719_brainlab087.jpg" class="home_page_graphic" alt="Photo of Leonard White">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/Martin.Smith1">Martin Paul Smith</a>, Assistant Professor of the Practice of Education</p>
+                <p class="caption"><a href="person/len.white">Leonard White</a>, Associate Professor in Neurology</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/108017_randles024.png" class="home_page_graphic" alt="Photo of Amanda Randles">
+              <img src="../themes/duke/images/049718_kaul069.jpg" class="home_page_graphic" alt="Photo of Shambhavi Kaul">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/amanda.randles">Amanda Randles</a>, Alfred Winborne and Victoria Stover Mordecai Assistant Professor of Biomedical Sciences</p>
+                <p class="caption"><a href="person/shambhavi.kaul">Shambhavi Kaul</a>, Assistant Professor of the Practice of Filmmaking of Art, Art History & Visual Studies</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/144510_tcheng008.png" class="home_page_graphic" alt="Photo of James Tcheng">
+              <img src="../themes/duke/images/090317_0403_story_plus_balleisen134.jpg" class="home_page_graphic" alt="Photo of Edward J. Balleisen">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/tchen001">James Tcheng</a>, Professor of Medicine</p>
+                <p class="caption"><a href="person/eballeis">Edward J. Balleisen</a>, Professor of History</p>
               </div>
             </div>
 
