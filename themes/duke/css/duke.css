@@ -725,7 +725,7 @@ body.loggedIn #intro {
 }
 
 #intro a {
-	color: #225c96;
+	color: #235f9c;
 	font-size: 1em;
 }
 
@@ -3338,7 +3338,7 @@ a.more-less {
 }
 
 a:hover.more-less {
-  color: black;
+  color: #000000;
   background: #B2D15A;
 }
 
@@ -3465,7 +3465,7 @@ div.updates a {
 }
 
 #intro .widgets ul li a {
-	color: #434b4b;
+	color: #235f9c;
 	text-decoration: none;
 	cursor: pointer;
 	font-size: 14px;
