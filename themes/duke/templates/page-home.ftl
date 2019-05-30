@@ -111,7 +111,6 @@
             <ul>
               <li><a href="http://about.scholars.duke.edu/new-scholarsduke">New to Scholars?</a></li>
               <li><a href="http://about.scholars.duke.edu/support-duke-faculty-delegates">Support Page</a></li>
-              <li><a href="http://about.scholars.duke.edu/video-tutorials">Video Tutorials</a></li>
               <li><a href="http://about.scholars.duke.edu/support-duke-faculty-delegates#How%20do%20I%20edit%20my%20profile?">FAQ's</a></li>
               <li><a href="http://about.scholars.duke.edu/support-duke-faculty-delegates#Users%27%20Guides">Users' Guides</a></li>
             </ul>
@@ -126,7 +125,7 @@
             </ul>
           </div>
         </div>
-      </section> <!-- #intro -->
+      </section>
 
       <section id="home_page_sidebar">
         <section class="research_feed">
