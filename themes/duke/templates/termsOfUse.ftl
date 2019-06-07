@@ -1,10 +1,10 @@
 <#-- $This file is distributed under the terms of the license in /doc/license.txt$ -->
 
 <section id="terms" role="region">
-  <h2>Terms of Use for the Scholars@Duke Widgets/API (Updated June 2019)</h2>
+  <h2>Terms of Use for the Scholars@Duke Widgets/API</h2>
 
   <p>Scholars@Duke allows users to interact with Scholars@Duke data and services through an API. These Terms and Conditions of Use will apply to your use of the Schoars@Duke APIs. By using the API, you are agreeing to these Terms and Conditions of Use. Duke reserves the right to modify these Terms and Conditions at any time. The most updated Terms and Conditions of Use will be posted on this website.</p> 
-
+  
   <h3>1. Permitted Uses</h3>
   <p>Users of the Scholars@Duke API may</p>
   <p>i. query the API;</p>
@@ -12,7 +12,7 @@
   <p>iii. develop and share applications based on the output of the API for personal or scholarly uses;</p>
 
   <h3>2. Prohibited Uses</h3>
-  <p>Unless specifically authorized by Duke’s Provost’s Office, users may</p>
+  <p>Unless specifically authorized by Duke’s Provost’s Office, users may not</p>
   <p>i. attempt to override, circumvent, or disable any encryption features or software protections employed in the API;</p>
   <p>ii. undertake any activity that may interfere with, disrupt or otherwise burden the Scholars@Duke site;</p>
   <p>iii. distribute or make available a significant portion of downloaded Scholars@Duke content as part of the creation or provision of a database; or</p>
@@ -21,9 +21,9 @@
 
   <h3>3. Attribution</h3>
   <p>Users who display or otherwise distribute output or information obtained from or in connection with the API must credit Scholars@Duke and Duke University as follows:
-  "Scholars@Duke, Duke University, https://scholars.duke.edu/</p>
+  "Scholars@Duke, Duke University, https://scholars.duke.edu/"</p>
 
-  <p>Duke does not assert rights in the metadata made available through Scholars@Duke. It is our belief that most of this metadata is not protected by copyright because it either expresses only objective facts (which are not original) or constitutes expression so limited by the number of ways the underlying ideas can be expressed that such expression has merged with those ideas. However, some data made available through Scholars@Duke was obtained from third parties who do make assertions of rights over their content. Accordingly, while we encourage scholarly, academic and research uses of Scholars@Duke  data, we cannot affirmatively grant permission. Users are encouraged to make their own copyright and risk assessment and to, when appropriate, rely on fair use.</p>
+  <p>Duke does not assert rights in the metadata made available through Scholars@Duke. It is our belief that most of this metadata is not protected by copyright because it either expresses only objective facts (which are not original) or constitutes expression so limited by the number of ways the underlying ideas can be expressed that such expression has merged with those ideas. However, some data made available through Scholars@Duke was obtained from third parties who do make assertions of rights over their content. Accordingly, while we encourage scholarly, academic and research uses of Scholars@Duke data, we cannot affirmatively grant permission. Users are encouraged to make their own copyright and risk assessment and to, when appropriate, rely on fair use.</p>
 
   <h3>4. Warranty and Indemnity</h3>
   <p>You represent and warrant that your use of the Scholars@Duke API will not infringe any patent, copyright, trade secret or other proprietary right of any third party and will not contain a virus, spyware, or other harmful component. You agree to indemnify and hold Duke harmless from any and all liability and costs incurred in connection with any claim arising out of your breach of this representation and warranty and these Terms and Conditions of Use. You will cooperate as fully as reasonably required in the defense of any claim. Duke reserves the right, at its own expense, to assume the exclusive defense and control of any matter subject to indemnification by you.</p>
@@ -53,7 +53,8 @@
     <h3 id="previous-terms">Previous Terms of Use</h3>
     <div class="hideshow" style="display:none">
       <section id="old-terms" role="region">
-        <h3 style="margin-top:20px;">Disclaimers</h3>
+
+        <h3>Disclaimers</h3>
         <p>This ${termsOfUse.siteName} website contains material&mdash;text information, publication
         citations, links, and images&mdash;provided by ${termsOfUse.siteHost} and by various
         third parties, both individuals and organizations, commercial and otherwise. To the extent copyrightable,
@@ -64,8 +65,7 @@
         ${termsOfUse.siteHost}. Any non-copyrightable information is available to you under a
         <a href="http://creativecommons.org/publicdomain/zero/1.0/"  target="_blank" title="cco waiver">CC0 waiver</a>.  However, source documents,
         images or web pages attached to or linked from VIVO may contain copyrighted information and should only be
-        used or distributed under terms included with each source or in accordance with the principles of fair use.
-        </p>
+        used or distributed under terms included with each source or in accordance with the principles of fair use.</p>
 
         <h3>Disclaimer of Liability</h3>
         <p>${termsOfUse.siteHost?cap_first} makes no warranty, expressed or implied, including the warranties of merchantability 
