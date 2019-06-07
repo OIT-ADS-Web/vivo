@@ -64,16 +64,12 @@ em {
 	font-style: italic;
 }
 
-#overview {
+#property-group-menu, #overview {
 	display: none;
 }
 
 .property-group h2#overview {
 	display: block;
-}
-
-#property-group-menu {
-	display: none;
 }
 
 .grant #individual-contributingRole .listDateTime {
@@ -176,7 +172,7 @@ label.inline {
 }
 
 .disclaimer, .grant-disclaimer {
-        font-size: 1.3em;
+  font-size: 1.3em;
 }
 
 .grant-disclaimer {
@@ -333,11 +329,7 @@ a.return: hover,a.return: active {
 	text-decoration: none;
 }
 
-.navlinkblock {
-	color: #5F6464;
-}
-
-.header {
+.navlinkblock, .header {
 	color: #5F6464;
 }
 
@@ -380,11 +372,7 @@ a.return: hover,a.return: active {
 	font-size: 1em;
 }
 
-.postheadercenter {
-	font-size: 1em;
-}
-
-.postheaderright {
+.postheadercenter, .postheaderright {
 	font-size: 1em;
 }
 
@@ -393,7 +381,7 @@ a.return: hover,a.return: active {
 	font-size: .8em;
 }
 
-.row,.rowvert {
+.row, .rowvert {
 	background-color: #F7F9F9;
 	color: #5F6464;
 	font-size: 1em;
@@ -504,7 +492,6 @@ a.ingestMenu: hover,a.ingestMenu: active,a.account-menu: hover,a.account-menu: a
 	float: right;
 	margin-top: 5px;
 	padding-top: 12px;
-/*	margin-right: 4px;*/
 	width: 20%;
 }
 
@@ -725,7 +712,7 @@ body.loggedIn #intro {
 }
 
 #intro a {
-	color: #225c96;
+	color: #235f9c;
 	font-size: 1em;
 }
 
@@ -788,8 +775,8 @@ input.search-home-vivo {
 /* Homepage Side Bar */
 #home_page_sidebar {
 	float: right;
-	margin-top: 5px;
 	width: 30%;
+	margin-top: 5px;
 	margin-right: 10px;
 }
 
@@ -824,14 +811,15 @@ input.search-home-vivo {
 }
 
 .research_feed li a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 .research_feed li .timestamp {
 	font-size: 1.06em;
 	margin: 5px 0;
 }
 
-.research_feed #stories li {
+.research_feed #stories li,
+.research_feed #events li {
 	background: url(../images/arrow-duke-today.gif) no-repeat scroll 7px 9px transparent;
 }
 
@@ -1207,21 +1195,21 @@ h3#personInPosition {
 	background-position: 0 0;
 }
 
-  .sidebar .individual_widget_links a:hover,
-  .sidebar .individual_widget_links a:focus,
-  .sidebar .individual_widget_links a:active {
-    background-position: 0 -32px;
-  }
+.sidebar .individual_widget_links a:hover,
+.sidebar .individual_widget_links a:focus,
+.sidebar .individual_widget_links a:active {
+  background-position: 0 -32px;
+}
 
 .sidebar .vivo_admin_links a {
   background-position: -180px 0;
 }
 
-  .sidebar .vivo_admin_links a:hover,
-  .sidebar .vivo_admin_links a:focus,
-  .sidebar .vivo_admin_links a:active {
-    background-position: -180px -32px;
-  }
+.sidebar .vivo_admin_links a:hover,
+.sidebar .vivo_admin_links a:focus,
+.sidebar .vivo_admin_links a:active {
+  background-position: -180px -32px;
+}
 
 /*Schools and Istitutes*/
 #organization-body {
@@ -1241,10 +1229,10 @@ h3#personInPosition {
 #orgNavigation li.subtree {
 }
 
-	#orgNavigation li li {
-		margin: 0;
-		padding: 12px 0 12px 5px;
-	}
+#orgNavigation li li {
+	margin: 0;
+	padding: 12px 0 12px 5px;
+}
 
 #orgNavigation a.organization {
 	margin-left: 0!important;
@@ -1261,15 +1249,15 @@ h3#personInPosition {
 	border: 1px solid #eeeeee;
 }
 
-	#orgNavigation .subtree .subtree a.orgExpanderLink {
-		margin-left: -26px;
-		padding: 4px 8px;
-		border: 1px solid #eeeeee;
-	}
+#orgNavigation .subtree .subtree a.orgExpanderLink {
+	margin-left: -26px;
+	padding: 4px 8px;
+	border: 1px solid #eeeeee;
+}
 
-	#orgNavigation .subtree .subtree a.orgExpanderLink img {
-		margin-left: 0;
-	}
+#orgNavigation .subtree .subtree a.orgExpanderLink img {
+	margin-left: 0;
+}
 
 li.subtree ul.tree-navigation li {
 	margin-left: 10px;
@@ -1967,6 +1955,7 @@ p.publication-status {
 	color: #064D68;
 	font-size: 2em;
 }
+
 #publication-subtypes {
 	color: #5E6363;
 	font-size: 1.875em;
@@ -2258,9 +2247,9 @@ h2 a.expanderLink {
 }
 
 .browse-header {
-    font-size: 1.3em;
-    line-height: 1.3em;
-    margin: 10px 20px;
+  font-size: 1.3em;
+  line-height: 1.3em;
+  margin: 10px 20px;
 }
 
 /*research & entity pages*/
@@ -2542,8 +2531,6 @@ ul#footer-nav li:last-child {
 }
 
 /*Media Queries*/
-
-
 @media only screen and (max-width: 480px) {
 
 	#header-nav > ul {
@@ -2561,9 +2548,9 @@ ul#footer-nav li:last-child {
 		height: 80px;
 	}
 
-		#branding h1.vivo-logo {
-			top: 5px;
-		}
+	#branding h1.vivo-logo {
+		top: 5px;
+	}
 
 	/*SP Body*/
 	#mobile-nav {
@@ -3338,7 +3325,7 @@ a.more-less {
 }
 
 a:hover.more-less {
-  color: black;
+  color: #000000;
   background: #B2D15A;
 }
 
@@ -3411,15 +3398,15 @@ div.updates a {
 }
 
 .widgets ul {
-	list-style: disc;
 	color: #434b4b;
 	list-style-position: inside;
 }
 
 .widgets ul li {
 	padding: 10px 0 10px 5px;
-  margin-left: 2em;
-  text-indent: -2em;
+  margin-left: 1.3em; 
+  background: url(../images/arrow-duke-today.gif) no-repeat scroll 0px 14px transparent;
+  text-indent: .25em;
 }
 
 .widgets #people-search-form .search {
@@ -3465,7 +3452,7 @@ div.updates a {
 }
 
 #intro .widgets ul li a {
-	color: #434b4b;
+	color: #235f9c;
 	text-decoration: none;
 	cursor: pointer;
 	font-size: 14px;
