@@ -37,7 +37,7 @@
   <h3>7. Termination</h3>
   <p>Any use of the API beyond the scope or in violation of these Terms and Conditions of Use, or any fraudulent, abusive, or otherwise illegal activity, may be grounds for termination of your access to the API from your IP address, without notice and at Duke’s sole discretion. In addition, Duke may terminate access to the API for any reason or no reason in its discretion.</p>
 
-  <h3>8.</h3>  
+  <h3>8. Modifications</h3>  
   <p>Duke reserves the right to modify these Terms and Conditions, or any aspect of the Scholars@Duke or Scholars@Duke API at any time. Notice that modifications have been made shall be posted to this page. Your continued use of the Scholars@Duke site and Scholars@Duke shall be considered acceptance of such modified terms.</p>
 
 </section>
