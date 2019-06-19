@@ -2457,13 +2457,13 @@ h2 a.expanderLink {
 #old-terms h3 {
 	color: #235F9C;
 	line-height: 1.2em;
-	font-size: 3em;
+	font-size: 1.85em;
 	margin-top: 20px;
 }
 
 #terms p,
 #old-terms p {
-	font-size: 2.4em;
+	font-size: 1.5em;
 	line-height: 1.3em;
 	margin: 10px 0;
 }
