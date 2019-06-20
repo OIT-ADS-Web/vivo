@@ -2117,10 +2117,6 @@ input[type="submit"] {
 	border: 1px solid #DFE6E6;
 }
 
-#terms h3 {
-	color: #235F9C;
-}
-
 .ie-alert {
 	color: red;
 	font-weight: 700;
@@ -2442,17 +2438,21 @@ h2 a.expanderLink {
 }
 
 /*Terms of use page*/
-#terms {
+#terms, #old-terms {
 	margin: 0 20px;
 }
 
-#terms h3 {
+#terms h3,
+#old-terms h3 {
+	color: #235F9C;
 	line-height: 1.2em;
-	font-size: 3em;
+	font-size: 1.85em;
+	margin-top: 20px;
 }
 
-#terms p {
-	font-size: 2.4em;
+#terms p,
+#old-terms p {
+	font-size: 1.5em;
 	line-height: 1.3em;
 	margin: 10px 0;
 }
