@@ -53,7 +53,8 @@
                                   "Public Service Grant",
                                   "Research Grant"] />
 
-      <#assign workSubclasses = ["Artistic Work and Non-Print Media", 
+      <#assign workSubclasses = ["Art History",
+                                 "Artistic Work and Non-Print Media", 
                                  "Audio Recording",
                                  "Ceramic",
                                  "Choreography",
@@ -85,13 +86,15 @@
                                  "Repertoire / Portfolio",
                                  "Radio/Television Program",
                                  "Repertoire/Portfolio",
+                                 "Research", 
                                  "Sculpture",
                                  "Set Design",
                                  "Script",
                                  "Sound Design",
                                  "Theatrical Performance",
                                  "Theatrical Production",
-                                 "Video","Video Recording"] />
+                                 "Video",
+                                 "Video Recording"] />
 
       <#assign eventSubclasses = ["Event",
                                   "Exhibitions, Screenings, and Performances"] />
