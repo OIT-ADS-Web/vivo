@@ -143,6 +143,7 @@
 
       <#assign grants = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000053", "${core}ResearcherRole")!>
       <#assign gifts = propertyGroups.pullProperty("${core}relatedBy", "http://vivo.duke.edu/vivo/ontology/duke-cv-extension#Gift")!>
+      <#-- <#assign industryRelationships = propertyGroups.pullProperty("someRelationship, "someClassname")!> -->
 
       <#if grants?has_content || gifts?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
         <li class="section-group-header">Research</li>
@@ -153,6 +154,9 @@
        
       <#-- Fellowships, Supported Research, & Other Grants -->
       <@collapsiblePropertyListSection "Fellowships, Supported Research, & Other Grants" gifts editable />
+
+      <#-- Industry Relationships -->
+      <#-- <@collapsiblePropertyListSection "Industry Relationships" industryRelationships editable /> -->
 
       <#assign authorships = propertyGroups.pullProperty("${core}relatedBy", "${core}Authorship")!>
 
