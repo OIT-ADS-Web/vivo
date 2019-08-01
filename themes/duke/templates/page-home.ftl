@@ -21,44 +21,44 @@
           <div class="carousel-inner">
 
             <div class="item">
-              <img src="../themes/duke/images/021317_eyepage083.jpg" class="home_page_graphic" alt="Photo of Preeya Gupta">
+              <img src="../themes/duke/images/021317_eyepage151.jpg" class="home_page_graphic" alt="Photo of Jullia Rosdahl">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/preeya.gupta">Preeya Gupta</a>, Associate Professor of Ophthalmology</p>
+                <p class="caption"><a href="person/jullia.rosdahl">Jullia Rosdahl</a>, Associate Professor of Ophthalmology</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/031318_gill_025.jpg" class="home_page_graphic" alt="Photo of David Gill">
+              <img src="../themes/duke/images/05219_kay_aaron018.jpg" class="home_page_graphic" alt="Photo of Aaron Kay">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/David.Gill">David Gill</a>, Assistant Professor in the Department of Marine Science and Conservation</p>
+                <p class="caption"><a href="person/aaron.kay">Aaron Kay</a>, Professor of Business Administration</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/140015b_levy_teaching006.jpg" class="home_page_graphic" alt="Photo of Marin Levy">
+              <img src="../themes/duke/images/06119_winters009.jpg" class="home_page_graphic" alt="Photo of Joseph Winters">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/levy">Marin Levy</a>, Associate Professor of Law</p>
+                <p class="caption"><a href="person/joseph.winters">Joseph Winters</a>, Alexander F. Hehmeyer Associate Professor</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/004719_brainlab087.jpg" class="home_page_graphic" alt="Photo of Leonard White">
+              <img src="../themes/duke/images/152317_barros_0011.jpg" class="home_page_graphic" alt="Photo of Ana Barros">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/len.white">Leonard White</a>, Associate Professor in Neurology</p>
+                <p class="caption"><a href="person/barros">Ana Barros</a>, Edmund T. Pratt, Jr. School Professor of Civil and Environmental Engineering</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/049718_kaul069.jpg" class="home_page_graphic" alt="Photo of Shambhavi Kaul">
+              <img src="../themes/duke/images/0622_microbiology.jpg" class="home_page_graphic" alt="Photo of Lawrence David">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/shambhavi.kaul">Shambhavi Kaul</a>, Assistant Professor of the Practice of Filmmaking of Art, Art History & Visual Studies</p>
+                <p class="caption"><a href="person/lawrence.david">Lawrence David</a>, Assistant Professor of Molecular Genetics and Microbiology</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/090317_0403_story_plus_balleisen134.jpg" class="home_page_graphic" alt="Photo of Edward J. Balleisen">
+              <img src="../themes/duke/images/081715_rose_class041.jpg" class="home_page_graphic" alt="Photo of Deondra Rose">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/eballeis">Edward J. Balleisen</a>, Professor of History</p>
+                <p class="caption"><a href="person/deondra.rose">Deondra Rose</a>, Assistant Professor in the Sanford School of Public Policy</p>
               </div>
             </div>
 
