@@ -56,7 +56,7 @@
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/081715_rose_class041.jpg" class="home_page_graphic" alt="Photo of Deondra Rose">
+              <img src="../themes/duke/images/081715_rose_class041.png" class="home_page_graphic" alt="Photo of Deondra Rose">
               <div class="caption-wrap">
                 <p class="caption"><a href="person/deondra.rose">Deondra Rose</a>, Assistant Professor in the Sanford School of Public Policy</p>
               </div>
