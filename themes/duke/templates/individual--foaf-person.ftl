@@ -32,7 +32,7 @@
 
             <#-- Display preferredTitle if it exists; otherwise mostSpecificTypes -->
             <#assign title = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/ARG_2000028","http://www.w3.org/2006/vcard/ns#Title")!>
-            <#if title?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+            <#if title?has_content>
               <@p.addLinkWithLabel title false />
               <#list title.statements as statement>
                 <div class="display-title">${statement.preferredTitle}</div>
@@ -57,7 +57,7 @@
 
           <#-- Positions -->
           <#assign positions = propertyGroups.pullProperty("${core}relatedBy", "${core}Position")!>
-          <#if positions?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+          <#if positions?has_content>
             <#assign localName = positions.localName>
             <h3 id="${localName}" class="mainPropGroup" style="margin-bottom: -2px; color: #000000;">Current Appointments & Affiliations <@p.verboseDisplay positions /></h3>
             <ul id="individual-personInPosition" role="list">
@@ -83,7 +83,7 @@
       <#assign licenses = propertyGroups.pullProperty("${core}relatedBy", "${dukecv}MedicalLicensure")!>
       <#assign nonDukePositions = propertyGroups.pullProperty("${core}relatedBy", "${dukecv}NonDukePosition")!>
 
-      <#if educations?has_content || leadershipPositions?has_content || dukePastPositions?has_content || licenses?has_content || nonDukePositions?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+      <#if educations?has_content || leadershipPositions?has_content || dukePastPositions?has_content || licenses?has_content || nonDukePositions?has_content>
         <li class="section-group-header">Background</li>
       </#if>
 
@@ -145,7 +145,7 @@
 
       <#assign grants = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000053", "${core}ResearcherRole")!>
       <#assign gifts = propertyGroups.pullProperty("${core}relatedBy", "${dukecv}Gift")!>
-      <#assign industryRelationships = propertyGroups.pullProperty("${core}relatedBy", "${duke}IndustryRelationship")!> -->
+      <#assign industryRelationships = propertyGroups.pullProperty("${core}relatedBy", "${duke}IndustryRelationship")!>
 
       <#if grants?has_content || gifts?has_content || industryRelationships?has_content>
         <li class="section-group-header">Research</li>
@@ -158,7 +158,7 @@
       <@collapsiblePropertyListSection "Fellowships, Supported Research, & Other Grants" gifts editable />
 
       <#-- Industry Relationships -->
-      <#-- <@collapsiblePropertyListSection "Industry Relationships" industryRelationships editable /> -->
+      <@collapsiblePropertyListSection "Industry Relationships" industryRelationships editable />
 
       <#assign authorships = propertyGroups.pullProperty("${core}relatedBy", "${core}Authorship")!>
       <#assign artisticRelationships = propertyGroups.pullProperty("${core}relatedBy", "http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticRelationship")!>
@@ -181,7 +181,7 @@
       <#assign availabilities = propertyGroups.pullProperty("${dukeact}mentorshipAvailability")!>
       <#assign teachingOverview = propertyGroups.pullProperty("${dukecv}teachingOverview")!>
 
-      <#if courses?has_content || mentorships?has_content || mentorOverview?has_content || availabilities?has_content || teachingOverview?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+      <#if courses?has_content || mentorships?has_content || mentorOverview?has_content || availabilities?has_content || teachingOverview?has_content>
         <li class="section-group-header">Teaching & Mentoring</li>
 
         <#-- Courses -->
@@ -201,7 +201,7 @@
             </a>
             <h3 id="mentorship-availabilities">Advising & Mentoring<@verboseDisplay availabilities /></h3>
             <div class="hideshow" style="display:none">
-              <#if mentorOverview?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+              <#if mentorOverview?has_content>
                 <@p.addLinkWithLabel mentorOverview editable />
                 <#list mentorOverview.statements as statement>
                   <ul class="individual-mentorOverview" role="list">
@@ -233,7 +233,7 @@
             </a>
             <h3 id="teaching-overview">Teaching Activities</h3>
             <div class="hideshow" style="display:none">
-              <#if teachingOverview?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+              <#if teachingOverview?has_content>
                 <@p.addLinkWithLabel teachingOverview editable />
                 <#list teachingOverview.statements as statement>
                   <ul class="individual-teachingOverview" role="list">
@@ -258,7 +258,7 @@
       <#assign academicOverview = propertyGroups.pullProperty("${dukecv}academicAdministrativeOverview")!>
       <#assign clinicalOverview = propertyGroups.pullProperty("${dukecv}clinicalOverview")!>
 
-      <#if presentations?has_content || outreach?has_content || profession?has_content || university?has_content || academicOverview?has_content || clinicalOverview?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+      <#if presentations?has_content || outreach?has_content || profession?has_content || university?has_content || academicOverview?has_content || clinicalOverview?has_content>
         <li class="section-group-header">Scholarly, Clinical, & Service Activities</li>
         <#-- Professional Activities -->
         <@collapsiblePropertyListSection "Presentation" presentations editable />
@@ -277,7 +277,7 @@
             </a>
             <h3 id="academic-overview">Academic & Administrative Activities</h3>
             <div class="hideshow" style="display:none">
-              <#if academicOverview?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+              <#if academicOverview?has_content>
                 <@p.addLinkWithLabel academicOverview editable />
                 <#list academicOverview.statements as statement>
                   <ul class="individual-academicOverview" role="list">
@@ -303,7 +303,7 @@
             </a>
             <h3 id="clinical-overview">Clinical Activities</h3>
             <div class="hideshow" style="display:none">
-              <#if clinicalOverview?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+              <#if clinicalOverview?has_content>
                 <@p.addLinkWithLabel clinicalOverview editable />
                 <#list clinicalOverview.statements as statement>
                   <ul class="individual-clinicalOverview" role="list">
