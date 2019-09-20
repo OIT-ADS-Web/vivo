@@ -146,17 +146,7 @@
       <#assign grants = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/RO_0000053", "${core}ResearcherRole")!>
       <#assign gifts = propertyGroups.pullProperty("${core}relatedBy", "${dukecv}Gift")!>
 
-<#-- 
-Caused by: get(propertyList) failed on instance of edu.cornell.mannlib.vitro.webapp.web.templatemodels.individual.IndividualTemplateModel 
-The problematic instruction: ---------- ==> assignment: propertyGroups=individual.propertyList [on line 10, column 1 in individual-setup.ftl] 
-in include "individual-setup.ftl" [on line 8, column 1 in individual--foaf-person.ftl] 
--->
-
-      <#assign industryRelationships = propertyGroups.pullProperty("${core}relatedBy", "${duke}IndustryRelationship")!>
-
-
-
-      <#if grants?has_content || gifts?has_content || industryRelationships?has_content>
+      <#if grants?has_content || gifts?has_content>
         <li class="section-group-header">Research</li>
       </#if>
 
@@ -165,13 +155,6 @@ in include "individual-setup.ftl" [on line 8, column 1 in individual--foaf-perso
        
       <#-- Fellowships, Supported Research, & Other Grants -->
       <@collapsiblePropertyListSection "Fellowships, Supported Research, & Other Grants" gifts editable />
-
-      
-      <#-- Industry Relationships -->
-
-      <@collapsiblePropertyListSection "Industry Relationships" industryRelationships editable />
-
-
 
       <#assign authorships = propertyGroups.pullProperty("${core}relatedBy", "${core}Authorship")!>
       <#assign artisticRelationships = propertyGroups.pullProperty("${core}relatedBy", "http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticRelationship")!>
