@@ -301,4 +301,4 @@ local:personInIndustryRelationship a :ObjectPropertyDisplayConfig ;
     :displayName "industry relationships" ;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
-    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
+    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupresearch> .
