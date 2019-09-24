@@ -171,11 +171,11 @@ label.inline {
 	padding: 0 .4em;
 }
 
-.disclaimer, .grant-disclaimer {
+.disclaimer, .grant-disclaimer, .industry-disclaimer {
   font-size: 1.3em;
 }
 
-.grant-disclaimer {
+.grant-disclaimer, .industry-disclaimer {
 	margin-left: 1.4em;
 }
 
@@ -3635,11 +3635,17 @@ p.long-caption {
 	margin-top: .9em;
 	margin-bottom: .5em;
 }
+
 .section-group-header:first-child {
 	margin-top: 0;
 }
 
 .person #individual-body .section-collapsible ul, .grant-disclaimer {
+	margin: 0;
+	padding: 0 0 0 40px;
+}
+
+.person #individual-body .section-collapsible ul, .industry-disclaimer {
 	margin: 0;
 	padding: 0 0 0 40px;
 }
