@@ -37,7 +37,7 @@ $(document).ready(function() {
 			$(disclaimerText).appendTo(grantCollapsibleSection);
 		});
 		$("a[name='Industry Relationships']").one('click',function() {
-			var industryText = '<p class="industry-disclaimer">This faculty member (or a member of their immediate family) has an outside financial interest with the companies listed below. These relations have been reported to the health system leadership and, when appropriate, management plans are in place to address potential conflicts.</p>'
+			var industryText = '<p class="industry-disclaimer">This faculty member (or a member of their immediate family) has an outside financial interest with the companies listed above. These relations have been reported to the health system leadership and, when appropriate, management plans are in place to address potential conflicts.</p>'
 			var industryCollapsibleSection = $("li[id='Industry Relationships'].section-collapsible").find('.hideshow');
 			$(industryText).appendTo(industryCollapsibleSection);
 		});
