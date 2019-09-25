@@ -42,6 +42,15 @@
             </div>
 
             <div class="item">
+              <img src="../themes/duke/images/RFP-20-21.png" class="home_page_graphic" alt="Now accepting proposals for team-based research projects that engage faculty, undergrads and grad students in interdisciplinary exploration of major societal challenges">
+              <div class="caption-wrap">
+                <p class="caption">
+                  Bass Connections <a href="https://bassconnections.duke.edu/about/news/bass-connections-invites-proposals-2020-2021-projects-november-4">invites faculty proposals</a> for 2020-2021 team-based research projects by November 4.
+                </p>
+              </div>
+            </div>
+
+            <div class="item">
               <img src="../themes/duke/images/152317_barros_0011.png" class="home_page_graphic" alt="Photo of Ana Barros">
               <div class="caption-wrap">
                 <p class="caption"><a href="person/barros">Ana Barros</a>, Edmund T. Pratt, Jr. School Professor of Civil and Environmental Engineering</p>
