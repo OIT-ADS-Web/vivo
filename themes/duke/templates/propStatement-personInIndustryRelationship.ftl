@@ -5,10 +5,9 @@
 
   <#local industryIndividual>
     <#if statement.company??>   
-      <a href="${profileUrl(statement.uri("company"))}">${statement.companyName!}</a>
+    	${statement.companyName!}
     <#else>
-      <#-- This shouldn't happen, but we must provide for it -->
-      <a href="${profileUrl(statement.uri("industryRelationship"))}" title="missing company">missing company</a>
+    	missing company
     </#if>
   </#local>
 
