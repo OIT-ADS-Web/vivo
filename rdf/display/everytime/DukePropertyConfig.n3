@@ -289,3 +289,16 @@ local:relatedNonDukePositionConfig a :ObjectPropertyDisplayConfig ;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
     :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
+
+local:personInIndustryRelationship a :ConfigContext ;
+    :hasConfiguration local:personInIndustryRelationshipConfig ;
+    :configContextFor vivo:relatedBy ;
+    :qualifiedByDomain <http://xmlns.com/foaf/0.1/Person> ;
+    :qualifiedBy      <http://vivo.duke.edu/vivo/ontology/duke-extension#IndustryRelationship> .
+
+local:personInIndustryRelationshipConfig a :ObjectPropertyDisplayConfig ;
+    :listViewConfigFile "listViewConfig-personInIndustryRelationship.xml"^^xsd:string ;
+    :displayName "industry relationships" ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
+    :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupresearch> .
