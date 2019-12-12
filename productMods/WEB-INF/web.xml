@@ -1181,17 +1181,7 @@
     <servlet-name>ShortURLVisualizationController</servlet-name>
     <url-pattern>/vis/*</url-pattern>
   </servlet-mapping>
-
-   <servlet>
-    <servlet-name>AjaxVisualizationController</servlet-name>
-    <servlet-class>edu.cornell.mannlib.vitro.webapp.controller.visualization.AjaxVisualizationController</servlet-class>
-  </servlet>
-
-  <servlet-mapping>
-    <servlet-name>AjaxVisualizationController</servlet-name>
-    <url-pattern>/visualizationAjax</url-pattern>
-  </servlet-mapping>
-
+  
   <servlet>
     <servlet-name>DataVisualizationController</servlet-name>
     <servlet-class>edu.cornell.mannlib.vitro.webapp.controller.visualization.DataVisualizationController</servlet-class>
