@@ -19,9 +19,8 @@
       <section id="intro" role="region">
         <div id="home_page_carousel" class="carousel slide">
           <div class="carousel-inner">
-
             <div class="item">
-              <img src="../themes/duke/images/20190923_evans_kate_009.jpg" class="home_page_graphic" alt="Photo of Katherine Evans">
+              <img src="../themes/duke/images/20190923_evans_kate_008.jpg" class="home_page_graphic" alt="Photo of Katherine Evans">
               <div class="caption-wrap">
                 <p class="caption"><a href="person/katherine.l.evans">Katherine Evans</a>, Clinical Professor of Law</p>
               </div>
