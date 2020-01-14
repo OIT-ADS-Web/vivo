@@ -27,7 +27,7 @@
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/20190914_harris_deonte_007.jpg" class="home_page_graphic" alt="Photo of Deonte Harris">
+              <img src="../themes/duke/images/20190914_harris_deonte_002.jpg" class="home_page_graphic" alt="Photo of Deonte Harris">
               <div class="caption-wrap">
                 <p class="caption"><a href="person/Deonte.Harris">Deonte Harris</a>, Assistant Professor of the Practice of the International Comparative Studies Program</p>
               </div>
