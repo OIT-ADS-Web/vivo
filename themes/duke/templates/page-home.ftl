@@ -19,46 +19,53 @@
       <section id="intro" role="region">
         <div id="home_page_carousel" class="carousel slide">
           <div class="carousel-inner">
-
             <div class="item">
-              <img src="../themes/duke/images/021317_eyepage151.png" class="home_page_graphic" alt="Photo of Jullia Rosdahl">
+              <img src="../themes/duke/images/20190923_evans_kate_008.jpg" class="home_page_graphic" alt="Photo of Katherine Evans">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/jullia.rosdahl">Jullia Rosdahl</a>, Associate Professor of Ophthalmology</p>
+                <p class="caption"><a href="person/katherine.l.evans">Katherine Evans</a>, Clinical Professor of Law</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/05219_kay_aaron018.png" class="home_page_graphic" alt="Photo of Aaron Kay">
+              <img src="../themes/duke/images/20190914_harris_deonte_002.jpg" class="home_page_graphic" alt="Photo of Deonte Harris">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/aaron.kay">Aaron Kay</a>, Professor of Business Administration</p>
+                <p class="caption"><a href="person/Deonte.Harris">Deonte Harris</a>, Assistant Professor of the Practice of the International Comparative Studies Program</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/06119_winters009.png" class="home_page_graphic" alt="Photo of Joseph Winters">
+              <img src="../themes/duke/images/20190912_marquez_cecila_007.jpg" class="home_page_graphic" alt="Photo of Cecilia Márquez">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/joseph.winters">Joseph Winters</a>, Alexander F. Hehmeyer Associate Professor</p>
+                <p class="caption"><a href="person/Cecilia.Marquez">Cecilia Márquez</a>, Assistant Professor of History</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/152317_barros_0011.png" class="home_page_graphic" alt="Photo of Ana Barros">
+              <img src="../themes/duke/images/20190912_strawn099.jpg" class="home_page_graphic" alt="Photo of Brent Strawn">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/barros">Ana Barros</a>, Edmund T. Pratt, Jr. School Professor of Civil and Environmental Engineering</p>
+                <p class="caption"><a href="person/brent.strawn">Brent Strawn</a>, Professor of Old Testament</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/094917_david019.png" class="home_page_graphic" alt="Photo of Lawrence David">
+              <img src="../themes/duke/images/20190808_wills_wu_lisa_013.jpg" class="home_page_graphic" alt="Photo of Lisa Wills">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/lawrence.david">Lawrence David</a>, Assistant Professor of Molecular Genetics and Microbiology</p>
+                <p class="caption"><a href="person/Lisa.Wills">Lisa Wills</a>, Assistant Professor of Computer Science</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/081715_rose_class041.png" class="home_page_graphic" alt="Photo of Deondra Rose">
+              <img src="../themes/duke/images/007917_leblanc_thomas_i_am_duke027.jpg" class="home_page_graphic" alt="Photo of Thomas LeBlanc">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/deondra.rose">Deondra Rose</a>, Assistant Professor in the Sanford School of Public Policy</p>
+                <p class="caption"><a href="person/thomas.leblanc">Thomas LeBlanc</a>, Associate Professor of Medicine</p>
+              </div>
+            </div>
+
+            <div class="item">
+              <img src="../themes/duke/images/RFP-20-21.png" class="home_page_graphic" alt="Now accepting faculty proposals for research collaboratories">
+              <div class="caption-wrap">
+                <p class="caption">
+                Invitation for <a href="https://sites.duke.edu/interdisciplinary/2019/11/06/propose-a-collaboratory-for-research-on-immigration-or-science-technology-and-ethics/">faculty proposals for research collaboratories</a> by January 24th.</p>
               </div>
             </div>
 
