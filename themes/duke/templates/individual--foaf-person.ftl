@@ -158,7 +158,7 @@
       <@collapsiblePropertyListSection "Fellowships, Supported Research, & Other Grants" gifts editable />
 
       <#-- Industry Relationships -->
-      <@collapsiblePropertyListSection "Industry Relationships" industryRelationships editable />
+      <@collapsiblePropertyListSection "External Relationships" industryRelationships editable />
 
       <#assign authorships = propertyGroups.pullProperty("${core}relatedBy", "${core}Authorship")!>
       <#assign artisticRelationships = propertyGroups.pullProperty("${core}relatedBy", "http://vivo.duke.edu/vivo/ontology/duke-art-extension#ArtisticRelationship")!>
