@@ -298,7 +298,7 @@ local:personInIndustryRelationship a :ConfigContext ;
 
 local:personInIndustryRelationshipConfig a :ObjectPropertyDisplayConfig ;
     :listViewConfigFile "listViewConfig-personInIndustryRelationship.xml"^^xsd:string ;
-    :displayName "industry relationships" ;
+    :displayName "external relationships" ;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
     :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupresearch> .
