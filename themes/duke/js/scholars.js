@@ -36,9 +36,9 @@ $(document).ready(function() {
 			var grantCollapsibleSection = $("li[id='Selected Grants'].section-collapsible").find('.hideshow');
 			$(disclaimerText).appendTo(grantCollapsibleSection);
 		});
-		$("a[name='Industry Relationships']").one('click',function() {
-			var industryText = '<p class="industry-disclaimer">This person (or a member of their immediate family) has an outside financial interest with the companies listed above. These relations have been reported to the health system leadership and, when appropriate, management plans are in place to address potential conflicts.</p>'
-			var industryCollapsibleSection = $("li[id='Industry Relationships'].section-collapsible").find('.hideshow');
+		$("a[name='External Relationships']").one('click',function() {
+			var industryText = '<p class="industry-disclaimer">This faculty member (or a member of their immediate family) has reported outside activities with the companies, institutions, or organizations listed above. This information has been reported to the health system leadership and, when appropriate, management plans are in place to address potential conflicts of interest.</p>'
+			var industryCollapsibleSection = $("li[id='External Relationships'].section-collapsible").find('.hideshow');
 			$(industryText).appendTo(industryCollapsibleSection);
 		});
 		if ($('.altmetric-hidden').length == 0) { 

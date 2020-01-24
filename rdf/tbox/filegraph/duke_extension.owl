@@ -751,7 +751,7 @@
   </rdf:Description>
 
   <rdf:Description rdf:about="http://vivo.duke.edu/vivo/ontology/duke-extension#IndustryRelationship">
-    <rdfs:label xml:lang="en-US">industry relationship</rdfs:label>
+    <rdfs:label xml:lang="en-US">external relationship</rdfs:label>
     <vitro:inClassGroup rdf:resource="http://vivoweb.org/ontology#vitroClassGrouppeople"/>
     <vitro:publicDescriptionAnnot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relationship that a scholar has with a company that could be considered a conflict of interest.</vitro:publicDescriptionAnnot>
     <vitro:hiddenFromDisplayBelowRoleLevelAnnot rdf:resource="http://vitro.mannlib.cornell.edu/ns/vitro/role#public"/>
