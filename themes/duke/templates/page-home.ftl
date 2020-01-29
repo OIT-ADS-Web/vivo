@@ -61,14 +61,6 @@
               </div>
             </div>
 
-            <div class="item">
-              <img src="../themes/duke/images/collaboratory-rfp-nov2019-600x320.png" class="home_page_graphic" alt="Now accepting faculty proposals for research collaboratories">
-              <div class="caption-wrap">
-                <p class="caption">
-                Invitation for <a href="https://sites.duke.edu/interdisciplinary/2019/11/06/propose-a-collaboratory-for-research-on-immigration-or-science-technology-and-ethics/">faculty proposals for research collaboratories</a> by January 24th.</p>
-              </div>
-            </div>
-
           </div>
         </div>
 
