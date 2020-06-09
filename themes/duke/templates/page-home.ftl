@@ -20,26 +20,6 @@
         <div id="home_page_carousel" class="carousel slide">
           <div class="carousel-inner">
 
-            <!--
-Photo: 011016_clinic3_1_lab035.jpg
-Caption: Vidyalakshmi Chandramohan, Assistant Professor in Neurosurgery
-
-Photo: 190904_boucher036.JPG
-Caption: Nathan Boucher, Assistant Research Professor in the Sanford School of Public Policy
-
-Photo: 036418_food_studies_019.jpg
-Caption: Saskia Cornes, Assistant Professor of the Practice of the John Hope Franklin Humanities Institute
-
-Photo: 006718_alexander002.jpg
-Caption: Lovest Alexander, Assistant Professor in Family Medicine and Community Health
-
-Photo: 127417_neal022.jpg
-Caption: Jerusha Neal, Assistant Professor of Homiletics
-
-Photo: 190906_zhang034.jpg
-Caption: Zhao Zhang, Assistant Professor of Pharmacology and Cancer Biology
-
-            -->
             <div class="item">
               <img src="../themes/duke/images/011016_clinic3_1_lab035.jpg" class="home_page_graphic" alt="Photo of Vidyalakshmi Chandramohan">
               <div class="caption-wrap">
