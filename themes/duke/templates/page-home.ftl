@@ -28,7 +28,7 @@
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/190904_boucher036.JPG" class="home_page_graphic" alt="Photo of Nathan Boucher">
+              <img src="../themes/duke/images/190904_boucher037.jpg" class="home_page_graphic" alt="Photo of Nathan Boucher">
               <div class="caption-wrap">
                 <p class="caption"><a href="person/NATHAN.BOUCHER">Nathan Boucher</a>, Assistant Research Professor in the Sanford School of Public Policy</p>
               </div>
