@@ -19,45 +19,66 @@
       <section id="intro" role="region">
         <div id="home_page_carousel" class="carousel slide">
           <div class="carousel-inner">
+
+            <!--
+Photo: 011016_clinic3_1_lab035.jpg
+Caption: Vidyalakshmi Chandramohan, Assistant Professor in Neurosurgery
+
+Photo: 190904_boucher036.JPG
+Caption: Nathan Boucher, Assistant Research Professor in the Sanford School of Public Policy
+
+Photo: 036418_food_studies_019.jpg
+Caption: Saskia Cornes, Assistant Professor of the Practice of the John Hope Franklin Humanities Institute
+
+Photo: 006718_alexander002.jpg
+Caption: Lovest Alexander, Assistant Professor in Family Medicine and Community Health
+
+Photo: 127417_neal022.jpg
+Caption: Jerusha Neal, Assistant Professor of Homiletics
+
+Photo: 190906_zhang034.jpg
+Caption: Zhao Zhang, Assistant Professor of Pharmacology and Cancer Biology
+
+            -->
             <div class="item">
-              <img src="../themes/duke/images/20190923_evans_kate_008.jpg" class="home_page_graphic" alt="Photo of Katherine Evans">
+              <img src="../themes/duke/images/011016_clinic3_1_lab035.jpg" class="home_page_graphic" alt="Photo of Vidyalakshmi Chandramohan">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/katherine.l.evans">Katherine Evans</a>, Clinical Professor of Law</p>
+                <p class="caption"><a href="person/vidyalakshmi.chandramohan">Vidyalakshmi Chandramohan</a>, Assistant Professor in Neurosurgery</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/20190914_harris_deonte_002.jpg" class="home_page_graphic" alt="Photo of Deonte Harris">
+              <img src="../themes/duke/images/190904_boucher036.JPG" class="home_page_graphic" alt="Photo of Nathan Boucher">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/Deonte.Harris">Deonte Harris</a>, Assistant Professor of the Practice of the International Comparative Studies Program</p>
+                <p class="caption"><a href="person/NATHAN.BOUCHER">Nathan Boucher</a>, Assistant Research Professor in the Sanford School of Public Policy</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/20190912_marquez_cecila_007.jpg" class="home_page_graphic" alt="Photo of Cecilia Márquez">
+              <img src="../themes/duke/images/036418_food_studies_019.jpg" class="home_page_graphic" alt="Photo of Saskia Cornes">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/Cecilia.Marquez">Cecilia Márquez</a>, Assistant Professor of History</p>
+                <p class="caption"><a href="person/saskia.cornes">Saskia Cornes</a>, Assistant Professor of the Practice of the John Hope Franklin Humanities Institute</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/20190912_strawn099.jpg" class="home_page_graphic" alt="Photo of Brent Strawn">
+              <img src="../themes/duke/images/006718_alexander002.jpg" class="home_page_graphic" alt="Photo of Lovest Alexander">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/brent.strawn">Brent Strawn</a>, Professor of Old Testament</p>
+                <p class="caption"><a href="person/lovest.alexander">Lovest Alexander</a>, Assistant Professor in Family Medicine and Community Health</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/20190808_wills_wu_lisa_013.jpg" class="home_page_graphic" alt="Photo of Lisa Wills">
+              <img src="../themes/duke/images/127417_neal022.jpg" class="home_page_graphic" alt="Photo of Jerusha Neal">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/Lisa.Wills">Lisa Wills</a>, Assistant Professor of Computer Science</p>
+                <p class="caption"><a href="person/jerusha.neal">Jerusha Neal</a>, Assistant Professor of Homiletics</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/007917_leblanc_thomas_i_am_duke027.jpg" class="home_page_graphic" alt="Photo of Thomas LeBlanc">
+              <img src="../themes/duke/images/190906_zhang034.jpg" class="home_page_graphic" alt="Photo of Zhao Zhang">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/thomas.leblanc">Thomas LeBlanc</a>, Associate Professor of Medicine</p>
+                <p class="caption"><a href="person/z.z">Zhao Zhang</a>, Associate Professor of Medicine</p>
               </div>
             </div>
 
