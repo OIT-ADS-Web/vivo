@@ -58,7 +58,7 @@
             <div class="item">
               <img src="../themes/duke/images/190906_zhang034.jpg" class="home_page_graphic" alt="Photo of Zhao Zhang">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/z.z">Zhao Zhang</a>, Associate Professor of Medicine</p>
+                <p class="caption"><a href="person/z.z">Zhao Zhang</a>, Assistant Professor of Pharmacology and Cancer Biology</p>
               </div>
             </div>
 
