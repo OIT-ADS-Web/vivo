@@ -44,7 +44,8 @@
             <div class="item">
               <img src="../themes/duke/images/006718_alexander002.jpg" class="home_page_graphic" alt="Photo of Lovest Alexander">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/lovest.alexander">Lovest Alexander</a>, Assistant Professor in Family Medicine and Community Health</p>
+                <p class="caption">
+                  <span>Lovest Alexander</span>, Assistant Professor in Family Medicine and Community Health</p>
               </div>
             </div>
 
