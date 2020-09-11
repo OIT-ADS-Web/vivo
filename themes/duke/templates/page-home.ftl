@@ -47,7 +47,7 @@
               <div class="caption-wrap">
                 <p class="caption">Bass Connections
                   <a href="https://bassconnections.duke.edu/about/news/bass-connections-invites-proposals-2021-2022-projects-december-4
-">invites faculty proposals</a> for 2021-2022 team-based research projects by December 4
+" target="_blank">invites faculty proposals</a> for 2021-2022 team-based research projects by December 4
                 </p>
               </div>
             </div>
