@@ -41,17 +41,6 @@
               </div>
             </div>
             
-            <!-- bass connections, remove 12/5/2020 -->
-            <div class="item">
-              <img src="../themes/duke/images/RFP-21-22-600x320.png" class="home_page_graphic" alt="Bass Connections Request for Project Proposals slide">
-              <div class="caption-wrap">
-                <p class="caption">Bass Connections
-                  <a href="https://bassconnections.duke.edu/about/news/bass-connections-invites-proposals-2021-2022-projects-december-4" target="_blank">invites faculty proposals</a> for 2021-2022 team-based research projects by December 4
-                </p>
-              </div>
-            </div>
-            <!-- end bass connections -->
-
             <div class="item">
               <img src="../themes/duke/images/006718_alexander002.jpg" class="home_page_graphic" alt="Photo of Lovest Alexander">
               <div class="caption-wrap">
