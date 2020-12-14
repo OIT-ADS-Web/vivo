@@ -1,0 +1,28 @@
+version: '3.7'
+services:
+  vivo:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    command: /srv/tomcat/apache-tomcat-7.0.107/bin/catalina.sh run
+    entrypoint: /vivo/docker-entrypoint-dev.sh
+    volumes:
+      - .:/vivo
+      - vivodata:/usr/local/vivo/data
+    ports:
+      - "8080:8080"
+  db:
+    image: mariadb:5.5
+    command: mysqld --character-set-server=utf8
+    volumes:
+      - dbdata:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=vivodev
+      - MYSQL_USER=vivo
+      - MYSQL_PASSWORD=vivo
+      - MYSQL_ROOT_PASSWORD=vivo
+    ports:
+      - "3306:3306"
+volumes:
+  vivodata:
+  dbdata:

@@ -1,0 +1,8 @@
+FROM openjdk:7
+
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends ant
+
+ADD apache-tomcat-7.0.107.tar.gz /srv/tomcat
+
+WORKDIR /vivo
