@@ -21,56 +21,45 @@
           <div class="carousel-inner">
 
             <div class="item">
-              <img src="../themes/duke/images/011016_clinic3_1_lab035.jpg" class="home_page_graphic" alt="Photo of Vidyalakshmi Chandramohan">
+              <img src="../themes/duke/images/021317_eyepage139.png" class="home_page_graphic" alt="Photo of Eleonora Lad">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/vidyalakshmi.chandramohan">Vidyalakshmi Chandramohan</a>, Assistant Professor in Neurosurgery</p>
+                <p class="caption"><a href="person/nora.lad">Eleonora Lad</a>, Associate Professor of Ophthalmology</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/190904_boucher037.jpg" class="home_page_graphic" alt="Photo of Nathan Boucher">
+              <img src="../themes/duke/images/038118_hsu016_opt3.png" class="home_page_graphic" alt="Photo of Po-Chun Hsu">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/NATHAN.BOUCHER">Nathan Boucher</a>, Assistant Research Professor in the Sanford School of Public Policy</p>
+                <p class="caption"><a href="person/pochun.hsu">Po-Chun Hsu</a>, Assistant Professor of Mechanical Engineering and Materials Science</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/036418_food_studies_019.jpg" class="home_page_graphic" alt="Photo of Saskia Cornes">
+              <img src="../themes/duke/images/20200924_gennetian052.png" class="home_page_graphic" alt="Photo of Lisa Gennetian">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/saskia.cornes">Saskia Cornes</a>, Assistant Professor of the Practice of the John Hope Franklin Humanities Institute</p>
+                <p class="caption"><a href="person/Lisa.Gennetian">Lisa Gennetian</a>, Pritzker Associate Professor of Early Learning Policy Studies</p>
               </div>
             </div>
-            
-            <!-- bass connections, remove 12/5/2020 -->
-            <div class="item">
-              <img src="../themes/duke/images/RFP-21-22-600x320.png" class="home_page_graphic" alt="Bass Connections Request for Project Proposals slide">
-              <div class="caption-wrap">
-                <p class="caption">Bass Connections
-                  <a href="https://bassconnections.duke.edu/about/news/bass-connections-invites-proposals-2021-2022-projects-december-4" target="_blank">invites faculty proposals</a> for 2021-2022 team-based research projects by December 4
-                </p>
-              </div>
-            </div>
-            <!-- end bass connections -->
 
             <div class="item">
-              <img src="../themes/duke/images/006718_alexander002.jpg" class="home_page_graphic" alt="Photo of Lovest Alexander">
+              <img src="../themes/duke/images/20200909_sarr_felwine_new_faculty_profile_010.png" class="home_page_graphic" alt="Photo of Felwine Sarr">
+              <div class="caption-wrap">
+                <p class="caption"><a href="person/Felwine.Sarr">Felwine Sarr</a>, Research Professor in the Department of Romance Studies</p>
+              </div>
+            </div>
+
+            <div class="item">
+              <img src="../themes/duke/images/20200930_tennyson063ps.png" class="home_page_graphic" alt="Photo of Callie Tennyson">
               <div class="caption-wrap">
                 <p class="caption">
-                  <a href="person/lovest.alexander">Lovest Alexander</a>, Assistant Professor in Family Medicine and Community Health</p>
+                  <a href="person/carolina.dimsdale">Callie Tennyson</a>, Assistant Professor in the School of Nursing</p>
               </div>
             </div>
 
             <div class="item">
-              <img src="../themes/duke/images/127417_neal022.jpg" class="home_page_graphic" alt="Photo of Jerusha Neal">
+              <img src="../themes/duke/images/20201001_wildeman164ps.png" class="home_page_graphic" alt="Photo of Christopher Wildeman">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/jerusha.neal">Jerusha Neal</a>, Assistant Professor of Homiletics</p>
-              </div>
-            </div>
-
-            <div class="item">
-              <img src="../themes/duke/images/190906_zhang034.jpg" class="home_page_graphic" alt="Photo of Zhao Zhang">
-              <div class="caption-wrap">
-                <p class="caption"><a href="person/z.z">Zhao Zhang</a>, Assistant Professor of Pharmacology and Cancer Biology</p>
+                <p class="caption"><a href="person/christopher.wildeman">Christopher Wildeman</a>, Professor of Sociology</p>
               </div>
             </div>
 
@@ -103,11 +92,11 @@
             <form id="people-search-form" action="/scholars_search/" class="search-form inline" name="people-search" role="search" method="GET">
               <label for="allWords" class="sr-only">Search</label>
               <input id="allWords"
-                     name="allWords" 
-                     type="text" 
-                     class="search-vivo" 
-                     width="30" 
-                     placeholder="Search" 
+                     name="allWords"
+                     type="text"
+                     class="search-vivo"
+                     width="30"
+                     placeholder="Search"
                      autocapitalize="off">
               <input type="submit" class="search" value="GO" />
             </form>
