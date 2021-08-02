@@ -13,7 +13,7 @@
         <#assign orgName>
           <@p.label individual false 1 />
         </#assign>
-        <h1>${titlecase(orgName)}</h1>
+        <h1>${orgName}</h1>
         <#include "individual-adminPanel.ftl">
         <#-- Overview -->
         <#include "individual-overview.ftl">
