@@ -20,49 +20,49 @@
         <div id="home_page_carousel" class="carousel slide">
           <div class="carousel-inner">
 
-            <div class="item">
-              <img src="../themes/duke/images/021317_eyepage139.png" class="home_page_graphic" alt="Photo of Eleonora Lad">
+             <div class="item">
+              <img src="../themes/duke/images/20200924_nicki_washington034.png" class="home_page_graphic" alt="Photo of Nicki Washington">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/nora.lad">Eleonora Lad</a>, Associate Professor of Ophthalmology</p>
+                <p class="caption"><a href="person/nicki.washington">Nicki Washington</a>, Professor of the Practice of Computer Science</p>
               </div>
-            </div>
+             </div>
 
-            <div class="item">
-              <img src="../themes/duke/images/038118_hsu016_opt3.png" class="home_page_graphic" alt="Photo of Po-Chun Hsu">
+             <div class="item">
+              <img src="../themes/duke/images/20200914_monroe_chris_new_faculty_profile_014.png" class="home_page_graphic" alt="Photo of Christopher Monroe">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/pochun.hsu">Po-Chun Hsu</a>, Assistant Professor of Mechanical Engineering and Materials Science</p>
+                <p class="caption"><a href="person/christopher.monroe">Christopher Monroe</a>, Professor in the Department of Electrical and Computer Engineering</p>
               </div>
-            </div>
+             </div>
 
-            <div class="item">
-              <img src="../themes/duke/images/20200924_gennetian052.png" class="home_page_graphic" alt="Photo of Lisa Gennetian">
+             <div class="item">
+              <img src="../themes/duke/images/079517_maclean012.png" class="home_page_graphic" alt="Photo of Nancy MacLean">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/Lisa.Gennetian">Lisa Gennetian</a>, Pritzker Associate Professor of Early Learning Policy Studies</p>
+                <p class="caption"><a href="person/nancy.maclean">Nancy MacLean</a>, William H. Chafe Distinguished Professor of History and Public Policy</p>
               </div>
-            </div>
+             </div>
 
-            <div class="item">
-              <img src="../themes/duke/images/20200909_sarr_felwine_new_faculty_profile_010.png" class="home_page_graphic" alt="Photo of Felwine Sarr">
+             <div class="item">
+              <img src="../themes/duke/images/20200922_miao044ps.png" class="home_page_graphic" alt="Photo of Edward Miao">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/Felwine.Sarr">Felwine Sarr</a>, Research Professor in the Department of Romance Studies</p>
+                <p class="caption"><a href="person/edward.miao">Edward Miao</a>, Professor of Immunology</p>
               </div>
-            </div>
+             </div>
 
-            <div class="item">
-              <img src="../themes/duke/images/20200930_tennyson063ps.png" class="home_page_graphic" alt="Photo of Callie Tennyson">
+             <div class="item">
+              <img src="../themes/duke/images/20200916_myrick_rachel007.png" class="home_page_graphic" alt="Photo of Rachel Myrick">
               <div class="caption-wrap">
                 <p class="caption">
-                  <a href="person/carolina.dimsdale">Callie Tennyson</a>, Assistant Professor in the School of Nursing</p>
+                  <a href="person/rachel.myrick">Rachel Myrick</a>, Assistant Professor of Political Science</p>
               </div>
-            </div>
+             </div>
 
-            <div class="item">
-              <img src="../themes/duke/images/20201001_wildeman164ps.png" class="home_page_graphic" alt="Photo of Christopher Wildeman">
+             <div class="item">
+              <img src="../themes/duke/images/20210302_3dheartjosie033.png" class="home_page_graphic" alt="Photo of Piers Barker">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/christopher.wildeman">Christopher Wildeman</a>, Professor of Sociology</p>
+                <p class="caption"><a href="person/piers.barker">Piers Barker</a>, Professor of Pediatrics</p>
               </div>
-            </div>
-
+             </div>
+       
           </div>
         </div>
 
