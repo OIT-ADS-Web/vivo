@@ -93,8 +93,8 @@
       <#-- Medical Licensure -->
       <@collapsiblePropertyListSection "Medical Licensure" licenses editable />
 
-      <#-- Duke Appointment History -->
-      <@collapsiblePropertyListSection "Duke Appointment History" dukePastPositions editable />
+      <#-- Previous Appointments & Affiliations -->
+      <@collapsiblePropertyListSection "Previous Appointments & Affiliations" dukePastPositions editable />
 
       <#-- Leadership & Clinical Positions at Duke -->
       <#if leadershipPositions?has_content>
