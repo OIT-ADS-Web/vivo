@@ -246,7 +246,7 @@ local:personInDukePastPosition a :ConfigContext ;
 
 local:personInDukePastPositionConfig a :ObjectPropertyDisplayConfig ;
     :listViewConfigFile "listViewConfig-personInDukePastPosition.xml"^^xsd:string ;
-    :displayName "duke appointment history" ;
+    :displayName "Previous Appointments & Affiliations" ;
     vitro:hiddenFromDisplayBelowRoleLevelAnnot role:public ;
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot role:public ;
     :propertyGroup <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> .
