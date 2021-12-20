@@ -42,13 +42,6 @@
              </div>
 
              <div class="item">
-              <img src="../themes/duke/images/RFP-20-21-22-23-600x320.png" class="home_page_graphic" alt="Promotional Photo for Bass Connections">
-              <div class="caption-wrap">
-                <p class="caption">Bass Connections <a href="https://bassconnections.duke.edu/about/news/bass-connections-invites-proposals-2022-2023-projects-november-1">invites faculty proposals</a> for 2022-2023 team-based research projects by November 1</p>
-              </div>
-             </div>
-
-             <div class="item">
               <img src="../themes/duke/images/20200922_miao044ps.png" class="home_page_graphic" alt="Photo of Edward Miao">
               <div class="caption-wrap">
                 <p class="caption"><a href="person/edward.miao">Edward Miao</a>, Professor of Immunology</p>
