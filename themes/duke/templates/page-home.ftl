@@ -21,45 +21,45 @@
           <div class="carousel-inner">
 
              <div class="item">
-              <img src="../themes/duke/images/20200924_nicki_washington034.png" class="home_page_graphic" alt="Photo of Nicki Washington">
+              <img src="../themes/duke/images/014919_mathsaper013.jpg" class="home_page_graphic" alt="Photo of Leslie Saper">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/nicki.washington">Nicki Washington</a>, Professor of the Practice of Computer Science</p>
+                <p class="caption"><a href="person/saper">Leslie Saper</a>, Professor of Mathematics</p>
               </div>
              </div>
 
              <div class="item">
-              <img src="../themes/duke/images/20200914_monroe_chris_new_faculty_profile_014.png" class="home_page_graphic" alt="Photo of Christopher Monroe">
+              <img src="../themes/duke/images/i20210902_naumann090b.jpg" class="home_page_graphic" alt="Photo of Eva Naumann">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/christopher.monroe">Christopher Monroe</a>, Professor in the Department of Electrical and Computer Engineering</p>
+                <p class="caption"><a href="person/Eva.Naumann">Eva Naumann</a>, Assistant Professor of Neurobiology</p>
               </div>
              </div>
 
              <div class="item">
-              <img src="../themes/duke/images/079517_maclean012.png" class="home_page_graphic" alt="Photo of Nancy MacLean">
+              <img src="../themes/duke/images/1901_DHS-transplant_06951.jpg" class="home_page_graphic" alt="Photo of Bradley Collins">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/nancy.maclean">Nancy MacLean</a>, William H. Chafe Distinguished Professor of History and Public Policy</p>
+                <p class="caption"><a href="person/colli005">Bradley Collins</a>, </p>Associate Professor of Surgery</p>
               </div>
              </div>
 
              <div class="item">
-              <img src="../themes/duke/images/20200922_miao044ps.png" class="home_page_graphic" alt="Photo of Edward Miao">
+              <img src="../themes/duke/images20211012_enriquez064.jpg" class="home_page_graphic" alt="Photo of Sophia Enriquez">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/edward.miao">Edward Miao</a>, Professor of Immunology</p>
+                <p class="caption"><a href="person/Sophia.Enriquez">Sophia Enriquez</a>, Assistant Professor of Music</p>
               </div>
              </div>
 
              <div class="item">
-              <img src="../themes/duke/images/20200916_myrick_rachel007.png" class="home_page_graphic" alt="Photo of Rachel Myrick">
+              <img src="../themes/duke/images/20210927_richardson050.jpg" class="home_page_graphic" alt="Photo of Kevin Richardson">
               <div class="caption-wrap">
                 <p class="caption">
-                  <a href="person/rachel.myrick">Rachel Myrick</a>, Assistant Professor of Political Science</p>
+                  <a href="person/Kevin.Richardson">Kevin Richardson</a>, Assistant Professor of Philosophy</p>
               </div>
              </div>
 
              <div class="item">
-              <img src="../themes/duke/images/20210302_3dheartjosie033.png" class="home_page_graphic" alt="Photo of Piers Barker">
+              <img src="../themes/duke/images/20210928_wattssmith075.jpg" class="home_page_graphic" alt="Photo of Candis Watts Smith">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/piers.barker">Piers Barker</a>, Professor of Pediatrics</p>
+                <p class="caption"><a href="person/candis.watts">Candis Watts Smith</a>, Associate Professor of Political Science</p>
               </div>
              </div>
        
