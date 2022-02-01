@@ -28,7 +28,7 @@
              </div>
 
              <div class="item">
-              <img src="../themes/duke/images/i20210902_naumann090b.jpg" class="home_page_graphic" alt="Photo of Eva Naumann">
+              <img src="../themes/duke/images/20210902_naumann090b.jpg" class="home_page_graphic" alt="Photo of Eva Naumann">
               <div class="caption-wrap">
                 <p class="caption"><a href="person/Eva.Naumann">Eva Naumann</a>, Assistant Professor of Neurobiology</p>
               </div>
@@ -37,12 +37,12 @@
              <div class="item">
               <img src="../themes/duke/images/1901_DHS-transplant_06951.jpg" class="home_page_graphic" alt="Photo of Bradley Collins">
               <div class="caption-wrap">
-                <p class="caption"><a href="person/colli005">Bradley Collins</a>, </p>Associate Professor of Surgery</p>
+                <p class="caption"><a href="person/colli005">Bradley Collins</a>, Associate Professor of Surgery</p>
               </div>
              </div>
 
              <div class="item">
-              <img src="../themes/duke/images20211012_enriquez064.jpg" class="home_page_graphic" alt="Photo of Sophia Enriquez">
+              <img src="../themes/duke/images/20211012_enriquez064.jpg" class="home_page_graphic" alt="Photo of Sophia Enriquez">
               <div class="caption-wrap">
                 <p class="caption"><a href="person/Sophia.Enriquez">Sophia Enriquez</a>, Assistant Professor of Music</p>
               </div>
