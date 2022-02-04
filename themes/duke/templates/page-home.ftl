@@ -64,7 +64,7 @@
              </div>
 
              <div class="item">
-              <img src="../themes/duke/images/muser_promo.png" class="home_page_graphic" alt="Muser Mentors">
+              <img src="../themes/duke/images/muser_promo2.png" class="home_page_graphic" alt="Muser Mentors">
               <div class="caption-wrap">
                 <p class="caption">Muser <a href="https://muser.duke.edu/">invites all researchers and faculty</a> to post Summer ‘22 undergraduate research projects by February 18th.</p>
               </div>
